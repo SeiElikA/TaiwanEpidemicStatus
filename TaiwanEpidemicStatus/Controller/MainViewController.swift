@@ -16,9 +16,13 @@ class MainViewController: UIViewController {
     @IBOutlet weak var btnCityStatisticMore: UIButton!
     @IBOutlet weak var btnNewsMore: UIButton!
     @IBOutlet weak var txtTotalCases: UILabel!
-    @IBOutlet weak var txtTotalDeath: UILabel!
+    @IBOutlet weak var txtTodayCases: UILabel!
     @IBOutlet weak var btnScan: UIButton!
     @IBOutlet weak var viewNavigationBar: UIView!
+    @IBOutlet weak var txtCityCases: UILabel!
+    @IBOutlet weak var txtTotalCaseLabel: UILabel!
+    @IBOutlet weak var txtTodayCasesLabel: UILabel!
+    @IBOutlet weak var txtNewsLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +32,7 @@ class MainViewController: UIViewController {
         
         txtTemperature.font = UIFont.roundedBoldFont(48)
         txtTotalCases.font = UIFont.roundedBoldFont(36)
-        txtTotalDeath.font = UIFont.roundedBoldFont(36)
+        txtTodayCases.font = UIFont.roundedBoldFont(36)
         
         viewSearchBox.layer.borderColor = UIColor.white.cgColor
         viewSearchBox.layer.borderWidth = 0.8
@@ -57,6 +61,14 @@ class MainViewController: UIViewController {
         viewNavigationBar.clipsToBounds = false
         viewNavigationBar.layer.cornerRadius = 16
         viewNavigationBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        
+        // 多國語言
+        txtCityCases.text = NSLocalizedString("CityStatistic", comment: "")
+        txtTotalCaseLabel.text = NSLocalizedString("TotalCases", comment: "")
+        txtTodayCasesLabel.text = NSLocalizedString("TodayCases", comment: "")
+        txtNewsLabel.text = NSLocalizedString("News", comment: "")
+        btnNewsMore.setTitle(NSLocalizedString("More", comment: ""), for: .normal)
+        btnCityStatisticMore.setTitle(NSLocalizedString("More", comment: ""), for: .normal)
     }
 }
 

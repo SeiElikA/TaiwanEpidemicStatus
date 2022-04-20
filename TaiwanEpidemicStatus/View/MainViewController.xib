@@ -19,9 +19,13 @@
                 <outlet property="btnScan" destination="GnX-JW-7dd" id="cJh-mB-arR"/>
                 <outlet property="mainScrollView" destination="bK0-6t-sAZ" id="D4s-a0-URY"/>
                 <outlet property="newsTableView" destination="adP-p3-IoL" id="xan-7V-T4H"/>
+                <outlet property="txtCityCases" destination="iAY-wT-Oay" id="vf0-G6-lxE"/>
+                <outlet property="txtNewsLabel" destination="126-3f-egq" id="e49-Rr-uR1"/>
                 <outlet property="txtTemperature" destination="Ous-H7-jE6" id="gzU-dV-Jg6"/>
+                <outlet property="txtTodayCases" destination="V2W-kd-wQh" id="e3s-pS-MJp"/>
+                <outlet property="txtTodayCasesLabel" destination="Mqs-ge-ln6" id="csK-nb-hWE"/>
+                <outlet property="txtTotalCaseLabel" destination="Mpw-zg-A6l" id="7lM-2a-lce"/>
                 <outlet property="txtTotalCases" destination="ImC-YS-zGh" id="fep-SF-aHv"/>
-                <outlet property="txtTotalDeath" destination="V2W-kd-wQh" id="e3s-pS-MJp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewCityStatisticBoard" destination="cLI-Ku-vgz" id="KqT-Nx-4el"/>
                 <outlet property="viewNavigationBar" destination="x27-qC-U5v" id="BQB-AO-Itj"/>
@@ -219,7 +223,7 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUW-50-WoL">
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUW-50-WoL">
                                                     <rect key="frame" x="272.66666666666669" y="0.0" width="37.333333333333314" height="54"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                     <color key="tintColor" name="MainColor"/>

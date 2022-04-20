@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6F1CC24628100EBE0065A4BB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F1CC24828100EBE0065A4BB /* Localizable.strings */; };
-		6F1CC24E281013D00065A4BB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F1CC24D281013D00065A4BB /* Localizable.strings */; };
 		6F1CC2512810159A0065A4BB /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F1CC2502810159A0065A4BB /* MainViewController.xib */; };
 		6F68EFD4280CF9030012B5B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F68EFD3280CF9030012B5B1 /* AppDelegate.swift */; };
 		6F68EFD6280CF9030012B5B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F68EFD5280CF9030012B5B1 /* SceneDelegate.swift */; };
@@ -16,6 +14,8 @@
 		6F68EFE0280CF9040012B5B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F68EFDF280CF9040012B5B1 /* Assets.xcassets */; };
 		6F68EFE3280CF9040012B5B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F68EFE1280CF9040012B5B1 /* LaunchScreen.storyboard */; };
 		6F68EFEE280CF9810012B5B1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F68EFEC280CF9810012B5B1 /* MainViewController.swift */; };
+		6FB1D4EA281026EC002F44D3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6FB1D4EC281026EC002F44D3 /* Localizable.strings */; };
+		6FB1D4F328102B59002F44D3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6FB1D4F528102B59002F44D3 /* InfoPlist.strings */; };
 		6FD357D8280D39940010D5DE /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD357D7280D39940010D5DE /* ViewExtension.swift */; };
 		6FD357DD280D56180010D5DE /* NewsItemLargeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD357DB280D56180010D5DE /* NewsItemLargeTableViewCell.swift */; };
 		6FD357DE280D56180010D5DE /* NewsItemLargeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FD357DC280D56180010D5DE /* NewsItemLargeTableViewCell.xib */; };
@@ -24,9 +24,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6F1CC24328100E6D0065A4BB /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		6F1CC24928100EC10065A4BB /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		6F1CC24D281013D00065A4BB /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		6F1CC2502810159A0065A4BB /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		6F68EFD0280CF9030012B5B1 /* TaiwanEpidemicStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaiwanEpidemicStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F68EFD3280CF9030012B5B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +33,12 @@
 		6F68EFE2280CF9040012B5B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F68EFE4280CF9040012B5B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F68EFEC280CF9810012B5B1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		6FB1D4EB281026EC002F44D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6FB1D4EF28102901002F44D3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		6FB1D4F028102919002F44D3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		6FB1D4F428102B59002F44D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6FB1D4F628102B5C002F44D3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		6FB1D4F728102B5D002F44D3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		6FD357D7280D39940010D5DE /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		6FD357DB280D56180010D5DE /* NewsItemLargeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItemLargeTableViewCell.swift; sourceTree = "<group>"; };
 		6FD357DC280D56180010D5DE /* NewsItemLargeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsItemLargeTableViewCell.xib; sourceTree = "<group>"; };
@@ -84,8 +87,8 @@
 				6F68EFEB280CF9720012B5B1 /* Controller */,
 				6F68EFEA280CF95F0012B5B1 /* View */,
 				6FD357D7280D39940010D5DE /* ViewExtension.swift */,
-				6F1CC24828100EBE0065A4BB /* Localizable.strings */,
-				6F1CC24D281013D00065A4BB /* Localizable.strings */,
+				6FB1D4F528102B59002F44D3 /* InfoPlist.strings */,
+				6FB1D4EC281026EC002F44D3 /* Localizable.strings */,
 			);
 			path = TaiwanEpidemicStatus;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hant",
 				"zh-Hans",
 			);
 			mainGroup = 6F68EFC7280CF9030012B5B1;
@@ -198,9 +202,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F1CC24628100EBE0065A4BB /* Localizable.strings in Resources */,
+				6FB1D4EA281026EC002F44D3 /* Localizable.strings in Resources */,
+				6FB1D4F328102B59002F44D3 /* InfoPlist.strings in Resources */,
 				6F1CC2512810159A0065A4BB /* MainViewController.xib in Resources */,
-				6F1CC24E281013D00065A4BB /* Localizable.strings in Resources */,
 				6F68EFE3280CF9040012B5B1 /* LaunchScreen.storyboard in Resources */,
 				6FD357DE280D56180010D5DE /* NewsItemLargeTableViewCell.xib in Resources */,
 				6F68EFE0280CF9040012B5B1 /* Assets.xcassets in Resources */,
@@ -228,21 +232,32 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6F1CC24828100EBE0065A4BB /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6F1CC24928100EC10065A4BB /* zh-Hans */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
 		6F68EFE1280CF9040012B5B1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				6F68EFE2280CF9040012B5B1 /* Base */,
-				6F1CC24328100E6D0065A4BB /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6FB1D4EC281026EC002F44D3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6FB1D4EB281026EC002F44D3 /* en */,
+				6FB1D4EF28102901002F44D3 /* zh-Hant */,
+				6FB1D4F028102919002F44D3 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		6FB1D4F528102B59002F44D3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6FB1D4F428102B59002F44D3 /* en */,
+				6FB1D4F628102B5C002F44D3 /* zh-Hant */,
+				6FB1D4F728102B5D002F44D3 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

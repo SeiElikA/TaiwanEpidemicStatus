@@ -6,9 +6,8 @@
   
 */
 
-"CityStatistic" = "案例统计";
-"TotalCases" = "总确诊数";
-"TodayCases" = "本日确诊";
+"CityStatistic" = "案例統計";
+"TotalCases" = "總確診數";
+"TodayCases" = "本日確診";
 "News" = "最新消息";
 "More" = "更多";
-
