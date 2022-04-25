@@ -37,7 +37,8 @@ public class FastAPI {
     }
     
     private func request(url:String, method:HttpMethod = .get, headerMap:[String:String] = [:], body:Data? = nil, callBack:  @escaping ((Data?, APIError?) -> Void)) {
-        var request = URLRequest(url: URL(string: Global.baseURL + url)!)
+        let encodeUrl = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        var request = URLRequest(url: URL(string: Global.baseURL + encodeUrl)!)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         for (key,value) in headerMap {
             request.addValue(value, forHTTPHeaderField: key)

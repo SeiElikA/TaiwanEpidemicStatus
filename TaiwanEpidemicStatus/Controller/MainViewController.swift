@@ -23,6 +23,13 @@ class MainViewController: UIViewController {
     @IBOutlet weak var txtTotalCaseLabel: UILabel!
     @IBOutlet weak var txtTodayCasesLabel: UILabel!
     @IBOutlet weak var txtNewsLabel: UILabel!
+    @IBOutlet weak var txtCityList: UITextField!
+    private let cityPickerView = UIPickerView()
+    
+    private let covidModel = CovidModel()
+    
+    private var citySelectIndex = 12
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,6 +76,51 @@ class MainViewController: UIViewController {
         txtNewsLabel.text = NSLocalizedString("News", comment: "")
         btnNewsMore.setTitle(NSLocalizedString("More", comment: ""), for: .normal)
         btnCityStatisticMore.setTitle(NSLocalizedString("More", comment: ""), for: .normal)
+        
+        // Set ToolBar
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        let btnDone = UIBarButtonItem(title: "Done", style: .done, target: self ,action: #selector(btnCitySelectDone))
+        let btnCancel = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(btnCitySelectCancel))
+        let space = UIBarButtonItem.flexibleSpace()
+        toolBar.items = [btnCancel, space, btnDone]
+        txtCityList.inputAccessoryView = toolBar
+        
+        // Set Picker in txtCityList Keyboard
+        txtCityList.delegate = self
+        cityPickerView.dataSource = self
+        cityPickerView.delegate = self
+        cityPickerView.selectRow(12, inComponent: 0, animated: true)
+        txtCityList.inputView = cityPickerView
+        
+        fetchCovidData()
+    }
+    
+    private func fetchCovidData() {
+        let cityName = txtCityList.text ?? ""
+        
+        covidModel.getCitySatistic(cityName: cityName, { result in
+            let cityFirstStatistic = result[0]
+            self.txtTotalCases.text = cityFirstStatistic.totalCasesAmount
+            self.txtTodayCases.text = cityFirstStatistic.newCasesAmount
+        })
+    }
+    
+    @objc private func btnCitySelectDone() {
+        let cityName = covidModel.cityList[citySelectIndex]
+        txtCityList.text = cityName
+        
+        covidModel.getCitySatistic(cityName: cityName, { result in
+            let cityFirstStatistic = result[0]
+            self.txtTotalCases.text = cityFirstStatistic.totalCasesAmount
+            self.txtTodayCases.text = cityFirstStatistic.newCasesAmount
+        })
+        
+        view.endEditing(true)
+    }
+    
+    @objc private func btnCitySelectCancel() {
+        view.endEditing(true)
     }
 }
 
@@ -85,3 +137,37 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
+// TODO: disable user input any thing
+extension MainViewController: UITextFieldDelegate {
+    override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
+        let menuController = UIMenuController.shared
+        UIMenuController.shared.isMenuVisible = false
+        return false
+    }
+}
+
+extension MainViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+    // 滾輪數量（橫向）
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    /**
+     component: 第幾個滾輪
+     */
+    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if component == 0 {
+            return covidModel.cityList.count
+        }
+        return 0
+    }
+    
+    // 返回資料
+    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return covidModel.cityList[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.citySelectIndex = row
+    }
+}
