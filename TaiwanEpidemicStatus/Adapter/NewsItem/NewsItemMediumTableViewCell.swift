@@ -7,14 +7,15 @@
 
 import UIKit
 
-class NewsItemLargeTableViewCell: UITableViewCell {
-    public static let identity = "NewsItemLargeTableViewCell"
+class NewsItemMediumTableViewCell: UITableViewCell {
+    public static let identity = "NewsItemMediumTableViewCell"
     @IBOutlet weak var txtContent: UILabel!
     @IBOutlet weak var txtTitle: UILabel!
     @IBOutlet weak var btnShare: UIButton!
     @IBOutlet weak var imgNews: UIImageView!
     @IBOutlet weak var txtDate: UILabel!
     @IBOutlet weak var viewBackground: UIView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,7 +23,7 @@ class NewsItemLargeTableViewCell: UITableViewCell {
         
         // Setting Style
         viewBackground.layer.cornerRadius = 8
-        imgNews.layer.cornerRadius = 8
+        imgNews.layer.cornerRadius = 6
         txtDate.font = UIFont.roundedFont(txtDate.font.pointSize)
         txtContent.font = UIFont.roundedFont(txtContent.font.pointSize)
         txtTitle.font = UIFont.roundedBoldFont(txtTitle.font.pointSize)

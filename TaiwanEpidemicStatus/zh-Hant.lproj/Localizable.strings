@@ -2,12 +2,8 @@
   Localizable.strings
   TaiwanEpidemicStatus
 
-  Created by 葉家均 on 2022/4/20.
+  Created by 葉家均 on 2022/4/26.
   
 */
-
-"CityStatistic" = "案例統計";
-"TotalCases" = "總確診數";
-"TodayCases" = "本日確診";
-"News" = "最新消息";
-"More" = "更多";
+"ServerError" = "伺服器維護中，請稍候再試";
+"ServerErrorTitle" = "無法連接伺服器";

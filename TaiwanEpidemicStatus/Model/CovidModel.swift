@@ -11,23 +11,28 @@ import FastAPI
 
 public class CovidModel {
     let fastApi = FastAPI()
-    var txtCityList:UITextField?
-    public var cityList:[String] = []
-    public var cityStisticList:[CityStatistic] = []
     
     init() {
-        getCityList()
     }
     
-    public func getCityList() {
-        fastApi.get(url: "Covid/getCity", { result, error in
+    public func getCityList(result: @escaping ([String]) -> Void) {
+        fastApi.get(url: "Covid/getCity", { data, error in
             if case .requestError(let msg) = error {
                 print(msg)
                 return
             }
             
-            if let result = result {
-                self.cityList = (try? JSONDecoder().decode([String].self, from: result)) ?? []
+            if let data = data {
+                var cityList:[String] = []
+                do {
+                    cityList = try JSONDecoder().decode([String].self, from: data)
+                } catch {
+                    print("\(error)")
+                }
+                
+                DispatchQueue.main.async {
+                    result(cityList)
+                }
             }
         })
     }
@@ -40,9 +45,9 @@ public class CovidModel {
             }
             
             if let result = result {
-                self.cityStisticList = (try? JSONDecoder().decode([CityStatistic].self, from: result)) ?? []
+                let cityStisticList = (try? JSONDecoder().decode([CityStatistic].self, from: result)) ?? []
                 DispatchQueue.main.async {
-                    cityDataList(self.cityStisticList)
+                    cityDataList(cityStisticList)
                 }
             }
         })

@@ -8,6 +8,6 @@
 import Foundation
 
 public class Global {
-    static let baseURL = "http://0.0.0.0:8080/"
+    static let baseURL = "https://api.kaijun.site/"
 }
 
