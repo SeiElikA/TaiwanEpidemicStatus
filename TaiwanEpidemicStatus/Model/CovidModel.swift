@@ -52,6 +52,14 @@ public class CovidModel {
             }
         })
     }
+    
+    public func saveSelectCity(cityName:String) {
+        UserDefaults().set(cityName, forKey: "cityName")
+    }
+    
+    public func getSelectCity() -> String {
+        return UserDefaults().string(forKey: "cityName") ?? "新北市"
+    }
 }
 
 

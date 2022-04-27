@@ -28,7 +28,8 @@ public class TestModel {
                 return
             }
             
-            successful()
+            DispatchQueue.main.async { successful() }
+            
         })
     }
 }

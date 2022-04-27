@@ -9,18 +9,24 @@ import UIKit
 
 class SelectCityNavigationViewController: UIViewController {
     @IBOutlet weak var cityTableView: UITableView!
-    @IBOutlet weak var txtNetworkInfo: UILabel!
+    @IBOutlet weak var txtNetworkInfo: UIButton!
     @IBOutlet weak var loadCityActivityIndicator: UIActivityIndicatorView!
-    private lazy var timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(timeOut), userInfo: .none, repeats: false)
+    private var timer:Timer?
     
     private let covidModel = CovidModel()
     
     public var selectCity:((Int) -> Void)?
-    private var cityList:[String] = [] {
+    private var searchCityList:[String] = [] {
         didSet {
             if isViewLoaded {
-                cityTableView.reloadData()
+                self.cityTableView.reloadData()
             }
+        }
+    }
+    
+    private var cityList:[String] = [] {
+        didSet {
+            searchCityList = cityList
         }
     }
     
@@ -34,25 +40,44 @@ class SelectCityNavigationViewController: UIViewController {
         let searchController = UISearchController()
         searchController.searchBar.setShowsCancelButton(true, animated: true)
         searchController.hidesNavigationBarDuringPresentation = false
+        searchController.searchResultsUpdater = self
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationItem.searchController?.searchBar.delegate = self
         
-        covidModel.getCityList(result: {
-            self.cityList = $0
-            self.txtNetworkInfo.isHidden = true
-            self.timer.invalidate()
-            self.hideActivityIndicator()
-        })
+        timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(timeOut), userInfo: .none, repeats: false)
+        
+        fetchData()
         
         cityTableView.dataSource = self
         cityTableView.delegate = self
         cityTableView.register(UINib(nibName: SelectCityTableViewCell.identity, bundle: nil), forCellReuseIdentifier: SelectCityTableViewCell.identity)
     }
     
+    @IBAction func btnReconnectedEvent(_ sender: Any) {
+        fetchData()
+        
+        txtNetworkInfo.isHidden = true
+        loadCityActivityIndicator.startAnimating()
+        loadCityActivityIndicator.alpha = 1
+        timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(timeOut), userInfo: .none, repeats: false)
+    }
+    
+    private func fetchData() {
+        covidModel.getCityList(result: {
+            if $0.isEmpty {
+                return
+            }
+            self.cityList = $0
+            self.txtNetworkInfo.isHidden = true
+            self.timer?.invalidate()
+            self.hideActivityIndicator()
+        })
+    }
+    
     @objc private func timeOut() {
         hideActivityIndicator()
-        timer.invalidate()
+        timer?.invalidate()
         if !cityList.isEmpty {
             return
         }
@@ -72,24 +97,38 @@ class SelectCityNavigationViewController: UIViewController {
 
 extension SelectCityNavigationViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cityList.count
+        return searchCityList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: SelectCityTableViewCell.identity, for: indexPath) as! SelectCityTableViewCell
-        cell.txtTitle.text = self.cityList[indexPath.row]
+        cell.txtTitle.text = self.searchCityList[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let index = indexPath.row
-        self.selectCity?(index)
+        let selectCityName = searchCityList[index]
+        covidModel.saveSelectCity(cityName: selectCityName)
+        self.selectCity?(cityList.firstIndex(of: selectCityName) ?? 0)
         self.dismiss(animated: true)
     }
 }
 
-extension SelectCityNavigationViewController: UISearchBarDelegate {
+extension SelectCityNavigationViewController: UISearchBarDelegate, UISearchResultsUpdating {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         self.dismiss(animated: true)
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        let search = searchController.searchBar.text ?? ""
+        if search.isEmpty {
+            searchCityList = cityList
+            return
+        }
+        
+        searchCityList = cityList.filter({ city in
+            city.localizedStandardContains(search)
+        })
     }
 }

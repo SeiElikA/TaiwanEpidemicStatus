@@ -27,4 +27,22 @@ public class AuthModel {
             }
         }
     }
+    
+    public func refreshToken(result: @escaping (String) -> Void) {
+        let body = try? JSONEncoder().encode(JWTUtil.getRefreshBody())
+        
+        fastAPI.post(url: "Authentication/refreshToken", body: body) { data, error in
+            if case .requestError(let msg) = error {
+                print(msg)
+                return
+            }
+            
+            if let data = data {
+                let token = String(data: data, encoding: .utf8) ?? ""
+                DispatchQueue.main.async {
+                    result(token)
+                }
+            }
+        }
+    }
 }

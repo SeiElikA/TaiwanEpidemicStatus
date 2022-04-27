@@ -31,3 +31,5 @@
 
 /* Class = "UILabel"; text = "更新時間:2022.04.01"; ObjectID = "xHn-Ha-Leo"; */
 "xHn-Ha-Leo.text" = "更新时间: {Date}";
+
+"Tk7-Df-9wE.normalTitle" = "请确认网路连接";

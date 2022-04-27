@@ -27,7 +27,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var txtCityList: UILabel!
     @IBOutlet weak var loadNewsActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var txtUpdateTime: UILabel!
-    @IBOutlet weak var txtNetworkInfo: UILabel!
+    @IBOutlet weak var txtNetworkInfo: UIButton!
     
     // Model
     private let covidModel = CovidModel()
@@ -85,6 +85,9 @@ class MainViewController: UIViewController {
         newsTableView.delegate = self
         newsTableView.register(UINib(nibName: NewsItemMediumTableViewCell.identity, bundle: nil), forCellReuseIdentifier: NewsItemMediumTableViewCell.identity)
         
+        // Set Select City
+        txtCityList.text = covidModel.getSelectCity()
+        
         // Bottom Navigation Bar
         viewNavigationBar.clipsToBounds = false
         viewNavigationBar.layer.cornerRadius = 16
@@ -100,17 +103,40 @@ class MainViewController: UIViewController {
         }, serverError: { msg in
             self.showServerError()
         }, successful: {
+            // If token is not exist, get jwt token
+            let group = DispatchGroup()
+            
+            group.enter()
             if JWTUtil.getToken().isEmpty {
                 self.authModel.getToken(result: {
                     JWTUtil.saveToken(token: $0)
                     
-                    // get Data
-                    self.fetchData()
+                    JWTUtil.refreshToken() {
+                        self.fetchData()
+                    }
                 })
-                return
+            } else {
+                JWTUtil.refreshToken() {
+                    self.fetchData()
+                }
             }
-            
-            // get Data
+        })
+    }
+    
+    @IBAction func btnReconnectedEvent(_ sender: Any) {
+        self.txtNetworkInfo.isHidden = true
+        self.loadNewsActivityIndicator.startAnimating()
+        UIView.animate(withDuration: 0.5, delay: 0, animations: {
+            self.loadNewsActivityIndicator.alpha = 1
+        })
+        
+        // check network connection
+        testModel.testNetwork(networkError: { msg in
+            self.txtNetworkInfo.isHidden = false
+            self.loadNewsActivityIndicator.stopAnimating()
+        }, serverError: { msg in
+            self.showServerError()
+        }, successful: {
             self.fetchData()
         })
     }

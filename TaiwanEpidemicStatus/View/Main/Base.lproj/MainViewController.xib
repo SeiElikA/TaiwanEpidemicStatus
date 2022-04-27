@@ -22,7 +22,7 @@
                 <outlet property="newsTableView" destination="adP-p3-IoL" id="xan-7V-T4H"/>
                 <outlet property="txtCityCases" destination="iAY-wT-Oay" id="vf0-G6-lxE"/>
                 <outlet property="txtCityList" destination="lgm-Zc-9dA" id="AhM-w2-P25"/>
-                <outlet property="txtNetworkInfo" destination="fKN-3D-yUd" id="JLb-Ki-33g"/>
+                <outlet property="txtNetworkInfo" destination="Tk7-Df-9wE" id="Co7-U0-c6R"/>
                 <outlet property="txtNewsLabel" destination="126-3f-egq" id="e49-Rr-uR1"/>
                 <outlet property="txtTemperature" destination="Ous-H7-jE6" id="gzU-dV-Jg6"/>
                 <outlet property="txtTodayCases" destination="V2W-kd-wQh" id="e3s-pS-MJp"/>
@@ -195,12 +195,16 @@
                                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="EBJ-t4-3gN">
                                             <rect key="frame" x="20" y="178.66666666666669" width="350" height="37"/>
                                         </activityIndicatorView>
-                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are not connected to the Internet." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKN-3D-yUd">
-                                            <rect key="frame" x="0.0" y="178.66666666666669" width="390" height="21.666666666666657"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tk7-Df-9wE">
+                                            <rect key="frame" x="0.0" y="170.66666666666669" width="390" height="34"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="You are not connected to the Internet.">
+                                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="btnReconnectedEvent:" destination="-1" eventType="touchUpInside" id="yfI-fZ-rU0"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
@@ -211,14 +215,14 @@
                                         <constraint firstItem="La4-zV-Oe2" firstAttribute="leading" secondItem="Cgv-pF-Vm5" secondAttribute="leading" id="B26-gs-318"/>
                                         <constraint firstItem="adP-p3-IoL" firstAttribute="top" secondItem="GMI-ob-n0V" secondAttribute="bottom" id="CZp-af-via"/>
                                         <constraint firstAttribute="trailing" secondItem="EBJ-t4-3gN" secondAttribute="trailing" constant="20" id="FrZ-Yz-c9v"/>
-                                        <constraint firstAttribute="trailing" secondItem="fKN-3D-yUd" secondAttribute="trailing" id="J5H-WF-Pvf"/>
                                         <constraint firstAttribute="trailing" secondItem="La4-zV-Oe2" secondAttribute="trailing" id="MGH-ua-NRK"/>
                                         <constraint firstItem="EBJ-t4-3gN" firstAttribute="leading" secondItem="Cgv-pF-Vm5" secondAttribute="leading" constant="20" id="P4A-5I-gy6"/>
-                                        <constraint firstItem="fKN-3D-yUd" firstAttribute="top" secondItem="GMI-ob-n0V" secondAttribute="bottom" constant="40" id="Py8-fi-EiE"/>
+                                        <constraint firstAttribute="trailing" secondItem="Tk7-Df-9wE" secondAttribute="trailing" id="QV6-6l-U1H"/>
                                         <constraint firstItem="La4-zV-Oe2" firstAttribute="top" secondItem="Cgv-pF-Vm5" secondAttribute="top" id="Qga-3y-B01"/>
                                         <constraint firstAttribute="bottom" secondItem="adP-p3-IoL" secondAttribute="bottom" constant="100" id="hn5-D9-02Q"/>
-                                        <constraint firstItem="fKN-3D-yUd" firstAttribute="leading" secondItem="Cgv-pF-Vm5" secondAttribute="leading" id="i7C-bV-EaK"/>
+                                        <constraint firstItem="Tk7-Df-9wE" firstAttribute="top" secondItem="GMI-ob-n0V" secondAttribute="bottom" constant="32" id="ide-dE-gC0"/>
                                         <constraint firstItem="adP-p3-IoL" firstAttribute="leading" secondItem="Cgv-pF-Vm5" secondAttribute="leading" constant="20" id="lut-a6-MB9"/>
+                                        <constraint firstItem="Tk7-Df-9wE" firstAttribute="leading" secondItem="Cgv-pF-Vm5" secondAttribute="leading" id="n16-ch-Pfe"/>
                                         <constraint firstItem="EBJ-t4-3gN" firstAttribute="top" secondItem="GMI-ob-n0V" secondAttribute="bottom" constant="40" id="xPQ-8y-mey"/>
                                     </constraints>
                                 </view>

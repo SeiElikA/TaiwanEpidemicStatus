@@ -24,32 +24,32 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wm5-kR-jIM">
                         <rect key="frame" x="0.0" y="12" width="350" height="173"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="新增1,480例COVID-19確定病例，分別為1,390例本土及90例境外移入" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbn-mn-IED">
-                                <rect key="frame" x="12" y="103.66666666666667" width="326" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="新增1,480例COVID-19確定病例，分別為1,390例本土及90例境外移入" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbn-mn-IED">
+                                <rect key="frame" x="12" y="95.333333333333329" width="326" height="40.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="749" text="中央流行疫情指揮中心今(12)日公布國內新增663例COVID-19確定病例，分別為551例本土個案及112例境外移入(30例為航班落..." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bq0-Wa-dB6">
-                                <rect key="frame" x="159.66666666666663" y="10" width="178.33333333333337" height="83.666666666666671"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="749" text="中央流行疫情指揮中心今(12)日公布國內新增663例COVID-19確定病例，分別為551例本土個案及112例境外移入(30例為航班落..." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bq0-Wa-dB6">
+                                <rect key="frame" x="159.66666666666663" y="10" width="178.33333333333337" height="75.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.55294117647058827" green="0.55294117647058827" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SwM-8D-kXP">
-                                <rect key="frame" x="12" y="10" width="139.66666666666666" height="83.666666666666671"/>
+                                <rect key="frame" x="12" y="10" width="139.66666666666666" height="75.333333333333329"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gPc-Xb-qB5">
-                                <rect key="frame" x="12" y="133.66666666666666" width="326" height="29.333333333333343"/>
+                                <rect key="frame" x="12" y="142" width="326" height="21"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022.04.15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbU-cD-4XS">
-                                        <rect key="frame" x="0.0" y="6.3333333333333428" width="72.333333333333329" height="17"/>
+                                        <rect key="frame" x="0.0" y="2" width="72.333333333333329" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ky4-KN-sgW">
-                                        <rect key="frame" x="305" y="4.3333333333333428" width="21" height="21"/>
+                                        <rect key="frame" x="305" y="0.0" width="21" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Ky4-KN-sgW" secondAttribute="height" multiplier="1:1" id="UpS-t3-qem"/>
                                         </constraints>
@@ -63,7 +63,7 @@
                                 </subviews>
                             </stackView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="749" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="8Vn-04-fza">
-                                <rect key="frame" x="12" y="10" width="139.66666666666666" height="83.666666666666671"/>
+                                <rect key="frame" x="12" y="10" width="139.66666666666666" height="75.333333333333329"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

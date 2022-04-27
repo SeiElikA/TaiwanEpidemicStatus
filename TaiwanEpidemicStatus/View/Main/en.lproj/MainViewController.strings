@@ -31,3 +31,5 @@
 
 /* Class = "UILabel"; text = "更新時間:2022.04.01"; ObjectID = "xHn-Ha-Leo"; */
 "xHn-Ha-Leo.text" = "Last Update: {Date}";
+
+"Tk7-Df-9wE.normalTitle" = "You are not connected to the Internet.";

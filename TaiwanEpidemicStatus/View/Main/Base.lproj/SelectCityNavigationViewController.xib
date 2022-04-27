@@ -13,7 +13,7 @@
             <connections>
                 <outlet property="cityTableView" destination="uMC-Ok-lZW" id="TLd-NK-tD5"/>
                 <outlet property="loadCityActivityIndicator" destination="Vnb-IZ-duL" id="LJo-3y-YvO"/>
-                <outlet property="txtNetworkInfo" destination="oaz-Fl-NuQ" id="RZh-c3-Pjh"/>
+                <outlet property="txtNetworkInfo" destination="e2Q-9Q-l56" id="QhU-9p-ssI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -25,25 +25,29 @@
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uMC-Ok-lZW">
                     <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                 </tableView>
-                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are not connected to the Internet." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaz-Fl-NuQ">
-                    <rect key="frame" x="63" y="437.5" width="288.5" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Vnb-IZ-duL">
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Vnb-IZ-duL">
                     <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
                 </activityIndicatorView>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2Q-9Q-l56">
+                    <rect key="frame" x="55" y="431" width="304" height="34"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="You are not connected to the Internet.">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="btnReconnectedEvent:" destination="-1" eventType="touchUpInside" id="WUJ-L7-SqC"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="oaz-Fl-NuQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="NtH-Cx-c0P"/>
+                <constraint firstItem="e2Q-9Q-l56" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="89i-3G-cfM"/>
+                <constraint firstItem="e2Q-9Q-l56" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="FyL-QT-kgC"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uMC-Ok-lZW" secondAttribute="trailing" id="TSC-Hk-RX0"/>
                 <constraint firstAttribute="bottom" secondItem="uMC-Ok-lZW" secondAttribute="bottom" id="Vfl-74-bNl"/>
                 <constraint firstItem="Vnb-IZ-duL" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ceT-bc-wa7"/>
                 <constraint firstItem="uMC-Ok-lZW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="p7v-yW-Xkl"/>
-                <constraint firstItem="oaz-Fl-NuQ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="vRZ-gf-vkt"/>
                 <constraint firstItem="uMC-Ok-lZW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="xOp-55-01H"/>
                 <constraint firstItem="Vnb-IZ-duL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="yw7-8F-Nya"/>
             </constraints>
