@@ -16,7 +16,7 @@ public class CovidModel {
     }
     
     public func getCityList(result: @escaping ([String]) -> Void) {
-        fastApi.get(url: "Covid/getCity", { data, error in
+        fastApi.get(url: "Covid/getCity", header: JWTUtil.getJWTHeader(), { data, error in
             if case .requestError(let msg) = error {
                 print(msg)
                 return
@@ -38,7 +38,7 @@ public class CovidModel {
     }
     
     public func getCitySatistic(cityName:String, _ cityDataList: @escaping ([CityStatistic]) -> Void) {
-        fastApi.get(url: "Covid/getCityStatistic?city=" + cityName, { result, error in
+        fastApi.get(url: "Covid/getCityStatistic?city=" + cityName, header: JWTUtil.getJWTHeader(), { result, error in
             if case .requestError(let msg) = error {
                 print(msg)
                 return

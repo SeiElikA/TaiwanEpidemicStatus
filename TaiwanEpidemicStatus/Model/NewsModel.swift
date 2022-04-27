@@ -28,7 +28,7 @@ public class NewsModel {
     }
     
     public func getNewsList(page:Int, result: @escaping ([CovidNews]) -> Void, timeOut: @escaping (() -> Void) = {}) {
-        fastAPI.get(url: "News/getNews?page=\(page)", { data, error in
+        fastAPI.get(url: "News/getNews?page=\(page)",header: JWTUtil.getJWTHeader(), { data, error in
             if case .requestError(let msg) = error {
                 if msg.contains("408") {
                     timeOut()

@@ -33,6 +33,7 @@ class MainViewController: UIViewController {
     private let covidModel = CovidModel()
     private let newsModel = NewsModel()
     private let testModel = TestModel()
+    private let authModel = AuthModel()
     
     // Data
     private var citySelectIndex = 12
@@ -93,15 +94,25 @@ class MainViewController: UIViewController {
         viewSearchBox.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(btnSelectCity(_:))))
         
         // check network connection
-        testModel.getCityList(networkError: { msg in
+        testModel.testNetwork(networkError: { msg in
             self.txtNetworkInfo.isHidden = false
             self.loadNewsActivityIndicator.stopAnimating()
         }, serverError: { msg in
             self.showServerError()
+        }, successful: {
+            if JWTUtil.getToken().isEmpty {
+                self.authModel.getToken(result: {
+                    JWTUtil.saveToken(token: $0)
+                    
+                    // get Data
+                    self.fetchData()
+                })
+                return
+            }
+            
+            // get Data
+            self.fetchData()
         })
-        
-        // get Data
-        fetchData()
     }
     
     public func showServerError() {

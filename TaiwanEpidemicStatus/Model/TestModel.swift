@@ -14,7 +14,7 @@ public class TestModel {
     init() {
     }
     
-    public func getCityList(networkError: @escaping (String) -> Void, serverError: @escaping (String) -> Void) {
+    public func testNetwork(networkError: @escaping (String) -> Void, serverError: @escaping (String) -> Void, successful: @escaping () -> Void = {}) {
         fastApi.get(url: "/", { data, error in
             if case .requestError(let msg) = error {
                 print(msg)
@@ -27,6 +27,8 @@ public class TestModel {
                 }
                 return
             }
+            
+            successful()
         })
     }
 }

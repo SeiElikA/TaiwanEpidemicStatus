@@ -3,11 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38A47BFDD0FC580411B03C7A /* Pods_TaiwanEpidemicStatus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB61A84121CD21BCD2898C3 /* Pods_TaiwanEpidemicStatus.framework */; };
+		64B5012C78013B4739F070C8 /* Pods_FastAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E703CACC2C71E2097F34F01E /* Pods_FastAPI.framework */; };
 		6F194383281790DA0008A6AD /* ParseUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F194382281790DA0008A6AD /* ParseUtil.swift */; };
+		6F3A528B28192247009E042B /* AESUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3A528A28192247009E042B /* AESUtil.swift */; };
+		6F3A528D281925E2009E042B /* JWTUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3A528C281925E2009E042B /* JWTUtil.swift */; };
+		6F3A529128192728009E042B /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3A529028192728009E042B /* AuthModel.swift */; };
 		6F3B59C328179AA3005B0E31 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F3B59C528179AA3005B0E31 /* MainViewController.xib */; };
 		6F3B59CD28179D75005B0E31 /* ExtensionMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3B59CC28179D75005B0E31 /* ExtensionMethod.swift */; };
 		6F3B59D52817A437005B0E31 /* SelectCityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3B59D32817A437005B0E31 /* SelectCityTableViewCell.swift */; };
@@ -66,7 +71,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		214424F9D8D37A486553F1D4 /* Pods-FastAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastAPI.release.xcconfig"; path = "Target Support Files/Pods-FastAPI/Pods-FastAPI.release.xcconfig"; sourceTree = "<group>"; };
+		5FB61A84121CD21BCD2898C3 /* Pods_TaiwanEpidemicStatus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaiwanEpidemicStatus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F194382281790DA0008A6AD /* ParseUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseUtil.swift; sourceTree = "<group>"; };
+		6F3A528A28192247009E042B /* AESUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AESUtil.swift; sourceTree = "<group>"; };
+		6F3A528C281925E2009E042B /* JWTUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTUtil.swift; sourceTree = "<group>"; };
+		6F3A529028192728009E042B /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 		6F3B59C428179AA3005B0E31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainViewController.xib; sourceTree = "<group>"; };
 		6F3B59C728179AA9005B0E31 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainViewController.strings; sourceTree = "<group>"; };
 		6F3B59C928179AA9005B0E31 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MainViewController.strings"; sourceTree = "<group>"; };
@@ -109,6 +119,10 @@
 		6FD357DC280D56180010D5DE /* NewsItemMediumTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsItemMediumTableViewCell.xib; sourceTree = "<group>"; };
 		6FD357E0280D56D40010D5DE /* ExpandTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandTableView.swift; sourceTree = "<group>"; };
 		6FD357E5280D82C00010D5DE /* BottomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNavigationView.swift; sourceTree = "<group>"; };
+		8D67909C78ADD09DDCF94958 /* Pods-TaiwanEpidemicStatus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiwanEpidemicStatus.debug.xcconfig"; path = "Target Support Files/Pods-TaiwanEpidemicStatus/Pods-TaiwanEpidemicStatus.debug.xcconfig"; sourceTree = "<group>"; };
+		8E785FFE1EB44893FB325A9C /* Pods-TaiwanEpidemicStatus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiwanEpidemicStatus.release.xcconfig"; path = "Target Support Files/Pods-TaiwanEpidemicStatus/Pods-TaiwanEpidemicStatus.release.xcconfig"; sourceTree = "<group>"; };
+		D93E472ECDF251766AC5187E /* Pods-FastAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastAPI.debug.xcconfig"; path = "Target Support Files/Pods-FastAPI/Pods-FastAPI.debug.xcconfig"; sourceTree = "<group>"; };
+		E703CACC2C71E2097F34F01E /* Pods_FastAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FastAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F807D62281668F2009E3794 /* FastAPI.framework in Frameworks */,
+				38A47BFDD0FC580411B03C7A /* Pods_TaiwanEpidemicStatus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,12 +139,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64B5012C78013B4739F070C8 /* Pods_FastAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A48F47FFF1D98CCCB91984F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E703CACC2C71E2097F34F01E /* Pods_FastAPI.framework */,
+				5FB61A84121CD21BCD2898C3 /* Pods_TaiwanEpidemicStatus.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6F19438028178FBF0008A6AD /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				6F194382281790DA0008A6AD /* ParseUtil.swift */,
+				6F3A528A28192247009E042B /* AESUtil.swift */,
+				6F3A528C281925E2009E042B /* JWTUtil.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -171,6 +198,8 @@
 				6F68EFD2280CF9030012B5B1 /* TaiwanEpidemicStatus */,
 				6F807D5D281668F2009E3794 /* FastAPI */,
 				6F68EFD1280CF9030012B5B1 /* Products */,
+				DEF62EAFF04A76AEF5C384FB /* Pods */,
+				1A48F47FFF1D98CCCB91984F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -242,6 +271,7 @@
 				6FAFD6892816A4160060FD86 /* CovidModel.swift */,
 				6FAFD6912817848D0060FD86 /* NewsModel.swift */,
 				6F3B59E5281819E3005B0E31 /* TestModel.swift */,
+				6F3A529028192728009E042B /* AuthModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -289,6 +319,17 @@
 			path = "Bottom Navigation Bar";
 			sourceTree = "<group>";
 		};
+		DEF62EAFF04A76AEF5C384FB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D93E472ECDF251766AC5187E /* Pods-FastAPI.debug.xcconfig */,
+				214424F9D8D37A486553F1D4 /* Pods-FastAPI.release.xcconfig */,
+				8D67909C78ADD09DDCF94958 /* Pods-TaiwanEpidemicStatus.debug.xcconfig */,
+				8E785FFE1EB44893FB325A9C /* Pods-TaiwanEpidemicStatus.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -307,10 +348,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F68EFE7280CF9040012B5B1 /* Build configuration list for PBXNativeTarget "TaiwanEpidemicStatus" */;
 			buildPhases = (
+				D00A8B929F3EE065690A45BF /* [CP] Check Pods Manifest.lock */,
 				6F68EFCC280CF9030012B5B1 /* Sources */,
 				6F68EFCD280CF9030012B5B1 /* Frameworks */,
 				6F68EFCE280CF9030012B5B1 /* Resources */,
 				6F807D67281668F2009E3794 /* Embed Frameworks */,
+				6E0A13B7283AE3E8F8C3A195 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -326,6 +369,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F807D64281668F2009E3794 /* Build configuration list for PBXNativeTarget "FastAPI" */;
 			buildPhases = (
+				5854C1919FE0F9D5E9D748D9 /* [CP] Check Pods Manifest.lock */,
 				6F807D57281668F2009E3794 /* Headers */,
 				6F807D58281668F2009E3794 /* Sources */,
 				6F807D59281668F2009E3794 /* Frameworks */,
@@ -404,6 +448,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5854C1919FE0F9D5E9D748D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FastAPI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E0A13B7283AE3E8F8C3A195 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TaiwanEpidemicStatus/Pods-TaiwanEpidemicStatus-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TaiwanEpidemicStatus/Pods-TaiwanEpidemicStatus-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TaiwanEpidemicStatus/Pods-TaiwanEpidemicStatus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D00A8B929F3EE065690A45BF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TaiwanEpidemicStatus-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6F68EFCC280CF9030012B5B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -412,10 +520,13 @@
 				6F68EFD4280CF9030012B5B1 /* AppDelegate.swift in Sources */,
 				6F68EFD6280CF9030012B5B1 /* SceneDelegate.swift in Sources */,
 				6F68EFDE280CF9030012B5B1 /* TaiwanEpidemicStatus.xcdatamodeld in Sources */,
+				6F3A528B28192247009E042B /* AESUtil.swift in Sources */,
 				6FAFD68D2816D6D10060FD86 /* CityStatistic.swift in Sources */,
 				6F3B59D52817A437005B0E31 /* SelectCityTableViewCell.swift in Sources */,
 				6F3B59CD28179D75005B0E31 /* ExtensionMethod.swift in Sources */,
+				6F3A528D281925E2009E042B /* JWTUtil.swift in Sources */,
 				6F68EFEE280CF9810012B5B1 /* MainViewController.swift in Sources */,
+				6F3A529128192728009E042B /* AuthModel.swift in Sources */,
 				6FAFD68A2816A4160060FD86 /* CovidModel.swift in Sources */,
 				6F194383281790DA0008A6AD /* ParseUtil.swift in Sources */,
 				6FAFD6922817848D0060FD86 /* NewsModel.swift in Sources */,
@@ -624,6 +735,7 @@
 		};
 		6F68EFE8280CF9040012B5B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D67909C78ADD09DDCF94958 /* Pods-TaiwanEpidemicStatus.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -644,6 +756,7 @@
 		};
 		6F68EFE9280CF9040012B5B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E785FFE1EB44893FB325A9C /* Pods-TaiwanEpidemicStatus.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -664,6 +777,7 @@
 		};
 		6F807D65281668F2009E3794 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D93E472ECDF251766AC5187E /* Pods-FastAPI.debug.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_ENABLE_MODULES = YES;
@@ -698,6 +812,7 @@
 		};
 		6F807D66281668F2009E3794 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 214424F9D8D37A486553F1D4 /* Pods-FastAPI.release.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_ENABLE_MODULES = YES;

@@ -13,6 +13,7 @@ public class FastAPI {
         403: "403 Forbidden",
         400: "400 Bad Request",
         401: "401 Unauthorized",
+        405: "405 Method Not Allow",
         408: "408 Request Timeout",
         500: "500 Internal Server Error",
         502: "502 Bad Gateway",
@@ -27,20 +28,20 @@ public class FastAPI {
         request(url: url,isOtherUrl: true ,callBack: callBack)
     }
     
-    public func get(url:String, _ callBack: @escaping ((Data?, APIError?) -> Void)) {
-        request(url: url, callBack: callBack)
+    public func get(url:String, header:[String:String] = [:], _ callBack: @escaping ((Data?, APIError?) -> Void)) {
+        request(url: url,headerMap: header ,callBack: callBack)
     }
     
-    public func post(url:String, header:[String:String], body:Data, _ callBack: @escaping ((Data?, APIError?) -> Void)) {
+    public func post(url:String, header:[String:String] = [:], body:Data? = nil, _ callBack: @escaping ((Data?, APIError?) -> Void)) {
         request(url: url,method: .post,headerMap: header, body: body ,callBack: callBack)
     }
     
-    public func put(url:String, header:[String:String], body:Data, _ callBack: @escaping ((Data?, APIError?) -> Void)) {
+    public func put(url:String, header:[String:String] = [:], body:Data? = nil, _ callBack: @escaping ((Data?, APIError?) -> Void)) {
         request(url: url,method: .put,headerMap: header, body: body ,callBack: callBack)
     }
     
-    public func delete(url:String, _ callBack: @escaping ((Data?, APIError?) -> Void)) {
-        request(url: url,method: .delete, callBack: callBack)
+    public func delete(url:String, header:[String:String] = [:], _ callBack: @escaping ((Data?, APIError?) -> Void)) {
+        request(url: url,method: .delete,headerMap: header, callBack: callBack)
     }
     
     private func request(url:String, method:HttpMethod = .get, headerMap:[String:String] = [:], body:Data? = nil, isOtherUrl:Bool = false, callBack:  @escaping ((Data?, APIError?) -> Void)) {
