@@ -17,6 +17,10 @@ class NewsItemMediumTableViewCell: UITableViewCell {
     @IBOutlet weak var viewBackground: UIView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    var viewController:UIViewController?
+    var shareLink:String?
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -29,10 +33,20 @@ class NewsItemMediumTableViewCell: UITableViewCell {
         txtTitle.font = UIFont.roundedBoldFont(txtTitle.font.pointSize)
         viewBackground.layer.borderWidth = 0.5
         viewBackground.layer.borderColor = UIColor(named: "MainColor")?.cgColor
+
+    }
+    
+    @IBAction func btnShareEvent(_ sender: Any) {
+        guard let shareLink = shareLink, let viewController = viewController else {
+            return
+        }
+        
+        let url = URL(string: shareLink)!
+        let activityController = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+        viewController.present(activityController, animated: true)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
     }
 }

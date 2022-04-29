@@ -56,7 +56,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         // Setting Style
-        navigationController?.isNavigationBarHidden = true
+        navigationController?.navigationBar.isHidden = true
         txtTemperature.font = UIFont.roundedBoldFont(48)
         txtTotalCases.font = UIFont.roundedBoldFont(36)
         txtTodayCases.font = UIFont.roundedBoldFont(36)
@@ -66,7 +66,7 @@ class MainViewController: UIViewController {
         viewSearchBox.layer.cornerRadius = 4
         
         viewCityStatisticBoard.layer.cornerRadius = 8
-        viewCityStatisticBoard.layer.shadowColor = UIColor.black.cgColor
+        viewCityStatisticBoard.layer.shadowColor = UIColor(named: "MainShadowColor")?.cgColor
         viewCityStatisticBoard.layer.shadowRadius = 6
         viewCityStatisticBoard.layer.shadowOpacity = 0.2
         viewCityStatisticBoard.layer.shadowOffset = CGSize(width: 0, height: 2)
@@ -80,6 +80,7 @@ class MainViewController: UIViewController {
         btnScan.layer.cornerRadius = (btnScan.frame.height / 2)
         btnScan.layer.shadowOpacity = 0.1
         btnScan.layer.shadowRadius = 4
+        btnScan.layer.shadowColor = UIColor(named: "MainShadowColor")?.cgColor
         
         newsTableView.dataSource = self
         newsTableView.delegate = self
@@ -96,31 +97,49 @@ class MainViewController: UIViewController {
         // click search box event
         viewSearchBox.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(btnSelectCity(_:))))
         
+        // add scrollView Refresh
+        let refreshControl = UIRefreshControl()
+        mainScrollView.refreshControl = refreshControl
+        mainScrollView.refreshControl?.addTarget(self, action: #selector(checkNetworkAndFetchData), for: .valueChanged)
+        
+        checkNetworkAndFetchData()
+    }
+    
+    @objc private func checkNetworkAndFetchData() {
         // check network connection
         testModel.testNetwork(networkError: { msg in
+            print(msg)
             self.txtNetworkInfo.isHidden = false
             self.loadNewsActivityIndicator.stopAnimating()
         }, serverError: { msg in
+            print(msg)
             self.showServerError()
         }, successful: {
             // If token is not exist, get jwt token
-            let group = DispatchGroup()
-            
-            group.enter()
+            let dispatch = DispatchSemaphore(value: 0)
             if JWTUtil.getToken().isEmpty {
                 self.authModel.getToken(result: {
                     JWTUtil.saveToken(token: $0)
-                    
-                    JWTUtil.refreshToken() {
-                        self.fetchData()
-                    }
+                    dispatch.signal()
                 })
             } else {
-                JWTUtil.refreshToken() {
-                    self.fetchData()
-                }
+                dispatch.signal()
             }
+            
+            dispatch.wait()
+            
+            let dispatchGroup = DispatchGroup()
+            JWTUtil.refreshToken() {
+                self.fetchData(dispatchGroup: dispatchGroup)
+            }
+            dispatchGroup.wait()
+            self.mainScrollView.refreshControl?.endRefreshing()
         })
+    }
+    
+    @IBAction func btnMoreNewsEvent(_ sender: Any) {
+        let newsController = NewsViewController()
+        self.navigationController?.pushViewController(newsController, animated: true)
     }
     
     @IBAction func btnReconnectedEvent(_ sender: Any) {
@@ -163,18 +182,21 @@ class MainViewController: UIViewController {
         navigationController?.present(navigationView, animated: true)
     }
     
-    private func fetchData() {
+    private func fetchData(dispatchGroup:DispatchGroup? = nil) {
         // get City Statistic (first open application default city)
         let cityName = txtCityList.text ?? ""
         getCityStatistic(cityName: cityName)
-        
+        dispatchGroup?.enter()
         // get News
         newsModel.getNewsList(page: 1, result: {
             self.covidNewsList = Array($0.prefix(5))
+            dispatchGroup?.leave()
         })
         
+        dispatchGroup?.enter()
         covidModel.getCityList(result: {
             self.cityList = $0
+            dispatchGroup?.leave()
         })
     }
     
@@ -199,6 +221,8 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         cell.txtTitle.text = covidNewsData.title
         cell.txtContent.text = covidNewsData.paragraph
         cell.txtDate.text = ParseUtil.covidNewsDateFormat(dateString: covidNewsData.time.dateTime)
+        cell.shareLink = covidNewsData.titleLink
+        cell.viewController = self
         
         newsModel.getNewsImage(url: covidNewsData.url, result: {
             cell.imgNews.alpha = 0
@@ -208,6 +232,9 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
                 cell.imgNews.alpha = 1
             }, completion: {_ in cell.activityIndicator.stopAnimating()})
         })
+        
+        cell.tag = indexPath.row  
+        cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selectNews(_:))))
         
         cell.clipsToBounds = false
         return cell
@@ -219,5 +246,12 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         UIView.animate(withDuration: 0.5, delay: 0.05 * Double(indexPath.row), animations: {
             cell.alpha = 1
         })
+    }
+    
+    @objc private func selectNews(_ view:UIGestureRecognizer) {
+        let index = view.view?.tag ?? 0
+        let detailViewController = NewsDetailViewController()
+        detailViewController.udnUrlString = self.covidNewsList[index].titleLink
+        self.navigationController?.pushViewController(detailViewController, animated: true)
     }
 }

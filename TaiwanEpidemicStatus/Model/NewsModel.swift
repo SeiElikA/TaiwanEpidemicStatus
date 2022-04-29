@@ -8,6 +8,7 @@
 import Foundation
 import FastAPI
 import UIKit
+import WebKit
 
 public class NewsModel {
     private let fastAPI = FastAPI()
@@ -47,6 +48,31 @@ public class NewsModel {
                  
                 DispatchQueue.main.async {
                     result(covidNewsData)
+                }
+            }
+        })
+    }
+    
+    public func getUDNNewsContent(url:String, _ content: @escaping ((UDNNews) -> Void), serverNotRunning: @escaping (() -> Void) = {}) {
+        fastAPI.get(url: "News/getNewsContent?url=\(url)",header: JWTUtil.getJWTHeader(), { data, error in
+            if case .requestError(let msg) = error {
+                print(msg)
+                if msg.contains("Server Not Running") {
+                    DispatchQueue.main.async {
+                        serverNotRunning()
+                    }
+                }
+                return
+            }
+            
+            if let data = data {
+                do {
+                    let udnNews = try JSONDecoder().decode(UDNNews.self, from: data)
+                    DispatchQueue.main.async {
+                        content(udnNews)
+                    }
+                } catch {
+                    print("\(error)")
                 }
             }
         })

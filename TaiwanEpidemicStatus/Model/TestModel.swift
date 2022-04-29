@@ -29,7 +29,6 @@ public class TestModel {
             }
             
             DispatchQueue.main.async { successful() }
-            
         })
     }
 }

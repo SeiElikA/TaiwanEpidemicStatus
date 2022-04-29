@@ -8,3 +8,5 @@
 
 "ServerError" = "Server Maintenance";
 "ServerErrorTitle" = "Can't Connected Server";
+"NewsAuthor" = "Author";
+"NewsSource" = "Source";

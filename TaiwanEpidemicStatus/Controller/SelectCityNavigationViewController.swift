@@ -41,6 +41,7 @@ class SelectCityNavigationViewController: UIViewController {
         searchController.searchBar.setShowsCancelButton(true, animated: true)
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchResultsUpdater = self
+        searchController.searchBar.autocapitalizationType = .none
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationItem.searchController?.searchBar.delegate = self
@@ -102,7 +103,9 @@ extension SelectCityNavigationViewController: UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: SelectCityTableViewCell.identity, for: indexPath) as! SelectCityTableViewCell
-        cell.txtTitle.text = self.searchCityList[indexPath.row]
+        let cityName = self.searchCityList[indexPath.row]
+        cell.accessoryType = cityName == covidModel.getSelectCity() ? .checkmark : .none
+        cell.txtTitle.text = cityName
         return cell
     }
     

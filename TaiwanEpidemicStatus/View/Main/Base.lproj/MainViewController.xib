@@ -50,7 +50,7 @@
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oLj-nB-BBr">
                             <rect key="frame" x="0.0" y="422" width="390" height="422"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" name="MainBackground"/>
                         </view>
                     </subviews>
                 </stackView>
@@ -184,6 +184,9 @@
                                                     <state key="normal" title="更多">
                                                         <imageReference key="image" image="chevron.right" catalog="system" symbolScale="small"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="btnMoreNewsEvent:" destination="-1" eventType="touchUpInside" id="PcR-C2-lcz"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>
@@ -369,7 +372,7 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GnX-JW-7dd">
                             <rect key="frame" x="165" y="-30" width="60" height="60"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" name="MainBackground"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="amo-vO-d8J"/>
                                 <constraint firstAttribute="width" secondItem="GnX-JW-7dd" secondAttribute="height" multiplier="1:1" id="dKO-Xz-D2d"/>
@@ -437,6 +440,9 @@
         <image name="sun.max" catalog="system" width="32" height="32"/>
         <namedColor name="DeathRedColor">
             <color red="0.81568627450980391" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MainBackground">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="MainColor">
             <color red="0.28235294117647058" green="0.49411764705882355" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -7,3 +7,5 @@
 */
 "ServerError" = "伺服器维护中，请稍候再试";
 "ServerErrorTitle" = "无法连接伺服器";
+"NewsAuthor" = "记者";
+"NewsSource" = "来源";
