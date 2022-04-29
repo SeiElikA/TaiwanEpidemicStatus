@@ -1,0 +1,35 @@
+
+/* Class = "UILabel"; text = "最新消息"; ObjectID = "126-3f-egq"; */
+"126-3f-egq.text" = "最新信息";
+
+/* Class = "UILabel"; text = "9,313"; ObjectID = "ImC-YS-zGh"; */
+"ImC-YS-zGh.text" = "0";
+
+/* Class = "UILabel"; text = "總確診數"; ObjectID = "Mpw-zg-A6l"; */
+"Mpw-zg-A6l.text" = "总确诊数";
+
+/* Class = "UILabel"; text = "死亡人數"; ObjectID = "Mqs-ge-ln6"; */
+"Mqs-ge-ln6.text" = "本日确诊";
+
+/* Class = "UIButton"; normalTitle = "更多"; ObjectID = "Tsw-Du-MxQ"; */
+"Tsw-Du-MxQ.normalTitle" = "更多";
+
+/* Class = "UILabel"; text = "854"; ObjectID = "V2W-kd-wQh"; */
+"V2W-kd-wQh.text" = "0";
+
+/* Class = "UIButton"; normalTitle = "更多"; ObjectID = "fUW-50-WoL"; */
+"fUW-50-WoL.normalTitle" = "更多";
+
+/* Class = "UILabel"; text = "案例統計"; ObjectID = "iAY-wT-Oay"; */
+"iAY-wT-Oay.text" = "案例统计";
+
+/* Class = "UILabel"; text = "新北市 - 土城區"; ObjectID = "mGR-Ln-9gx"; */
+"mGR-Ln-9gx.text" = "新北市 - 土城區";
+
+/* Class = "UITextField"; text = "新北市"; ObjectID = "tGZ-Gh-uZj"; */
+"tGZ-Gh-uZj.text" = "新北市";
+
+/* Class = "UILabel"; text = "更新時間:2022.04.01"; ObjectID = "xHn-Ha-Leo"; */
+"xHn-Ha-Leo.text" = "更新时间: {Date}";
+
+"Tk7-Df-9wE.normalTitle" = "请确认网路连接";

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsImagePreviewViewController" customModule="TaiwanEpidemicStatus" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundView" destination="i5M-Pr-FkT" id="81R-gp-e9G"/>
+                <outlet property="imgNews" destination="pfS-CI-IiH" id="96t-rK-ChZ"/>
+                <outlet property="scrollView" destination="TBH-Oh-mas" id="26b-em-t4Y"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" maximumZoomScale="5" translatesAutoresizingMaskIntoConstraints="NO" id="TBH-Oh-mas">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3iN-yY-uBJ">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ExNewsImage" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pfS-CI-IiH">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="3iN-yY-uBJ" firstAttribute="trailing" secondItem="OUY-Vl-60i" secondAttribute="trailing" id="6nG-hV-HTh"/>
+                        <constraint firstItem="pfS-CI-IiH" firstAttribute="width" secondItem="CAw-SL-slJ" secondAttribute="width" id="HZg-M3-JYB"/>
+                        <constraint firstItem="3iN-yY-uBJ" firstAttribute="top" secondItem="OUY-Vl-60i" secondAttribute="top" id="K2O-Fa-H1o"/>
+                        <constraint firstItem="pfS-CI-IiH" firstAttribute="height" secondItem="CAw-SL-slJ" secondAttribute="height" id="L2v-7P-i64"/>
+                        <constraint firstItem="3iN-yY-uBJ" firstAttribute="leading" secondItem="OUY-Vl-60i" secondAttribute="leading" id="UrY-bi-N74"/>
+                        <constraint firstItem="3iN-yY-uBJ" firstAttribute="bottom" secondItem="OUY-Vl-60i" secondAttribute="bottom" id="gTQ-md-dyI"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="OUY-Vl-60i"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="CAw-SL-slJ"/>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yd0-dx-Gqm">
+                    <rect key="frame" x="366" y="56" width="36" height="36"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="Close Button"/>
+                    <connections>
+                        <action selector="btnCloseEvent:" destination="-1" eventType="touchUpInside" id="tqa-oT-Ap4"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TBH-Oh-mas" secondAttribute="trailing" id="O1k-oL-W2E"/>
+                <constraint firstItem="TBH-Oh-mas" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Oge-5U-e2G"/>
+                <constraint firstItem="TBH-Oh-mas" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Zg2-1s-R4k"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yd0-dx-Gqm" secondAttribute="trailing" constant="12" id="raI-Np-BS8"/>
+                <constraint firstItem="yd0-dx-Gqm" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="sJX-wx-zEq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="TBH-Oh-mas" secondAttribute="bottom" id="uwg-FS-HCz"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="128.57142857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Close Button" width="36" height="36"/>
+        <image name="ExNewsImage" width="1280" height="720"/>
+    </resources>
+</document>

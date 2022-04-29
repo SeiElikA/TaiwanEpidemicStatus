@@ -2,12 +2,11 @@
   Localizable.strings
   TaiwanEpidemicStatus
 
-  Created by 葉家均 on 2022/4/20.
+  Created by 葉家均 on 2022/4/26.
   
 */
-"CityStatistic" = "City Statistic";
-"TotalCases" = "Total Cases";
-"TodayCases" = "Today Cases";
-"News" = "News";
-"More" = "More";
 
+"ServerError" = "Server Maintenance";
+"ServerErrorTitle" = "Can't Connected Server";
+"NewsAuthor" = "Author";
+"NewsSource" = "Source";
