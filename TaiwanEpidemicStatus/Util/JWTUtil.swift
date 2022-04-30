@@ -60,7 +60,7 @@ public class JWTUtil {
     public static func refreshToken(complete: @escaping () -> Void = {}) {
         DispatchQueue.global(qos: .background).async {
             let authModel = AuthModel()
-            var test = 0
+            var first = true
             
             while(true) {
                 let semaphore = DispatchSemaphore(value: 0)
@@ -73,11 +73,10 @@ public class JWTUtil {
                 }
                 semaphore.wait()
                 
-                if test != 1 {
-                    DispatchQueue.main.async {
-                        complete()
-                    }
-                    test = 1
+                if first {
+                    complete()
+                    
+                    first.toggle()
                 }
                 
                 sleep(1)

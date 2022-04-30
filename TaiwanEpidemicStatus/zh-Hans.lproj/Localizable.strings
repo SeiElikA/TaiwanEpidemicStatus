@@ -5,7 +5,7 @@
   Created by 葉家均 on 2022/4/26.
   
 */
-"ServerError" = "伺服器维护中，请稍候再试";
-"ServerErrorTitle" = "无法连接伺服器";
+"ServerError" = "服务器维护中，请稍候再试";
+"ServerErrorTitle" = "无法连接服务器";
 "NewsAuthor" = "记者";
 "NewsSource" = "来源";

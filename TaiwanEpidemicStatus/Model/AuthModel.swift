@@ -21,9 +21,8 @@ public class AuthModel {
             
             if let data = data {
                 let token = String(data: data, encoding: .utf8) ?? ""
-                DispatchQueue.main.async {
-                    result(token)
-                }
+                JWTUtil.saveGetTokenTime()
+                result(token)
             }
         }
     }

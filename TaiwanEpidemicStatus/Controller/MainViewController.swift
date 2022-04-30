@@ -111,6 +111,8 @@ class MainViewController: UIViewController {
             print(msg)
             self.txtNetworkInfo.isHidden = false
             self.loadNewsActivityIndicator.stopAnimating()
+            self.mainScrollView.refreshControl?.endRefreshing()
+            self.covidNewsList = []
         }, serverError: { msg in
             print(msg)
             self.showServerError()
@@ -125,16 +127,24 @@ class MainViewController: UIViewController {
             } else {
                 dispatch.signal()
             }
-            
             dispatch.wait()
             
-            let dispatchGroup = DispatchGroup()
             JWTUtil.refreshToken() {
-                self.fetchData(dispatchGroup: dispatchGroup)
+                self.fetchData() {
+                    DispatchQueue.main.async {
+                        hideLoadView()
+                    }
+                }
             }
-            dispatchGroup.wait()
-            self.mainScrollView.refreshControl?.endRefreshing()
         })
+        
+        func hideLoadView() {
+            self.loadNewsActivityIndicator.fadeOutAnimate(during: 0.5, completion: {
+                self.txtNetworkInfo.isHidden = true
+                self.loadNewsActivityIndicator.stopAnimating()
+            })
+            self.mainScrollView.refreshControl?.endRefreshing()
+        }
     }
     
     @IBAction func btnMoreNewsEvent(_ sender: Any) {
@@ -145,9 +155,7 @@ class MainViewController: UIViewController {
     @IBAction func btnReconnectedEvent(_ sender: Any) {
         self.txtNetworkInfo.isHidden = true
         self.loadNewsActivityIndicator.startAnimating()
-        UIView.animate(withDuration: 0.5, delay: 0, animations: {
-            self.loadNewsActivityIndicator.alpha = 1
-        })
+        loadNewsActivityIndicator.fadeInAnimate(during: 0.5)
         
         // check network connection
         testModel.testNetwork(networkError: { msg in
@@ -160,7 +168,7 @@ class MainViewController: UIViewController {
         })
     }
     
-    public func showServerError() {
+    private func showServerError() {
         let errorMsg = NSLocalizedString("ServerError", comment: "")
         let errorMsgTitle = NSLocalizedString("ServerErrorTitle", comment: "")
         let alertController = UIAlertController(title: errorMsgTitle, message: errorMsg, preferredStyle: .alert)
@@ -182,22 +190,28 @@ class MainViewController: UIViewController {
         navigationController?.present(navigationView, animated: true)
     }
     
-    private func fetchData(dispatchGroup:DispatchGroup? = nil) {
+    private func fetchData(complection: (() -> Void)? = nil) {
         // get City Statistic (first open application default city)
-        let cityName = txtCityList.text ?? ""
+        let dispatchGroup = DispatchGroup()
+        var cityName = ""
+        cityName = self.covidModel.getSelectCity()
+        
         getCityStatistic(cityName: cityName)
-        dispatchGroup?.enter()
         // get News
+        dispatchGroup.enter()
         newsModel.getNewsList(page: 1, result: {
             self.covidNewsList = Array($0.prefix(5))
-            dispatchGroup?.leave()
+            dispatchGroup.leave()
         })
         
-        dispatchGroup?.enter()
+        dispatchGroup.enter()
         covidModel.getCityList(result: {
             self.cityList = $0
-            dispatchGroup?.leave()
+            dispatchGroup.leave()
         })
+        
+        dispatchGroup.wait()
+        complection?()
     }
     
     private func getCityStatistic(cityName:String) {

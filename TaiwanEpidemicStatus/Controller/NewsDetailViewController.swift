@@ -20,12 +20,14 @@ class NewsDetailViewController: UIViewController{
     @IBOutlet weak var loadActivityindicator: UIActivityIndicatorView!
     @IBOutlet var rootView: UIView!
     @IBOutlet weak var txtAuthor: UILabel!
+    @IBOutlet weak var btnRefresh: UIButton!
     
     var newsContentImage:[Int:UIImage] = [:]
     var udnUrlString = ""
     var debugUrl = "https://udn.com/news/story/7332/6274560"
     
     private var newsModel = NewsModel()
+    private var testModel = TestModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +35,18 @@ class NewsDetailViewController: UIViewController{
         self.navigationController?.isNavigationBarHidden = true
         self.navigationController?.interactivePopGestureRecognizer?.delegate = nil // UINavigationController Swipe Back
 
-        // Set Title under line
+        // Set Title under line style
         viewUnderLine.layer.cornerRadius = viewUnderLine.bounds.height / 2
+        
+        self.checkNetwork()
+        
+        imgCover.isUserInteractionEnabled = true
+        imgCover.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(openCoverImageEvent)))
+    }
+    
+    private func fetchNewsContent() {
+        self.loadActivityindicator.fadeInAnimate(during: 0.5)
+        self.loadActivityindicator.startAnimating()
         
         // get news content
         newsModel.getUDNNewsContent(url: udnUrlString, { data in
@@ -70,12 +82,11 @@ class NewsDetailViewController: UIViewController{
                     self.stackNewsContent.addArrangedSubview(component)
                 }
             })
+            
+            self.btnRefresh.isHidden = true
         }, serverNotRunning: {
             self.showServerNotRunningAlert()
         })
-        
-        imgCover.isUserInteractionEnabled = true
-        imgCover.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(openCoverImageEvent)))
     }
     
     @objc private func openCoverImageEvent() {
@@ -124,14 +135,31 @@ class NewsDetailViewController: UIViewController{
 
         self.newsModel.getNewsImage(url: imgUrl, result: {
             self.imgCover.image = $0
-            self.loadActivityindicator.stopAnimating()
+            self.imgCover.fadeInAnimate(during: 0.5)
+            self.loadActivityindicator.fadeOutAnimate(during: 0.5, completion: {
+                self.loadActivityindicator.stopAnimating()
+            })
+        })
+    }
+    
+    private func checkNetwork() {
+        testModel.testNetwork(networkError: { msg in
+            print(msg)
+            self.btnRefresh.isHidden = false
+            self.loadActivityindicator.fadeOutAnimate(during: 0.5, completion: {
+                self.loadActivityindicator.stopAnimating()
+            })
+        }, serverError: { msg in
+            print(msg)
+            self.showServerNotRunningAlert()
+        }, successful: {
+            self.fetchNewsContent()
         })
     }
     
     @IBAction func btnClose(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
-    
     
     public func getNewsComponent(block:UDNBlock) -> UIView {
         switch(block.block_type) {
@@ -143,7 +171,6 @@ class NewsDetailViewController: UIViewController{
             return getNewsVideo(videoUrl: block.video_url)
         case "title":
             return getNewsTitle(text: block.text)
-        
         default:
             return UIView()
         }
@@ -217,5 +244,9 @@ class NewsDetailViewController: UIViewController{
         viewController.modalTransitionStyle = .crossDissolve
         viewController.previewImage = img
         self.present(viewController, animated: true)
+    }
+    
+    @IBAction func btnReconnectedEvent(_ sender: Any) {
+        self.checkNetwork()
     }
 }

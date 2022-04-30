@@ -33,6 +33,9 @@
                                     <state key="normal" image="BackButton">
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
                                     </state>
+                                    <connections>
+                                        <action selector="btnCloseEvent:" destination="-1" eventType="touchUpInside" id="hxB-1u-t8c"/>
+                                    </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="疫情新聞" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aps-El-Sdn">
                                     <rect key="frame" x="18" y="52" width="125.5" height="37"/>

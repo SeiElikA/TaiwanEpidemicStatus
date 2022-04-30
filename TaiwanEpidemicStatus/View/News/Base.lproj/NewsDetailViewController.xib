@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsDetailViewController" customModule="TaiwanEpidemicStatus" customModuleProvider="target">
             <connections>
+                <outlet property="btnRefresh" destination="P6H-lK-8Qy" id="isW-rX-Ilb"/>
                 <outlet property="btnShare" destination="aHR-KM-0Kk" id="jiz-Bn-6yl"/>
                 <outlet property="imgCover" destination="esO-jU-lnO" id="2Ha-Rv-cwZ"/>
                 <outlet property="loadActivityindicator" destination="6rc-YJ-7ub" id="YoJ-IX-hs0"/>
@@ -34,7 +35,7 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpU-dq-hA2">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="401.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="400.5"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="esO-jU-lnO">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="286.5"/>
@@ -85,16 +86,24 @@
                                     </constraints>
                                 </view>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="eGv-NG-PYg">
-                                    <rect key="frame" x="20" y="400.5" width="374" height="1"/>
+                                    <rect key="frame" x="20" y="400.5" width="374" height="0.0"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dNB-hn-YN9">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="1"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="1" id="lri-Ow-Th9"/>
-                                            </constraints>
-                                        </view>
+                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6H-lK-8Qy">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="0.0"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="You are not connected to the Internet.">
+                                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="btnReconnectedEvent:" destination="-1" eventType="touchUpInside" id="1gu-1u-YoE"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="P6H-lK-8Qy" secondAttribute="trailing" id="rg2-D9-iTW"/>
+                                        <constraint firstItem="P6H-lK-8Qy" firstAttribute="leading" secondItem="eGv-NG-PYg" secondAttribute="leading" id="ygh-6I-sC0"/>
+                                    </constraints>
                                 </stackView>
                                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="6rc-YJ-7ub">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="286.5"/>

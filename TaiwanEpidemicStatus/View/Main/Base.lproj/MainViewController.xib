@@ -177,8 +177,8 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tsw-Du-MxQ">
-                                                    <rect key="frame" x="304.66666666666669" y="6" width="37.333333333333314" height="17"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                                    <rect key="frame" x="302.66666666666669" y="5.3333333333333144" width="39.333333333333314" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                     <color key="tintColor" name="MainColor"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" title="更多">
@@ -253,8 +253,8 @@
                                                     </subviews>
                                                 </stackView>
                                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUW-50-WoL">
-                                                    <rect key="frame" x="272.66666666666669" y="0.0" width="37.333333333333314" height="54"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                                    <rect key="frame" x="270.66666666666669" y="0.0" width="39.333333333333314" height="54"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                     <color key="tintColor" name="MainColor"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" title="更多">
@@ -436,8 +436,8 @@
         <image name="LocationIcon" width="16" height="21"/>
         <image name="PassportIcon" width="40" height="40"/>
         <image name="QRcodeIcon" width="36" height="36"/>
-        <image name="chevron.right" catalog="system" width="32" height="32"/>
-        <image name="sun.max" catalog="system" width="32" height="32"/>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <image name="sun.max" catalog="system" width="128" height="124"/>
         <namedColor name="DeathRedColor">
             <color red="0.81568627450980391" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

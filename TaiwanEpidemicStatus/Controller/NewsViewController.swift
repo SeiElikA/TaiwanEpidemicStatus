@@ -44,6 +44,10 @@ class NewsViewController: UIViewController {
             
         })
     }
+    
+    @IBAction func btnCloseEvent(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
 }
 
 extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
