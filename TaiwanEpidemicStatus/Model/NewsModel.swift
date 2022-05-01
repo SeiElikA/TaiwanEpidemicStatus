@@ -57,7 +57,7 @@ public class NewsModel {
         fastAPI.get(url: "News/getNewsContent?url=\(url)",header: JWTUtil.getJWTHeader(), { data, error in
             if case .requestError(let msg) = error {
                 print(msg)
-                if msg.contains("Server Not Running") {
+                if msg.starts(with: "5") {
                     DispatchQueue.main.async {
                         serverNotRunning()
                     }
