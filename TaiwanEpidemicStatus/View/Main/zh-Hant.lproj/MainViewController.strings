@@ -24,10 +24,10 @@
 "iAY-wT-Oay.text" = "案例統計";
 
 /* Class = "UILabel"; text = "新北市 - 土城區"; ObjectID = "mGR-Ln-9gx"; */
-"mGR-Ln-9gx.text" = "新北市 - 土城區";
+"mGR-Ln-9gx.text" = "   ";
 
 /* Class = "UITextField"; text = "新北市"; ObjectID = "tGZ-Gh-uZj"; */
-"tGZ-Gh-uZj.text" = "新北市";
+"tGZ-Gh-uZj.text" = "";
 
 /* Class = "UILabel"; text = "更新時間:2022.04.01"; ObjectID = "xHn-Ha-Leo"; */
 "xHn-Ha-Leo.text" = "更新時間: {Date}";

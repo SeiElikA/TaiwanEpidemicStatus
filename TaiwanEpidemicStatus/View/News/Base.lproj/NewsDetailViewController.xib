@@ -40,6 +40,9 @@
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="esO-jU-lnO">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="286.5"/>
                                 </imageView>
+                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="6rc-YJ-7ub">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="286.5"/>
+                                </activityIndicatorView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHR-KM-0Kk">
                                     <rect key="frame" x="359.5" y="8" width="36.5" height="36"/>
                                     <color key="tintColor" name="MainColor"/>
@@ -105,9 +108,6 @@
                                         <constraint firstItem="P6H-lK-8Qy" firstAttribute="leading" secondItem="eGv-NG-PYg" secondAttribute="leading" id="ygh-6I-sC0"/>
                                     </constraints>
                                 </stackView>
-                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="6rc-YJ-7ub">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="286.5"/>
-                                </activityIndicatorView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPK-zo-9L3">
                                     <rect key="frame" x="42" y="355" width="8" height="17"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>

@@ -8,20 +8,16 @@
 import UIKit
 
 class NewsViewController: UIViewController {
-    @IBOutlet weak var udnNewsTableView: UITableView!
+    @IBOutlet weak var allNewsTableView: UITableView!
+    @IBOutlet weak var viewTabNavigation: UIView!
+    @IBOutlet weak var allNewsCollection: UICollectionView!
     
     private let newsModel = NewsModel()
     private var newsPage = 0
     private var covidNewsList:[CovidNews] = [] {
         didSet {
             if isViewLoaded {
-                // fade animation hide load news activity indicator
-                UIView.animate(withDuration: 0.5, delay: 0, animations: {
-                   // self.loadNewsActivityIndicator.alpha = 0
-                }, completion: { _ in
-                   // self.loadNewsActivityIndicator.stopAnimating()
-                })
-                self.udnNewsTableView.reloadData()
+                self.allNewsTableView.reloadData()
             }
         }
     }
@@ -29,11 +25,20 @@ class NewsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Setting Style
+        viewTabNavigation.layer.cornerRadius = viewTabNavigation.bounds.height / 2
 
-        // Do any additional setup after loading the view.
-        udnNewsTableView.delegate = self
-        udnNewsTableView.dataSource = self
-        udnNewsTableView.register(UINib(nibName: NewsItemMediumTableViewCell.identity, bundle: nil), forCellReuseIdentifier: NewsItemMediumTableViewCell.identity)
+        // Settign TableView
+        allNewsTableView.delegate = self
+        allNewsTableView.dataSource = self
+        allNewsTableView.register(UINib(nibName: NewsItemMediumTableViewCell.identity, bundle: nil), forCellReuseIdentifier: NewsItemMediumTableViewCell.identity)
+        
+        // Setting CollectionView
+        allNewsCollection.dataSource = self
+        allNewsCollection.delegate = self
+        allNewsCollection.register(UINib(nibName: AllNewsCollectionViewCell.identity, bundle: nil), forCellWithReuseIdentifier: AllNewsCollectionViewCell.identity)
+        
         fetchNewsList()
     }
     
@@ -93,5 +98,16 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
         let detailViewController = NewsDetailViewController()
         detailViewController.udnUrlString = self.covidNewsList[index].titleLink
         self.navigationController?.pushViewController(detailViewController, animated: true)
+    }
+}
+
+extension NewsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ : UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AllNewsCollectionViewCell.identity, for: indexPath) as! AllNewsCollectionViewCell
+        return cell
     }
 }

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AllNewsCollectionViewCell" customModule="TaiwanEpidemicStatus" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="240"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="390" height="240"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="ExNewsImage" translatesAutoresizingMaskIntoConstraints="NO" id="CDt-vq-el0">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="200.5"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新增630例COVID-19確定病例，..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2g-pq-ga0">
+                        <rect key="frame" x="24" y="212.5" width="342" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="AZ0-0t-GnJ">
+                        <rect key="frame" x="239.5" y="174.5" width="150.5" height="26"/>
+                        <color key="pageIndicatorTintColor" red="0.68627450980392157" green="0.68627450980392157" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="currentPageIndicatorTintColor" name="MainColor"/>
+                    </pageControl>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="CDt-vq-el0" firstAttribute="bottom" secondItem="AZ0-0t-GnJ" secondAttribute="bottom" id="2eY-lo-pSD"/>
+                <constraint firstAttribute="bottom" secondItem="L2g-pq-ga0" secondAttribute="bottom" constant="8" id="9ou-OG-t7G"/>
+                <constraint firstAttribute="trailing" secondItem="L2g-pq-ga0" secondAttribute="trailing" constant="24" id="DIg-AZ-htg"/>
+                <constraint firstAttribute="trailing" secondItem="AZ0-0t-GnJ" secondAttribute="trailing" id="E86-z6-eL8"/>
+                <constraint firstItem="CDt-vq-el0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="LsL-o0-L8o"/>
+                <constraint firstAttribute="trailing" secondItem="CDt-vq-el0" secondAttribute="trailing" id="X2W-L2-i4B"/>
+                <constraint firstItem="CDt-vq-el0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="fXc-d3-QpH"/>
+                <constraint firstItem="L2g-pq-ga0" firstAttribute="top" secondItem="CDt-vq-el0" secondAttribute="bottom" constant="12" id="gg9-J3-MGf"/>
+                <constraint firstItem="L2g-pq-ga0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="24" id="xqF-gi-dIe"/>
+            </constraints>
+            <size key="customSize" width="390" height="241"/>
+            <connections>
+                <outlet property="imgNews" destination="CDt-vq-el0" id="WsC-TL-1zV"/>
+                <outlet property="newsPageControl" destination="AZ0-0t-GnJ" id="wiY-si-Mcg"/>
+                <outlet property="txtNewsCaption" destination="L2g-pq-ga0" id="cyc-ai-bCg"/>
+            </connections>
+            <point key="canvasLocation" x="313.04347826086956" y="-63.616071428571423"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ExNewsImage" width="1280" height="720"/>
+        <namedColor name="MainColor">
+            <color red="0.28235294117647058" green="0.49411764705882355" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

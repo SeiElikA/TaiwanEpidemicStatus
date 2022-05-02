@@ -17,11 +17,13 @@
                 <outlet property="btnCityStatisticMore" destination="fUW-50-WoL" id="Ai9-LI-cfp"/>
                 <outlet property="btnNewsMore" destination="Tsw-Du-MxQ" id="7tp-40-Ccm"/>
                 <outlet property="btnScan" destination="GnX-JW-7dd" id="cJh-mB-arR"/>
+                <outlet property="imgWeatherIcon" destination="tDD-6I-IyQ" id="Yeb-EU-Go8"/>
                 <outlet property="loadNewsActivityIndicator" destination="EBJ-t4-3gN" id="uEt-48-pug"/>
                 <outlet property="mainScrollView" destination="bK0-6t-sAZ" id="D4s-a0-URY"/>
                 <outlet property="newsTableView" destination="adP-p3-IoL" id="xan-7V-T4H"/>
                 <outlet property="txtCityCases" destination="iAY-wT-Oay" id="vf0-G6-lxE"/>
                 <outlet property="txtCityList" destination="lgm-Zc-9dA" id="AhM-w2-P25"/>
+                <outlet property="txtLocation" destination="mGR-Ln-9gx" id="JqT-ej-NUg"/>
                 <outlet property="txtNetworkInfo" destination="Tk7-Df-9wE" id="Co7-U0-c6R"/>
                 <outlet property="txtNewsLabel" destination="126-3f-egq" id="e49-Rr-uR1"/>
                 <outlet property="txtTemperature" destination="Ous-H7-jE6" id="gzU-dV-Jg6"/>
@@ -69,8 +71,8 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SZF-1F-CYU" userLabel="View Temperature">
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="276"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新北市 - 土城區" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGR-Ln-9gx">
-                                            <rect key="frame" x="20" y="12" width="100" height="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGR-Ln-9gx">
+                                            <rect key="frame" x="20" y="12" width="11.666666666666664" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>

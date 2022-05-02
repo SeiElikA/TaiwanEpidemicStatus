@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import CoreLocation
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, CLLocationManagerDelegate {
     // UI Component
+    @IBOutlet weak var imgWeatherIcon: UIImageView!
     @IBOutlet weak var mainScrollView: UIScrollView!
     @IBOutlet weak var newsTableView: UITableView!
     @IBOutlet weak var txtTemperature: UILabel!
@@ -28,25 +30,24 @@ class MainViewController: UIViewController {
     @IBOutlet weak var loadNewsActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var txtUpdateTime: UILabel!
     @IBOutlet weak var txtNetworkInfo: UIButton!
+    @IBOutlet weak var txtLocation: UILabel!
     
     // Model
     private let covidModel = CovidModel()
     private let newsModel = NewsModel()
     private let testModel = TestModel()
     private let authModel = AuthModel()
+    private let weatherModel = WeatherModel()
     
     // Data
+    private var locationManager = CLLocationManager()
     private var citySelectIndex = 12
     private var cityList:[String] = []
     private var covidNewsList:[CovidNews] = [] {
         didSet {
             if isViewLoaded {
                 // fade animation hide load news activity indicator
-                UIView.animate(withDuration: 0.5, delay: 0, animations: {
-                    self.loadNewsActivityIndicator.alpha = 0
-                }, completion: { _ in
-                    self.loadNewsActivityIndicator.stopAnimating()
-                })
+                self.loadNewsActivityIndicator.fadeOutAnimate(during: 0.5)
                 self.newsTableView.reloadData()
             }
         }
@@ -102,7 +103,18 @@ class MainViewController: UIViewController {
         mainScrollView.refreshControl = refreshControl
         mainScrollView.refreshControl?.addTarget(self, action: #selector(checkNetworkAndFetchData), for: .valueChanged)
         
+        setLocationManager()
         checkNetworkAndFetchData()
+    }
+    
+    private func setLocationManager() {
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization() // user 授權
+        if locationManager.authorizationStatus == .denied {
+            self.txtLocation.text = "Weather"
+        }
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest // 設定為最佳精度
+        locationManager.startUpdatingLocation() // 開始update user 位置
     }
     
     @objc private func checkNetworkAndFetchData() {
@@ -221,6 +233,30 @@ class MainViewController: UIViewController {
             self.txtTodayCases.text = cityFirstStatistic.newCasesAmount
             self.txtUpdateTime.text = self.txtUpdateTime.text?.replace("{Date}", cityFirstStatistic.announcementDate.replace("-", "."))
         })
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        DispatchQueue.global(qos: .background).async {
+            let userLocation = locations[0]
+            self.weatherModel.getWeatherData(location: userLocation, weathers: {
+                let data = $0[0]
+                self.txtLocation.text = $1
+                self.txtTemperature.text = "\(data.MinT)~\(data.MaxT)°C"
+                let weatherIcon = self.weatherModel.getWeatherIcon(wX: data.Wx)
+                self.imgWeatherIcon.tintColor = weatherIcon.first?.value
+                self.imgWeatherIcon.image = weatherIcon.first?.key
+                
+            },timeOut: {
+                self.txtNetworkInfo.isHidden = false
+                self.loadNewsActivityIndicator.stopAnimating()
+            })
+        }
+    }
+    
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        if manager.authorizationStatus == .denied {
+            self.txtLocation.text = "Weather"
+        }
     }
 }
 
