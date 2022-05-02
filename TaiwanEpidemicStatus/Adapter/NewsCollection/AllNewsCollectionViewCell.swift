@@ -12,14 +12,12 @@ class AllNewsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imgNews: UIImageView!
     @IBOutlet weak var txtNewsCaption: UILabel!
     @IBOutlet weak var newsPageControl: UIPageControl!
+    @IBOutlet weak var loadImgActivityIndicator: UIActivityIndicatorView!
     
-    public var newsPosition = 0
     override func awakeFromNib() {
         super.awakeFromNib()
         
         imgNews.layer.cornerRadius = 8
-        self.newsPageControl.currentPage = newsPosition
-        
     }
 
 }

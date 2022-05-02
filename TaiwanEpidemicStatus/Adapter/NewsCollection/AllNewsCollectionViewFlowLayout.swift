@@ -12,15 +12,17 @@ class AllNewsCollectionViewFlowLayout: UICollectionViewFlowLayout {
         let height = collectionView!.bounds.height
         let width = collectionView!.bounds.width
         
+        let topPadding = CGFloat(12)
+        let bottomPadding = CGFloat(0)
+        
         let itemSizeHeight = height
-        let itemSizeWidth = itemSizeHeight * 1.7
+        let itemSizeWidth = itemSizeHeight * 1.3
         self.itemSize = CGSize(width: itemSizeWidth, height: itemSizeHeight)
         self.scrollDirection = .horizontal
-        
-        let insertTop = CGFloat(24)
-        let insertBottom = CGFloat(10)
+        self.minimumLineSpacing = -10
+
         let insertHorizontal = (width - itemSizeWidth) / 2
-        self.sectionInset = UIEdgeInsets(top: insertTop, left: insertHorizontal, bottom: insertBottom, right: insertHorizontal)
+        self.sectionInset = UIEdgeInsets(top: topPadding, left: insertHorizontal, bottom: bottomPadding, right: insertHorizontal)
     }
     
     override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
@@ -34,7 +36,7 @@ class AllNewsCollectionViewFlowLayout: UICollectionViewFlowLayout {
         attrs?.forEach({
             let offsetCenter = targetP.x + width / 2
             let offsetX = $0.center.x - offsetCenter
-            if abs(offsetX) < minSpace {
+            if abs(offsetX) < abs(minSpace) {
                 minSpace = offsetX
             }
         })
@@ -54,7 +56,9 @@ class AllNewsCollectionViewFlowLayout: UICollectionViewFlowLayout {
         attrs?.forEach({
             let position = ($0.center.x - centerOffset) / width
             let scale = 1 - abs(position) * (1 - 0.7)
+            let alpha = 1 - abs(position) * (1 - 0.4)
             $0.transform = CGAffineTransform(scaleX: scale, y: scale)
+            $0.alpha = alpha
         })
         
         return attrs  

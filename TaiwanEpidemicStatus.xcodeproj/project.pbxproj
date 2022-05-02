@@ -352,8 +352,8 @@
 		6FD357D9280D55D30010D5DE /* Adapter */ = {
 			isa = PBXGroup;
 			children = (
-				6F3F09A6281E983900407DBD /* NewsCollection */,
 				6F3B59D32817A437005B0E31 /* SelectCityTableViewCell.swift */,
+				6F3F09A6281E983900407DBD /* NewsCollection */,
 				6FD357DA280D55DD0010D5DE /* NewsItem */,
 			);
 			path = Adapter;

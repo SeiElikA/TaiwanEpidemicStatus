@@ -228,6 +228,9 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     
     private func getCityStatistic(cityName:String) {
         covidModel.getCitySatistic(cityName: cityName, { result in
+            if result.isEmpty {
+                return
+            }
             let cityFirstStatistic = result[0]
             self.txtTotalCases.text = cityFirstStatistic.totalCasesAmount
             self.txtTodayCases.text = cityFirstStatistic.newCasesAmount
@@ -270,7 +273,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         let covidNewsData = self.covidNewsList[indexPath.row]
         cell.txtTitle.text = covidNewsData.title
         cell.txtContent.text = covidNewsData.paragraph
-        cell.txtDate.text = ParseUtil.covidNewsDateFormat(dateString: covidNewsData.time.dateTime)
+        cell.txtDate.text = ParseUtil.covidNewsDateFormat(dateString: covidNewsData.time.dateTime) + "｜" + covidNewsData.cateTitle
         cell.shareLink = covidNewsData.titleLink
         cell.viewController = self
         
@@ -286,6 +289,10 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         cell.tag = indexPath.row  
         cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selectNews(_:))))
         
+        cell.layer.shadowColor = UIColor(named: "MainColor")?.cgColor
+        cell.layer.shadowRadius = 3
+        cell.layer.shadowOpacity = 0.3
+        cell.layer.shadowOffset = CGSize(width: 0, height: 3)
         cell.clipsToBounds = false
         return cell
     }
