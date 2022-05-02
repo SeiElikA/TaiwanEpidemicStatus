@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsViewController" customModule="TaiwanEpidemicStatus" customModuleProvider="target">
+            <connections>
+                <outlet property="allNewsCollection" destination="0mg-of-M36" id="sMl-nq-00d"/>
+                <outlet property="allNewsTableView" destination="HLS-nI-RGK" id="vgy-UA-d4c"/>
+                <outlet property="btnReconnected" destination="NIi-Rk-jgm" id="2Oe-Gg-HOL"/>
+                <outlet property="cdcNewsTableView" destination="WP3-uV-M22" id="a3v-EV-ZLq"/>
+                <outlet property="loadNewsActivityIndicator" destination="Wei-lV-yb0" id="L57-4n-b3M"/>
+                <outlet property="loadingView" destination="bhW-ob-3Jm" id="pDn-rO-T4d"/>
+                <outlet property="mainViewBackground" destination="vki-gl-S8V" id="1i4-49-Ono"/>
+                <outlet property="scrollView" destination="fTm-6f-Oab" id="YUw-lp-Gas"/>
+                <outlet property="txtAllNews" destination="9K5-os-VIt" id="Ihg-yD-mHo"/>
+                <outlet property="txtCDCNews" destination="FAt-lL-lxc" id="G7T-Xo-4G1"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewAllNews" destination="fTm-6f-Oab" id="ROQ-XE-rIe"/>
+                <outlet property="viewCDCNews" destination="TqN-V5-T5V" id="706-Q9-hW2"/>
+                <outlet property="viewTabNavigation" destination="h5k-ni-Dqf" id="ZUP-QZ-ipJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vki-gl-S8V">
+                    <rect key="frame" x="0.0" y="44" width="390" height="140"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="261" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucS-Qt-Xan">
+                            <rect key="frame" x="18" y="8" width="36" height="36"/>
+                            <color key="tintColor" name="MainColor"/>
+                            <state key="normal" image="BackButton">
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
+                            </state>
+                            <connections>
+                                <action selector="btnCloseEvent:" destination="-1" eventType="touchUpInside" id="hxB-1u-t8c"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="疫情新聞" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aps-El-Sdn">
+                            <rect key="frame" x="18.000000000000007" y="52" width="125.66666666666669" height="37"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全部新聞" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9K5-os-VIt">
+                            <rect key="frame" x="20" y="101" width="66" height="20"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="衛福部新聞" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAt-lL-lxc">
+                            <rect key="frame" x="126" y="101" width="82" height="20"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h5k-ni-Dqf" userLabel="TabNavigationView">
+                            <rect key="frame" x="19.999999999999996" y="125" width="39.666666666666657" height="3"/>
+                            <color key="backgroundColor" name="MainColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="3" id="8H8-Zf-4VO"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="9K5-os-VIt" firstAttribute="top" secondItem="aps-El-Sdn" secondAttribute="bottom" constant="12" id="3hw-gA-xgq"/>
+                        <constraint firstAttribute="bottom" secondItem="h5k-ni-Dqf" secondAttribute="bottom" constant="12" id="9Yl-IT-zK5"/>
+                        <constraint firstItem="h5k-ni-Dqf" firstAttribute="top" secondItem="9K5-os-VIt" secondAttribute="bottom" constant="4" id="CCt-LE-gsg"/>
+                        <constraint firstItem="FAt-lL-lxc" firstAttribute="leading" secondItem="9K5-os-VIt" secondAttribute="trailing" constant="40" id="MBv-aD-7U7"/>
+                        <constraint firstItem="aps-El-Sdn" firstAttribute="top" secondItem="ucS-Qt-Xan" secondAttribute="bottom" constant="8" id="Y6g-AV-XbW"/>
+                        <constraint firstItem="h5k-ni-Dqf" firstAttribute="leading" secondItem="9K5-os-VIt" secondAttribute="leading" id="afN-fx-hFy"/>
+                        <constraint firstItem="ucS-Qt-Xan" firstAttribute="leading" secondItem="vki-gl-S8V" secondAttribute="leading" constant="18" id="cOW-JJ-fDq"/>
+                        <constraint firstItem="aps-El-Sdn" firstAttribute="leading" secondItem="vki-gl-S8V" secondAttribute="leading" constant="18" id="q8h-gI-xLK"/>
+                        <constraint firstItem="FAt-lL-lxc" firstAttribute="top" secondItem="aps-El-Sdn" secondAttribute="bottom" constant="12" id="qp3-Fu-4Pq"/>
+                        <constraint firstItem="9K5-os-VIt" firstAttribute="leading" secondItem="vki-gl-S8V" secondAttribute="leading" constant="20" id="sr5-a5-mj2"/>
+                        <constraint firstItem="h5k-ni-Dqf" firstAttribute="width" secondItem="9K5-os-VIt" secondAttribute="width" multiplier="0.6" id="yBF-N7-9FD"/>
+                        <constraint firstItem="ucS-Qt-Xan" firstAttribute="top" secondItem="vki-gl-S8V" secondAttribute="top" constant="8" id="yuq-2c-ohC"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TqN-V5-T5V" userLabel="CDC News Scroll View">
+                    <rect key="frame" x="390" y="184" width="390" height="626"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R8X-Po-beh" userLabel="CDC View">
+                            <rect key="frame" x="0.0" y="0.0" width="390" height="729"/>
+                            <subviews>
+                                <tableView tag="1" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WP3-uV-M22" customClass="ExpandTableView" customModule="TaiwanEpidemicStatus" customModuleProvider="target">
+                                    <rect key="frame" x="24" y="0.0" width="342" height="717"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="717" placeholder="YES" id="eIT-dH-nx7"/>
+                                    </constraints>
+                                </tableView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="WP3-uV-M22" firstAttribute="leading" secondItem="R8X-Po-beh" secondAttribute="leading" constant="24" id="Gf8-AQ-0b1"/>
+                                <constraint firstAttribute="trailing" secondItem="WP3-uV-M22" secondAttribute="trailing" constant="24" id="JpP-bP-1EZ"/>
+                                <constraint firstItem="WP3-uV-M22" firstAttribute="top" secondItem="R8X-Po-beh" secondAttribute="top" id="X5g-Vq-gfy"/>
+                                <constraint firstAttribute="bottom" secondItem="WP3-uV-M22" secondAttribute="bottom" constant="12" id="Yl8-6o-Hke"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="R8X-Po-beh" firstAttribute="bottom" secondItem="BYX-O2-A7B" secondAttribute="bottom" id="1R7-vt-hiL"/>
+                        <constraint firstItem="R8X-Po-beh" firstAttribute="top" secondItem="BYX-O2-A7B" secondAttribute="top" id="4x6-Pc-vQg"/>
+                        <constraint firstItem="R8X-Po-beh" firstAttribute="width" secondItem="eh4-fU-cyb" secondAttribute="width" id="IjW-RI-8Qq"/>
+                        <constraint firstItem="R8X-Po-beh" firstAttribute="leading" secondItem="BYX-O2-A7B" secondAttribute="leading" id="VPI-TM-V7Z"/>
+                        <constraint firstItem="R8X-Po-beh" firstAttribute="trailing" secondItem="BYX-O2-A7B" secondAttribute="trailing" id="j2k-rs-vD7"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="BYX-O2-A7B"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="eh4-fU-cyb"/>
+                </scrollView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTm-6f-Oab" userLabel="All News Scroll View">
+                    <rect key="frame" x="0.0" y="184" width="390" height="626"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V7j-Fc-uS0" userLabel="All View">
+                            <rect key="frame" x="0.0" y="0.0" width="390" height="645"/>
+                            <subviews>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="0mg-of-M36">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="228"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LJR-om-yE7" customClass="AllNewsCollectionViewFlowLayout" customModule="TaiwanEpidemicStatus" customModuleProvider="target">
+                                        <size key="itemSize" width="128" height="128"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                </collectionView>
+                                <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HLS-nI-RGK" customClass="ExpandTableView" customModule="TaiwanEpidemicStatus" customModuleProvider="target">
+                                    <rect key="frame" x="24" y="240" width="342" height="393"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="393" placeholder="YES" id="b1Q-X6-WkX"/>
+                                    </constraints>
+                                </tableView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="HLS-nI-RGK" firstAttribute="top" secondItem="0mg-of-M36" secondAttribute="bottom" constant="12" id="5rU-Cn-keT"/>
+                                <constraint firstItem="0mg-of-M36" firstAttribute="top" secondItem="V7j-Fc-uS0" secondAttribute="top" id="Bp6-c0-9kj"/>
+                                <constraint firstAttribute="trailing" secondItem="0mg-of-M36" secondAttribute="trailing" id="CPg-ZQ-GR9"/>
+                                <constraint firstItem="HLS-nI-RGK" firstAttribute="leading" secondItem="V7j-Fc-uS0" secondAttribute="leading" constant="24" id="EJk-qP-lda"/>
+                                <constraint firstItem="0mg-of-M36" firstAttribute="leading" secondItem="V7j-Fc-uS0" secondAttribute="leading" id="PQq-MY-E51"/>
+                                <constraint firstAttribute="bottom" secondItem="HLS-nI-RGK" secondAttribute="bottom" constant="12" id="lqp-oF-PVe"/>
+                                <constraint firstAttribute="trailing" secondItem="HLS-nI-RGK" secondAttribute="trailing" constant="24" id="tsD-fU-kmS"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="V7j-Fc-uS0" firstAttribute="bottom" secondItem="Zgq-16-aU4" secondAttribute="bottom" id="8LJ-SE-Jrl"/>
+                        <constraint firstItem="V7j-Fc-uS0" firstAttribute="top" secondItem="uTi-t3-7Lc" secondAttribute="top" id="PHf-r7-WCT"/>
+                        <constraint firstItem="V7j-Fc-uS0" firstAttribute="width" secondItem="uTi-t3-7Lc" secondAttribute="width" id="Xif-sM-a9f"/>
+                        <constraint firstItem="V7j-Fc-uS0" firstAttribute="trailing" secondItem="uTi-t3-7Lc" secondAttribute="trailing" id="bht-kZ-bDe"/>
+                        <constraint firstItem="V7j-Fc-uS0" firstAttribute="leading" secondItem="Zgq-16-aU4" secondAttribute="leading" id="mak-gI-JoI"/>
+                        <constraint firstItem="V7j-Fc-uS0" firstAttribute="leading" secondItem="uTi-t3-7Lc" secondAttribute="leading" id="mr7-kq-VDH"/>
+                        <constraint firstItem="V7j-Fc-uS0" firstAttribute="top" secondItem="Zgq-16-aU4" secondAttribute="top" id="tiC-td-sFl"/>
+                        <constraint firstItem="V7j-Fc-uS0" firstAttribute="trailing" secondItem="Zgq-16-aU4" secondAttribute="trailing" id="z6X-dI-tft"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="Zgq-16-aU4"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="uTi-t3-7Lc"/>
+                </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bhW-ob-3Jm" userLabel="Loading View">
+                    <rect key="frame" x="0.0" y="184" width="390" height="626"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Wei-lV-yb0">
+                            <rect key="frame" x="0.0" y="24" width="390" height="37"/>
+                        </activityIndicatorView>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIi-Rk-jgm">
+                            <rect key="frame" x="0.0" y="27" width="390" height="34"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="You are not connected to the Internet.">
+                                <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="btnReconntedEvent:" destination="-1" eventType="touchUpInside" id="vcf-QK-g60"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="NIi-Rk-jgm" secondAttribute="trailing" id="4sp-X1-j5T"/>
+                        <constraint firstItem="Wei-lV-yb0" firstAttribute="leading" secondItem="bhW-ob-3Jm" secondAttribute="leading" id="GDg-EP-aN7"/>
+                        <constraint firstItem="Wei-lV-yb0" firstAttribute="top" secondItem="bhW-ob-3Jm" secondAttribute="top" constant="24" id="GKk-9X-Kcg"/>
+                        <constraint firstAttribute="trailing" secondItem="Wei-lV-yb0" secondAttribute="trailing" id="LIU-0d-Big"/>
+                        <constraint firstItem="NIi-Rk-jgm" firstAttribute="top" secondItem="bhW-ob-3Jm" secondAttribute="top" constant="27" id="WiW-ob-tBB"/>
+                        <constraint firstItem="NIi-Rk-jgm" firstAttribute="leading" secondItem="bhW-ob-3Jm" secondAttribute="leading" id="m4s-H3-0sh"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="TqN-V5-T5V" firstAttribute="leading" secondItem="fTm-6f-Oab" secondAttribute="trailing" id="2UH-sH-xxR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="fTm-6f-Oab" secondAttribute="bottom" id="42W-dt-AHW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bhW-ob-3Jm" secondAttribute="trailing" id="4uu-db-yR5"/>
+                <constraint firstItem="vki-gl-S8V" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="8QQ-pl-A4k"/>
+                <constraint firstItem="TqN-V5-T5V" firstAttribute="width" secondItem="fTm-6f-Oab" secondAttribute="width" id="Eva-4Z-wI9"/>
+                <constraint firstItem="vki-gl-S8V" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="HIy-K9-fFT"/>
+                <constraint firstItem="vki-gl-S8V" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="UFw-o4-6lO"/>
+                <constraint firstItem="TqN-V5-T5V" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Vt9-hg-yJm"/>
+                <constraint firstItem="bhW-ob-3Jm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bbJ-gK-Jqi"/>
+                <constraint firstItem="TqN-V5-T5V" firstAttribute="top" secondItem="vki-gl-S8V" secondAttribute="bottom" id="cZ8-Dn-WFm"/>
+                <constraint firstItem="fTm-6f-Oab" firstAttribute="top" secondItem="vki-gl-S8V" secondAttribute="bottom" id="lGY-ad-vTj"/>
+                <constraint firstItem="bhW-ob-3Jm" firstAttribute="top" secondItem="vki-gl-S8V" secondAttribute="bottom" id="mKE-r4-Pb4"/>
+                <constraint firstItem="0mg-of-M36" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.27" id="mpu-61-m2M"/>
+                <constraint firstItem="fTm-6f-Oab" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="tJf-ho-L8Z"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="bhW-ob-3Jm" secondAttribute="bottom" id="wOV-Ax-YeM"/>
+                <constraint firstItem="fTm-6f-Oab" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="xjx-yW-BBB"/>
+            </constraints>
+            <point key="canvasLocation" x="130.76923076923077" y="126.54028436018957"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="BackButton" width="36" height="36"/>
+        <namedColor name="MainColor">
+            <color red="0.28235294117647058" green="0.49411764705882355" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

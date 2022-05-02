@@ -28,12 +28,9 @@ public class NewsModel {
         })
     }
     
-    public func getNewsList(page:Int, result: @escaping ([CovidNews]) -> Void, timeOut: @escaping (() -> Void) = {}) {
+    public func getAllNewsList(page:Int, result: @escaping ([CovidNews]) -> Void) {
         fastAPI.get(url: "News/getNews?page=\(page)",header: JWTUtil.getJWTHeader(), { data, error in
             if case .requestError(let msg) = error {
-                if msg.contains("408") {
-                    timeOut()
-                }
                 print(msg)
                 return
             }
@@ -46,8 +43,26 @@ public class NewsModel {
                     print("\(error)")
                 }
                  
-                DispatchQueue.main.async {
-                    result(covidNewsData)
+                result(covidNewsData)
+            }
+        })
+    }
+    
+    public func getCDCNewsList(result: @escaping ([CDCNews]) -> Void) {
+        fastAPI.get(url: "News/getCDCNews",header: JWTUtil.getJWTHeader(), { data, error in
+            if case .requestError(let msg) = error {
+                print(msg)
+                return
+            }
+            
+            if let data = data {
+                var cdcNewsList:[CDCNews] = []
+                do {
+                    cdcNewsList = try JSONDecoder().decode([CDCNews].self, from: data)
+                    
+                        result(cdcNewsList)
+                } catch {
+                    print(error)
                 }
             }
         })

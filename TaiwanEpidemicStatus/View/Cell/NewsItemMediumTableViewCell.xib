@@ -36,7 +36,7 @@
                                 <color key="textColor" red="0.55294117647058827" green="0.55294117647058827" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SwM-8D-kXP">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="ImgPlaceHolder" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SwM-8D-kXP">
                                 <rect key="frame" x="12" y="10" width="139.66666666666666" height="79.333333333333329"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gPc-Xb-qB5">
@@ -116,6 +116,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="ImgPlaceHolder" width="668" height="300"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <namedColor name="MainColor">
             <color red="0.28235294117647058" green="0.49411764705882355" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -45,10 +45,12 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     private var cityList:[String] = []
     private var covidNewsList:[CovidNews] = [] {
         didSet {
-            if isViewLoaded {
-                // fade animation hide load news activity indicator
-                self.loadNewsActivityIndicator.fadeOutAnimate(during: 0.5)
-                self.newsTableView.reloadData()
+            DispatchQueue.main.async {
+                if self.isViewLoaded {
+                    // fade animation hide load news activity indicator
+                    self.loadNewsActivityIndicator.fadeOutAnimate(during: 0.5)
+                    self.newsTableView.reloadData()
+                }
             }
         }
     }
@@ -127,7 +129,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
             self.covidNewsList = []
         }, serverError: { msg in
             print(msg)
-            self.showServerError()
+            self.showServerNotRunningAlert()
         }, successful: {
             // If token is not exist, get jwt token
             let dispatch = DispatchSemaphore(value: 0)
@@ -174,23 +176,12 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
             self.txtNetworkInfo.isHidden = false
             self.loadNewsActivityIndicator.stopAnimating()
         }, serverError: { msg in
-            self.showServerError()
+            self.showServerNotRunningAlert()
         }, successful: {
             self.fetchData()
         })
     }
-    
-    private func showServerError() {
-        let errorMsg = NSLocalizedString("ServerError", comment: "")
-        let errorMsgTitle = NSLocalizedString("ServerErrorTitle", comment: "")
-        let alertController = UIAlertController(title: errorMsgTitle, message: errorMsg, preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "OK", style: .destructive, handler: { _ in
-            exit(0)
-        })
-        alertController.addAction(alertAction)
-        present(alertController, animated: true)
-    }
-    
+
     @IBAction func btnSelectCity(_ sender: Any) {
         let navigationView = UINavigationController(rootViewController: SelectCityNavigationViewController())
         let viewController = navigationView.viewControllers.first as! SelectCityNavigationViewController
@@ -211,7 +202,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         getCityStatistic(cityName: cityName)
         // get News
         dispatchGroup.enter()
-        newsModel.getNewsList(page: 1, result: {
+        newsModel.getAllNewsList(page: 1, result: {
             self.covidNewsList = Array($0.prefix(5))
             dispatchGroup.leave()
         })

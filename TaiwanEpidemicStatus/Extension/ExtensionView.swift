@@ -26,3 +26,15 @@ extension UIFont {
         return UIFont.systemFont(ofSize:fontSize)
     }
 }
+
+extension UIViewController {
+    func showServerNotRunningAlert() {
+        let serverErrorMsg = NSLocalizedString("ServerError", comment: "")
+        let alertController = UIAlertController(title: "Error", message: serverErrorMsg, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .destructive, handler: { _ in
+            self.navigationController?.popViewController(animated: true)
+        })
+        alertController.addAction(alertAction)
+        self.present(alertController, animated: true)
+    }
+}

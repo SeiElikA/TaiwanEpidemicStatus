@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "全部新聞"; ObjectID = "9K5-os-VIt"; */
+"9K5-os-VIt.text" = "All News";
+
+/* Class = "UILabel"; text = "衛福部新聞"; ObjectID = "FAt-lL-lxc"; */
+"FAt-lL-lxc.text" = "CDC News";
+
+/* Class = "UILabel"; text = "疫情新聞"; ObjectID = "aps-El-Sdn"; */
+"aps-El-Sdn.text" = "Covid News";

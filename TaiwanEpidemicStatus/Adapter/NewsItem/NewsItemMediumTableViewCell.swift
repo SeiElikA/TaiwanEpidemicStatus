@@ -26,14 +26,13 @@ class NewsItemMediumTableViewCell: UITableViewCell {
         // Initialization code
         
         // Setting Style
-        viewBackground.layer.cornerRadius = 8
         imgNews.layer.cornerRadius = 6
         txtDate.font = UIFont.roundedFont(txtDate.font.pointSize)
         txtContent.font = UIFont.roundedFont(txtContent.font.pointSize)
         txtTitle.font = UIFont.roundedBoldFont(txtTitle.font.pointSize)
+        viewBackground.layer.cornerRadius = 8
         viewBackground.layer.borderWidth = 0.5
         viewBackground.layer.borderColor = UIColor(named: "MainColor")?.cgColor
-
     }
     
     @IBAction func btnShareEvent(_ sender: Any) {

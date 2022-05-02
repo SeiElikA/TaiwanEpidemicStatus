@@ -22,9 +22,13 @@ class NewsDetailViewController: UIViewController{
     @IBOutlet weak var txtAuthor: UILabel!
     @IBOutlet weak var btnRefresh: UIButton!
     
+    // if is udn news
     var newsContentImage:[Int:UIImage] = [:]
     var udnUrlString = ""
     var debugUrl = "https://udn.com/news/story/7332/6274560"
+    
+    // if is cdc news
+    var cdcData: CDCNews?
     
     private var newsModel = NewsModel()
     private var testModel = TestModel()
@@ -38,10 +42,29 @@ class NewsDetailViewController: UIViewController{
         // Set Title under line style
         viewUnderLine.layer.cornerRadius = viewUnderLine.bounds.height / 2
         
-        self.checkNetwork()
-        
         imgCover.isUserInteractionEnabled = true
         imgCover.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(openCoverImageEvent)))
+        
+        if let cdcData = cdcData {
+            self.loadActivityindicator.stopAnimating()
+            removeCoverImage()
+            
+            let format = DateFormatter()
+            format.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            let date = format.date(from: cdcData.pubDate) ?? Date()
+            format.dateFormat = "yyyy.MM.dd HH:mm"
+        
+            self.txtDate.text = format.string(from: date)
+            self.txtTitle.text = cdcData.title
+            self.txtSource.text = "Source: Taiwan Centers for Disease Control Official"
+        
+            let context = cdcData.content.replace("<br><br>", "").replace("&lt;br /&gt;", "").replace("\n", "\n\r")
+            let label = getNewsLabel(text: context)
+            self.stackNewsContent.addArrangedSubview(label)
+        } else {
+            self.checkNetwork()
+        }
+        
     }
     
     private func fetchNewsContent() {
@@ -102,34 +125,14 @@ class NewsDetailViewController: UIViewController{
     }
 
     @IBAction func btnShareEvent(_ sender: Any) {
-        let activityViewController = UIActivityViewController(activityItems: [URL(string: self.udnUrlString)!], applicationActivities: nil)
+        let activityViewController = UIActivityViewController(activityItems: [URL(string: cdcData?.link ?? self.udnUrlString)!], applicationActivities: nil)
         present(activityViewController, animated: true)
-    }
-    
-    private func showServerNotRunningAlert() {
-        let serverErrorMsg = NSLocalizedString("ServerError", comment: "")
-        let alertController = UIAlertController(title: "Error", message: serverErrorMsg, preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "OK", style: .destructive, handler: { _ in
-            self.navigationController?.popViewController(animated: true)
-        })
-        alertController.addAction(alertAction)
-        present(alertController, animated: true)
     }
     
     private func getCoverImage(imgUrl:String?) {
         guard let imgUrl = imgUrl else {
             self.loadActivityindicator.stopAnimating()
-            
-            // if not have coverimg, remove imgCover
-            self.imgCover.translatesAutoresizingMaskIntoConstraints = false
-            self.rootView.constraints.forEach({
-                if $0.firstAnchor == imgCover.heightAnchor {
-                    rootView.removeConstraint($0)
-                }
-            })
-            let constraint = self.imgCover.heightAnchor.constraint(equalToConstant: 52)
-            constraint.isActive = true
-            
+            removeCoverImage()
             return
         }
 
@@ -140,6 +143,18 @@ class NewsDetailViewController: UIViewController{
                 self.loadActivityindicator.stopAnimating()
             })
         })
+    }
+    
+    private func removeCoverImage() {
+        // if not have coverimg, remove imgCover
+        self.imgCover.translatesAutoresizingMaskIntoConstraints = false
+        self.rootView.constraints.forEach({
+            if $0.firstAnchor == imgCover.heightAnchor {
+                rootView.removeConstraint($0)
+            }
+        })
+        let constraint = self.imgCover.heightAnchor.constraint(equalToConstant: 52)
+        constraint.isActive = true
     }
     
     private func checkNetwork() {

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="173" id="KGk-i7-Jjw" customClass="NewsItemMediumNotImageTableViewCell" customModule="TaiwanEpidemicStatus" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="197"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="350" height="197"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8dm-FI-IjP">
+                        <rect key="frame" x="0.0" y="12" width="350" height="173"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="新增1,480例COVID-19確定病例，分別為1,390例本土及90例境外移入" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqp-rg-nYa">
+                                <rect key="frame" x="12" y="12" width="326" height="41"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" distribution="equalCentering" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5ca-q2-DGY">
+                                <rect key="frame" x="12" y="142" width="326" height="21"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022.04.15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MeO-YU-vhw">
+                                        <rect key="frame" x="0.0" y="2" width="72.5" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" name="NewsItemDateColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T71-N1-hCy">
+                                        <rect key="frame" x="305" y="0.0" width="21" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="T71-N1-hCy" secondAttribute="height" multiplier="1:1" id="3Qm-Fx-tWZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                        <color key="tintColor" name="MainColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="square.and.arrow.up" catalog="system" symbolScale="medium"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnShareEvent:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="TnG-On-A19"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="743" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Mv-U2-15s">
+                                <rect key="frame" x="12" y="59" width="326" height="75"/>
+                                <mutableString key="text">中央流行疫情指揮中心今(2)日表示，為避免大量民眾前往醫院急診篩檢造成急診壅塞，影響重症醫療量能，中央流行疫情指揮中心已規劃相關因應措施，請各地方政府及醫療機構配合辦理。說明如下：&lt;br&gt;&lt;br&gt;\n一、請各地方政府依轄區疫情狀況增加開設社區篩檢站，擴大服務量能。&lt;br&gt;&lt;br&gt;\n二、請急救責任醫院開設防疫(發燒)門診分流病人，提供輕症或無症狀但家用抗原快篩陽性之民眾相關評估採檢與診療服務。&lt;br&gt;&lt;br&gt;\n三、無症狀者，需快篩陽性，始可採檢核酸PCR檢測。居隔/居檢者另依相關篩檢規定辦理。&lt;br&gt;&lt;br&gt;\n四、鼓勵基層診所投入提供採檢服務，擴大篩檢服務量能。&lt;br&gt;&lt;br&gt;\n五、請醫院啟動應變機制，服務降載並調度人力支援採檢、通報、控床等工作。&lt;br&gt;&lt;br&gt;\n指揮中心指出，目前全國各縣市共開設344處社區篩檢站，另有104家專責醫院開設防疫或疫病門診，請快篩陽性或有症狀之民眾至各地方政府或醫院相關網頁查詢，就近前往利用。指揮中心強調，請地方政府於設置社區篩檢站時，規劃結合基層醫師進駐，以協助判斷是否有重症的風險或徵候，必要時由護理師給予衛教，遇有快篩陽性且症狀輕微者，可直接開予症狀治療藥物，同時進行PCR檢驗</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.55294117649999996" green="0.55294117649999996" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="5ca-q2-DGY" secondAttribute="trailing" constant="12" id="9IM-Cl-yh2"/>
+                            <constraint firstItem="0Mv-U2-15s" firstAttribute="top" secondItem="wqp-rg-nYa" secondAttribute="bottom" constant="6" id="Aey-PS-RhH"/>
+                            <constraint firstAttribute="trailing" secondItem="wqp-rg-nYa" secondAttribute="trailing" constant="12" id="Es2-PE-KfE"/>
+                            <constraint firstAttribute="trailing" secondItem="0Mv-U2-15s" secondAttribute="trailing" constant="12" id="FWj-mM-UTz"/>
+                            <constraint firstItem="5ca-q2-DGY" firstAttribute="leading" secondItem="8dm-FI-IjP" secondAttribute="leading" constant="12" id="HXn-EY-nyw"/>
+                            <constraint firstItem="wqp-rg-nYa" firstAttribute="leading" secondItem="8dm-FI-IjP" secondAttribute="leading" constant="12" id="K4E-GR-0RU"/>
+                            <constraint firstItem="0Mv-U2-15s" firstAttribute="leading" secondItem="8dm-FI-IjP" secondAttribute="leading" constant="12" id="dav-fE-M6B"/>
+                            <constraint firstAttribute="bottom" secondItem="5ca-q2-DGY" secondAttribute="bottom" constant="10" id="iSB-q7-7l6"/>
+                            <constraint firstItem="wqp-rg-nYa" firstAttribute="top" secondItem="8dm-FI-IjP" secondAttribute="top" constant="12" id="lKJ-kY-OOX"/>
+                            <constraint firstItem="5ca-q2-DGY" firstAttribute="top" secondItem="0Mv-U2-15s" secondAttribute="bottom" constant="8" id="qVQ-gl-xW2"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="8dm-FI-IjP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="EWq-GQ-1FP"/>
+                    <constraint firstAttribute="trailing" secondItem="8dm-FI-IjP" secondAttribute="trailing" id="FVS-Mb-IlF"/>
+                    <constraint firstItem="8dm-FI-IjP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="KBT-cU-B0u"/>
+                    <constraint firstAttribute="bottom" secondItem="8dm-FI-IjP" secondAttribute="bottom" constant="12" id="cIn-Ko-7qP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="imgShare" destination="T71-N1-hCy" id="Hb3-t5-cbF"/>
+                <outlet property="txtDate" destination="MeO-YU-vhw" id="CIC-nU-5GM"/>
+                <outlet property="txtDescription" destination="0Mv-U2-15s" id="hxf-MY-2uh"/>
+                <outlet property="txtTitle" destination="wqp-rg-nYa" id="mss-wR-HLG"/>
+                <outlet property="viewBackground" destination="8dm-FI-IjP" id="n3d-qf-2nh"/>
+            </connections>
+            <point key="canvasLocation" x="236.23188405797103" y="173.77232142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <namedColor name="MainColor">
+            <color red="0.28235294117647058" green="0.49411764705882355" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NewsItemDateColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.20000000298023224" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
