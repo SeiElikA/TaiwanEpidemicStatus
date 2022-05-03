@@ -197,8 +197,8 @@
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableView>
-                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="EBJ-t4-3gN">
-                                            <rect key="frame" x="20" y="178.66666666666669" width="350" height="37"/>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="EBJ-t4-3gN">
+                                            <rect key="frame" x="20" y="178.66666666666669" width="350" height="20"/>
                                         </activityIndicatorView>
                                         <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tk7-Df-9wE">
                                             <rect key="frame" x="0.0" y="170.66666666666669" width="390" height="34"/>

@@ -21,7 +21,7 @@ class NewsViewController: UIViewController {
     @IBOutlet weak var loadingView: UIView!
     @IBOutlet weak var loadNewsActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var btnReconnected: UIButton!
-    
+    private var timer:Timer?
     
     private let newsModel = NewsModel()
     private let testModel = TestModel()
@@ -52,7 +52,7 @@ class NewsViewController: UIViewController {
             }
         }
     }
-    private var collectionImgList:[Int:UIImage] = [:]
+    
     private var cdcTableViewList: [CDCNews] = [] {
         didSet {
             if isViewLoaded {
@@ -89,16 +89,21 @@ class NewsViewController: UIViewController {
         txtAllNews.isUserInteractionEnabled = true
         txtAllNews.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(changeToAllNews)))
         
+        timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(networkError), userInfo: nil, repeats: false)
         fetchNewsList()
+    }
+    
+    @objc private func networkError() {
+        self.loadingView.isHidden = false
+        self.btnReconnected.isHidden = false
+        self.loadNewsActivityIndicator.isHidden = true
+        self.timer?.invalidate()
     }
     
     private func fetchNewsList() {
         testModel.testNetwork(networkError: { msg in
             print(msg)
-            self.loadingView.isHidden = false
-            self.btnReconnected.isHidden = false
-            self.loadNewsActivityIndicator.fadeOutAnimate(during: 0.5)
-            self.loadNewsActivityIndicator.isHidden = true
+            self.networkError()
         }, serverError: { msg in
             print(msg)
             self.showServerNotRunningAlert()
@@ -120,12 +125,14 @@ class NewsViewController: UIViewController {
                 }
                 dispatchGroup.leave()
             })
+            
             DispatchQueue.global().async {
                 dispatchGroup.wait()
                 
                 dispatchGroup.notify(queue: .main, execute: {
                     self.loadingView.fadeOutAnimate(during: 0.5, completion: {
                         self.loadingView.isHidden = true
+                        self.timer?.invalidate()
                     })
                 })
             }
@@ -134,9 +141,11 @@ class NewsViewController: UIViewController {
     
     @IBAction func btnReconntedEvent(_ sender: Any) {
         btnReconnected.isHidden = true
+        loadNewsActivityIndicator.isHidden = false
         loadNewsActivityIndicator.startAnimating()
         loadNewsActivityIndicator.fadeInAnimate(during: 0.5)
         
+        timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(networkError), userInfo: nil, repeats: false)
         self.fetchNewsList()
     }
     
@@ -219,14 +228,22 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
         cell.shareLink = covidNewsData.titleLink
         cell.viewController = self
         
-        newsModel.getNewsImage(url: covidNewsData.url, result: {
-            cell.imgNews.alpha = 0
-            cell.imgNews.image = $0
-            // show image use animation
-            UIView.animate(withDuration: 0.5, delay: 0, animations: {
-                cell.imgNews.alpha = 1
-            }, completion: {_ in cell.activityIndicator.stopAnimating()})
-        })
+        if let existImage = Global.collectionImgTempList[covidNewsData.titleLink] {
+            cell.imgNews.image = existImage
+            cell.activityIndicator.fadeOutAnimate(during: 0.5)
+            cell.activityIndicator.stopAnimating()
+        } else {
+            newsModel.getNewsImage(url: covidNewsData.url, result: {
+                cell.imgNews.image = $0
+                Global.collectionImgTempList[covidNewsData.titleLink] = $0
+                // show image use animation
+                cell.imgNews.fadeInAnimate(during: 0.5, completion: {
+                    cell.activityIndicator.stopAnimating()
+                })
+            })
+        }
+ 
+
         
         cell.tag = indexPath.row + 5
         cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selectNews(_:))))
@@ -262,14 +279,17 @@ extension NewsViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell.tag = indexPath.row
         cell.newsPageControl.currentPage = indexPath.row
         
-        if let existNewsImg = self.collectionImgList[indexPath.row] {
+        if let existNewsImg = Global.collectionImgTempList[data.titleLink] {
             cell.imgNews.image = existNewsImg
             cell.loadImgActivityIndicator.stopAnimating()
             cell.imgNews.fadeInAnimate(during: 0.5)
         } else {
+            cell.imgNews.image = UIImage(named: "ImgPlaceHolder")
+            cell.loadImgActivityIndicator.startAnimating()
+            
             self.newsModel.getNewsImage(url: data.url, result: {
                 cell.imgNews.image = $0
-                self.collectionImgList[indexPath.row] = $0
+                Global.collectionImgTempList[data.titleLink] = $0
                 cell.loadImgActivityIndicator.stopAnimating()
                 cell.imgNews.fadeInAnimate(during: 0.5)
             })

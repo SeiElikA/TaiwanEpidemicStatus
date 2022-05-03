@@ -173,8 +173,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bhW-ob-3Jm" userLabel="Loading View">
                     <rect key="frame" x="0.0" y="184" width="390" height="626"/>
                     <subviews>
-                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Wei-lV-yb0">
-                            <rect key="frame" x="0.0" y="24" width="390" height="37"/>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Wei-lV-yb0">
+                            <rect key="frame" x="0.0" y="24" width="390" height="20"/>
                         </activityIndicatorView>
                         <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIi-Rk-jgm">
                             <rect key="frame" x="0.0" y="27" width="390" height="34"/>

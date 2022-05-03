@@ -50,6 +50,7 @@
 		6FAFD6922817848D0060FD86 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAFD6912817848D0060FD86 /* NewsModel.swift */; };
 		6FAFD694281788DC0060FD86 /* CovidNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAFD693281788DC0060FD86 /* CovidNews.swift */; };
 		6FB1D4F328102B59002F44D3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6FB1D4F528102B59002F44D3 /* InfoPlist.strings */; };
+		6FC6E8192820D29900C5D4CE /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC6E8182820D29900C5D4CE /* Global.swift */; };
 		6FD357D8280D39940010D5DE /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD357D7280D39940010D5DE /* ExtensionView.swift */; };
 		6FD357DD280D56180010D5DE /* NewsItemMediumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD357DB280D56180010D5DE /* NewsItemMediumTableViewCell.swift */; };
 		6FD357DE280D56180010D5DE /* NewsItemMediumTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FD357DC280D56180010D5DE /* NewsItemMediumTableViewCell.xib */; };
@@ -148,6 +149,7 @@
 		6FB1D4F428102B59002F44D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6FB1D4F628102B5C002F44D3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		6FB1D4F728102B5D002F44D3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		6FC6E8182820D29900C5D4CE /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		6FD357D7280D39940010D5DE /* ExtensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionView.swift; sourceTree = "<group>"; };
 		6FD357DB280D56180010D5DE /* NewsItemMediumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItemMediumTableViewCell.swift; sourceTree = "<group>"; };
 		6FD357DC280D56180010D5DE /* NewsItemMediumTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsItemMediumTableViewCell.xib; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 				6F68EFEA280CF95F0012B5B1 /* View */,
 				6FB1D4F528102B59002F44D3 /* InfoPlist.strings */,
 				6F3B59EB28181C01005B0E31 /* Localizable.strings */,
+				6FC6E8182820D29900C5D4CE /* Global.swift */,
 			);
 			path = TaiwanEpidemicStatus;
 			sourceTree = "<group>";
@@ -634,6 +637,7 @@
 				6F128712281D5BD40046A586 /* Weather.swift in Sources */,
 				6FAFD68D2816D6D10060FD86 /* CityStatistic.swift in Sources */,
 				6F3B59D52817A437005B0E31 /* SelectCityTableViewCell.swift in Sources */,
+				6FC6E8192820D29900C5D4CE /* Global.swift in Sources */,
 				6F3B59CD28179D75005B0E31 /* ExtensionMethod.swift in Sources */,
 				6F3A528D281925E2009E042B /* JWTUtil.swift in Sources */,
 				6F68EFEE280CF9810012B5B1 /* MainViewController.swift in Sources */,

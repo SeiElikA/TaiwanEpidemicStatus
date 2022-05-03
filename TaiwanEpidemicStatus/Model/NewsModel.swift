@@ -38,7 +38,7 @@ public class NewsModel {
             if let data = data {
                 var covidNewsData:[CovidNews] = []
                 do {
-                    covidNewsData = try JSONDecoder().decode([CovidNews].self, from: data)
+                    covidNewsData = try JSONDecoder().decode([CovidNews].self, from: data).filter({$0.titleLink.starts(with: "https://udn.com/news/story/")})
                 } catch {
                     print("\(error)")
                 }
@@ -60,7 +60,7 @@ public class NewsModel {
                 do {
                     cdcNewsList = try JSONDecoder().decode([CDCNews].self, from: data)
                     
-                        result(cdcNewsList)
+                    result(cdcNewsList)
                 } catch {
                     print(error)
                 }

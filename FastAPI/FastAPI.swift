@@ -25,7 +25,7 @@ public class FastAPI {
     }
     
     public func getImage(url:String, _ callBack: @escaping ((Data?, APIError?) -> Void)) {
-        request(url: url,isOtherUrl: true ,callBack: callBack)
+        request(url: url,isOtherUrl: true ,timeout: 60,callBack: callBack)
     }
     
     public func get(url:String, header:[String:String] = [:], _ callBack: @escaping ((Data?, APIError?) -> Void)) {
@@ -44,7 +44,7 @@ public class FastAPI {
         request(url: url,method: .delete,headerMap: header, callBack: callBack)
     }
     
-    private func request(url:String, method:HttpMethod = .get, headerMap:[String:String] = [:], body:Data? = nil, isOtherUrl:Bool = false, callBack:  @escaping ((Data?, APIError?) -> Void)) {
+    private func request(url:String, method:HttpMethod = .get, headerMap:[String:String] = [:], body:Data? = nil, isOtherUrl:Bool = false, timeout:Double = 10, callBack:  @escaping ((Data?, APIError?) -> Void)) {
         let encodeUrl = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         var request = URLRequest(url: URL(string: isOtherUrl ? encodeUrl : (Global.baseURL + encodeUrl))!)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -53,7 +53,7 @@ public class FastAPI {
         }
         request.httpMethod = method.rawValue
         request.httpBody = body
-        request.timeoutInterval = 10
+        request.timeoutInterval = timeout
         
         func callBackSuccessful(data:Data) {
             callBack(data, nil)

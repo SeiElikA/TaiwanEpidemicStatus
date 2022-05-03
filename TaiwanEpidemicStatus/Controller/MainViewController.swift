@@ -31,6 +31,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var txtUpdateTime: UILabel!
     @IBOutlet weak var txtNetworkInfo: UIButton!
     @IBOutlet weak var txtLocation: UILabel!
+    private var timer:Timer?
     
     // Model
     private let covidModel = CovidModel()
@@ -105,6 +106,8 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         mainScrollView.refreshControl = refreshControl
         mainScrollView.refreshControl?.addTarget(self, action: #selector(checkNetworkAndFetchData), for: .valueChanged)
         
+        // Set Time out timer
+        timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(networkError),userInfo: nil, repeats: false)
         setLocationManager()
         checkNetworkAndFetchData()
     }
@@ -123,10 +126,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         // check network connection
         testModel.testNetwork(networkError: { msg in
             print(msg)
-            self.txtNetworkInfo.isHidden = false
-            self.loadNewsActivityIndicator.stopAnimating()
-            self.mainScrollView.refreshControl?.endRefreshing()
-            self.covidNewsList = []
+            self.networkError()
         }, serverError: { msg in
             print(msg)
             self.showServerNotRunningAlert()
@@ -145,6 +145,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
             
             JWTUtil.refreshToken() {
                 self.fetchData() {
+                    self.timer?.invalidate()
                     DispatchQueue.main.async {
                         hideLoadView()
                     }
@@ -161,6 +162,14 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    @objc private func networkError() {
+        self.covidNewsList = []
+        self.txtNetworkInfo.isHidden = false
+        self.loadNewsActivityIndicator.stopAnimating()
+        self.mainScrollView.refreshControl?.endRefreshing()
+        timer?.invalidate()
+    }
+    
     @IBAction func btnMoreNewsEvent(_ sender: Any) {
         let newsController = NewsViewController()
         self.navigationController?.pushViewController(newsController, animated: true)
@@ -170,15 +179,19 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         self.txtNetworkInfo.isHidden = true
         self.loadNewsActivityIndicator.startAnimating()
         loadNewsActivityIndicator.fadeInAnimate(during: 0.5)
+        timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(networkError),userInfo: nil, repeats: false)
         
         // check network connection
         testModel.testNetwork(networkError: { msg in
-            self.txtNetworkInfo.isHidden = false
-            self.loadNewsActivityIndicator.stopAnimating()
+            print(msg)
+            self.networkError()
         }, serverError: { msg in
             self.showServerNotRunningAlert()
         }, successful: {
-            self.fetchData()
+            self.timer?.invalidate()
+            DispatchQueue.global(qos: .background).async {
+                self.fetchData()
+            }
         })
     }
 
@@ -238,11 +251,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
                 self.txtTemperature.text = "\(data.MinT)~\(data.MaxT)°C"
                 let weatherIcon = self.weatherModel.getWeatherIcon(wX: data.Wx)
                 self.imgWeatherIcon.tintColor = weatherIcon.first?.value
-                self.imgWeatherIcon.image = weatherIcon.first?.key
-                
-            },timeOut: {
-                self.txtNetworkInfo.isHidden = false
-                self.loadNewsActivityIndicator.stopAnimating()
+                self.imgWeatherIcon.image = weatherIcon.first?.key   
             })
         }
     }
@@ -268,14 +277,20 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         cell.shareLink = covidNewsData.titleLink
         cell.viewController = self
         
-        newsModel.getNewsImage(url: covidNewsData.url, result: {
-            cell.imgNews.alpha = 0
-            cell.imgNews.image = $0
-            // show image use animation
-            UIView.animate(withDuration: 0.5, delay: 0, animations: {
-                cell.imgNews.alpha = 1
-            }, completion: {_ in cell.activityIndicator.stopAnimating()})
-        })
+        if let existImage = Global.collectionImgTempList[covidNewsData.titleLink] {
+            cell.imgNews.image = existImage
+            cell.activityIndicator.fadeOutAnimate(during: 0.5)
+            cell.activityIndicator.stopAnimating()
+        } else {
+            newsModel.getNewsImage(url: covidNewsData.url, result: {
+                cell.imgNews.image = $0
+                Global.collectionImgTempList[covidNewsData.titleLink] = $0
+                // show image use animation
+                cell.imgNews.fadeInAnimate(during: 0.5, completion: {
+                    cell.activityIndicator.stopAnimating()
+                })
+            })
+        }
         
         cell.tag = indexPath.row  
         cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selectNews(_:))))
