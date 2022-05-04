@@ -14,14 +14,17 @@
             <connections>
                 <outlet property="allNewsCollection" destination="0mg-of-M36" id="sMl-nq-00d"/>
                 <outlet property="allNewsTableView" destination="HLS-nI-RGK" id="vgy-UA-d4c"/>
+                <outlet property="btnBackButton" destination="ucS-Qt-Xan" id="K5i-ru-NQf"/>
                 <outlet property="btnReconnected" destination="NIi-Rk-jgm" id="2Oe-Gg-HOL"/>
                 <outlet property="cdcNewsTableView" destination="WP3-uV-M22" id="a3v-EV-ZLq"/>
                 <outlet property="loadNewsActivityIndicator" destination="Wei-lV-yb0" id="L57-4n-b3M"/>
                 <outlet property="loadingView" destination="bhW-ob-3Jm" id="pDn-rO-T4d"/>
                 <outlet property="mainViewBackground" destination="vki-gl-S8V" id="1i4-49-Ono"/>
-                <outlet property="scrollView" destination="fTm-6f-Oab" id="YUw-lp-Gas"/>
+                <outlet property="scrollViewAllNewsContent" destination="V7j-Fc-uS0" id="rZU-7Z-aeg"/>
                 <outlet property="txtAllNews" destination="9K5-os-VIt" id="Ihg-yD-mHo"/>
                 <outlet property="txtCDCNews" destination="FAt-lL-lxc" id="G7T-Xo-4G1"/>
+                <outlet property="txtSmallTitle" destination="zcC-zh-G69" id="9hI-Nq-CWn"/>
+                <outlet property="txtTitle" destination="aps-El-Sdn" id="4Yu-33-aRS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewAllNews" destination="fTm-6f-Oab" id="ROQ-XE-rIe"/>
                 <outlet property="viewCDCNews" destination="TqN-V5-T5V" id="706-Q9-hW2"/>
@@ -71,18 +74,29 @@
                                 <constraint firstAttribute="height" constant="3" id="8H8-Zf-4VO"/>
                             </constraints>
                         </view>
+                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" text="疫情新聞" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcC-zh-G69">
+                            <rect key="frame" x="0.0" y="8" width="390" height="36"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="9K5-os-VIt" firstAttribute="top" secondItem="aps-El-Sdn" secondAttribute="bottom" constant="12" id="3hw-gA-xgq"/>
                         <constraint firstAttribute="bottom" secondItem="h5k-ni-Dqf" secondAttribute="bottom" constant="12" id="9Yl-IT-zK5"/>
+                        <constraint firstItem="ucS-Qt-Xan" firstAttribute="bottom" secondItem="zcC-zh-G69" secondAttribute="bottom" id="Bbb-hc-tDN"/>
                         <constraint firstItem="h5k-ni-Dqf" firstAttribute="top" secondItem="9K5-os-VIt" secondAttribute="bottom" constant="4" id="CCt-LE-gsg"/>
+                        <constraint firstItem="zcC-zh-G69" firstAttribute="top" secondItem="ucS-Qt-Xan" secondAttribute="top" id="E0K-2E-8M0"/>
                         <constraint firstItem="FAt-lL-lxc" firstAttribute="leading" secondItem="9K5-os-VIt" secondAttribute="trailing" constant="40" id="MBv-aD-7U7"/>
+                        <constraint firstAttribute="trailing" secondItem="zcC-zh-G69" secondAttribute="trailing" id="OAZ-6I-vSE"/>
                         <constraint firstItem="aps-El-Sdn" firstAttribute="top" secondItem="ucS-Qt-Xan" secondAttribute="bottom" constant="8" id="Y6g-AV-XbW"/>
                         <constraint firstItem="h5k-ni-Dqf" firstAttribute="leading" secondItem="9K5-os-VIt" secondAttribute="leading" id="afN-fx-hFy"/>
+                        <constraint firstItem="aps-El-Sdn" firstAttribute="top" secondItem="ucS-Qt-Xan" secondAttribute="bottom" constant="8" id="b5q-k7-FF2"/>
                         <constraint firstItem="ucS-Qt-Xan" firstAttribute="leading" secondItem="vki-gl-S8V" secondAttribute="leading" constant="18" id="cOW-JJ-fDq"/>
                         <constraint firstItem="aps-El-Sdn" firstAttribute="leading" secondItem="vki-gl-S8V" secondAttribute="leading" constant="18" id="q8h-gI-xLK"/>
                         <constraint firstItem="FAt-lL-lxc" firstAttribute="top" secondItem="aps-El-Sdn" secondAttribute="bottom" constant="12" id="qp3-Fu-4Pq"/>
+                        <constraint firstItem="zcC-zh-G69" firstAttribute="leading" secondItem="vki-gl-S8V" secondAttribute="leading" id="rlr-VS-jD7"/>
                         <constraint firstItem="9K5-os-VIt" firstAttribute="leading" secondItem="vki-gl-S8V" secondAttribute="leading" constant="20" id="sr5-a5-mj2"/>
                         <constraint firstItem="h5k-ni-Dqf" firstAttribute="width" secondItem="9K5-os-VIt" secondAttribute="width" multiplier="0.6" id="yBF-N7-9FD"/>
                         <constraint firstItem="ucS-Qt-Xan" firstAttribute="top" secondItem="vki-gl-S8V" secondAttribute="top" constant="8" id="yuq-2c-ohC"/>
@@ -125,7 +139,7 @@
                     <rect key="frame" x="0.0" y="184" width="390" height="626"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V7j-Fc-uS0" userLabel="All View">
-                            <rect key="frame" x="0.0" y="0.0" width="390" height="645"/>
+                            <rect key="frame" x="0.0" y="0.0" width="390" height="634"/>
                             <subviews>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="0mg-of-M36">
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="228"/>
@@ -138,22 +152,28 @@
                                     </collectionViewFlowLayout>
                                 </collectionView>
                                 <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HLS-nI-RGK" customClass="ExpandTableView" customModule="TaiwanEpidemicStatus" customModuleProvider="target">
-                                    <rect key="frame" x="24" y="240" width="342" height="393"/>
+                                    <rect key="frame" x="24" y="240" width="342" height="354"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="393" placeholder="YES" id="b1Q-X6-WkX"/>
+                                        <constraint firstAttribute="height" constant="354" placeholder="YES" id="2r3-Mq-9Zr"/>
                                     </constraints>
                                 </tableView>
+                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="rlQ-R1-K6u">
+                                    <rect key="frame" x="0.0" y="602" width="390" height="20"/>
+                                </activityIndicatorView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstItem="HLS-nI-RGK" firstAttribute="top" secondItem="0mg-of-M36" secondAttribute="bottom" constant="12" id="5rU-Cn-keT"/>
                                 <constraint firstItem="0mg-of-M36" firstAttribute="top" secondItem="V7j-Fc-uS0" secondAttribute="top" id="Bp6-c0-9kj"/>
                                 <constraint firstAttribute="trailing" secondItem="0mg-of-M36" secondAttribute="trailing" id="CPg-ZQ-GR9"/>
                                 <constraint firstItem="HLS-nI-RGK" firstAttribute="leading" secondItem="V7j-Fc-uS0" secondAttribute="leading" constant="24" id="EJk-qP-lda"/>
                                 <constraint firstItem="0mg-of-M36" firstAttribute="leading" secondItem="V7j-Fc-uS0" secondAttribute="leading" id="PQq-MY-E51"/>
-                                <constraint firstAttribute="bottom" secondItem="HLS-nI-RGK" secondAttribute="bottom" constant="12" id="lqp-oF-PVe"/>
+                                <constraint firstItem="HLS-nI-RGK" firstAttribute="top" secondItem="0mg-of-M36" secondAttribute="bottom" constant="12" id="QwE-Zy-iaZ"/>
+                                <constraint firstItem="rlQ-R1-K6u" firstAttribute="top" secondItem="HLS-nI-RGK" secondAttribute="bottom" constant="8" id="gsh-cm-dcg"/>
+                                <constraint firstItem="rlQ-R1-K6u" firstAttribute="leading" secondItem="V7j-Fc-uS0" secondAttribute="leading" id="kXS-to-tya"/>
                                 <constraint firstAttribute="trailing" secondItem="HLS-nI-RGK" secondAttribute="trailing" constant="24" id="tsD-fU-kmS"/>
+                                <constraint firstAttribute="trailing" secondItem="rlQ-R1-K6u" secondAttribute="trailing" id="uov-PH-Fg1"/>
+                                <constraint firstAttribute="bottom" secondItem="rlQ-R1-K6u" secondAttribute="bottom" constant="12" id="zFA-ef-91y"/>
                             </constraints>
                         </view>
                     </subviews>

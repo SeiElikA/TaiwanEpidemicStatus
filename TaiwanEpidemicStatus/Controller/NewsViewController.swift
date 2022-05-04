@@ -16,12 +16,16 @@ class NewsViewController: UIViewController {
     @IBOutlet weak var txtAllNews: UILabel!
     @IBOutlet weak var viewCDCNews: UIScrollView!
     @IBOutlet weak var viewAllNews: UIScrollView!
-    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var mainViewBackground: UIView!
     @IBOutlet weak var loadingView: UIView!
     @IBOutlet weak var loadNewsActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var btnReconnected: UIButton!
+    @IBOutlet weak var txtTitle: UILabel!
+    @IBOutlet weak var txtSmallTitle: UILabel!
+    @IBOutlet weak var btnBackButton: UIButton!
+    @IBOutlet weak var scrollViewAllNewsContent: UIView!
     private var timer:Timer?
+    private var isTableFirstLoading = true
     
     private let newsModel = NewsModel()
     private let testModel = TestModel()
@@ -71,6 +75,7 @@ class NewsViewController: UIViewController {
         // Settign TableView
         allNewsTableView.delegate = self
         allNewsTableView.dataSource = self
+        allNewsTableView.register(UINib(nibName: NewsItemLargeTableViewCell.identity, bundle: nil), forCellReuseIdentifier: NewsItemLargeTableViewCell.identity)
         allNewsTableView.register(UINib(nibName: NewsItemMediumTableViewCell.identity, bundle: nil), forCellReuseIdentifier: NewsItemMediumTableViewCell.identity)
         
         cdcNewsTableView.dataSource = self
@@ -84,10 +89,12 @@ class NewsViewController: UIViewController {
         
         // Add News Tab click event
         txtCDCNews.isUserInteractionEnabled = true
-        txtCDCNews.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(changeToCDCNews)))
+        txtCDCNews.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(changeNewsTabView)))
         
         txtAllNews.isUserInteractionEnabled = true
-        txtAllNews.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(changeToAllNews)))
+        txtAllNews.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(changeNewsTabView)))
+        
+        viewAllNews.delegate = self
         
         timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(networkError), userInfo: nil, repeats: false)
         fetchNewsList()
@@ -167,20 +174,12 @@ class NewsViewController: UIViewController {
         navigationController?.pushViewController(detailViewController, animated: true)
     }
     
-    @objc private func changeToCDCNews() {
-        changeNewsTabView()
-    }
-    
-    @objc private func changeToAllNews() {
-        changeNewsTabView()
-    }
-    
-    private func changeNewsTabView() {
+    @objc private func changeNewsTabView() {
         isAllNews.toggle()
         let newsViewWidth = self.viewAllNews.frame.width
         let textStartPosition = (isAllNews ? self.txtAllNews : self.txtCDCNews).frame.origin.x
         
-        let animator = UIViewPropertyAnimator(duration: 0.15, curve: .linear) {            
+        let animator = UIViewPropertyAnimator(duration: 0.15, curve: .linear) {
             self.viewTabNavigation.frame.origin.x = textStartPosition
             self.txtCDCNews.textColor = self.isAllNews ? .lightGray : UIColor(named: "MainShadowColor")
             self.txtAllNews.textColor = self.isAllNews ? UIColor(named: "MainShadowColor") : .lightGray
@@ -188,6 +187,18 @@ class NewsViewController: UIViewController {
             self.viewCDCNews.frame = self.viewCDCNews.frame.offsetBy(dx: self.isAllNews ? newsViewWidth : -newsViewWidth, dy: 0)
         }
         animator.startAnimation()
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let scrollViewHeight = scrollView.contentOffset.y + scrollView.frame.height
+        if scrollViewHeight == self.scrollViewAllNewsContent.bounds.height{
+            self.newsPage += 1
+            self.newsModel.getAllNewsList(page: self.newsPage, result: { list in
+                DispatchQueue.main.async {
+                    self.covidNewsList.append(contentsOf: list)
+                }
+            })
+        }
     }
 }
 
@@ -213,37 +224,49 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         // fade animation show tableview cell
-        cell.alpha = 0
-        UIView.animate(withDuration: 0.5, delay: 0.05 * Double(indexPath.row), animations: {
-            cell.alpha = 1
-        })
+        if isTableFirstLoading {
+            cell.alpha = 0
+            UIView.animate(withDuration: 0.5, delay: 0.05 * Double(indexPath.row), animations: {
+                cell.alpha = 1
+            })
+        }
+
+        isTableFirstLoading = false
     }
     
     private func getAllTableViewCell(tableView:UITableView, indexPath:IndexPath) -> UITableViewCell {
-        let cell: NewsItemMediumTableViewCell = tableView.dequeueReusableCell(withIdentifier: NewsItemMediumTableViewCell.identity, for: indexPath) as! NewsItemMediumTableViewCell
+        var cell: BaseNewsItem
         let covidNewsData = self.allTableViewList[indexPath.row]
-        cell.txtTitle.text = covidNewsData.title
-        cell.txtContent.text = covidNewsData.paragraph
-        cell.txtDate.text = ParseUtil.covidNewsDateFormat(dateString: covidNewsData.time.dateTime) + "｜" + covidNewsData.cateTitle
-        cell.shareLink = covidNewsData.titleLink
-        cell.viewController = self
+
         
         if let existImage = Global.collectionImgTempList[covidNewsData.titleLink] {
+            cell = existImage.size.width <= 1200 ? tableView.dequeueReusableCell(withIdentifier: NewsItemMediumTableViewCell.identity, for: indexPath) as! NewsItemMediumTableViewCell : tableView.dequeueReusableCell(withIdentifier: NewsItemLargeTableViewCell.identity, for: indexPath) as! NewsItemLargeTableViewCell
+            
             cell.imgNews.image = existImage
             cell.activityIndicator.fadeOutAnimate(during: 0.5)
             cell.activityIndicator.stopAnimating()
         } else {
-            newsModel.getNewsImage(url: covidNewsData.url, result: {
-                cell.imgNews.image = $0
-                Global.collectionImgTempList[covidNewsData.titleLink] = $0
-                // show image use animation
-                cell.imgNews.fadeInAnimate(during: 0.5, completion: {
-                    cell.activityIndicator.stopAnimating()
-                })
+            let random = [0,1].randomElement()
+            cell = random == 0 ? tableView.dequeueReusableCell(withIdentifier: NewsItemMediumTableViewCell.identity, for: indexPath) as! NewsItemMediumTableViewCell : tableView.dequeueReusableCell(withIdentifier: NewsItemLargeTableViewCell.identity, for: indexPath) as! NewsItemLargeTableViewCell
+            
+            newsModel.getNewsImage(url: covidNewsData.url, result: { img in
+                DispatchQueue.main.async {
+                    cell.imgNews.image = img
+                    Global.collectionImgTempList[covidNewsData.titleLink] = img
+                    // show image use animation
+                    cell.imgNews.fadeInAnimate(during: 0.5, completion: {
+                        cell.activityIndicator.stopAnimating()
+                    })
+                }
+
             })
         }
- 
-
+        
+        cell.txtTitle.text = covidNewsData.title
+        cell.txtCaption.text = covidNewsData.paragraph
+        cell.txtDate.text = ParseUtil.covidNewsDateFormat(dateString: covidNewsData.time.dateTime) + "｜" + covidNewsData.cateTitle
+        cell.shareLink = covidNewsData.titleLink
+        cell.viewController = self
         
         cell.tag = indexPath.row + 5
         cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selectNews(_:))))
@@ -287,11 +310,13 @@ extension NewsViewController: UICollectionViewDelegate, UICollectionViewDataSour
             cell.imgNews.image = UIImage(named: "ImgPlaceHolder")
             cell.loadImgActivityIndicator.startAnimating()
             
-            self.newsModel.getNewsImage(url: data.url, result: {
-                cell.imgNews.image = $0
-                Global.collectionImgTempList[data.titleLink] = $0
-                cell.loadImgActivityIndicator.stopAnimating()
-                cell.imgNews.fadeInAnimate(during: 0.5)
+            self.newsModel.getNewsImage(url: data.url, result: { img in
+                DispatchQueue.main.async {
+                    cell.imgNews.image = img
+                    Global.collectionImgTempList[data.titleLink] = img
+                    cell.loadImgActivityIndicator.stopAnimating()
+                    cell.imgNews.fadeInAnimate(during: 0.5)
+                }
             })
         }
         cell.txtNewsCaption.text = data.title

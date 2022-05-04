@@ -107,7 +107,7 @@
                 <outlet property="activityIndicator" destination="8Vn-04-fza" id="JFY-Il-kbx"/>
                 <outlet property="btnShare" destination="Ky4-KN-sgW" id="yXO-07-hya"/>
                 <outlet property="imgNews" destination="SwM-8D-kXP" id="YXf-iR-HXB"/>
-                <outlet property="txtContent" destination="bq0-Wa-dB6" id="hg9-Az-knl"/>
+                <outlet property="txtCaption" destination="bq0-Wa-dB6" id="hg9-Az-knl"/>
                 <outlet property="txtDate" destination="dbU-cD-4XS" id="RCG-lZ-hSd"/>
                 <outlet property="txtTitle" destination="Pbn-mn-IED" id="u14-e8-3So"/>
                 <outlet property="viewBackground" destination="Wm5-kR-jIM" id="zlG-c8-a4R"/>

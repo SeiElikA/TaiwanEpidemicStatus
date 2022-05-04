@@ -62,11 +62,11 @@
                         <constraint firstAttribute="width" secondItem="p4m-Gs-U2i" secondAttribute="height" multiplier="1:1" id="PrS-LX-vTu"/>
                     </constraints>
                 </imageView>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bK0-6t-sAZ">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bK0-6t-sAZ">
                     <rect key="frame" x="0.0" y="44" width="390" height="766"/>
                     <subviews>
-                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fjM-ey-R5P" userLabel="Root View">
-                            <rect key="frame" x="0.0" y="0.0" width="390" height="534.66666666666663"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fjM-ey-R5P" userLabel="Root View">
+                            <rect key="frame" x="0.0" y="0.0" width="390" height="852.66666666666663"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SZF-1F-CYU" userLabel="View Temperature">
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="276"/>
@@ -159,8 +159,8 @@
                                         <constraint firstAttribute="trailing" secondItem="gLu-QQ-ED3" secondAttribute="trailing" constant="22" id="sIA-4U-HNB"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cgv-pF-Vm5" userLabel="View News">
-                                    <rect key="frame" x="0.0" y="276" width="390" height="497"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cgv-pF-Vm5" userLabel="View News">
+                                    <rect key="frame" x="0.0" y="275.99999999999994" width="390" height="576.66666666666652"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="La4-zV-Oe2" userLabel="Padding View">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="90"/>
@@ -192,9 +192,12 @@
                                                 </button>
                                             </subviews>
                                         </stackView>
-                                        <tableView contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="adP-p3-IoL" customClass="ExpandTableView" customModule="TaiwanEpidemicStatus" customModuleProvider="target">
-                                            <rect key="frame" x="20" y="143" width="350" height="338"/>
+                                        <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="adP-p3-IoL" customClass="ExpandTableView" customModule="TaiwanEpidemicStatus" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="138.66666666666669" width="350" height="338"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="338" placeholder="YES" id="RJm-hk-f43"/>
+                                            </constraints>
                                             <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableView>
                                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="EBJ-t4-3gN">
@@ -385,16 +388,19 @@
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogv-7R-5gl">
-                            <rect key="frame" x="0.0" y="0.0" width="165" height="65"/>
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" image="HomeIcon"/>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pE-n0-oRF">
-                            <rect key="frame" x="225" y="0.0" width="165" height="65"/>
+                            <rect key="frame" x="0.0" y="0.0" width="195" height="65"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="PassportIcon"/>
+                            <connections>
+                                <action selector="btnPassportEvent:" destination="-1" eventType="touchUpInside" id="O9K-cs-Yfs"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pE-n0-oRF">
+                            <rect key="frame" x="195" y="0.0" width="195" height="65"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="SettingIcon"/>
                         </button>
                     </subviews>
                     <color key="backgroundColor" name="MainColor"/>
@@ -402,8 +408,10 @@
                         <constraint firstItem="ogv-7R-5gl" firstAttribute="top" secondItem="x27-qC-U5v" secondAttribute="top" id="1dv-Kf-GfB"/>
                         <constraint firstAttribute="bottom" secondItem="ogv-7R-5gl" secondAttribute="bottom" id="7Ic-el-h38"/>
                         <constraint firstItem="GnX-JW-7dd" firstAttribute="centerY" secondItem="x27-qC-U5v" secondAttribute="centerY" constant="-32.5" id="G08-N2-bPG"/>
+                        <constraint firstItem="ogv-7R-5gl" firstAttribute="width" secondItem="x27-qC-U5v" secondAttribute="width" multiplier="0.5" id="Kmd-H7-lrC"/>
                         <constraint firstAttribute="trailing" secondItem="8pE-n0-oRF" secondAttribute="trailing" id="OJr-a5-JA6"/>
                         <constraint firstAttribute="height" constant="65" id="RBh-Se-iPA"/>
+                        <constraint firstItem="8pE-n0-oRF" firstAttribute="width" secondItem="x27-qC-U5v" secondAttribute="width" multiplier="0.5" id="SCN-xA-DPZ"/>
                         <constraint firstItem="GnX-JW-7dd" firstAttribute="centerX" secondItem="x27-qC-U5v" secondAttribute="centerX" id="TeP-jZ-9Nm"/>
                         <constraint firstItem="GnX-JW-7dd" firstAttribute="leading" secondItem="ogv-7R-5gl" secondAttribute="trailing" id="WXn-x7-qNN"/>
                         <constraint firstItem="ogv-7R-5gl" firstAttribute="leading" secondItem="x27-qC-U5v" secondAttribute="leading" id="eob-Oc-BmF"/>
@@ -411,6 +419,11 @@
                         <constraint firstItem="8pE-n0-oRF" firstAttribute="leading" secondItem="GnX-JW-7dd" secondAttribute="trailing" id="nkY-Uz-RTc"/>
                         <constraint firstAttribute="bottom" secondItem="8pE-n0-oRF" secondAttribute="bottom" id="okg-Vp-Ppb"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="subviews">
+                            <exclude reference="GnX-JW-7dd"/>
+                        </mask>
+                    </variation>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -434,10 +447,10 @@
     </objects>
     <resources>
         <image name="Circle" width="151" height="152"/>
-        <image name="HomeIcon" width="40" height="40"/>
         <image name="LocationIcon" width="16" height="21"/>
         <image name="PassportIcon" width="40" height="40"/>
         <image name="QRcodeIcon" width="36" height="36"/>
+        <image name="SettingIcon" width="77" height="64"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="sun.max" catalog="system" width="128" height="124"/>
         <namedColor name="DeathRedColor">

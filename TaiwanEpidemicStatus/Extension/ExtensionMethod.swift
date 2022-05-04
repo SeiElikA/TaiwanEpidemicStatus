@@ -14,22 +14,3 @@ extension String{
     }
 }
 
-extension UIView {
-    func fadeInAnimate(during:Double, completion:(() -> Void)? = nil) {
-        self.alpha = 0
-        UIView.animate(withDuration: during, delay: 0, animations: {
-            self.alpha = 1
-        }, completion: { _ in
-            completion?()
-        })
-    }
-    
-    func fadeOutAnimate(during:Double, completion:(() -> Void)? = nil) {
-        self.alpha = 1
-        UIView.animate(withDuration: during, delay: 0, animations: {
-            self.alpha = 0
-        }, completion: { _ in
-            completion?()
-        })
-    }
-}

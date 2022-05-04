@@ -9,3 +9,4 @@
 "ServerErrorTitle" = "无法连接服务器";
 "NewsAuthor" = "记者";
 "NewsSource" = "来源";
+"CameraNotUse" = "此设备的镜头无法使用";

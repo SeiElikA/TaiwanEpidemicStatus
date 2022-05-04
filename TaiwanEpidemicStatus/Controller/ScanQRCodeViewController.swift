@@ -1,0 +1,139 @@
+//
+//  ScanQRCodeViewController.swift
+//  TaiwanEpidemicStatus
+//
+//  Created by 葉家均 on 2022/5/3.
+//
+
+import UIKit
+import AVFoundation
+
+class ScanQRCodeViewController: UIViewController {
+    var captureSession = AVCaptureSession()
+    var videoPreviewLayer: AVCaptureVideoPreviewLayer?
+    var qrCodeFrameView:UIView?
+    @IBOutlet weak var topView: UIView!
+    @IBOutlet weak var rightView: UIView!
+    @IBOutlet weak var leftView: UIView!
+    @IBOutlet weak var bottomView: UIView!
+    @IBOutlet var scanOutlineView: [UIView]!
+    @IBOutlet weak var btnBack: UIButton!
+    private var sleepTime = Date().timeIntervalSince1970
+    public var scanResult: ((String) -> Void)?
+    
+    
+    
+    private func setViewConstraint() {
+        scanOutlineView.forEach({
+            $0.layer.cornerRadius = 5
+        })
+        
+        let width = UIScreen.main.bounds.width
+        let height = UIScreen.main.bounds.height
+        let viewQRCodeSize = width - (rightView.frame.width * 2)
+        
+        let viewHeight = (height - viewQRCodeSize) / 2
+        topView.heightAnchor.constraint(equalToConstant: viewHeight).isActive = true
+        bottomView.heightAnchor.constraint(equalToConstant: viewHeight).isActive = true
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        self.setViewConstraint()
+        
+        guard let captureDevice = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) else {
+            self.showCameraErrorAlert()
+            return
+        }
+        
+        if AVCaptureDevice.authorizationStatus(for: .video) == .denied {
+            AVCaptureDevice.requestAccess(for: .video, completionHandler: {
+                if !$0 {
+                    self.showCameraErrorAlert()
+                }
+            })
+            return
+        }
+        
+        do {
+            let input = try AVCaptureDeviceInput(device: captureDevice)
+            captureSession.addInput(input)
+            
+            let captureMetadataOutput = AVCaptureMetadataOutput()
+            captureSession.addOutput(captureMetadataOutput)
+            
+            captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
+            captureMetadataOutput.metadataObjectTypes = [AVMetadataObject.ObjectType.qr]
+
+            videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+            videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
+            videoPreviewLayer?.frame = view.layer.bounds
+            view.layer.addSublayer(videoPreviewLayer!)
+            
+            captureSession.startRunning()
+            
+            view.bringSubviewToFront(topView)
+            view.bringSubviewToFront(rightView)
+            view.bringSubviewToFront(leftView)
+            view.bringSubviewToFront(bottomView)
+            view.bringSubviewToFront(btnBack)
+            
+            scanOutlineView.forEach({
+                view.bringSubviewToFront($0)
+            })
+        } catch {
+            print("\(error)")
+            return
+        }
+    }
+
+    private func showCameraErrorAlert() {
+        let errorMsg = NSLocalizedString("CameraNotUse", comment: "")
+        let alertController = UIAlertController(title: "Error", message: errorMsg, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .cancel, handler: { _ in
+            self.navigationController?.popViewController(animated: true)
+        })
+        alertController.addAction(alertAction)
+        self.present(alertController, animated: true)
+    }
+}
+
+extension ScanQRCodeViewController: AVCaptureMetadataOutputObjectsDelegate {
+    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+        if (Date().timeIntervalSince1970 - self.sleepTime) < 0.5 {
+            return
+        }
+        self.sleepTime = Date().timeIntervalSince1970
+        
+        if metadataObjects.count <= 0 {
+            return
+        }
+        
+        let metadataObj = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
+        
+        if metadataObj.type != .qr {
+            return
+        }
+
+        let maxX = rightView.frame.origin.x + leftView.frame.width
+        let minX = leftView.frame.origin.x
+        let minY = rightView.frame.origin.y
+        let maxY = rightView.frame.origin.y + rightView.frame.height
+        
+        guard let barCodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObj) else {
+            return
+        }
+        
+        let barCodeSize = barCodeObject.bounds
+
+        
+        if barCodeSize.origin.x > minX && (barCodeSize.origin.x + barCodeSize.width) < maxX {
+            if barCodeSize.origin.y > minY && (barCodeSize.origin.y + barCodeSize.height) < maxY {
+                self.navigationController?.popViewController(animated: true)
+                scanResult?(metadataObj.stringValue ?? "")
+            }
+        }
+        
+    }
+}

@@ -58,7 +58,7 @@ class NewsDetailViewController: UIViewController{
             self.txtTitle.text = cdcData.title
             self.txtSource.text = "Source: Taiwan Centers for Disease Control Official"
         
-            let context = cdcData.content.replace("<br><br>", "").replace("&lt;br /&gt;", "").replace("\n", "\n\r")
+            let context = cdcData.content.replace("<br>", "").replace("&lt;br /&gt;", "").replace("&gt;", "").replace("\n", "\n\r")
             let label = getNewsLabel(text: context)
             self.stackNewsContent.addArrangedSubview(label)
         } else {
@@ -135,13 +135,26 @@ class NewsDetailViewController: UIViewController{
             removeCoverImage()
             return
         }
-
-        self.newsModel.getNewsImage(url: imgUrl, result: {
-            self.imgCover.image = $0
-            self.imgCover.fadeInAnimate(during: 0.5)
-            self.loadActivityindicator.fadeOutAnimate(during: 0.5, completion: {
-                self.loadActivityindicator.stopAnimating()
+        
+        let dispatch = DispatchSemaphore(value: 0)
+        
+        if let existImg = Global.collectionImgTempList[self.udnUrlString] {
+            self.imgCover.image = existImg
+            dispatch.signal()
+        } else {
+            self.newsModel.getNewsImage(url: imgUrl, result: { img in
+                DispatchQueue.main.async {
+                    self.imgCover.image = img
+                }
+                dispatch.signal()
             })
+        }
+        
+        dispatch.wait()
+        
+        self.imgCover.fadeInAnimate(during: 0.5)
+        self.loadActivityindicator.fadeOutAnimate(during: 0.5, completion: {
+            self.loadActivityindicator.stopAnimating()
         })
     }
     
@@ -211,10 +224,12 @@ class NewsDetailViewController: UIViewController{
         
         let newsImageUrl = img.image.formats?.large_jpeg ?? img.image.formats?.jpeg ?? nil
         if let newsImageUrl = newsImageUrl {
-            NewsModel().getNewsImage(url: newsImageUrl, result: {
-                imgView.newsImage.image = $0
-                imgView.loadImageActivityIndicator.stopAnimating()
-                self.newsContentImage[img.index] = $0
+            NewsModel().getNewsImage(url: newsImageUrl, result: { imgResult in
+                DispatchQueue.main.async {
+                    imgView.newsImage.image = imgResult
+                    imgView.loadImageActivityIndicator.stopAnimating()
+                    self.newsContentImage[img.index] = imgResult
+                }
             })
         }
 

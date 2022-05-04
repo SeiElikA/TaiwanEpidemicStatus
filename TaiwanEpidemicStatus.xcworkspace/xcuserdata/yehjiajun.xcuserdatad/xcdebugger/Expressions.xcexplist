@@ -11,7 +11,23 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "NewsViewController.scrollViewDidScroll(_:):NewsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "scrollView.contentOffset.y">
+            </PersistentString>
+            <PersistentString
+               value = "self.scrollViewAllNewsContent.bounds.height">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "NewsDetailViewController.getCoverImage(imgUrl:):NewsDetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Global.collectionImgTempList[self.udnUrlString]">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
    </ContextStates>
 </VariablesViewState>

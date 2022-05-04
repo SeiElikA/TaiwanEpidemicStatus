@@ -10,3 +10,4 @@
 "ServerErrorTitle" = "Can't Connected Server";
 "NewsAuthor" = "Author";
 "NewsSource" = "Source";
+"CameraNotUse" = "This device Camera can't use";

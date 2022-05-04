@@ -7,9 +7,10 @@
 
 import UIKit
 
-class NewsItemMediumTableViewCell: UITableViewCell {
+class NewsItemMediumTableViewCell: UITableViewCell,BaseNewsItem {
     public static let identity = "NewsItemMediumTableViewCell"
-    @IBOutlet weak var txtContent: UILabel!
+    
+    @IBOutlet weak var txtCaption: UILabel!
     @IBOutlet weak var txtTitle: UILabel!
     @IBOutlet weak var btnShare: UIButton!
     @IBOutlet weak var imgNews: UIImageView!
@@ -28,7 +29,7 @@ class NewsItemMediumTableViewCell: UITableViewCell {
         // Setting Style
         imgNews.layer.cornerRadius = 6
         txtDate.font = UIFont.roundedFont(txtDate.font.pointSize)
-        txtContent.font = UIFont.roundedFont(txtContent.font.pointSize)
+        txtCaption.font = UIFont.roundedFont(txtCaption.font.pointSize)
         txtTitle.font = UIFont.roundedBoldFont(txtTitle.font.pointSize)
         viewBackground.layer.cornerRadius = 8
         viewBackground.layer.borderWidth = 0.5
@@ -43,9 +44,5 @@ class NewsItemMediumTableViewCell: UITableViewCell {
         let url = URL(string: shareLink)!
         let activityController = UIActivityViewController(activityItems: [url], applicationActivities: nil)
         viewController.present(activityController, animated: true)
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
     }
 }

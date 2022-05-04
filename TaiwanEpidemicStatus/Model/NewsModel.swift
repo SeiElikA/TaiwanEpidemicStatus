@@ -21,9 +21,7 @@ public class NewsModel {
             }
             
             if let data = data {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                    result(UIImage(data: data) ?? UIImage())
-                }
+                result(UIImage(data: data) ?? UIImage())
             }
         })
     }

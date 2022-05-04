@@ -206,6 +206,10 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         navigationController?.present(navigationView, animated: true)
     }
     
+    @IBAction func btnPassportEvent(_ sender: Any) {
+        navigationController?.pushViewController(PassportViewController(), animated: true)
+    }
+    
     private func fetchData(complection: (() -> Void)? = nil) {
         // get City Statistic (first open application default city)
         let dispatchGroup = DispatchGroup()
@@ -248,7 +252,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
             self.weatherModel.getWeatherData(location: userLocation, weathers: {
                 let data = $0[0]
                 self.txtLocation.text = $1
-                self.txtTemperature.text = "\(data.MinT)~\(data.MaxT)°C"
+                self.txtTemperature.text = data.MaxT == data.MinT ? "\(data.MinT)°C" : "\(data.MinT)~\(data.MaxT)°C"
                 let weatherIcon = self.weatherModel.getWeatherIcon(wX: data.Wx)
                 self.imgWeatherIcon.tintColor = weatherIcon.first?.value
                 self.imgWeatherIcon.image = weatherIcon.first?.key   
@@ -272,7 +276,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         let cell: NewsItemMediumTableViewCell = tableView.dequeueReusableCell(withIdentifier: NewsItemMediumTableViewCell.identity, for: indexPath) as! NewsItemMediumTableViewCell
         let covidNewsData = self.covidNewsList[indexPath.row]
         cell.txtTitle.text = covidNewsData.title
-        cell.txtContent.text = covidNewsData.paragraph
+        cell.txtCaption.text = covidNewsData.paragraph
         cell.txtDate.text = ParseUtil.covidNewsDateFormat(dateString: covidNewsData.time.dateTime) + "｜" + covidNewsData.cateTitle
         cell.shareLink = covidNewsData.titleLink
         cell.viewController = self
@@ -282,13 +286,15 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
             cell.activityIndicator.fadeOutAnimate(during: 0.5)
             cell.activityIndicator.stopAnimating()
         } else {
-            newsModel.getNewsImage(url: covidNewsData.url, result: {
-                cell.imgNews.image = $0
-                Global.collectionImgTempList[covidNewsData.titleLink] = $0
-                // show image use animation
-                cell.imgNews.fadeInAnimate(during: 0.5, completion: {
-                    cell.activityIndicator.stopAnimating()
-                })
+            newsModel.getNewsImage(url: covidNewsData.url, result: { img in
+                DispatchQueue.main.async {
+                    cell.imgNews.image = img
+                    Global.collectionImgTempList[covidNewsData.url] = img
+                    // show image use animation
+                    cell.imgNews.fadeInAnimate(during: 0.5, completion: {
+                        cell.activityIndicator.stopAnimating()
+                    })
+                }
             })
         }
         
