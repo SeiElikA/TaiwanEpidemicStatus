@@ -21,8 +21,6 @@ class ScanQRCodeViewController: UIViewController {
     private var sleepTime = Date().timeIntervalSince1970
     public var scanResult: ((String) -> Void)?
     
-    
-    
     private func setViewConstraint() {
         scanOutlineView.forEach({
             $0.layer.cornerRadius = 5
@@ -33,8 +31,8 @@ class ScanQRCodeViewController: UIViewController {
         let viewQRCodeSize = width - (rightView.frame.width * 2)
         
         let viewHeight = (height - viewQRCodeSize) / 2
-        topView.heightAnchor.constraint(equalToConstant: viewHeight).isActive = true
         bottomView.heightAnchor.constraint(equalToConstant: viewHeight).isActive = true
+        topView.heightAnchor.constraint(equalToConstant: viewHeight).isActive = true
     }
     
     override func viewDidLoad() {
@@ -46,7 +44,7 @@ class ScanQRCodeViewController: UIViewController {
             self.showCameraErrorAlert()
             return
         }
-        
+
         if AVCaptureDevice.authorizationStatus(for: .video) == .denied {
             AVCaptureDevice.requestAccess(for: .video, completionHandler: {
                 if !$0 {
@@ -55,30 +53,30 @@ class ScanQRCodeViewController: UIViewController {
             })
             return
         }
-        
+
         do {
             let input = try AVCaptureDeviceInput(device: captureDevice)
             captureSession.addInput(input)
-            
+
             let captureMetadataOutput = AVCaptureMetadataOutput()
             captureSession.addOutput(captureMetadataOutput)
-            
-            captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
+
+            captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.global())
             captureMetadataOutput.metadataObjectTypes = [AVMetadataObject.ObjectType.qr]
 
             videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
             videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
             videoPreviewLayer?.frame = view.layer.bounds
             view.layer.addSublayer(videoPreviewLayer!)
-            
+
             captureSession.startRunning()
-            
+
             view.bringSubviewToFront(topView)
             view.bringSubviewToFront(rightView)
             view.bringSubviewToFront(leftView)
             view.bringSubviewToFront(bottomView)
             view.bringSubviewToFront(btnBack)
-            
+
             scanOutlineView.forEach({
                 view.bringSubviewToFront($0)
             })
@@ -87,7 +85,11 @@ class ScanQRCodeViewController: UIViewController {
             return
         }
     }
-
+    
+    @IBAction func btnBackEvent(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     private func showCameraErrorAlert() {
         let errorMsg = NSLocalizedString("CameraNotUse", comment: "")
         let alertController = UIAlertController(title: "Error", message: errorMsg, preferredStyle: .alert)
@@ -115,25 +117,26 @@ extension ScanQRCodeViewController: AVCaptureMetadataOutputObjectsDelegate {
         if metadataObj.type != .qr {
             return
         }
+        
+        DispatchQueue.main.async {
+            let maxX = self.rightView.frame.origin.x + self.leftView.frame.width
+            let minX = self.leftView.frame.origin.x
+            let minY = self.rightView.frame.origin.y
+            let maxY = self.rightView.frame.origin.y + self.rightView.frame.height
+            
+            guard let barCodeObject = self.videoPreviewLayer?.transformedMetadataObject(for: metadataObj) else {
+                return
+            }
+            
+            let barCodeSize = barCodeObject.bounds
 
-        let maxX = rightView.frame.origin.x + leftView.frame.width
-        let minX = leftView.frame.origin.x
-        let minY = rightView.frame.origin.y
-        let maxY = rightView.frame.origin.y + rightView.frame.height
-        
-        guard let barCodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObj) else {
-            return
-        }
-        
-        let barCodeSize = barCodeObject.bounds
-
-        
-        if barCodeSize.origin.x > minX && (barCodeSize.origin.x + barCodeSize.width) < maxX {
-            if barCodeSize.origin.y > minY && (barCodeSize.origin.y + barCodeSize.height) < maxY {
-                self.navigationController?.popViewController(animated: true)
-                scanResult?(metadataObj.stringValue ?? "")
+            
+            if barCodeSize.origin.x > minX && (barCodeSize.origin.x + barCodeSize.width) < maxX {
+                if barCodeSize.origin.y > minY && (barCodeSize.origin.y + barCodeSize.height) < maxY {
+                    self.navigationController?.popViewController(animated: true)
+                    self.scanResult?(metadataObj.stringValue ?? "")
+                }
             }
         }
-        
     }
 }

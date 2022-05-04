@@ -24,12 +24,14 @@ class NewsViewController: UIViewController {
     @IBOutlet weak var txtSmallTitle: UILabel!
     @IBOutlet weak var btnBackButton: UIButton!
     @IBOutlet weak var scrollViewAllNewsContent: UIView!
+    
     private var timer:Timer?
     private var isTableFirstLoading = true
+    private var pageChangeLock = false
     
     private let newsModel = NewsModel()
     private let testModel = TestModel()
-    private var newsPage = 0
+    private var newsPage = 1
     private var isAllNews = true
     
     private var covidNewsList:[CovidNews] = [] {
@@ -46,6 +48,7 @@ class NewsViewController: UIViewController {
         didSet {
             if isViewLoaded {
                 self.allNewsTableView.reloadData()
+                self.pageChangeLock = false
             }
         }
     }
@@ -163,7 +166,7 @@ class NewsViewController: UIViewController {
     @objc private func selectNews(_ view:UIGestureRecognizer) {
         let index = view.view?.tag ?? 0
         let detailViewController = NewsDetailViewController()
-        detailViewController.udnUrlString = self.covidNewsList[index].titleLink
+        detailViewController.udnUrlString = self.allTableViewList[index].titleLink
         self.navigationController?.pushViewController(detailViewController, animated: true)
     }
     
@@ -175,6 +178,10 @@ class NewsViewController: UIViewController {
     }
     
     @objc private func changeNewsTabView() {
+        if pageChangeLock {
+            return
+        }
+        
         isAllNews.toggle()
         let newsViewWidth = self.viewAllNews.frame.width
         let textStartPosition = (isAllNews ? self.txtAllNews : self.txtCDCNews).frame.origin.x
@@ -193,6 +200,7 @@ class NewsViewController: UIViewController {
         let scrollViewHeight = scrollView.contentOffset.y + scrollView.frame.height
         if scrollViewHeight == self.scrollViewAllNewsContent.bounds.height{
             self.newsPage += 1
+            self.pageChangeLock = true
             self.newsModel.getAllNewsList(page: self.newsPage, result: { list in
                 DispatchQueue.main.async {
                     self.covidNewsList.append(contentsOf: list)
@@ -258,7 +266,6 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
                         cell.activityIndicator.stopAnimating()
                     })
                 }
-
             })
         }
         
@@ -268,7 +275,7 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
         cell.shareLink = covidNewsData.titleLink
         cell.viewController = self
         
-        cell.tag = indexPath.row + 5
+        cell.tag = indexPath.row
         cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selectNews(_:))))
     
         return cell

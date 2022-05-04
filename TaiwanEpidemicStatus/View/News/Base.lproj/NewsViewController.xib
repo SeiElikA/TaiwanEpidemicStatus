@@ -141,7 +141,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V7j-Fc-uS0" userLabel="All View">
                             <rect key="frame" x="0.0" y="0.0" width="390" height="634"/>
                             <subviews>
-                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="0mg-of-M36">
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="4" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="0mg-of-M36">
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="228"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LJR-om-yE7" customClass="AllNewsCollectionViewFlowLayout" customModule="TaiwanEpidemicStatus" customModuleProvider="target">
@@ -241,6 +241,14 @@
             <point key="canvasLocation" x="130.76923076923077" y="126.54028436018957"/>
         </view>
     </objects>
+    <designables>
+        <designable name="HLS-nI-RGK">
+            <size key="intrinsicContentSize" width="-1" height="861.66666412353527"/>
+        </designable>
+        <designable name="WP3-uV-M22">
+            <size key="intrinsicContentSize" width="-1" height="861.99999618530285"/>
+        </designable>
+    </designables>
     <resources>
         <image name="BackButton" width="36" height="36"/>
         <namedColor name="MainColor">

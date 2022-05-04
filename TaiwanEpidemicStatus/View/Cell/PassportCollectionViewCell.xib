@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PassportCollectionViewCell" customModule="TaiwanEpidemicStatus" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="548"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="548"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gst-Vm-mT3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="548"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VaccineIcon" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TbZ-GS-c10">
+                                <rect key="frame" x="20" y="16" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="TbZ-GS-c10" secondAttribute="height" multiplier="1:1" id="8J0-dv-T4h"/>
+                                    <constraint firstAttribute="height" constant="24" id="QN0-AK-X3O"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="疫苗卡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6j-IX-3ok">
+                                <rect key="frame" x="58" y="16" width="52" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COVID-19" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOo-6W-nkv">
+                                <rect key="frame" x="277.5" y="16" width="79.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfV-3t-Shu">
+                                <rect key="frame" x="16" y="72" width="31" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <color key="textColor" name="PassportFontColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="疫苗" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wnY-qf-ESn">
+                                <rect key="frame" x="16" y="150" width="31" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <color key="textColor" name="PassportFontColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="第2劑（共2劑）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yls-qe-HEg">
+                                <rect key="frame" x="16" y="216" width="110.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <color key="textColor" name="PassportFontColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="簽發人" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eyi-vy-uuN">
+                                <rect key="frame" x="16" y="282" width="46" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <color key="textColor" name="PassportFontColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="王曉明" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ugd-R8-jFd">
+                                <rect key="frame" x="16" y="98" width="91" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comirnaty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R13-i6-Uw5">
+                                <rect key="frame" x="16" y="176" width="96" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021/12/30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvG-gQ-Ymd">
+                                <rect key="frame" x="16" y="242" width="104.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="246" verticalHuggingPriority="254" verticalCompressionResistancePriority="749" text="Taiwan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a04-Xj-ufk">
+                                <rect key="frame" x="16" y="308" width="64" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Rh-7m-LWB">
+                                <rect key="frame" x="8" y="336" width="359" height="204"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="753" text="EU DCC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcM-30-kBt">
+                                        <rect key="frame" x="0.0" y="171" width="359" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="747" image="QRCodePreview" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ez-BO-F3b">
+                                        <rect key="frame" x="52" y="8" width="255" height="159"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="2Ez-BO-F3b" secondAttribute="trailing" constant="52" id="0wH-yQ-1Bl"/>
+                                    <constraint firstAttribute="trailing" secondItem="kcM-30-kBt" secondAttribute="trailing" id="1dY-3c-eDc"/>
+                                    <constraint firstItem="kcM-30-kBt" firstAttribute="top" secondItem="2Ez-BO-F3b" secondAttribute="bottom" constant="4" id="To0-0T-eBE"/>
+                                    <constraint firstItem="2Ez-BO-F3b" firstAttribute="leading" secondItem="9Rh-7m-LWB" secondAttribute="leading" constant="52" id="b3z-we-sev"/>
+                                    <constraint firstItem="2Ez-BO-F3b" firstAttribute="top" secondItem="9Rh-7m-LWB" secondAttribute="top" constant="8" id="dk4-NC-xUk"/>
+                                    <constraint firstItem="kcM-30-kBt" firstAttribute="leading" secondItem="9Rh-7m-LWB" secondAttribute="leading" id="qEI-Ag-nVl"/>
+                                    <constraint firstAttribute="bottom" secondItem="kcM-30-kBt" secondAttribute="bottom" constant="12" id="ukC-64-tG0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="PassportCardColor"/>
+                        <constraints>
+                            <constraint firstItem="cfV-3t-Shu" firstAttribute="leading" secondItem="gst-Vm-mT3" secondAttribute="leading" constant="16" id="0OY-ei-o39"/>
+                            <constraint firstItem="TbZ-GS-c10" firstAttribute="top" secondItem="gst-Vm-mT3" secondAttribute="top" constant="16" id="33a-yv-kAy"/>
+                            <constraint firstItem="Eyi-vy-uuN" firstAttribute="leading" secondItem="gst-Vm-mT3" secondAttribute="leading" constant="16" id="37G-eG-fAx"/>
+                            <constraint firstItem="BOo-6W-nkv" firstAttribute="top" secondItem="TbZ-GS-c10" secondAttribute="top" id="5xK-sY-5so"/>
+                            <constraint firstItem="rvG-gQ-Ymd" firstAttribute="leading" secondItem="gst-Vm-mT3" secondAttribute="leading" constant="16" id="9f5-Ui-lqf"/>
+                            <constraint firstItem="wnY-qf-ESn" firstAttribute="leading" secondItem="gst-Vm-mT3" secondAttribute="leading" constant="16" id="Cnh-Ha-di4"/>
+                            <constraint firstItem="TbZ-GS-c10" firstAttribute="leading" secondItem="gst-Vm-mT3" secondAttribute="leading" constant="20" id="DvN-FU-O8r"/>
+                            <constraint firstItem="Yls-qe-HEg" firstAttribute="top" secondItem="R13-i6-Uw5" secondAttribute="bottom" constant="16" id="F2n-xe-slZ"/>
+                            <constraint firstItem="wnY-qf-ESn" firstAttribute="top" secondItem="Ugd-R8-jFd" secondAttribute="bottom" constant="16" id="KNx-na-bRZ"/>
+                            <constraint firstItem="TbZ-GS-c10" firstAttribute="bottom" secondItem="U6j-IX-3ok" secondAttribute="bottom" id="KSm-vu-kfK"/>
+                            <constraint firstItem="a04-Xj-ufk" firstAttribute="leading" secondItem="gst-Vm-mT3" secondAttribute="leading" constant="16" id="Lb3-EW-sVa"/>
+                            <constraint firstItem="9Rh-7m-LWB" firstAttribute="leading" secondItem="gst-Vm-mT3" secondAttribute="leading" constant="8" id="XeC-Bk-AbM"/>
+                            <constraint firstItem="rvG-gQ-Ymd" firstAttribute="top" secondItem="Yls-qe-HEg" secondAttribute="bottom" constant="8" id="bCp-8a-l6A"/>
+                            <constraint firstItem="R13-i6-Uw5" firstAttribute="leading" secondItem="gst-Vm-mT3" secondAttribute="leading" constant="16" id="c9u-zW-1h8"/>
+                            <constraint firstItem="U6j-IX-3ok" firstAttribute="leading" secondItem="TbZ-GS-c10" secondAttribute="trailing" constant="14" id="dnz-Iw-3Lc"/>
+                            <constraint firstAttribute="trailing" secondItem="BOo-6W-nkv" secondAttribute="trailing" constant="18" id="dzo-fl-PCm"/>
+                            <constraint firstAttribute="trailing" secondItem="9Rh-7m-LWB" secondAttribute="trailing" constant="8" id="fN2-d1-xIV"/>
+                            <constraint firstItem="U6j-IX-3ok" firstAttribute="top" secondItem="TbZ-GS-c10" secondAttribute="top" id="fSn-1q-siO"/>
+                            <constraint firstItem="Ugd-R8-jFd" firstAttribute="leading" secondItem="gst-Vm-mT3" secondAttribute="leading" constant="16" id="gPr-pK-9Tb"/>
+                            <constraint firstItem="Ugd-R8-jFd" firstAttribute="top" secondItem="cfV-3t-Shu" secondAttribute="bottom" constant="8" id="hO2-7S-Qtu"/>
+                            <constraint firstItem="9Rh-7m-LWB" firstAttribute="top" secondItem="a04-Xj-ufk" secondAttribute="bottom" constant="4" id="hnX-tM-hI6"/>
+                            <constraint firstAttribute="bottom" secondItem="9Rh-7m-LWB" secondAttribute="bottom" constant="8" id="hpE-VV-fq0"/>
+                            <constraint firstItem="Eyi-vy-uuN" firstAttribute="top" secondItem="rvG-gQ-Ymd" secondAttribute="bottom" constant="16" id="hvt-Ij-QN8"/>
+                            <constraint firstItem="a04-Xj-ufk" firstAttribute="top" secondItem="Eyi-vy-uuN" secondAttribute="bottom" constant="8" id="rgM-BR-VMN"/>
+                            <constraint firstItem="TbZ-GS-c10" firstAttribute="bottom" secondItem="BOo-6W-nkv" secondAttribute="bottom" id="rjF-bc-Rsl"/>
+                            <constraint firstItem="Yls-qe-HEg" firstAttribute="leading" secondItem="gst-Vm-mT3" secondAttribute="leading" constant="16" id="u4F-B0-vE3"/>
+                            <constraint firstItem="R13-i6-Uw5" firstAttribute="top" secondItem="wnY-qf-ESn" secondAttribute="bottom" constant="8" id="wDU-IY-k2d"/>
+                            <constraint firstItem="cfV-3t-Shu" firstAttribute="top" secondItem="TbZ-GS-c10" secondAttribute="bottom" constant="32" id="yqP-2G-qgs"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="gst-Vm-mT3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Fi2-ii-0xP"/>
+                <constraint firstAttribute="trailing" secondItem="gst-Vm-mT3" secondAttribute="trailing" id="Hgq-Rz-Sc9"/>
+                <constraint firstItem="gst-Vm-mT3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="te1-0m-vCy"/>
+                <constraint firstAttribute="bottom" secondItem="gst-Vm-mT3" secondAttribute="bottom" id="uwE-ef-bLh"/>
+            </constraints>
+            <size key="customSize" width="320" height="600"/>
+            <connections>
+                <outlet property="imgQRCode" destination="2Ez-BO-F3b" id="iYc-th-3gY"/>
+                <outlet property="txtDate" destination="rvG-gQ-Ymd" id="bLa-j8-O7x"/>
+                <outlet property="txtIssuedBy" destination="a04-Xj-ufk" id="Gmm-zp-xhb"/>
+                <outlet property="txtName" destination="Ugd-R8-jFd" id="HWT-ac-8qX"/>
+                <outlet property="txtVaccine" destination="R13-i6-Uw5" id="EIK-W7-hPo"/>
+                <outlet property="txtVaccineCount" destination="Yls-qe-HEg" id="6Rd-U0-U79"/>
+            </connections>
+            <point key="canvasLocation" x="44" y="74.662668665667169"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="QRCodePreview" width="300" height="300"/>
+        <image name="VaccineIcon" width="21" height="36"/>
+        <namedColor name="PassportCardColor">
+            <color red="0.4823529411764706" green="0.67843137254901964" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PassportFontColor">
+            <color red="0.28235294117647058" green="0.28235294117647058" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
