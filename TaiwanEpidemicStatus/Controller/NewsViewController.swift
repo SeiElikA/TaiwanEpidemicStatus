@@ -163,10 +163,17 @@ class NewsViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-    @objc private func selectNews(_ view:UIGestureRecognizer) {
+    @objc private func selectNewsTable(_ view:UIGestureRecognizer) {
         let index = view.view?.tag ?? 0
         let detailViewController = NewsDetailViewController()
         detailViewController.udnUrlString = self.allTableViewList[index].titleLink
+        self.navigationController?.pushViewController(detailViewController, animated: true)
+    }
+    
+    @objc private func selectNewsCollection(_ view:UIGestureRecognizer) {
+        let index = view.view?.tag ?? 0
+        let detailViewController = NewsDetailViewController()
+        detailViewController.udnUrlString = self.allCollectionViewList[index].titleLink
         self.navigationController?.pushViewController(detailViewController, animated: true)
     }
     
@@ -276,7 +283,7 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
         cell.viewController = self
         
         cell.tag = indexPath.row
-        cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selectNews(_:))))
+        cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selectNewsTable(_:))))
     
         return cell
     }
@@ -334,7 +341,7 @@ extension NewsViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell.layer.shadowOffset = CGSize(width: 0, height: 3)
         cell.clipsToBounds = false
         
-        cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selectNews(_:))))
+        cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selectNewsCollection(_:))))
         
         return cell
     }

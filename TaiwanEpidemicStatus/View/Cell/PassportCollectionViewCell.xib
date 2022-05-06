@@ -64,8 +64,8 @@
                                 <color key="textColor" name="PassportFontColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="王曉明" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ugd-R8-jFd">
-                                <rect key="frame" x="16" y="98" width="91" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="王曉明" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ugd-R8-jFd">
+                                <rect key="frame" x="16" y="98" width="343" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -138,6 +138,7 @@
                             <constraint firstItem="9Rh-7m-LWB" firstAttribute="top" secondItem="a04-Xj-ufk" secondAttribute="bottom" constant="4" id="hnX-tM-hI6"/>
                             <constraint firstAttribute="bottom" secondItem="9Rh-7m-LWB" secondAttribute="bottom" constant="8" id="hpE-VV-fq0"/>
                             <constraint firstItem="Eyi-vy-uuN" firstAttribute="top" secondItem="rvG-gQ-Ymd" secondAttribute="bottom" constant="16" id="hvt-Ij-QN8"/>
+                            <constraint firstAttribute="trailing" secondItem="Ugd-R8-jFd" secondAttribute="trailing" constant="16" id="jmj-eH-gno"/>
                             <constraint firstItem="a04-Xj-ufk" firstAttribute="top" secondItem="Eyi-vy-uuN" secondAttribute="bottom" constant="8" id="rgM-BR-VMN"/>
                             <constraint firstItem="TbZ-GS-c10" firstAttribute="bottom" secondItem="BOo-6W-nkv" secondAttribute="bottom" id="rjF-bc-Rsl"/>
                             <constraint firstItem="Yls-qe-HEg" firstAttribute="leading" secondItem="gst-Vm-mT3" secondAttribute="leading" constant="16" id="u4F-B0-vE3"/>

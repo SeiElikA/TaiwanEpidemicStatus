@@ -11,3 +11,5 @@
 "NewsAuthor" = "Author";
 "NewsSource" = "Source";
 "CameraNotUse" = "This device Camera can't use";
+"HC1Error" = "This QRCode not correct.";
+"PassportDoses" = "DOES {currentNumber} OF {totalNumber}";

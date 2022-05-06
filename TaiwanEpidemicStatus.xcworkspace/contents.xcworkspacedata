@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:PassportEntity+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:PassportEntity+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:TaiwanEpidemicStatus.xcodeproj">
    </FileRef>
    <FileRef

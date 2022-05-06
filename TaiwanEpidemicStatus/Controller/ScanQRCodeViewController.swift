@@ -18,8 +18,9 @@ class ScanQRCodeViewController: UIViewController {
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet var scanOutlineView: [UIView]!
     @IBOutlet weak var btnBack: UIButton!
+    @IBOutlet weak var viewLabelPassport: UIStackView!
+    @IBOutlet weak var stackView: UIStackView!
     private var sleepTime = Date().timeIntervalSince1970
-    public var scanResult: ((String) -> Void)?
     
     private func setViewConstraint() {
         scanOutlineView.forEach({
@@ -38,6 +39,7 @@ class ScanQRCodeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.viewLabelPassport.layer.cornerRadius = viewLabelPassport.frame.height / 2
         self.setViewConstraint()
         
         guard let captureDevice = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) else {
@@ -76,6 +78,7 @@ class ScanQRCodeViewController: UIViewController {
             view.bringSubviewToFront(leftView)
             view.bringSubviewToFront(bottomView)
             view.bringSubviewToFront(btnBack)
+            view.bringSubviewToFront(stackView)
 
             scanOutlineView.forEach({
                 view.bringSubviewToFront($0)
@@ -133,8 +136,9 @@ extension ScanQRCodeViewController: AVCaptureMetadataOutputObjectsDelegate {
             
             if barCodeSize.origin.x > minX && (barCodeSize.origin.x + barCodeSize.width) < maxX {
                 if barCodeSize.origin.y > minY && (barCodeSize.origin.y + barCodeSize.height) < maxY {
-                    self.navigationController?.popViewController(animated: true)
-                    self.scanResult?(metadataObj.stringValue ?? "")
+                    let loadingViewController = LoadingGetPassportViewController()
+                    loadingViewController.hc1Code = metadataObj.stringValue ?? ""
+                    self.navigationController?.pushViewController(loadingViewController, animated: true)
                 }
             }
         }

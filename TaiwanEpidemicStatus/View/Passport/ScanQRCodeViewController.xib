@@ -16,8 +16,10 @@
                 <outlet property="btnBack" destination="tf2-Nv-hXt" id="Uvd-AF-uHd"/>
                 <outlet property="leftView" destination="qkV-Uk-ZVp" id="1HZ-Ih-0pc"/>
                 <outlet property="rightView" destination="U7O-19-fcb" id="cLT-Kg-ZEs"/>
+                <outlet property="stackView" destination="wug-TH-Ucp" id="hMq-06-ib9"/>
                 <outlet property="topView" destination="Et3-E3-Ygi" id="YdT-MP-iKB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewLabelPassport" destination="c8H-fv-if7" id="9Xd-VK-WnR"/>
                 <outletCollection property="scanOutlineView" destination="E2l-yl-eMm" collectionClass="NSMutableArray" id="RLH-T3-kef"/>
                 <outletCollection property="scanOutlineView" destination="UGR-gd-T5E" collectionClass="NSMutableArray" id="mGp-5e-rcj"/>
                 <outletCollection property="scanOutlineView" destination="8IC-E3-ZYl" collectionClass="NSMutableArray" id="ldj-u0-MjQ"/>
@@ -72,6 +74,25 @@
                         <action selector="btnBackEvent:" destination="-1" eventType="touchUpInside" id="TlB-yD-Gs4"/>
                     </connections>
                 </button>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wug-TH-Ucp">
+                    <rect key="frame" x="0.0" y="92" width="414" height="44.5"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="c8H-fv-if7">
+                            <rect key="frame" x="152.5" y="0.0" width="109.5" height="44.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="疫苗護照" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnz-Ac-NAH">
+                                    <rect key="frame" x="20" y="12" width="69.5" height="20.5"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                    <color key="textColor" name="MainColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <directionalEdgeInsets key="directionalLayoutMargins" top="12" leading="20" bottom="12" trailing="20"/>
+                        </stackView>
+                    </subviews>
+                </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E2l-yl-eMm">
                     <rect key="frame" x="47" y="274" width="86" height="10"/>
                     <color key="backgroundColor" name="MainColor"/>
@@ -147,6 +168,7 @@
                 <constraint firstItem="8IC-E3-ZYl" firstAttribute="top" secondItem="Et3-E3-Ygi" secondAttribute="bottom" constant="-5" id="8NO-zt-e2v"/>
                 <constraint firstItem="Et3-E3-Ygi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8l7-9z-E5O"/>
                 <constraint firstItem="HAY-hI-cam" firstAttribute="top" secondItem="NY3-NZ-EIq" secondAttribute="bottom" constant="-5" id="9rG-co-GlN"/>
+                <constraint firstItem="wug-TH-Ucp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="BJb-HI-5VS"/>
                 <constraint firstItem="NY3-NZ-EIq" firstAttribute="leading" secondItem="qkV-Uk-ZVp" secondAttribute="trailing" constant="-5" id="Cym-VH-BH6"/>
                 <constraint firstItem="U7O-19-fcb" firstAttribute="top" secondItem="Et3-E3-Ygi" secondAttribute="bottom" id="EZ3-fD-hMz"/>
                 <constraint firstItem="Et3-E3-Ygi" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="FEm-F8-lCQ"/>
@@ -154,6 +176,8 @@
                 <constraint firstItem="HAY-hI-cam" firstAttribute="top" secondItem="qkV-Uk-ZVp" secondAttribute="bottom" id="HYe-cM-HA8"/>
                 <constraint firstItem="z9U-fo-CIN" firstAttribute="leading" secondItem="qkV-Uk-ZVp" secondAttribute="trailing" constant="-5" id="K95-Bm-jIN"/>
                 <constraint firstItem="U7O-19-fcb" firstAttribute="leading" secondItem="0zd-ds-Rv3" secondAttribute="trailing" constant="-5" id="Myp-A9-Mdn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wug-TH-Ucp" secondAttribute="trailing" id="NR4-Mr-y0n"/>
+                <constraint firstItem="wug-TH-Ucp" firstAttribute="top" secondItem="tf2-Nv-hXt" secondAttribute="bottom" constant="4" id="NRB-RX-ex4"/>
                 <constraint firstItem="HAY-hI-cam" firstAttribute="top" secondItem="RPQ-fI-Eos" secondAttribute="bottom" constant="-5" id="S1E-bM-dXW"/>
                 <constraint firstAttribute="bottom" secondItem="HAY-hI-cam" secondAttribute="bottom" id="Sam-kR-JfO"/>
                 <constraint firstItem="U7O-19-fcb" firstAttribute="leading" secondItem="UGR-gd-T5E" secondAttribute="trailing" constant="-5" id="YeI-tO-11g"/>

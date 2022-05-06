@@ -10,3 +10,5 @@
 "NewsAuthor" = "记者";
 "NewsSource" = "来源";
 "CameraNotUse" = "此设备的镜头无法使用";
+"HC1Error" = "请扫描正确的二维码";
+"PassportDoses" = "第{currentNumber}剂 (共{totalNumber}剂)";

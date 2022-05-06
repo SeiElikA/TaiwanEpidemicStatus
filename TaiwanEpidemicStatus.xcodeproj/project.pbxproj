@@ -34,7 +34,6 @@
 		6F65C1B5281FE7AC004EB65F /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F65C1B7281FE7AC004EB65F /* NewsViewController.xib */; };
 		6F68EFD4280CF9030012B5B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F68EFD3280CF9030012B5B1 /* AppDelegate.swift */; };
 		6F68EFD6280CF9030012B5B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F68EFD5280CF9030012B5B1 /* SceneDelegate.swift */; };
-		6F68EFDE280CF9030012B5B1 /* TaiwanEpidemicStatus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6F68EFDC280CF9030012B5B1 /* TaiwanEpidemicStatus.xcdatamodeld */; };
 		6F68EFE0280CF9040012B5B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F68EFDF280CF9040012B5B1 /* Assets.xcassets */; };
 		6F68EFE3280CF9040012B5B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F68EFE1280CF9040012B5B1 /* LaunchScreen.storyboard */; };
 		6F68EFEE280CF9810012B5B1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F68EFEC280CF9810012B5B1 /* MainViewController.swift */; };
@@ -75,6 +74,12 @@
 		6FF6D6AE28221D7600430CBB /* PassportCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF6D6AD28221D7600430CBB /* PassportCollectionViewFlowLayout.swift */; };
 		6FF6D6B128221DB800430CBB /* PassportCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF6D6AF28221DB800430CBB /* PassportCollectionViewCell.swift */; };
 		6FF6D6B228221DB800430CBB /* PassportCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FF6D6B028221DB800430CBB /* PassportCollectionViewCell.xib */; };
+		6FF6D6B42823904B00430CBB /* PassportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF6D6B32823904B00430CBB /* PassportModel.swift */; };
+		6FF6D6B62823917B00430CBB /* Passport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF6D6B52823917B00430CBB /* Passport.swift */; };
+		6FF6D6B9282392DC00430CBB /* LoadingGetPassportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF6D6B7282392DC00430CBB /* LoadingGetPassportViewController.swift */; };
+		6FF6D6BA282392DC00430CBB /* LoadingGetPassportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FF6D6B8282392DC00430CBB /* LoadingGetPassportViewController.xib */; };
+		6FF6D6BC282398B200430CBB /* PassportEntityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF6D6BB282398B200430CBB /* PassportEntityModel.swift */; };
+		6FF6D6C728239A5500430CBB /* TaiwanEpidemicStatus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6FF6D6C528239A5500430CBB /* TaiwanEpidemicStatus.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,7 +146,6 @@
 		6F68EFD0280CF9030012B5B1 /* TaiwanEpidemicStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaiwanEpidemicStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F68EFD3280CF9030012B5B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F68EFD5280CF9030012B5B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6F68EFDD280CF9030012B5B1 /* TaiwanEpidemicStatus.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaiwanEpidemicStatus.xcdatamodel; sourceTree = "<group>"; };
 		6F68EFDF280CF9040012B5B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F68EFE2280CF9040012B5B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F68EFE4280CF9040012B5B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -187,6 +191,12 @@
 		6FF6D6AD28221D7600430CBB /* PassportCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		6FF6D6AF28221DB800430CBB /* PassportCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportCollectionViewCell.swift; sourceTree = "<group>"; };
 		6FF6D6B028221DB800430CBB /* PassportCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PassportCollectionViewCell.xib; sourceTree = "<group>"; };
+		6FF6D6B32823904B00430CBB /* PassportModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportModel.swift; sourceTree = "<group>"; };
+		6FF6D6B52823917B00430CBB /* Passport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passport.swift; sourceTree = "<group>"; };
+		6FF6D6B7282392DC00430CBB /* LoadingGetPassportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingGetPassportViewController.swift; sourceTree = "<group>"; };
+		6FF6D6B8282392DC00430CBB /* LoadingGetPassportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingGetPassportViewController.xib; sourceTree = "<group>"; };
+		6FF6D6BB282398B200430CBB /* PassportEntityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportEntityModel.swift; sourceTree = "<group>"; };
+		6FF6D6C628239A5500430CBB /* TaiwanEpidemicStatus.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaiwanEpidemicStatus.xcdatamodel; sourceTree = "<group>"; };
 		8D67909C78ADD09DDCF94958 /* Pods-TaiwanEpidemicStatus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiwanEpidemicStatus.debug.xcconfig"; path = "Target Support Files/Pods-TaiwanEpidemicStatus/Pods-TaiwanEpidemicStatus.debug.xcconfig"; sourceTree = "<group>"; };
 		8E785FFE1EB44893FB325A9C /* Pods-TaiwanEpidemicStatus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiwanEpidemicStatus.release.xcconfig"; path = "Target Support Files/Pods-TaiwanEpidemicStatus/Pods-TaiwanEpidemicStatus.release.xcconfig"; sourceTree = "<group>"; };
 		D93E472ECDF251766AC5187E /* Pods-FastAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastAPI.debug.xcconfig"; path = "Target Support Files/Pods-FastAPI/Pods-FastAPI.debug.xcconfig"; sourceTree = "<group>"; };
@@ -305,12 +315,12 @@
 		6F68EFD2280CF9030012B5B1 /* TaiwanEpidemicStatus */ = {
 			isa = PBXGroup;
 			children = (
+				6FF6D6C528239A5500430CBB /* TaiwanEpidemicStatus.xcdatamodeld */,
 				6F68EFD3280CF9030012B5B1 /* AppDelegate.swift */,
 				6F68EFD5280CF9030012B5B1 /* SceneDelegate.swift */,
 				6F68EFDF280CF9040012B5B1 /* Assets.xcassets */,
 				6F68EFE1280CF9040012B5B1 /* LaunchScreen.storyboard */,
 				6F68EFE4280CF9040012B5B1 /* Info.plist */,
-				6F68EFDC280CF9030012B5B1 /* TaiwanEpidemicStatus.xcdatamodeld */,
 				6F3B59D72817C9FF005B0E31 /* Extension */,
 				6F194381281790CF0008A6AD /* Util */,
 				6FAFD68B2816D6B60060FD86 /* Object */,
@@ -340,6 +350,7 @@
 		6F68EFEB280CF9720012B5B1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6FF6D6B7282392DC00430CBB /* LoadingGetPassportViewController.swift */,
 				6FC6E8252821073C00C5D4CE /* ScanQRCodeViewController.swift */,
 				6FC6E821282104FA00C5D4CE /* PassportViewController.swift */,
 				6FD8F5FE281C1B0A0053EC07 /* NewsViewController.swift */,
@@ -371,6 +382,8 @@
 				6F3B59E5281819E3005B0E31 /* TestModel.swift */,
 				6F3A529028192728009E042B /* AuthModel.swift */,
 				6F12870D281D52F40046A586 /* WeatherModel.swift */,
+				6FF6D6B32823904B00430CBB /* PassportModel.swift */,
+				6FF6D6BB282398B200430CBB /* PassportEntityModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -384,6 +397,7 @@
 				6F12870F281D54E70046A586 /* Location.swift */,
 				6F128711281D5BD40046A586 /* Weather.swift */,
 				6F65C1B3281FD8B5004EB65F /* CDCNews.swift */,
+				6FF6D6B52823917B00430CBB /* Passport.swift */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -393,6 +407,7 @@
 			children = (
 				6FC6E822282104FA00C5D4CE /* PassportViewController.xib */,
 				6FC6E8262821073C00C5D4CE /* ScanQRCodeViewController.xib */,
+				6FF6D6B8282392DC00430CBB /* LoadingGetPassportViewController.xib */,
 			);
 			path = Passport;
 			sourceTree = "<group>";
@@ -576,6 +591,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FC6E8282821073C00C5D4CE /* ScanQRCodeViewController.xib in Resources */,
+				6FF6D6BA282392DC00430CBB /* LoadingGetPassportViewController.xib in Resources */,
 				6F3B59D62817A437005B0E31 /* SelectCityTableViewCell.xib in Resources */,
 				6FD8F5EE281B923B0053EC07 /* NewsImageView.xib in Resources */,
 				6F3F09AA281E985700407DBD /* AllNewsCollectionViewCell.xib in Resources */,
@@ -676,23 +692,27 @@
 			files = (
 				6FD8F5F1281BC78C0053EC07 /* NewsImagePreviewViewController.swift in Sources */,
 				6F68EFD4280CF9030012B5B1 /* AppDelegate.swift in Sources */,
+				6FF6D6B9282392DC00430CBB /* LoadingGetPassportViewController.swift in Sources */,
 				6FC6E8272821073C00C5D4CE /* ScanQRCodeViewController.swift in Sources */,
+				6FF6D6BC282398B200430CBB /* PassportEntityModel.swift in Sources */,
 				6F68EFD6280CF9030012B5B1 /* SceneDelegate.swift in Sources */,
 				6F3F09A9281E985700407DBD /* AllNewsCollectionViewCell.swift in Sources */,
 				6F3F09A5281D764100407DBD /* NewsTabView.swift in Sources */,
 				6FF32145281AC8C60019A809 /* UDNNews.swift in Sources */,
-				6F68EFDE280CF9030012B5B1 /* TaiwanEpidemicStatus.xcdatamodeld in Sources */,
 				6FF32142281AB88C0019A809 /* NewsDetailViewController.swift in Sources */,
+				6FF6D6B62823917B00430CBB /* Passport.swift in Sources */,
 				6F128710281D54E70046A586 /* Location.swift in Sources */,
 				6F3A528B28192247009E042B /* AESUtil.swift in Sources */,
 				6FC6E81C2820D69300C5D4CE /* NewsItemLargeTableViewCell.swift in Sources */,
 				6F128712281D5BD40046A586 /* Weather.swift in Sources */,
 				6FF6D6B128221DB800430CBB /* PassportCollectionViewCell.swift in Sources */,
+				6FF6D6C728239A5500430CBB /* TaiwanEpidemicStatus.xcdatamodeld in Sources */,
 				6FAFD68D2816D6D10060FD86 /* CityStatistic.swift in Sources */,
 				6FC6E81F2820DC7400C5D4CE /* BaseNewsItem.swift in Sources */,
 				6FC6E823282104FA00C5D4CE /* PassportViewController.swift in Sources */,
 				6F3B59D52817A437005B0E31 /* SelectCityTableViewCell.swift in Sources */,
 				6FC6E8192820D29900C5D4CE /* Global.swift in Sources */,
+				6FF6D6B42823904B00430CBB /* PassportModel.swift in Sources */,
 				6F3B59CD28179D75005B0E31 /* ExtensionMethod.swift in Sources */,
 				6F3A528D281925E2009E042B /* JWTUtil.swift in Sources */,
 				6F68EFEE280CF9810012B5B1 /* MainViewController.swift in Sources */,
@@ -1077,12 +1097,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		6F68EFDC280CF9030012B5B1 /* TaiwanEpidemicStatus.xcdatamodeld */ = {
+		6FF6D6C528239A5500430CBB /* TaiwanEpidemicStatus.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				6F68EFDD280CF9030012B5B1 /* TaiwanEpidemicStatus.xcdatamodel */,
+				6FF6D6C628239A5500430CBB /* TaiwanEpidemicStatus.xcdatamodel */,
 			);
-			currentVersion = 6F68EFDD280CF9030012B5B1 /* TaiwanEpidemicStatus.xcdatamodel */;
+			currentVersion = 6FF6D6C628239A5500430CBB /* TaiwanEpidemicStatus.xcdatamodel */;
 			path = TaiwanEpidemicStatus.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

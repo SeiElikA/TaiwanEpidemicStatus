@@ -10,3 +10,5 @@
 "NewsAuthor" = "記者";
 "NewsSource" = "來源";
 "CameraNotUse" = "此裝置的鏡頭無法使用";
+"HC1Error" = "請掃描正確的QRCode";
+"PassportDoses" = "第{currentNumber}劑 (共{totalNumber}劑)";
