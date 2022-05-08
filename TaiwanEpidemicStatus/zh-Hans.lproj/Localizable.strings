@@ -12,3 +12,7 @@
 "CameraNotUse" = "此设备的镜头无法使用";
 "HC1Error" = "请扫描正确的二维码";
 "PassportDoses" = "第{currentNumber}剂 (共{totalNumber}剂)";
+"PassportExistError" = "此疫苗护照已存在";
+"ImportPassport" = "从相簿汇入QR Code";
+"NewCases" = "新增确诊";
+"City" = "县市: {city}";

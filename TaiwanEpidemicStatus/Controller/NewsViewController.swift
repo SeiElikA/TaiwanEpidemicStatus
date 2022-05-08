@@ -27,7 +27,8 @@ class NewsViewController: UIViewController {
     
     private var timer:Timer?
     private var isTableFirstLoading = true
-    private var pageChangeLock = false
+    private var firstLoadingLock = true
+    private var pageChangeLock = true
     
     private let newsModel = NewsModel()
     private let testModel = TestModel()
@@ -142,6 +143,7 @@ class NewsViewController: UIViewController {
                 dispatchGroup.notify(queue: .main, execute: {
                     self.loadingView.fadeOutAnimate(during: 0.5, completion: {
                         self.loadingView.isHidden = true
+                        self.firstLoadingLock = false
                         self.timer?.invalidate()
                     })
                 })
@@ -185,7 +187,7 @@ class NewsViewController: UIViewController {
     }
     
     @objc private func changeNewsTabView() {
-        if pageChangeLock {
+        if pageChangeLock || firstLoadingLock {
             return
         }
         

@@ -1,0 +1,6 @@
+
+/* Class = "UILabel"; text = "Carry a digital copy of the caccineation certificate by scanning the QR code of the Digital COVID-19 certificate.\n\nClick on the upper right corner to add the first vaccine passport"; ObjectID = "OKE-vc-R3K"; */
+"OKE-vc-R3K.text" = "将你与家人的疫苗接种数位证明存入手机，并以QR code的方式提供快速验证\n\n点击右上角来新增第一个疫苗护照吧";
+
+/* Class = "UILabel"; text = "疫苗護照"; ObjectID = "ZwP-Av-fYw"; */
+"ZwP-Av-fYw.text" = "疫苗护照";

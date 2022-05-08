@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="bottomView" destination="HAY-hI-cam" id="sIN-BC-ydE"/>
                 <outlet property="btnBack" destination="tf2-Nv-hXt" id="Uvd-AF-uHd"/>
+                <outlet property="btnImport" destination="LSo-kn-wcM" id="kpB-Q4-xXW"/>
                 <outlet property="leftView" destination="qkV-Uk-ZVp" id="1HZ-Ih-0pc"/>
                 <outlet property="rightView" destination="U7O-19-fcb" id="cLT-Kg-ZEs"/>
                 <outlet property="stackView" destination="wug-TH-Ucp" id="hMq-06-ib9"/>
@@ -64,6 +65,16 @@
                         <constraint firstAttribute="width" constant="52" id="2Sm-Rq-l2g"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSo-kn-wcM">
+                    <rect key="frame" x="360" y="52" width="36" height="36"/>
+                    <color key="tintColor" name="MainColor"/>
+                    <state key="normal" image="ImportButton">
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
+                    </state>
+                    <connections>
+                        <action selector="btnImportEvent:" destination="-1" eventType="touchUpInside" id="IV8-qD-wnz"/>
+                    </connections>
+                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tf2-Nv-hXt">
                     <rect key="frame" x="18" y="52" width="36" height="36"/>
                     <color key="tintColor" name="MainColor"/>
@@ -162,6 +173,7 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="U7O-19-fcb" firstAttribute="leading" secondItem="H8p-15-0if" secondAttribute="trailing" constant="-5" id="2b0-jQ-ocb"/>
+                <constraint firstItem="LSo-kn-wcM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="4AP-Mg-gkl"/>
                 <constraint firstItem="tf2-Nv-hXt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="18" id="4zB-Td-jtU"/>
                 <constraint firstItem="Et3-E3-Ygi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6JX-aC-epW"/>
                 <constraint firstItem="0zd-ds-Rv3" firstAttribute="top" secondItem="Et3-E3-Ygi" secondAttribute="bottom" constant="-5" id="7U6-HC-aCg"/>
@@ -173,6 +185,7 @@
                 <constraint firstItem="U7O-19-fcb" firstAttribute="top" secondItem="Et3-E3-Ygi" secondAttribute="bottom" id="EZ3-fD-hMz"/>
                 <constraint firstItem="Et3-E3-Ygi" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="FEm-F8-lCQ"/>
                 <constraint firstItem="HAY-hI-cam" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Gat-IC-iIv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LSo-kn-wcM" secondAttribute="trailing" constant="18" id="HFk-XW-7h6"/>
                 <constraint firstItem="HAY-hI-cam" firstAttribute="top" secondItem="qkV-Uk-ZVp" secondAttribute="bottom" id="HYe-cM-HA8"/>
                 <constraint firstItem="z9U-fo-CIN" firstAttribute="leading" secondItem="qkV-Uk-ZVp" secondAttribute="trailing" constant="-5" id="K95-Bm-jIN"/>
                 <constraint firstItem="U7O-19-fcb" firstAttribute="leading" secondItem="0zd-ds-Rv3" secondAttribute="trailing" constant="-5" id="Myp-A9-Mdn"/>
@@ -200,6 +213,7 @@
     </objects>
     <resources>
         <image name="BackButton" width="36" height="36"/>
+        <image name="ImportButton" width="36" height="36"/>
         <namedColor name="MainColor">
             <color red="0.28235294117647058" green="0.49411764705882355" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

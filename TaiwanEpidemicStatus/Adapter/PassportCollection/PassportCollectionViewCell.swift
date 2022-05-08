@@ -14,6 +14,7 @@ class PassportCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var txtVaccineCount: UILabel!
     @IBOutlet weak var txtIssuedBy: UILabel!
     @IBOutlet weak var imgQRCode: UIImageView!
+    @IBOutlet weak var imgDebug: UIImageView!
     
     public static let identity = "PassportCollectionViewCell"
     

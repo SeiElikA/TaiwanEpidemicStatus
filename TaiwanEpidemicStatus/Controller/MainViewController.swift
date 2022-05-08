@@ -44,6 +44,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     private var locationManager = CLLocationManager()
     private var citySelectIndex = 12
     private var cityList:[String] = []
+    private var isCityStatisticLoaded = false
     private var covidNewsList:[CovidNews] = [] {
         didSet {
             DispatchQueue.main.async {
@@ -53,6 +54,11 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
                     self.newsTableView.reloadData()
                 }
             }
+        }
+    }
+    private var cityStatisticData:[CityStatistic] = [] {
+        didSet {
+            isCityStatisticLoaded = true
         }
     }
     
@@ -170,6 +176,16 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         timer?.invalidate()
     }
     
+    @IBAction func btnMoreStatisticEvent(_ sender: Any) {
+        if !isCityStatisticLoaded {
+            return
+        }
+        
+        let statisticViewController = CovidStatisticViewController()
+        statisticViewController.cityStatisticData = self.cityStatisticData
+        self.navigationController?.pushViewController(statisticViewController, animated: true)
+    }
+    
     @IBAction func btnMoreNewsEvent(_ sender: Any) {
         let newsController = NewsViewController()
         self.navigationController?.pushViewController(newsController, animated: true)
@@ -239,6 +255,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
             if result.isEmpty {
                 return
             }
+            self.cityStatisticData = result
             let cityFirstStatistic = result[0]
             self.txtTotalCases.text = cityFirstStatistic.totalCasesAmount
             self.txtTodayCases.text = cityFirstStatistic.newCasesAmount

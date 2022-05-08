@@ -31,7 +31,12 @@ class LoadingGetPassportViewController: UIViewController {
                 self.timer?.invalidate()
                 if let msg = msg {
                     print(msg)
-                    let errorMsg = NSLocalizedString("HC1Error", comment: "")
+                    var errorMsg = NSLocalizedString("HC1Error", comment: "")
+                    if msg.contains("408") {
+                        errorMsg = "Time Out Connection"
+                    } else if msg.contains("401") {
+                        errorMsg = "Authorization Error"
+                    }
                     let alertController = UIAlertController(title: "Error", message: errorMsg, preferredStyle: .alert)
                     let action = UIAlertAction(title: "OK", style: .cancel, handler: { _ in
                         self.backToPassportViewController()
@@ -43,19 +48,38 @@ class LoadingGetPassportViewController: UIViewController {
                 
                 if let passport = passport {
                     // Save passport to core data
+                    let existData = self.coreDataModel.getAllPassport().first(where: {$0.hc1Code == self.hc1Code})
+                    
+                    if existData != nil {
+                        let errorMsg = NSLocalizedString("PassportExistError", comment: "")
+                        self.showErrorAlert(content: errorMsg)
+                        return
+                    }
+
                     self.coreDataModel.insertPassport(passport: passport, hc1Code: self.hc1Code ?? "")
                     self.backToPassportViewController()
                     PassportViewController.instance?.reloadPassportData()
                     return
                 }
                 
-                self.backToPassportViewController()
+                self.showErrorAlert(content: "")
             }
         })
     }
     
-    public func backToPassportViewController() {
-        let viewController = self.navigationController?.viewControllers[1]
+    private func showErrorAlert(content:String) {
+        let alertController = UIAlertController(title: "Error", message: content, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: { _ in
+            self.backToPassportViewController()
+        })
+        alertController.addAction(action)
+        self.present(alertController, animated: true)
+    }
+    
+    private func backToPassportViewController() {
+        var viewController:UIViewController?
+        viewController = self.navigationController?.viewControllers.first(where: {$0.nibName == "PassportViewController"})
+
         self.navigationController?.popToViewController(viewController!, animated: true)
         timer?.invalidate()
     }

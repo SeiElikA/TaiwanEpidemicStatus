@@ -22,94 +22,94 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="548"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VaccineIcon" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TbZ-GS-c10">
-                                <rect key="frame" x="20" y="16" width="24" height="24"/>
+                                <rect key="frame" x="18" y="16" width="28" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="TbZ-GS-c10" secondAttribute="height" multiplier="1:1" id="8J0-dv-T4h"/>
-                                    <constraint firstAttribute="height" constant="24" id="QN0-AK-X3O"/>
+                                    <constraint firstAttribute="height" constant="28" id="QN0-AK-X3O"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="疫苗卡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6j-IX-3ok">
-                                <rect key="frame" x="58" y="16" width="52" height="24"/>
+                                <rect key="frame" x="60" y="16" width="52" height="28"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COVID-19" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOo-6W-nkv">
-                                <rect key="frame" x="277.5" y="16" width="79.5" height="24"/>
+                                <rect key="frame" x="277.5" y="16" width="79.5" height="28"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfV-3t-Shu">
-                                <rect key="frame" x="16" y="72" width="31" height="18"/>
+                                <rect key="frame" x="16" y="76" width="31" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <color key="textColor" name="PassportFontColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="疫苗" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wnY-qf-ESn">
-                                <rect key="frame" x="16" y="150" width="31" height="18"/>
+                                <rect key="frame" x="16" y="154" width="31" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <color key="textColor" name="PassportFontColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="第2劑（共2劑）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yls-qe-HEg">
-                                <rect key="frame" x="16" y="216" width="110.5" height="18"/>
+                                <rect key="frame" x="16" y="220" width="110.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <color key="textColor" name="PassportFontColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="簽發人" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eyi-vy-uuN">
-                                <rect key="frame" x="16" y="282" width="46" height="18"/>
+                                <rect key="frame" x="16" y="286" width="46" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <color key="textColor" name="PassportFontColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="王曉明" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ugd-R8-jFd">
-                                <rect key="frame" x="16" y="98" width="343" height="36"/>
+                                <rect key="frame" x="16" y="102" width="343" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comirnaty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R13-i6-Uw5">
-                                <rect key="frame" x="16" y="176" width="96" height="24"/>
+                                <rect key="frame" x="16" y="180" width="96" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021/12/30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvG-gQ-Ymd">
-                                <rect key="frame" x="16" y="242" width="104.5" height="24"/>
+                                <rect key="frame" x="16" y="246" width="104.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="246" verticalHuggingPriority="254" verticalCompressionResistancePriority="749" text="Taiwan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a04-Xj-ufk">
-                                <rect key="frame" x="16" y="308" width="64" height="24"/>
+                                <rect key="frame" x="16" y="312" width="64" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Rh-7m-LWB">
-                                <rect key="frame" x="8" y="336" width="359" height="204"/>
+                                <rect key="frame" x="8" y="340" width="359" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="753" text="EU DCC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcM-30-kBt">
-                                        <rect key="frame" x="0.0" y="171" width="359" height="21"/>
+                                        <rect key="frame" x="0.0" y="167" width="359" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="747" image="QRCodePreview" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ez-BO-F3b">
-                                        <rect key="frame" x="52" y="8" width="255" height="159"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JkE-f6-3rO">
+                                        <rect key="frame" x="52" y="8" width="255" height="155"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="2Ez-BO-F3b" secondAttribute="trailing" constant="52" id="0wH-yQ-1Bl"/>
                                     <constraint firstAttribute="trailing" secondItem="kcM-30-kBt" secondAttribute="trailing" id="1dY-3c-eDc"/>
-                                    <constraint firstItem="kcM-30-kBt" firstAttribute="top" secondItem="2Ez-BO-F3b" secondAttribute="bottom" constant="4" id="To0-0T-eBE"/>
-                                    <constraint firstItem="2Ez-BO-F3b" firstAttribute="leading" secondItem="9Rh-7m-LWB" secondAttribute="leading" constant="52" id="b3z-we-sev"/>
-                                    <constraint firstItem="2Ez-BO-F3b" firstAttribute="top" secondItem="9Rh-7m-LWB" secondAttribute="top" constant="8" id="dk4-NC-xUk"/>
+                                    <constraint firstItem="JkE-f6-3rO" firstAttribute="leading" secondItem="9Rh-7m-LWB" secondAttribute="leading" constant="52" id="KYc-N9-Ys3"/>
+                                    <constraint firstAttribute="trailing" secondItem="JkE-f6-3rO" secondAttribute="trailing" constant="52" id="btB-og-TUJ"/>
                                     <constraint firstItem="kcM-30-kBt" firstAttribute="leading" secondItem="9Rh-7m-LWB" secondAttribute="leading" id="qEI-Ag-nVl"/>
+                                    <constraint firstItem="kcM-30-kBt" firstAttribute="top" secondItem="JkE-f6-3rO" secondAttribute="bottom" constant="4" id="qGl-gG-Xnb"/>
                                     <constraint firstAttribute="bottom" secondItem="kcM-30-kBt" secondAttribute="bottom" constant="12" id="ukC-64-tG0"/>
+                                    <constraint firstItem="JkE-f6-3rO" firstAttribute="top" secondItem="9Rh-7m-LWB" secondAttribute="top" constant="8" id="xPY-rz-wSo"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -121,7 +121,7 @@
                             <constraint firstItem="BOo-6W-nkv" firstAttribute="top" secondItem="TbZ-GS-c10" secondAttribute="top" id="5xK-sY-5so"/>
                             <constraint firstItem="rvG-gQ-Ymd" firstAttribute="leading" secondItem="gst-Vm-mT3" secondAttribute="leading" constant="16" id="9f5-Ui-lqf"/>
                             <constraint firstItem="wnY-qf-ESn" firstAttribute="leading" secondItem="gst-Vm-mT3" secondAttribute="leading" constant="16" id="Cnh-Ha-di4"/>
-                            <constraint firstItem="TbZ-GS-c10" firstAttribute="leading" secondItem="gst-Vm-mT3" secondAttribute="leading" constant="20" id="DvN-FU-O8r"/>
+                            <constraint firstItem="TbZ-GS-c10" firstAttribute="leading" secondItem="gst-Vm-mT3" secondAttribute="leading" constant="18" id="DvN-FU-O8r"/>
                             <constraint firstItem="Yls-qe-HEg" firstAttribute="top" secondItem="R13-i6-Uw5" secondAttribute="bottom" constant="16" id="F2n-xe-slZ"/>
                             <constraint firstItem="wnY-qf-ESn" firstAttribute="top" secondItem="Ugd-R8-jFd" secondAttribute="bottom" constant="16" id="KNx-na-bRZ"/>
                             <constraint firstItem="TbZ-GS-c10" firstAttribute="bottom" secondItem="U6j-IX-3ok" secondAttribute="bottom" id="KSm-vu-kfK"/>
@@ -162,7 +162,7 @@
             </constraints>
             <size key="customSize" width="320" height="600"/>
             <connections>
-                <outlet property="imgQRCode" destination="2Ez-BO-F3b" id="iYc-th-3gY"/>
+                <outlet property="imgQRCode" destination="JkE-f6-3rO" id="vGy-1Q-qJe"/>
                 <outlet property="txtDate" destination="rvG-gQ-Ymd" id="bLa-j8-O7x"/>
                 <outlet property="txtIssuedBy" destination="a04-Xj-ufk" id="Gmm-zp-xhb"/>
                 <outlet property="txtName" destination="Ugd-R8-jFd" id="HWT-ac-8qX"/>
@@ -173,7 +173,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="QRCodePreview" width="300" height="300"/>
         <image name="VaccineIcon" width="21" height="36"/>
         <namedColor name="PassportCardColor">
             <color red="0.4823529411764706" green="0.67843137254901964" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

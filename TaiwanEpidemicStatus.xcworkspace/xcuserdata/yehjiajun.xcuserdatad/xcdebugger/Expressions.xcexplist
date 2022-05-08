@@ -3,26 +3,10 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "NewsDetailViewController.getCoverImage(imgUrl:):NewsDetailViewController.swift">
+         contextName = "static QRCodeUtil.generateQRCode(_:):QRCodeUtil.swift">
          <PersistentStrings>
             <PersistentString
-               value = "Global.collectionImgTempList[self.udnUrlString]">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "closure #1 in closure #1 in NewsViewController.scrollViewDidScroll(_:):NewsViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.covidNewsList">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "ScanQRCodeViewController.setViewConstraint():ScanQRCodeViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "rightView.frame.width">
+               value = "UIImage(ciImage: output)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -34,6 +18,30 @@
             </PersistentString>
             <PersistentString
                value = "self.scrollViewAllNewsContent.bounds.height">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static QRCodeUtil.decodeQRCode(_:):QRCodeUtil.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "features.first?.messageString">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "NewsViewController.getAllTableViewCell(tableView:indexPath:):NewsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PassportViewController.collectionView(_:cellForItemAt:):PassportViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "cellIdentity">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -54,10 +62,42 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "NewsViewController.getAllTableViewCell(tableView:indexPath:):NewsViewController.swift">
+         contextName = "closure #1 in closure #1 in NewsViewController.scrollViewDidScroll(_:):NewsViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "indexPath.row">
+               value = "self.covidNewsList">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "NewsDetailViewController.getCoverImage(imgUrl:):NewsDetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Global.collectionImgTempList[self.udnUrlString]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ScanQRCodeViewController.setViewConstraint():ScanQRCodeViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "rightView.frame.width">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CovidStatisticViewController.setChart():CovidStatisticViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "(0..&lt;dayValues.count).map({$0})&#10;">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #1 in LoadingGetPassportViewController.viewDidLoad():LoadingGetPassportViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.hc1Code">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

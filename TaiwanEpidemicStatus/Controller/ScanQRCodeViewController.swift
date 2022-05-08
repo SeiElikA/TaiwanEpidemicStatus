@@ -20,6 +20,7 @@ class ScanQRCodeViewController: UIViewController {
     @IBOutlet weak var btnBack: UIButton!
     @IBOutlet weak var viewLabelPassport: UIStackView!
     @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var btnImport: UIButton!
     private var sleepTime = Date().timeIntervalSince1970
     
     private func setViewConstraint() {
@@ -78,6 +79,7 @@ class ScanQRCodeViewController: UIViewController {
             view.bringSubviewToFront(leftView)
             view.bringSubviewToFront(bottomView)
             view.bringSubviewToFront(btnBack)
+            view.bringSubviewToFront(btnImport)
             view.bringSubviewToFront(stackView)
 
             scanOutlineView.forEach({
@@ -93,19 +95,39 @@ class ScanQRCodeViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func btnImportEvent(_ sender: Any) {
+        self.selectQRCodeImage()
+    }
+    
     private func showCameraErrorAlert() {
         let errorMsg = NSLocalizedString("CameraNotUse", comment: "")
+        let importMsg = NSLocalizedString("ImportPassport", comment: "")
+        
         let alertController = UIAlertController(title: "Error", message: errorMsg, preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "OK", style: .cancel, handler: { _ in
+        let alertAction = UIAlertAction(title: "Back", style: .cancel, handler: { _ in
             self.navigationController?.popViewController(animated: true)
         })
+        
+        let importAction = UIAlertAction(title: importMsg, style: .default, handler: { _ in
+            self.selectQRCodeImage()
+        })
+        
+        alertController.addAction(importAction)
         alertController.addAction(alertAction)
         self.present(alertController, animated: true)
+    }
+    
+    private func selectQRCodeImage() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.delegate = self
+        self.present(imagePicker, animated: true)
     }
 }
 
 extension ScanQRCodeViewController: AVCaptureMetadataOutputObjectsDelegate {
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+        // Delay
         if (Date().timeIntervalSince1970 - self.sleepTime) < 0.5 {
             return
         }
@@ -136,11 +158,26 @@ extension ScanQRCodeViewController: AVCaptureMetadataOutputObjectsDelegate {
             
             if barCodeSize.origin.x > minX && (barCodeSize.origin.x + barCodeSize.width) < maxX {
                 if barCodeSize.origin.y > minY && (barCodeSize.origin.y + barCodeSize.height) < maxY {
+                    self.sleepTime = Date().timeIntervalSince1970
+                    
                     let loadingViewController = LoadingGetPassportViewController()
                     loadingViewController.hc1Code = metadataObj.stringValue ?? ""
                     self.navigationController?.pushViewController(loadingViewController, animated: true)
                 }
             }
         }
+    }
+}
+
+extension ScanQRCodeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let pickerImage = info[.originalImage] as? UIImage else {
+            return
+        }
+        picker.dismiss(animated: true, completion: nil)
+        
+        let loadingViewController = LoadingGetPassportViewController()
+        loadingViewController.hc1Code = QRCodeUtil.decodeQRCode(pickerImage)
+        self.navigationController?.pushViewController(loadingViewController, animated: true)
     }
 }

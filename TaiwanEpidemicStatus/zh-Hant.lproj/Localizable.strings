@@ -12,3 +12,7 @@
 "CameraNotUse" = "此裝置的鏡頭無法使用";
 "HC1Error" = "請掃描正確的QRCode";
 "PassportDoses" = "第{currentNumber}劑 (共{totalNumber}劑)";
+"PassportExistError" = "此疫苗護照已存在";
+"ImportPassport" = "從相簿匯入QR Code";
+"NewCases" = "新增確診";
+"City" = "縣市: {city}";
