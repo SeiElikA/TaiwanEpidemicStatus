@@ -10,9 +10,18 @@ import Charts
 
 class CovidStatisticViewController: UIViewController {
     @IBOutlet weak var viewChart: UIView!
+    @IBOutlet weak var viewDistStatistic: UIView!
+    @IBOutlet weak var viewTaiwanStatistic: UIView!
     @IBOutlet weak var chart: LineChartView!
     @IBOutlet weak var txtCity: UILabel!
+    @IBOutlet weak var distTableView: UITableView!
+    @IBOutlet weak var txtExclude: UILabel!
+    @IBOutlet weak var txtComfirmCases: UILabel!
+    @IBOutlet weak var txtDeath: UILabel!
     
+    // Data
+    private lazy var newDate = cityStatisticData[0].announcementDate
+    private let covidModel = CovidModel()
     public var cityStatisticData:[CityStatistic] = []
     
     override func viewDidLoad() {
@@ -22,11 +31,9 @@ class CovidStatisticViewController: UIViewController {
         let cityName = NSLocalizedString("City", comment: "").replace("{city}", cityStatisticData.first?.cityName ?? "")
         txtCity.text = cityName
         
-        viewChart.layer.cornerRadius = 8
-        viewChart.layer.shadowColor = UIColor(named: "MainShadowColor")?.cgColor
-        viewChart.layer.shadowRadius = 6
-        viewChart.layer.shadowOpacity = 0.2
-        viewChart.layer.shadowOffset = CGSize(width: 0, height: 2)
+        setViewStyle(view: viewChart)
+        setViewStyle(view: viewDistStatistic)
+        setViewStyle(view: viewTaiwanStatistic)
         
         chart.xAxis.axisMinimum = 0
         chart.leftAxis.axisMinimum = 0
@@ -37,10 +44,13 @@ class CovidStatisticViewController: UIViewController {
         chart.gridBackgroundColor = .white
         chart.xAxis.axisLineColor = UIColor(named: "MainColor")!
         chart.legend.form = .line
-    
         chart.animate(xAxisDuration: 1.5, easingOption: .linear)
         
         setChart()
+        
+        distTableView.dataSource = self
+        distTableView.delegate = self
+        distTableView.register(UINib(nibName: DistStatisticTableViewCell.identity, bundle: nil), forCellReuseIdentifier: DistStatisticTableViewCell.identity)
     }
     
     private func setChart() {
@@ -65,9 +75,45 @@ class CovidStatisticViewController: UIViewController {
         chartSet.setColor(UIColor(named: "MainColor")!)
         let chartData = LineChartData(dataSet: chartSet)
         chart.data = chartData
+        
+        fetchData()
+    }
+    
+    private func fetchData() {
+        covidModel.getTaiwanStatistic(result: { data in
+            DispatchQueue.main.async {
+                self.txtExclude.text = data.totalExclude
+                self.txtDeath.text = data.totalDeath
+                self.txtComfirmCases.text = data.totalCases
+            }
+        })
     }
     
     @IBAction func btnBackEvent(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    private func setViewStyle(view:UIView) {
+        view.layer.cornerRadius = 8
+        view.layer.shadowColor = UIColor(named: "MainShadowColor")?.cgColor
+        view.layer.shadowRadius = 6
+        view.layer.shadowOpacity = 0.2
+        view.layer.shadowOffset = CGSize(width: 0, height: 2)
+    }
+}
+
+extension CovidStatisticViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cityStatisticData.filter({$0.districtName != "全區" && $0.announcementDate == newDate }).count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: DistStatisticTableViewCell.identity, for: indexPath) as! DistStatisticTableViewCell
+        let data = cityStatisticData.filter({$0.districtName != "全區" && $0.announcementDate == newDate})[indexPath.row]
+        cell.txtDistName.text = data.districtName
+        cell.txtNewsCases.text = data.newCasesAmount
+        cell.txtTotalCases.text = data.totalCasesAmount
+        return cell
     }
 }

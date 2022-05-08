@@ -10,9 +10,24 @@ import UIKit
 import FastAPI
 
 public class CovidModel {
-    let fastApi = FastAPI()
+    private let fastApi = FastAPI()
     
-    init() {
+    public func getTaiwanStatistic(result: @escaping (TaiwanStatisticData) -> Void) {
+        fastApi.get(url: "Covid/getTaiwanStatistic",header: JWTUtil.getJWTHeader(), { data, error in
+            if case .requestError(let msg) = error {
+                print(msg)
+                return
+            }
+            
+            if let data = data {
+                do {
+                    let taiwanData = try JSONDecoder().decode(TaiwanStatisticData.self, from: data)
+                    result(taiwanData)
+                } catch {
+                    print(error)
+                }
+            }
+        })
     }
     
     public func getCityList(result: @escaping ([String]) -> Void) {

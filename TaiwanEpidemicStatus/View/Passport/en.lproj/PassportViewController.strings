@@ -1,6 +1,6 @@
 
 /* Class = "UILabel"; text = "Carry a digital copy of the caccineation certificate by scanning the QR code of the Digital COVID-19 certificate.\n\nClick on the upper right corner to add the first vaccine passport"; ObjectID = "OKE-vc-R3K"; */
-"OKE-vc-R3K.text" = "Carry a digital copy of the Vaccineation certificate by scanning the QR code of the Digital COVID-19 certificate.\n\nClick on the upper right corner to add the first Vaccineation certificate";
+"OKE-vc-R3K.text" = "Carry a digital copy of the Vaccination certificate by scanning the QR code of the Digital COVID-19 certificate.\n\nClick on the upper right corner to add the first Vaccination certificate";
 
 /* Class = "UILabel"; text = "疫苗護照"; ObjectID = "ZwP-Av-fYw"; */
-"ZwP-Av-fYw.text" = "Vaccineation certificate";
+"ZwP-Av-fYw.text" = "Vaccination certificate";

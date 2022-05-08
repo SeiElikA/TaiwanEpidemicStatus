@@ -73,6 +73,9 @@
 		6FD8F600281C1B0A0053EC07 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD8F5FE281C1B0A0053EC07 /* NewsViewController.swift */; };
 		6FD972542826B354004EDD07 /* CovidStatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD972522826B354004EDD07 /* CovidStatisticViewController.swift */; };
 		6FD972552826B354004EDD07 /* CovidStatisticViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FD972532826B354004EDD07 /* CovidStatisticViewController.xib */; };
+		6FD9725828280EF1004EDD07 /* DistStatisticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD9725628280EF1004EDD07 /* DistStatisticTableViewCell.swift */; };
+		6FD9725928280EF1004EDD07 /* DistStatisticTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FD9725728280EF1004EDD07 /* DistStatisticTableViewCell.xib */; };
+		6FD9725B28281737004EDD07 /* TaiwanStatisticData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD9725A28281737004EDD07 /* TaiwanStatisticData.swift */; };
 		6FF32142281AB88C0019A809 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF32140281AB88C0019A809 /* NewsDetailViewController.swift */; };
 		6FF32145281AC8C60019A809 /* UDNNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF32144281AC8C60019A809 /* UDNNews.swift */; };
 		6FF6D6AE28221D7600430CBB /* PassportCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF6D6AD28221D7600430CBB /* PassportCollectionViewFlowLayout.swift */; };
@@ -199,6 +202,9 @@
 		6FD8F5FE281C1B0A0053EC07 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		6FD972522826B354004EDD07 /* CovidStatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidStatisticViewController.swift; sourceTree = "<group>"; };
 		6FD972532826B354004EDD07 /* CovidStatisticViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CovidStatisticViewController.xib; sourceTree = "<group>"; };
+		6FD9725628280EF1004EDD07 /* DistStatisticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistStatisticTableViewCell.swift; sourceTree = "<group>"; };
+		6FD9725728280EF1004EDD07 /* DistStatisticTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DistStatisticTableViewCell.xib; sourceTree = "<group>"; };
+		6FD9725A28281737004EDD07 /* TaiwanStatisticData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaiwanStatisticData.swift; sourceTree = "<group>"; };
 		6FF32140281AB88C0019A809 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 		6FF32144281AC8C60019A809 /* UDNNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDNNews.swift; sourceTree = "<group>"; };
 		6FF6D6AD28221D7600430CBB /* PassportCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
@@ -254,6 +260,7 @@
 				6FD357DC280D56180010D5DE /* NewsItemMediumTableViewCell.xib */,
 				6F3B59D42817A437005B0E31 /* SelectCityTableViewCell.xib */,
 				6F65C1B0281FD561004EB65F /* NewsItemMediumNotImageTableViewCell.xib */,
+				6FD9725728280EF1004EDD07 /* DistStatisticTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -413,6 +420,7 @@
 				6F128711281D5BD40046A586 /* Weather.swift */,
 				6F65C1B3281FD8B5004EB65F /* CDCNews.swift */,
 				6FF6D6B52823917B00430CBB /* Passport.swift */,
+				6FD9725A28281737004EDD07 /* TaiwanStatisticData.swift */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -430,8 +438,9 @@
 		6FD357D9280D55D30010D5DE /* Adapter */ = {
 			isa = PBXGroup;
 			children = (
-				6FF6D6AC28221D5600430CBB /* PassportCollection */,
+				6FD9725628280EF1004EDD07 /* DistStatisticTableViewCell.swift */,
 				6F3B59D32817A437005B0E31 /* SelectCityTableViewCell.swift */,
+				6FF6D6AC28221D5600430CBB /* PassportCollection */,
 				6F3F09A6281E983900407DBD /* NewsCollection */,
 				6FD357DA280D55DD0010D5DE /* NewsItem */,
 			);
@@ -611,6 +620,7 @@
 				6FD8F5EE281B923B0053EC07 /* NewsImageView.xib in Resources */,
 				6F3F09AA281E985700407DBD /* AllNewsCollectionViewCell.xib in Resources */,
 				6FB1D4F328102B59002F44D3 /* InfoPlist.strings in Resources */,
+				6FD9725928280EF1004EDD07 /* DistStatisticTableViewCell.xib in Resources */,
 				6F3B59C328179AA3005B0E31 /* MainViewController.xib in Resources */,
 				6FD8F5F5281BFBDA0053EC07 /* NewsDetailViewController.xib in Resources */,
 				6F82AB0D2826605B0006BF9A /* PassportViewController.xib in Resources */,
@@ -717,6 +727,7 @@
 				6FF32145281AC8C60019A809 /* UDNNews.swift in Sources */,
 				6F82AB0C28265E550006BF9A /* QRCodeUtil.swift in Sources */,
 				6FF32142281AB88C0019A809 /* NewsDetailViewController.swift in Sources */,
+				6FD9725B28281737004EDD07 /* TaiwanStatisticData.swift in Sources */,
 				6FF6D6B62823917B00430CBB /* Passport.swift in Sources */,
 				6F128710281D54E70046A586 /* Location.swift in Sources */,
 				6F3A528B28192247009E042B /* AESUtil.swift in Sources */,
@@ -726,6 +737,7 @@
 				6FF6D6C728239A5500430CBB /* TaiwanEpidemicStatus.xcdatamodeld in Sources */,
 				6FAFD68D2816D6D10060FD86 /* CityStatistic.swift in Sources */,
 				6FC6E81F2820DC7400C5D4CE /* BaseNewsItem.swift in Sources */,
+				6FD9725828280EF1004EDD07 /* DistStatisticTableViewCell.swift in Sources */,
 				6FC6E823282104FA00C5D4CE /* PassportViewController.swift in Sources */,
 				6F3B59D52817A437005B0E31 /* SelectCityTableViewCell.swift in Sources */,
 				6FC6E8192820D29900C5D4CE /* Global.swift in Sources */,

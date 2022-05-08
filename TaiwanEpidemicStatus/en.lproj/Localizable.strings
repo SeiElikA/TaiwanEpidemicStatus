@@ -17,3 +17,8 @@
 "ImportPassport" = "Import QR cord from photo";
 "NewCases" = "New Cases";
 "City" = "City: {city}";
+"HaveQuestion" = "Have a Question?";
+"ApplyVaccination" = "Apply";
+"OperationManualVaccination" = "Operation Manual";
+"AboutVaccination" = "Vaccination Certificate Q&A";
+

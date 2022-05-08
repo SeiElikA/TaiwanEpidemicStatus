@@ -16,3 +16,7 @@
 "ImportPassport" = "从相簿汇入QR Code";
 "NewCases" = "新增确诊";
 "City" = "县市: {city}";
+"HaveQuestion" = "遇到任何问题吗？";
+"ApplyVaccination" = "申请疫苗护照";
+"OperationManualVaccination" = "操作说明";
+"AboutVaccination" = "疫苗护照 Q&A";

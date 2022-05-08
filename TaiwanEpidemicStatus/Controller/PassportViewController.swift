@@ -13,8 +13,8 @@ class PassportViewController: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var txtPlaceHolder: UILabel!
     @IBOutlet weak var imgPlaceHolder: UIImageView!
-    @IBOutlet weak var imgDebug: UIImageView!
     
+    private var placeHolderClickCount = 0
     private lazy var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     private lazy var coreDataModel = PassportEntityModel(context: context)
     public static var instance:PassportViewController?
@@ -31,7 +31,60 @@ class PassportViewController: UIViewController {
         passportCollection.delegate = self
         passportCollection.register(UINib(nibName: PassportCollectionViewCell.identity, bundle: nil), forCellWithReuseIdentifier: PassportCollectionViewCell.identity)
         
+        imgPlaceHolder.isUserInteractionEnabled = true
+        imgPlaceHolder.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imgPlaceHolderClickEvent)))
         reloadPassportData()
+    }
+    
+    @objc private func imgPlaceHolderClickEvent() {
+        placeHolderClickCount += 1
+        let notification = UINotificationFeedbackGenerator()
+        notification.notificationOccurred(.success)
+        var animator = UIViewPropertyAnimator(duration: 0.3, curve: .linear, animations: {
+            self.imgPlaceHolder.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+        })
+        animator.startAnimation()
+        animator = UIViewPropertyAnimator(duration: 0.3, curve: .linear, animations: {
+            self.imgPlaceHolder.transform = CGAffineTransform(scaleX: 1, y: 1)
+        })
+        animator.startAnimation()
+        
+        if placeHolderClickCount == 5 {
+            placeHolderClickCount = 0
+            self.showHelperMenu()
+        }
+    }
+    
+    private func showHelperMenu() {
+        let questionTitle = NSLocalizedString("HaveQuestion", comment: "")
+        let applyText = NSLocalizedString("ApplyVaccination", comment: "")
+        let questionAndAnsText = NSLocalizedString("AboutVaccination", comment: "")
+        let operationtext = NSLocalizedString("OperationManualVaccination", comment: "")
+        
+        let alertController = UIAlertController(title: questionTitle, message: nil, preferredStyle: .actionSheet)
+        
+        let applyAction = UIAlertAction(title: applyText, style: .default) { _ in
+            self.openWebSite(url: "https://dvc.mohw.gov.tw/")
+        }
+        let operationAction = UIAlertAction(title: operationtext, style: .default) { _ in
+            self.openWebSite(url: "https://dvc.mohw.gov.tw/vapa/template/vapa/common/pdf/OperationsManual.pdf")
+        }
+        let questionAction = UIAlertAction(title: questionAndAnsText, style: .default) { _ in
+            self.openWebSite(url: "https://dvc.mohw.gov.tw/vapa/template/vapa/common/pdf/QA.pdf")
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        alertController.addAction(applyAction)
+        alertController.addAction(operationAction)
+        alertController.addAction(questionAction)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true)
+    }
+    
+    private func openWebSite(url:String) {
+        let url = URL(string: url)!
+        UIApplication.shared.open(url)
     }
     
     @IBAction func btnBackEvent(_ sender: Any) {

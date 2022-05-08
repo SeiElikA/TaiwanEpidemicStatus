@@ -16,3 +16,7 @@
 "ImportPassport" = "從相簿匯入QR Code";
 "NewCases" = "新增確診";
 "City" = "縣市: {city}";
+"HaveQuestion" = "遇到任何問題嗎？";
+"ApplyVaccination" = "申請疫苗護照";
+"OperationManualVaccination" = "操作說明";
+"AboutVaccination" = "疫苗護照 Q&A";
