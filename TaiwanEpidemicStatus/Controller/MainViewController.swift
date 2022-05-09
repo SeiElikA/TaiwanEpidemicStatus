@@ -210,7 +210,12 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
             }
         })
     }
-
+    
+    @IBAction func btnSettingEvent(_ sender: Any) {
+            let url = URL(string: UIApplication.openSettingsURLString)!
+            UIApplication.shared.openURL(url)
+    }
+    
     @IBAction func btnSelectCity(_ sender: Any) {
         let navigationView = UINavigationController(rootViewController: SelectCityNavigationViewController())
         let viewController = navigationView.viewControllers.first as! SelectCityNavigationViewController
