@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="gmW-0k-NBq">
+            <objects>
+                <navigationController storyboardIdentifier="SettingNavigationController" id="2Ne-d2-j0z" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="P6c-A0-G4x">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="HG2-md-KFn" kind="relationship" relationship="rootViewController" id="IbA-Yw-opM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hoi-gk-vfL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-70" y="120"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="q0b-aH-17W">
+            <objects>
+                <tableViewController storyboardIdentifier="SettingViewController" id="HG2-md-KFn" customClass="SettingsTableViewController" customModule="TaiwanEpidemicStatus" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="aoz-lX-9Xd">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <sections>
+                            <tableViewSection headerTitle="新聞" id="fWN-eJ-Yve">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="J9k-UY-tk2">
+                                        <rect key="frame" x="20" y="49" width="350" height="39.333332061767578"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J9k-UY-tk2" id="ZvI-Sh-wa9">
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="39.333332061767578"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <listContentConfiguration key="contentConfiguration" text="CDC新聞更新通知"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="其他" id="rNq-rA-aDz">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Bl3-0H-hun">
+                                        <rect key="frame" x="20" y="137.99999809265137" width="350" height="39.333332061767578"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bl3-0H-hun" id="Ze7-mG-Uht">
+                                            <rect key="frame" x="0.0" y="0.0" width="321.33333333333331" height="39.333332061767578"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <listContentConfiguration key="contentConfiguration" text="APP 語言" secondaryText=""/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="b9a-Ar-lNF">
+                                        <rect key="frame" x="20" y="177.33333015441895" width="350" height="39.333332061767578"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="b9a-Ar-lNF" id="CcD-zt-eUF">
+                                            <rect key="frame" x="0.0" y="0.0" width="321.33333333333331" height="39.333332061767578"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <listContentConfiguration key="contentConfiguration" text="夜間模式"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="h7u-My-mL4">
+                                        <rect key="frame" x="20" y="216.66666221618652" width="350" height="39.333332061767578"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h7u-My-mL4" id="Uy4-zl-Uli">
+                                            <rect key="frame" x="0.0" y="0.0" width="321.33333333333331" height="39.333332061767578"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <listContentConfiguration key="contentConfiguration" text="關於我們"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="" id="0Et-RV-aBX">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="eIo-s8-DKy">
+                                        <rect key="frame" x="20" y="291.33332824707031" width="350" height="39.333332061767578"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eIo-s8-DKy" id="ZtZ-Do-JGP">
+                                            <rect key="frame" x="0.0" y="0.0" width="321.33333333333331" height="39.333332061767578"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <listContentConfiguration key="contentConfiguration" text="Bug 回報" secondaryText=""/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="HG2-md-KFn" id="81h-Tz-cED"/>
+                            <outlet property="delegate" destination="HG2-md-KFn" id="FOa-bA-SA5"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Settings" id="Cra-6G-j1C"/>
+                    <connections>
+                        <outlet property="aboutAsTableCell" destination="h7u-My-mL4" id="UrS-Gh-NPZ"/>
+                        <outlet property="appLanguageTableCell" destination="Bl3-0H-hun" id="AP2-Rl-1pb"/>
+                        <outlet property="bugReportTableCell" destination="eIo-s8-DKy" id="Ieq-kd-azc"/>
+                        <outlet property="cdcNewsUpdateTableCell" destination="J9k-UY-tk2" id="VgR-ds-7Lj"/>
+                        <outlet property="darkModeTableCell" destination="b9a-Ar-lNF" id="Ggi-Je-5vj"/>
+                        <segue destination="2YO-se-uxt" kind="show" identifier="bugReport" id="nQl-je-W1Q"/>
+                        <segue destination="JWp-wK-6gu" kind="show" identifier="darkMode" id="YUF-gW-eZ1"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mNV-Zx-Ir8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="843" y="116"/>
+        </scene>
+        <!--Appearance-->
+        <scene sceneID="uyd-Ls-gUI">
+            <objects>
+                <tableViewController id="JWp-wK-6gu" customClass="SelectAppearanceTableViewController" customModule="TaiwanEpidemicStatus" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="D0i-Nc-mJl">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <sections>
+                            <tableViewSection id="o0X-O5-OUi">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="KH1-d0-E4v">
+                                        <rect key="frame" x="20" y="18" width="350" height="39.333332061767578"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KH1-d0-E4v" id="6Dm-Cf-beE">
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="39.333332061767578"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <listContentConfiguration key="contentConfiguration" text="跟隨系統"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="aF9-wu-jQm">
+                                        <rect key="frame" x="20" y="57.333332061767578" width="350" height="39.333332061767578"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aF9-wu-jQm" id="i00-l4-AHK">
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="39.333332061767578"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <listContentConfiguration key="contentConfiguration" text="深色"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="5X6-WE-Hrx">
+                                        <rect key="frame" x="20" y="96.666664123535156" width="350" height="39.333332061767578"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5X6-WE-Hrx" id="TpN-YL-peP">
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="39.333332061767578"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <listContentConfiguration key="contentConfiguration" text="淺色"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="JWp-wK-6gu" id="Wa0-XH-tSJ"/>
+                            <outlet property="delegate" destination="JWp-wK-6gu" id="vv6-v7-xia"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Appearance" id="fYG-CY-KhZ"/>
+                    <connections>
+                        <outletCollection property="cellCollection" destination="KH1-d0-E4v" collectionClass="NSMutableArray" id="enO-jg-piM"/>
+                        <outletCollection property="cellCollection" destination="aF9-wu-jQm" collectionClass="NSMutableArray" id="ogO-XS-W5J"/>
+                        <outletCollection property="cellCollection" destination="5X6-WE-Hrx" collectionClass="NSMutableArray" id="chJ-es-XTH"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VvH-9D-qRj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1751" y="-223"/>
+        </scene>
+        <!--Bug Report View Controller-->
+        <scene sceneID="ZeN-Yh-qbd">
+            <objects>
+                <viewController id="2YO-se-uxt" customClass="BugReportViewController" customModule="TaiwanEpidemicStatus" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hiP-I6-0aP">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uxC-Dn-UXr">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EtW-oq-PUY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uxC-Dn-UXr" secondAttribute="trailing" id="1nh-CQ-WxP"/>
+                            <constraint firstItem="uxC-Dn-UXr" firstAttribute="top" secondItem="hiP-I6-0aP" secondAttribute="top" id="F5M-i2-X8e"/>
+                            <constraint firstAttribute="bottom" secondItem="uxC-Dn-UXr" secondAttribute="bottom" id="KVl-Nf-EO5"/>
+                            <constraint firstItem="uxC-Dn-UXr" firstAttribute="leading" secondItem="hiP-I6-0aP" secondAttribute="leading" id="Mog-vZ-Jtt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="z63-Qw-8j3"/>
+                    <connections>
+                        <outlet property="webView" destination="uxC-Dn-UXr" id="nLu-M8-CyO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xjJ-T8-ro4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1751" y="456"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -41,64 +41,64 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfV-3t-Shu">
-                                <rect key="frame" x="16" y="76" width="31" height="18"/>
+                                <rect key="frame" x="16" y="68" width="31" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <color key="textColor" name="PassportFontColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="疫苗" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wnY-qf-ESn">
-                                <rect key="frame" x="16" y="154" width="31" height="18"/>
+                                <rect key="frame" x="16" y="146" width="31" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <color key="textColor" name="PassportFontColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="第2劑（共2劑）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yls-qe-HEg">
-                                <rect key="frame" x="16" y="220" width="110.5" height="18"/>
+                                <rect key="frame" x="16" y="212" width="110.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <color key="textColor" name="PassportFontColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="簽發人" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eyi-vy-uuN">
-                                <rect key="frame" x="16" y="286" width="46" height="18"/>
+                                <rect key="frame" x="16" y="278" width="46" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <color key="textColor" name="PassportFontColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="王曉明" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ugd-R8-jFd">
-                                <rect key="frame" x="16" y="102" width="343" height="36"/>
+                                <rect key="frame" x="16" y="94" width="343" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comirnaty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R13-i6-Uw5">
-                                <rect key="frame" x="16" y="180" width="96" height="24"/>
+                                <rect key="frame" x="16" y="172" width="96" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021/12/30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvG-gQ-Ymd">
-                                <rect key="frame" x="16" y="246" width="104.5" height="24"/>
+                                <rect key="frame" x="16" y="238" width="104.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="246" verticalHuggingPriority="254" verticalCompressionResistancePriority="749" text="Taiwan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a04-Xj-ufk">
-                                <rect key="frame" x="16" y="312" width="64" height="24"/>
+                                <rect key="frame" x="16" y="304" width="64" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Rh-7m-LWB">
-                                <rect key="frame" x="8" y="340" width="359" height="200"/>
+                            <view contentMode="scaleToFill" verticalHuggingPriority="253" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="9Rh-7m-LWB">
+                                <rect key="frame" x="8" y="332" width="359" height="208"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="753" text="EU DCC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcM-30-kBt">
-                                        <rect key="frame" x="0.0" y="167" width="359" height="21"/>
+                                        <rect key="frame" x="0.0" y="175" width="359" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JkE-f6-3rO">
-                                        <rect key="frame" x="52" y="8" width="255" height="155"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="JkE-f6-3rO">
+                                        <rect key="frame" x="52" y="8" width="255" height="163"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -143,7 +143,7 @@
                             <constraint firstItem="TbZ-GS-c10" firstAttribute="bottom" secondItem="BOo-6W-nkv" secondAttribute="bottom" id="rjF-bc-Rsl"/>
                             <constraint firstItem="Yls-qe-HEg" firstAttribute="leading" secondItem="gst-Vm-mT3" secondAttribute="leading" constant="16" id="u4F-B0-vE3"/>
                             <constraint firstItem="R13-i6-Uw5" firstAttribute="top" secondItem="wnY-qf-ESn" secondAttribute="bottom" constant="8" id="wDU-IY-k2d"/>
-                            <constraint firstItem="cfV-3t-Shu" firstAttribute="top" secondItem="TbZ-GS-c10" secondAttribute="bottom" constant="32" id="yqP-2G-qgs"/>
+                            <constraint firstItem="cfV-3t-Shu" firstAttribute="top" secondItem="TbZ-GS-c10" secondAttribute="bottom" constant="24" id="yqP-2G-qgs"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

@@ -66,6 +66,16 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         
         // Setting Style
+        // set color
+        let selectColor = UserDefaults().integer(forKey: "selectIndex")
+        if selectColor == 0 {
+            view.window?.overrideUserInterfaceStyle = .unspecified
+        } else if selectColor == 1 {
+            view.window?.overrideUserInterfaceStyle = .dark
+        } else {
+            view.window?.overrideUserInterfaceStyle = .light
+        }
+        
         navigationController?.navigationBar.isHidden = true
         txtTemperature.font = UIFont.roundedBoldFont(48)
         txtTotalCases.font = UIFont.roundedBoldFont(36)
@@ -106,6 +116,8 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         
         // click search box event
         viewSearchBox.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(btnSelectCity(_:))))
+        
+
         
         // add scrollView Refresh
         let refreshControl = UIRefreshControl()
@@ -212,8 +224,10 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func btnSettingEvent(_ sender: Any) {
-            let url = URL(string: UIApplication.openSettingsURLString)!
-            UIApplication.shared.openURL(url)
+        let storyboard = UIStoryboard.init(name: "SettingStoryboard", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "SettingNavigationController")
+        //let navigationView = UINavigationController(rootViewController: viewController)
+        self.navigationController?.present(viewController, animated: true)
     }
     
     @IBAction func btnSelectCity(_ sender: Any) {
