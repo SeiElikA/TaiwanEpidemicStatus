@@ -12,6 +12,10 @@ import FastAPI
 public class CovidModel {
     private let fastApi = FastAPI()
     
+    init() {
+        
+    }
+    
     public func getTaiwanStatistic(result: @escaping (TaiwanStatisticData) -> Void) {
         fastApi.get(url: "Covid/getTaiwanStatistic",header: JWTUtil.getJWTHeader(), { data, error in
             if case .requestError(let msg) = error {
