@@ -62,10 +62,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Setting Style
+    override func viewDidAppear(_ animated: Bool) {
         // set color
         let selectColor = UserDefaults().integer(forKey: "selectIndex")
         if selectColor == 0 {
@@ -75,7 +72,12 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         } else {
             view.window?.overrideUserInterfaceStyle = .light
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
+        // Setting Style
         navigationController?.navigationBar.isHidden = true
         txtTemperature.font = UIFont.roundedBoldFont(48)
         txtTotalCases.font = UIFont.roundedBoldFont(36)
@@ -226,7 +228,6 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func btnSettingEvent(_ sender: Any) {
         let storyboard = UIStoryboard.init(name: "SettingStoryboard", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "SettingNavigationController")
-        //let navigationView = UINavigationController(rootViewController: viewController)
         self.navigationController?.present(viewController, animated: true)
     }
     

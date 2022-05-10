@@ -1,0 +1,36 @@
+
+/* Class = "UITableViewCell"; contentConfiguration.text = "淺色"; ObjectID = "5X6-WE-Hrx"; */
+"5X6-WE-Hrx.contentConfiguration.text" = "Light";
+
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "Cra-6G-j1C"; */
+"Cra-6G-j1C.title" = "Settings";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "EeC-jl-yTw"; */
+"EeC-jl-yTw.text" = "Detail";
+
+/* Class = "UITableViewCell"; contentConfiguration.text = "CDC新聞更新通知"; ObjectID = "J9k-UY-tk2"; */
+"J9k-UY-tk2.contentConfiguration.text" = "CDC News Update Notice";
+
+/* Class = "UITableViewCell"; contentConfiguration.text = "跟隨系統"; ObjectID = "KH1-d0-E4v"; */
+"KH1-d0-E4v.contentConfiguration.text" = "Automatic";
+
+/* Class = "UITableViewCell"; contentConfiguration.text = "深色"; ObjectID = "aF9-wu-jQm"; */
+"aF9-wu-jQm.contentConfiguration.text" = "Dark";
+
+/* Class = "UITableViewCell"; contentConfiguration.text = "Bug 回報"; ObjectID = "eIo-s8-DKy"; */
+"eIo-s8-DKy.contentConfiguration.text" = "Bug Report";
+
+/* Class = "UINavigationItem"; title = "Appearance"; ObjectID = "fYG-CY-KhZ"; */
+"fYG-CY-KhZ.title" = "Appearance";
+
+/* Class = "UILabel"; text = "APP 語言"; ObjectID = "gdV-WT-JTT"; */
+"gdV-WT-JTT.text" = "APP Language";
+
+/* Class = "UITableViewCell"; contentConfiguration.text = "關於我們"; ObjectID = "h7u-My-mL4"; */
+"h7u-My-mL4.contentConfiguration.text" = "About As";
+
+/* Class = "UILabel"; text = "夜間模式"; ObjectID = "wqZ-YI-7vE"; */
+"wqZ-YI-7vE.text" = "Appearance";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "yCR-10-vSm"; */
+"yCR-10-vSm.text" = "Detail";

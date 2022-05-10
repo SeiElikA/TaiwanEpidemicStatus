@@ -9,22 +9,33 @@ import UIKit
 
 class SelectAppearanceTableViewController: UITableViewController {
     private var selectIndex:Int = 0
+    
     @IBOutlet var cellCollection: [UITableViewCell]!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.selectIndex = UserDefaults().integer(forKey: "selectIndex")
         
         cellCollection.forEach({
-            $0.accessoryView = UIImageView(image: UIImage(systemName: cellCollection.firstIndex(of: $0) == selectIndex ? "checkmark.circle.fill" : "circle"))
+            let isSelect = cellCollection.firstIndex(of: $0) == selectIndex
+            let imageView = UIImageView(image: UIImage(systemName: isSelect ? "checkmark.circle.fill" : "circle"))
+            imageView.tintColor = isSelect ? .systemBlue : .gray
+            $0.accessoryView = imageView
+            
         })
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if self.selectIndex != indexPath.row {
-            cellCollection[self.selectIndex].accessoryView = UIImageView(image: UIImage(systemName: "circle"))
+            let uncheckImage = UIImageView(image: UIImage(systemName: "circle"))
+            uncheckImage.tintColor = .gray
+            cellCollection[self.selectIndex].accessoryView = uncheckImage
             self.selectIndex = indexPath.row
-            cellCollection[self.selectIndex].accessoryView = UIImageView(image: UIImage(systemName: "checkmark.circle.fill"))
+            
+            let checkImage = UIImageView(image: UIImage(systemName: "checkmark.circle.fill"))
+            checkImage.tintColor = .systemBlue
+            cellCollection[self.selectIndex].accessoryView = checkImage
             UserDefaults().set(self.selectIndex, forKey: "selectIndex")
             if self.selectIndex == 0 {
                 view.window?.overrideUserInterfaceStyle = .unspecified
@@ -33,6 +44,8 @@ class SelectAppearanceTableViewController: UITableViewController {
             } else {
                 view.window?.overrideUserInterfaceStyle = .light
             }
+            
+            SettingsTableViewController.instance?.darkModeTableCell.detailTextLabel?.text = NSLocalizedString(Global.darkModeSelection[self.selectIndex], comment: "")
         }
     }
 }

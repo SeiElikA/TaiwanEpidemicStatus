@@ -462,8 +462,8 @@
         <image name="PassportIcon" width="40" height="40"/>
         <image name="QRcodeIcon" width="36" height="36"/>
         <image name="SettingIcon" width="77" height="64"/>
-        <image name="chevron.right" catalog="system" width="32" height="32"/>
-        <image name="sun.max" catalog="system" width="32" height="32"/>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <image name="sun.max" catalog="system" width="128" height="124"/>
         <namedColor name="DeathRedColor">
             <color red="0.81568627450980391" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

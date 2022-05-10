@@ -10,4 +10,9 @@ import UIKit
 
 public class Global {
     public static var collectionImgTempList:[String:UIImage] = [:]
+    public static let darkModeSelection = [
+        "WithSystem",
+        "Dark",
+        "Light"
+    ]
 }

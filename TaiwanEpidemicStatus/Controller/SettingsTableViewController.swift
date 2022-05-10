@@ -9,6 +9,7 @@ import UIKit
 
 class SettingsTableViewController: UITableViewController {
     private let cdcNewsNoticeKey = ""
+    public static var instance:SettingsTableViewController?
     
     @IBOutlet weak var cdcNewsUpdateTableCell: UITableViewCell!
     @IBOutlet weak var appLanguageTableCell: UITableViewCell!
@@ -18,6 +19,7 @@ class SettingsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        SettingsTableViewController.instance = self
         let barButton = UIBarButtonItem(title: "Close", style: .done, target: self, action: #selector(closeClickEvent))
         self.navigationItem.rightBarButtonItem = barButton
         
@@ -26,13 +28,19 @@ class SettingsTableViewController: UITableViewController {
         switchView.isOn = UserDefaults().bool(forKey: cdcNewsNoticeKey)
         switchView.addTarget(self, action: #selector(cdcNewsNotificationChange), for: .valueChanged)
         cdcNewsUpdateTableCell.accessoryView = switchView
+        // set dark mode select
+        let darkModeSelection = UserDefaults().integer(forKey: "selectIndex")
+        darkModeTableCell.detailTextLabel?.text = NSLocalizedString(Global.darkModeSelection[darkModeSelection], comment: "")
+        // set this application language
+        let countryCode = Bundle.main.preferredLocalizations.first ?? "" // get application language code
+        let name = Locale.current.localizedString(forLanguageCode: countryCode) // change language code to full name
+        appLanguageTableCell.detailTextLabel?.text = name
+        
         
         // set click event
         bugReportTableCell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(openBugReportClickEvent)))
         appLanguageTableCell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(changeAppLanguageClickEvent)))
         darkModeTableCell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(changeDarkMode)))
-        
-        
     }
     
     @objc private func changeDarkMode() {
