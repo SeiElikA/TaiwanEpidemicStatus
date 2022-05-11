@@ -20,7 +20,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var btnNewsMore: UIButton!
     @IBOutlet weak var txtTotalCases: UILabel!
     @IBOutlet weak var txtTodayCases: UILabel!
-    @IBOutlet weak var btnScan: UIButton!
+    @IBOutlet weak var btnMap: UIButton!
     @IBOutlet weak var viewNavigationBar: UIView!
     @IBOutlet weak var txtCityCases: UILabel!
     @IBOutlet weak var txtTotalCaseLabel: UILabel!
@@ -99,10 +99,10 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         btnCityStatisticMore.semanticContentAttribute = .forceRightToLeft
         
         mainScrollView.decelerationRate = .fast
-        btnScan.layer.cornerRadius = (btnScan.frame.height / 2)
-        btnScan.layer.shadowOpacity = 0.1
-        btnScan.layer.shadowRadius = 4
-        btnScan.layer.shadowColor = UIColor(named: "MainShadowColor")?.cgColor
+        btnMap.layer.cornerRadius = (btnMap.frame.height / 2)
+        btnMap.layer.shadowOpacity = 0.1
+        btnMap.layer.shadowRadius = 4
+        btnMap.layer.shadowColor = UIColor(named: "MainShadowColor")?.cgColor
         
         newsTableView.dataSource = self
         newsTableView.delegate = self
@@ -205,6 +205,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         self.navigationController?.pushViewController(newsController, animated: true)
     }
     
+    
     @IBAction func btnReconnectedEvent(_ sender: Any) {
         self.txtNetworkInfo.isHidden = true
         self.loadNewsActivityIndicator.startAnimating()
@@ -223,6 +224,10 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
                 self.fetchData()
             }
         })
+    }
+    
+    @IBAction func btnMapClickEvent(_ sender: Any) {
+        self.navigationController?.pushViewController(MapViewController(), animated: true)
     }
     
     @IBAction func btnSettingEvent(_ sender: Any) {

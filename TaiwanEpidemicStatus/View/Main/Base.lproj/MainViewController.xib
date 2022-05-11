@@ -15,8 +15,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="TaiwanEpidemicStatus" customModuleProvider="target">
             <connections>
                 <outlet property="btnCityStatisticMore" destination="fUW-50-WoL" id="Ai9-LI-cfp"/>
+                <outlet property="btnMap" destination="GnX-JW-7dd" id="cJh-mB-arR"/>
                 <outlet property="btnNewsMore" destination="Tsw-Du-MxQ" id="7tp-40-Ccm"/>
-                <outlet property="btnScan" destination="GnX-JW-7dd" id="cJh-mB-arR"/>
                 <outlet property="imgWeatherIcon" destination="tDD-6I-IyQ" id="Yeb-EU-Go8"/>
                 <outlet property="loadNewsActivityIndicator" destination="EBJ-t4-3gN" id="uEt-48-pug"/>
                 <outlet property="mainScrollView" destination="bK0-6t-sAZ" id="D4s-a0-URY"/>
@@ -386,12 +386,15 @@
                                 <constraint firstAttribute="width" secondItem="GnX-JW-7dd" secondAttribute="height" multiplier="1:1" id="dKO-Xz-D2d"/>
                             </constraints>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" image="QRcodeIcon">
+                            <state key="normal" image="MapIcon">
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                             </state>
+                            <connections>
+                                <action selector="btnMapClickEvent:" destination="-1" eventType="touchUpInside" id="5aD-0G-TMj"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogv-7R-5gl">
-                            <rect key="frame" x="0.0" y="0.0" width="195" height="65"/>
+                            <rect key="frame" x="0.0" y="0.0" width="165" height="65"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="PassportIcon"/>
@@ -400,7 +403,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pE-n0-oRF">
-                            <rect key="frame" x="195" y="0.0" width="195" height="65"/>
+                            <rect key="frame" x="225" y="0.0" width="165" height="65"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="SettingIcon"/>
@@ -414,10 +417,8 @@
                         <constraint firstItem="ogv-7R-5gl" firstAttribute="top" secondItem="x27-qC-U5v" secondAttribute="top" id="1dv-Kf-GfB"/>
                         <constraint firstAttribute="bottom" secondItem="ogv-7R-5gl" secondAttribute="bottom" id="7Ic-el-h38"/>
                         <constraint firstItem="GnX-JW-7dd" firstAttribute="centerY" secondItem="x27-qC-U5v" secondAttribute="centerY" constant="-32.5" id="G08-N2-bPG"/>
-                        <constraint firstItem="ogv-7R-5gl" firstAttribute="width" secondItem="x27-qC-U5v" secondAttribute="width" multiplier="0.5" id="Kmd-H7-lrC"/>
                         <constraint firstAttribute="trailing" secondItem="8pE-n0-oRF" secondAttribute="trailing" id="OJr-a5-JA6"/>
                         <constraint firstAttribute="height" constant="65" id="RBh-Se-iPA"/>
-                        <constraint firstItem="8pE-n0-oRF" firstAttribute="width" secondItem="x27-qC-U5v" secondAttribute="width" multiplier="0.5" id="SCN-xA-DPZ"/>
                         <constraint firstItem="GnX-JW-7dd" firstAttribute="centerX" secondItem="x27-qC-U5v" secondAttribute="centerX" id="TeP-jZ-9Nm"/>
                         <constraint firstItem="GnX-JW-7dd" firstAttribute="leading" secondItem="ogv-7R-5gl" secondAttribute="trailing" id="WXn-x7-qNN"/>
                         <constraint firstItem="ogv-7R-5gl" firstAttribute="leading" secondItem="x27-qC-U5v" secondAttribute="leading" id="eob-Oc-BmF"/>
@@ -425,11 +426,6 @@
                         <constraint firstItem="8pE-n0-oRF" firstAttribute="leading" secondItem="GnX-JW-7dd" secondAttribute="trailing" id="nkY-Uz-RTc"/>
                         <constraint firstAttribute="bottom" secondItem="8pE-n0-oRF" secondAttribute="bottom" id="okg-Vp-Ppb"/>
                     </constraints>
-                    <variation key="default">
-                        <mask key="subviews">
-                            <exclude reference="GnX-JW-7dd"/>
-                        </mask>
-                    </variation>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -454,8 +450,8 @@
     <resources>
         <image name="Circle" width="151" height="152"/>
         <image name="LocationIcon" width="16" height="21"/>
+        <image name="MapIcon" width="33.333332061767578" height="30.333333969116211"/>
         <image name="PassportIcon" width="40" height="40"/>
-        <image name="QRcodeIcon" width="36" height="36"/>
         <image name="SettingIcon" width="77" height="64"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="sun.max" catalog="system" width="128" height="124"/>

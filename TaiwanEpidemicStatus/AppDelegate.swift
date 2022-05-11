@@ -10,11 +10,10 @@ import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
+    {
         // Override point for customization after application launch.
+        UNUserNotificationCenter.current().delegate = self
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: { granted,_  in
             if granted {
                 print("Allow")
@@ -23,14 +22,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         })
         
-        // 註冊遠程通知
-        application.registerForRemoteNotifications()
-        
+        if !ApnsModel.isApnsOpen() {
+            // 註冊遠程通知
+            UIApplication.shared.registerForRemoteNotifications()
+        } else {
+            // 取消註冊遠程通知
+            UIApplication.shared.unregisterForRemoteNotifications()
+        }
+
         return true
     }
 
     // MARK: UISceneSession Lifecycle
-
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
         // Use this method to select a configuration to create the new scene with.
@@ -44,7 +47,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     // MARK: - Core Data stack
-
     lazy var persistentContainer: NSPersistentContainer = {
         /*
          The persistent container for the application. This implementation
@@ -73,7 +75,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
 
     // MARK: - Core Data Saving support
-
     func saveContext () {
         let context = persistentContainer.viewContext
         if context.hasChanges {
@@ -88,6 +89,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+    // MARK: - Notification
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+
+    }
+    
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         let deviceTokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
         ApnsModel().addTokenToServer(token: deviceTokenString)
@@ -96,6 +102,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
         print("error: \(error)")
+    }
+}
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.banner])
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        defer {
+            completionHandler()
+        }
+        
+        guard response.actionIdentifier == UNNotificationDefaultActionIdentifier else {
+            return
+        }
+        
+        //response.notification.request.content.userInfo
+        
+        // Click notification open news view controller
+        let window = (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window
+        let rootViewController = UINavigationController(rootViewController: MainViewController())
+        window?.rootViewController = rootViewController
+        window?.makeKeyAndVisible()
+        
+        rootViewController.pushViewController(NewsViewController(), animated: true)
     }
 }
 

@@ -12,6 +12,11 @@
 		6F12870E281D52F40046A586 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F12870D281D52F40046A586 /* WeatherModel.swift */; };
 		6F128710281D54E70046A586 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F12870F281D54E70046A586 /* Location.swift */; };
 		6F128712281D5BD40046A586 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F128711281D5BD40046A586 /* Weather.swift */; };
+		6F14AF3C282B9DFA00FC9FAB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F14AF3A282B9DFA00FC9FAB /* MapViewController.swift */; };
+		6F14AF3D282B9DFA00FC9FAB /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F14AF3B282B9DFA00FC9FAB /* MapViewController.xib */; };
+		6F14AF3F282BB54100FC9FAB /* AntigenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F14AF3E282BB54100FC9FAB /* AntigenData.swift */; };
+		6F14AF41282BB83900FC9FAB /* MapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F14AF40282BB83900FC9FAB /* MapModel.swift */; };
+		6F14AF43282BF2F700FC9FAB /* HaspitalAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F14AF42282BF2F700FC9FAB /* HaspitalAnnotation.swift */; };
 		6F159E3628292AB9003D803E /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F159E3528292AB9003D803E /* SettingsTableViewController.swift */; };
 		6F194383281790DA0008A6AD /* ParseUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F194382281790DA0008A6AD /* ParseUtil.swift */; };
 		6F38DDA6282A9284000BAEED /* ApnsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F38DDA5282A9284000BAEED /* ApnsModel.swift */; };
@@ -123,6 +128,11 @@
 		6F12870D281D52F40046A586 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		6F12870F281D54E70046A586 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		6F128711281D5BD40046A586 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		6F14AF3A282B9DFA00FC9FAB /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		6F14AF3B282B9DFA00FC9FAB /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		6F14AF3E282BB54100FC9FAB /* AntigenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntigenData.swift; sourceTree = "<group>"; };
+		6F14AF40282BB83900FC9FAB /* MapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModel.swift; sourceTree = "<group>"; };
+		6F14AF42282BF2F700FC9FAB /* HaspitalAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaspitalAnnotation.swift; sourceTree = "<group>"; };
 		6F159E3528292AB9003D803E /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		6F194382281790DA0008A6AD /* ParseUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseUtil.swift; sourceTree = "<group>"; };
 		6F38DDA5282A9284000BAEED /* ApnsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApnsModel.swift; sourceTree = "<group>"; };
@@ -265,6 +275,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6F14AF39282B9DE200FC9FAB /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				6F14AF3B282B9DFA00FC9FAB /* MapViewController.xib */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		6F19438028178FBF0008A6AD /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,6 +394,7 @@
 		6F68EFEA280CF95F0012B5B1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6F14AF39282B9DE200FC9FAB /* Map */,
 				6FC6E820282104EA00C5D4CE /* Passport */,
 				6FF3213F281AB8700019A809 /* News */,
 				6F3B59CE2817A191005B0E31 /* Main */,
@@ -399,6 +418,7 @@
 				6F159E3528292AB9003D803E /* SettingsTableViewController.swift */,
 				6F6E3FA62829357E00041B20 /* BugReportViewController.swift */,
 				6F6E3FA828294C9400041B20 /* SelectAppearanceTableViewController.swift */,
+				6F14AF3A282B9DFA00FC9FAB /* MapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -426,6 +446,7 @@
 				6FF6D6B32823904B00430CBB /* PassportModel.swift */,
 				6FF6D6BB282398B200430CBB /* PassportEntityModel.swift */,
 				6F38DDA5282A9284000BAEED /* ApnsModel.swift */,
+				6F14AF40282BB83900FC9FAB /* MapModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -441,6 +462,7 @@
 				6F65C1B3281FD8B5004EB65F /* CDCNews.swift */,
 				6FF6D6B52823917B00430CBB /* Passport.swift */,
 				6FD9725A28281737004EDD07 /* TaiwanStatisticData.swift */,
+				6F14AF3E282BB54100FC9FAB /* AntigenData.swift */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -485,6 +507,7 @@
 				6FD8F5E6281B91900053EC07 /* NewsImageView */,
 				6FD357E4280D82A30010D5DE /* Bottom Navigation Bar */,
 				6FD357E0280D56D40010D5DE /* ExpandTableView.swift */,
+				6F14AF42282BF2F700FC9FAB /* HaspitalAnnotation.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -648,6 +671,7 @@
 				6FC6E81D2820D69300C5D4CE /* NewsItemLargeTableViewCell.xib in Resources */,
 				6FD972552826B354004EDD07 /* CovidStatisticViewController.xib in Resources */,
 				6F68EFE3280CF9040012B5B1 /* LaunchScreen.storyboard in Resources */,
+				6F14AF3D282B9DFA00FC9FAB /* MapViewController.xib in Resources */,
 				6F82AB16282663D90006BF9A /* PassportCollectionViewCell.xib in Resources */,
 				6FD357DE280D56180010D5DE /* NewsItemMediumTableViewCell.xib in Resources */,
 				6F65C1B2281FD561004EB65F /* NewsItemMediumNotImageTableViewCell.xib in Resources */,
@@ -749,6 +773,8 @@
 				6FF32145281AC8C60019A809 /* UDNNews.swift in Sources */,
 				6F82AB0C28265E550006BF9A /* QRCodeUtil.swift in Sources */,
 				6FF32142281AB88C0019A809 /* NewsDetailViewController.swift in Sources */,
+				6F14AF43282BF2F700FC9FAB /* HaspitalAnnotation.swift in Sources */,
+				6F14AF3F282BB54100FC9FAB /* AntigenData.swift in Sources */,
 				6FD9725B28281737004EDD07 /* TaiwanStatisticData.swift in Sources */,
 				6FF6D6B62823917B00430CBB /* Passport.swift in Sources */,
 				6F128710281D54E70046A586 /* Location.swift in Sources */,
@@ -768,6 +794,7 @@
 				6F3B59CD28179D75005B0E31 /* ExtensionMethod.swift in Sources */,
 				6FD972542826B354004EDD07 /* CovidStatisticViewController.swift in Sources */,
 				6F3A528D281925E2009E042B /* JWTUtil.swift in Sources */,
+				6F14AF41282BB83900FC9FAB /* MapModel.swift in Sources */,
 				6F68EFEE280CF9810012B5B1 /* MainViewController.swift in Sources */,
 				6FD8F5F4281BCE5E0053EC07 /* NewsComponentUtil.swift in Sources */,
 				6F3A529128192728009E042B /* AuthModel.swift in Sources */,
@@ -786,6 +813,7 @@
 				6F12870E281D52F40046A586 /* WeatherModel.swift in Sources */,
 				6FD357E6280D82C00010D5DE /* BottomNavigationView.swift in Sources */,
 				6F65C1B4281FD8B5004EB65F /* CDCNews.swift in Sources */,
+				6F14AF3C282B9DFA00FC9FAB /* MapViewController.swift in Sources */,
 				6FD357DD280D56180010D5DE /* NewsItemMediumTableViewCell.swift in Sources */,
 				6F3B59E6281819E3005B0E31 /* TestModel.swift in Sources */,
 				6FD357D8280D39940010D5DE /* ExtensionView.swift in Sources */,

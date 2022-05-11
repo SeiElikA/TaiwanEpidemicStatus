@@ -23,3 +23,5 @@
 "WithSystem" = "跟随系统";
 "Dark" = "深色";
 "Light" = "浅色";
+"NotLocationPermission" = "无法取得现在位置";
+"LocationInfo" = "定位至卫福部疾病管制署";

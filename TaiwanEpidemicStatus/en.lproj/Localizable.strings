@@ -24,3 +24,5 @@
 "WithSystem" = "Automatic";
 "Dark" = "Dark";
 "Light" = "Light";
+"NotLocationPermission" = "Not have location permission";
+"LocationInfo" = "Location to the CDC offical";

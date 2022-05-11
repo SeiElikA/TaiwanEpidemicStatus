@@ -12,7 +12,6 @@ public struct CDCNews: Decodable {
     let categories:[String]
     let content:String
     let description:String
-    //let enclosure:String
     let guid:String
     let link:String
     let pubDate:String

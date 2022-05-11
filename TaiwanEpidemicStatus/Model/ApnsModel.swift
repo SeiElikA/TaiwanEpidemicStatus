@@ -9,8 +9,8 @@ import Foundation
 import FastAPI
 
 public class ApnsModel {
-    let fastApi:FastAPI = FastAPI()
-    
+    private let fastApi:FastAPI = FastAPI()
+    private static let cdcNewsNoticeKey = "cdcNewsNoticeKey"
     
     public func addTokenToServer(token:String) {
         let dic = ["token":token]
@@ -20,5 +20,13 @@ public class ApnsModel {
                 print(msg)
             }
         })
+    }
+    
+    public static func isApnsOpen() -> Bool {
+        return UserDefaults().bool(forKey: cdcNewsNoticeKey)
+    }
+    
+    public static func setApnsOpen(isOpen:Bool) {
+        UserDefaults().set(isOpen, forKey: ApnsModel.cdcNewsNoticeKey)
     }
 }

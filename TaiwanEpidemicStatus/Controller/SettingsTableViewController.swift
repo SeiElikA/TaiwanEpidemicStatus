@@ -8,7 +8,6 @@
 import UIKit
 
 class SettingsTableViewController: UITableViewController {
-    private let cdcNewsNoticeKey = ""
     public static var instance:SettingsTableViewController?
     
     @IBOutlet weak var cdcNewsUpdateTableCell: UITableViewCell!
@@ -25,7 +24,7 @@ class SettingsTableViewController: UITableViewController {
         
         // set cell style
         let switchView = UISwitch()
-        switchView.isOn = UserDefaults().bool(forKey: cdcNewsNoticeKey)
+        switchView.isOn = !ApnsModel.isApnsOpen()
         switchView.addTarget(self, action: #selector(cdcNewsNotificationChange), for: .valueChanged)
         cdcNewsUpdateTableCell.accessoryView = switchView
         // set dark mode select
@@ -57,7 +56,15 @@ class SettingsTableViewController: UITableViewController {
     }
     
     @objc private func cdcNewsNotificationChange(uiSwitch:UISwitch) {
-        UserDefaults().set(uiSwitch.isOn, forKey: cdcNewsNoticeKey)
+        ApnsModel.setApnsOpen(isOpen: !uiSwitch.isOn)
+        
+        if uiSwitch.isOn {
+            // 註冊遠程通知
+            UIApplication.shared.registerForRemoteNotifications()
+        } else {
+            // 取消註冊遠程通知
+            UIApplication.shared.unregisterForRemoteNotifications()
+        }
     }
     
     @objc private func closeClickEvent() {
