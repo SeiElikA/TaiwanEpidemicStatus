@@ -16,9 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         // init google ads
         GADMobileAds.sharedInstance().start(completionHandler: nil)
-        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [
-            "326d46ed5dda1d95367c0f992c0ab945"
-        ]
+//        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [
+//            "326d46ed5dda1d95367c0f992c0ab945"
+//        ]
         // set notification
         UNUserNotificationCenter.current().delegate = self
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: { granted,_  in
