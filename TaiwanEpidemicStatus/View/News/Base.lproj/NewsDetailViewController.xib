@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsDetailViewController" customModule="TaiwanEpidemicStatus" customModuleProvider="target">
             <connections>
+                <outlet property="bannerView" destination="038-1I-3xB" id="Jt2-CH-eGM"/>
                 <outlet property="btnRefresh" destination="P6H-lK-8Qy" id="isW-rX-Ilb"/>
                 <outlet property="btnShare" destination="aHR-KM-0Kk" id="jiz-Bn-6yl"/>
                 <outlet property="imgCover" destination="esO-jU-lnO" id="2Ha-Rv-cwZ"/>
@@ -32,10 +33,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2n6-PN-Bkm">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="736"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpU-dq-hA2">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="400.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="412.5"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="esO-jU-lnO">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="286.5"/>
@@ -123,7 +124,6 @@
                                 <constraint firstItem="gD4-Bc-2dc" firstAttribute="leading" secondItem="cpU-dq-hA2" secondAttribute="leading" constant="22" id="4dQ-7r-uDf"/>
                                 <constraint firstItem="QYv-kW-tuS" firstAttribute="top" secondItem="cpU-dq-hA2" secondAttribute="top" constant="8" id="8Yw-yM-W0x"/>
                                 <constraint firstItem="esO-jU-lnO" firstAttribute="leading" secondItem="cpU-dq-hA2" secondAttribute="leading" id="ARy-EF-WYh"/>
-                                <constraint firstAttribute="bottom" secondItem="eGv-NG-PYg" secondAttribute="bottom" id="Btp-In-Qtl"/>
                                 <constraint firstAttribute="trailing" secondItem="6rc-YJ-7ub" secondAttribute="trailing" id="Cdp-CO-X16"/>
                                 <constraint firstAttribute="trailing" secondItem="eGv-NG-PYg" secondAttribute="trailing" constant="20" id="EsQ-so-o7x"/>
                                 <constraint firstItem="wKE-uP-isk" firstAttribute="leading" secondItem="cpU-dq-hA2" secondAttribute="leading" constant="22" id="FEP-Vh-fNh"/>
@@ -133,6 +133,7 @@
                                 <constraint firstItem="mvX-Y8-gJT" firstAttribute="leading" secondItem="cpU-dq-hA2" secondAttribute="leading" constant="22" id="M0W-R8-Z4l"/>
                                 <constraint firstItem="wKE-uP-isk" firstAttribute="top" secondItem="aYd-Ho-R3i" secondAttribute="bottom" constant="4" id="Nrw-Bp-di9"/>
                                 <constraint firstItem="eGv-NG-PYg" firstAttribute="leading" secondItem="cpU-dq-hA2" secondAttribute="leading" constant="20" id="OUx-zz-iDf"/>
+                                <constraint firstAttribute="bottom" secondItem="eGv-NG-PYg" secondAttribute="bottom" constant="12" id="R1S-nR-J4O"/>
                                 <constraint firstAttribute="trailing" secondItem="aHR-KM-0Kk" secondAttribute="trailing" constant="18" id="RJC-6i-erm"/>
                                 <constraint firstItem="mvX-Y8-gJT" firstAttribute="top" secondItem="esO-jU-lnO" secondAttribute="bottom" constant="18" id="TA2-DN-sQS"/>
                                 <constraint firstItem="6rc-YJ-7ub" firstAttribute="top" secondItem="cpU-dq-hA2" secondAttribute="top" id="VVO-Nl-F1o"/>
@@ -161,15 +162,25 @@
                     <viewLayoutGuide key="contentLayoutGuide" id="pFc-Ly-hvU"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="hMO-t1-ddl"/>
                 </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="038-1I-3xB" customClass="GADBannerView">
+                    <rect key="frame" x="0.0" y="780" width="414" height="82"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="82" id="Fu6-Nt-rjK"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="2n6-PN-Bkm" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="3tL-yb-d5c"/>
                 <constraint firstItem="esO-jU-lnO" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.35" id="MLP-ds-QXi"/>
+                <constraint firstItem="038-1I-3xB" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="b6q-LM-0na"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2n6-PN-Bkm" secondAttribute="trailing" id="eVc-Lf-4GG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="038-1I-3xB" secondAttribute="bottom" id="lN1-H1-OVK"/>
                 <constraint firstItem="2n6-PN-Bkm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nCF-1d-WzM"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="2n6-PN-Bkm" secondAttribute="bottom" id="osF-rs-wYB"/>
+                <constraint firstItem="038-1I-3xB" firstAttribute="top" secondItem="2n6-PN-Bkm" secondAttribute="bottom" id="nIs-Ez-JA1"/>
+                <constraint firstItem="038-1I-3xB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ohZ-JV-hsy"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="128.57142857142856"/>
         </view>

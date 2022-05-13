@@ -27,7 +27,7 @@
 "gdV-WT-JTT.text" = "APP 語言";
 
 /* Class = "UITableViewCell"; contentConfiguration.text = "關於我們"; ObjectID = "h7u-My-mL4"; */
-"h7u-My-mL4.contentConfiguration.text" = "關於我們";
+"h7u-My-mL4.contentConfiguration.text" = "隱私權政策";
 
 /* Class = "UILabel"; text = "夜間模式"; ObjectID = "wqZ-YI-7vE"; */
 "wqZ-YI-7vE.text" = "夜間模式";

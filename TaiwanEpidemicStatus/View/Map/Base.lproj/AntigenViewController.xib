@@ -143,14 +143,6 @@
             <point key="canvasLocation" x="132" y="131"/>
         </view>
     </objects>
-    <designables>
-        <designable name="1sc-Q9-h7s">
-            <size key="intrinsicContentSize" width="-1" height="771"/>
-        </designable>
-        <designable name="Mhd-Xq-G6l">
-            <size key="intrinsicContentSize" width="-1" height="752"/>
-        </designable>
-    </designables>
     <resources>
         <namedColor name="BottomSheetBackgroundColor">
             <color red="0.96100002527236938" green="0.9660000205039978" blue="0.96200001239776611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

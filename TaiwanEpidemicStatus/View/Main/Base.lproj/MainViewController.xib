@@ -447,11 +447,6 @@
             <point key="canvasLocation" x="130.76923076923077" y="130.09478672985782"/>
         </view>
     </objects>
-    <designables>
-        <designable name="adP-p3-IoL">
-            <size key="intrinsicContentSize" width="-1" height="861.66666412353527"/>
-        </designable>
-    </designables>
     <resources>
         <image name="Circle" width="151" height="152"/>
         <image name="LocationIcon" width="16" height="21"/>

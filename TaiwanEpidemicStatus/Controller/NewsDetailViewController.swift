@@ -7,7 +7,7 @@
 
 import UIKit
 import WebKit
-import Social
+import GoogleMobileAds
 
 class NewsDetailViewController: UIViewController{
     @IBOutlet weak var btnShare: UIButton!
@@ -21,6 +21,7 @@ class NewsDetailViewController: UIViewController{
     @IBOutlet var rootView: UIView!
     @IBOutlet weak var txtAuthor: UILabel!
     @IBOutlet weak var btnRefresh: UIButton!
+    @IBOutlet weak var bannerView: GADBannerView!
     
     // if is udn news
     var newsContentImage:[Int:UIImage] = [:]
@@ -35,9 +36,11 @@ class NewsDetailViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        initGoogleAds()
         // Set Navigation
         self.navigationController?.isNavigationBarHidden = true
-        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil // UINavigationController Swipe Back
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
 
         // Set Title under line style
         viewUnderLine.layer.cornerRadius = viewUnderLine.bounds.height / 2
@@ -64,8 +67,16 @@ class NewsDetailViewController: UIViewController{
         } else {
             self.checkNetwork()
         }
-        
     }
+    
+    private func initGoogleAds() {
+        bannerView.rootViewController = self
+        bannerView.adUnitID = Global.adUnitID
+        bannerView.load(GADRequest())
+
+        bannerView.delegate = self
+    }
+
     
     private func fetchNewsContent() {
         self.loadActivityindicator.fadeInAnimate(during: 0.5)
@@ -105,6 +116,7 @@ class NewsDetailViewController: UIViewController{
                     self.stackNewsContent.addArrangedSubview(component)
                 }
             })
+            
             
             self.btnRefresh.isHidden = true
         }, serverNotRunning: {
@@ -278,5 +290,31 @@ class NewsDetailViewController: UIViewController{
     
     @IBAction func btnReconnectedEvent(_ sender: Any) {
         self.checkNetwork()
+    }
+}
+
+extension NewsDetailViewController: GADBannerViewDelegate {
+    func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
+      print("bannerViewDidReceiveAd")
+    }
+
+    func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
+      print("bannerView:didFailToReceiveAdWithError: \(error.localizedDescription)")
+    }
+
+    func bannerViewDidRecordImpression(_ bannerView: GADBannerView) {
+      print("bannerViewDidRecordImpression")
+    }
+
+    func bannerViewWillPresentScreen(_ bannerView: GADBannerView) {
+      print("bannerViewWillPresentScreen")
+    }
+
+    func bannerViewWillDismissScreen(_ bannerView: GADBannerView) {
+      print("bannerViewWillDIsmissScreen")
+    }
+
+    func bannerViewDidDismissScreen(_ bannerView: GADBannerView) {
+      print("bannerViewDidDismissScreen")
     }
 }

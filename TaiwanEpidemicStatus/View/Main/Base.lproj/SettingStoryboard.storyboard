@@ -103,7 +103,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="321.33333333333331" height="39.333332061767578"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <listContentConfiguration key="contentConfiguration" text="關於我們"/>
+                                        <listContentConfiguration key="contentConfiguration" text="隱私權政策"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -135,6 +135,7 @@
                         <outlet property="darkModeTableCell" destination="b9a-Ar-lNF" id="Ggi-Je-5vj"/>
                         <segue destination="2YO-se-uxt" kind="show" identifier="bugReport" id="nQl-je-W1Q"/>
                         <segue destination="JWp-wK-6gu" kind="show" identifier="darkMode" id="YUF-gW-eZ1"/>
+                        <segue destination="b5f-cd-VEa" kind="show" identifier="changeToPrivacyPolicy" id="TZQ-gJ-YpO"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mNV-Zx-Ir8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -195,7 +196,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VvH-9D-qRj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1751" y="-223"/>
+            <point key="canvasLocation" x="1751" y="-884"/>
         </scene>
         <!--Bug Report View Controller-->
         <scene sceneID="ZeN-Yh-qbd">
@@ -230,7 +231,110 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xjJ-T8-ro4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1751" y="456"/>
+            <point key="canvasLocation" x="1751" y="-154"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="19o-O0-N44">
+            <objects>
+                <viewController id="b5f-cd-VEa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F1V-5C-6EU">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="end-g9-7TH">
+                                <rect key="frame" x="20" y="100" width="350" height="710"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2R-vJ-03K">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="2597"/>
+                                        <mutableString key="text">「Taiwan Covid Helper」是由「SeiElikA」（下稱我們）所經營之APP(下稱本APP)各項服務與資訊。
+以下是我們的隱私權保護政策，幫助您瞭解本APP所蒐集的個人資料之運用及保護方式。
+一、隱私權保護政策的適用範圍
+    （1）請您在於使用本APP服務前，確認您已審閱並同意本隱私權政策所列全部條款，若您不同意全部或部份者，則請勿使用本APP服務。
+    （2）隱私權保護政策內容，包括我們如何處理您在使用本APP服務時蒐集到的個人識別資料。
+    （3）隱私權保護政策不適用於本APP以外的相關連結網站，亦不適用於非我們所委託或參與管理之人員。
+
+二、個人資料的蒐集及使用
+    （1）在使用我們的服務時，我們可能會要求您向我們提供可用於聯繫或識別您的某些個人資料，包括：
+        • C001辨識個人者： 如姓名、地址、電話、電子郵件等資訊。
+        • C011個人描述：例如：性別、出生年月日等。
+
+    （2）本APP將蒐集的數據用於各種目的：
+        •提供和維護系統所提供讀服務
+        •提供用戶支持
+        •提供分析或有價值訊息，以便我們改進服務
+        •監控服務的使用情況
+        •檢測，預防和解決技術問題
+    （3）本APP針對蒐集數據的利用期間、地區、對象及方式：
+        •期間：當事人要求停止使用或本服務停止提供服務之日為止。
+        •地區：個人資料將用於台灣地區。
+        •利用對象及方式：所蒐集到的資料將利用於各項業務之執行，利用方式為因業務執行所必須進行之各項分析、聯繫及通知。
+
+三、資料的保護與安全
+    （1）本APP主機均設有防火牆、防毒系統等相關資訊安全設備及必要的安全防護措施，本APP及您的個人資料均受到嚴格的保護。只有經過授權的人員才能接觸您的個人資料，相關處理人員均有簽署保密合約，如有違反保密義務者，將會受到相關的法律處分。
+    （2） 如因業務需要有必要委託本APP相關單位提供服務時，我們會要求其遵守保密義務，並採取相當之檢查程序以確定其將確實遵守。
+    （3）請您妥善保管您的密碼與個人資料，並提醒您使用完畢本APP相關服務後，務必關閉本APP，以免您的資料遭人盜用。
+    （4）您同意在使用本APP服務時，所留存的資料與事實相符。另若嗣後您發現您的個人資料遭他人非法使用或有任何異常時，應即時通知我們。
+    （5）您同意於使用本APP服務時，所提供及使用之資料皆為合法，並無侵害第三人權利、違反第三方協議或涉及任何違法行為。如因使用本APP服務而致第三人損害，除因我們故意或重大過失所致外，我們並不負擔相關賠償責任。
+
+四、對外的相關連結
+本APP上有可能包含其他合作網站或網頁連結，該網站或網頁也有可能會蒐集您的個人資料，不論其內容或隱私權政策為何，皆與本APP 無關，您應自行參考該連結網站中的隱私權保護政策，我們不負任何連帶責任。
+五、與第三人共用個人資料之政策
+    （1）本APP絕不會提供、交換、出租或出售任何您的個人資料給其他個人、團體、私人企業或公務機關，但有法律依據或合約義務者，不在此限。
+    （2）前項但書之情形包括但不限於：
+        •經由您書面同意。
+        •法律明文規定。
+        •為維護國家安全或增進公共利益。
+        •為免除您生命、身體、自由或財產上之危險。
+        •與公務機關或學術研究機構合作，基於公共利益為統計或學術研究而有必要，且資料經過提供者處理或蒐集者依其揭露方式無從識別特定之當事人。
+        •當您在APP的行為，違反服務條款或可能損害或妨礙APP與其他使用者權益或導致任何人遭受損害時，經APP管理單位研析揭露您的個人資料是為了辨識、聯絡或採取法律行動所必要者。
+        •有利於您的權益。
+    （3）本APP委託廠商協助蒐集、處理或利用您的個人資料時，將對委外廠商或個人善盡監督管理之責。
+
+六、Cookie之使用
+    （1）為了提供您最佳的服務，本網站會在您的電腦中放置並取用我們的Cookie，若您不願接受Cookie的寫入，您可在您使用的瀏覽器功能項中設定隱私權等級為高，即可拒絕Cookie的寫入，但可能會導致網站某些功能無法正常執行 。
+以下是可能使用的Cookie範例:
+        •session cookies. 用來維護應用程式的狀態
+        •Preference Cookies. 用來記錄您的喜好與設定
+        •Security Cookies. 用來控制安全和檢查
+
+七、Google Ads
+•	Google 和其夥伴會利用廣告 Cookie，根據使用者在您網站和/或其他網站瀏覽的內容，對使用者放送合適的廣告。
+•	第三方廠商 (包括 Google) 會使用 Cookie，根據使用者先前在您網站     (或其他網站) 上瀏覽的內容放送廣告。
+
+八、未成年人保護
+未成年人於註冊或使用本服務而同意本公司蒐集、利用其個人資訊時，應按其年齡由其法定代理人代為或在法定代理人之同意下為之。
+九、隱私權政策的修訂
+我們將因應需求擁有隨時修改本隱私權保護政策的權利，當我們做出修改時，會於本APP公告，且自公告日起生效，不再另行通知。</mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="h2R-vJ-03K" firstAttribute="width" secondItem="6W7-bb-4Xo" secondAttribute="width" id="8V5-aP-qwA"/>
+                                    <constraint firstItem="h2R-vJ-03K" firstAttribute="top" secondItem="u84-Y6-U6d" secondAttribute="top" id="Jcf-qu-sJM"/>
+                                    <constraint firstItem="h2R-vJ-03K" firstAttribute="bottom" secondItem="u84-Y6-U6d" secondAttribute="bottom" id="W6B-cn-Q9p"/>
+                                    <constraint firstItem="h2R-vJ-03K" firstAttribute="trailing" secondItem="u84-Y6-U6d" secondAttribute="trailing" id="kbc-ga-KFQ"/>
+                                    <constraint firstItem="h2R-vJ-03K" firstAttribute="leading" secondItem="u84-Y6-U6d" secondAttribute="leading" id="rfF-l1-yWx"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="u84-Y6-U6d"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="6W7-bb-4Xo"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8IP-ID-4uw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="end-g9-7TH" firstAttribute="leading" secondItem="8IP-ID-4uw" secondAttribute="leading" constant="20" id="Wvh-Fa-Gi2"/>
+                            <constraint firstItem="8IP-ID-4uw" firstAttribute="trailing" secondItem="end-g9-7TH" secondAttribute="trailing" constant="20" id="X8Q-ZJ-WZq"/>
+                            <constraint firstItem="end-g9-7TH" firstAttribute="top" secondItem="8IP-ID-4uw" secondAttribute="top" constant="12" id="kUV-zh-91E"/>
+                            <constraint firstItem="8IP-ID-4uw" firstAttribute="bottom" secondItem="end-g9-7TH" secondAttribute="bottom" id="px2-TO-wa2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7Pv-9c-6JP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rEJ-Js-Eto" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1751" y="557"/>
         </scene>
     </scenes>
     <resources>

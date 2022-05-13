@@ -183,14 +183,6 @@
             <point key="canvasLocation" x="131.8840579710145" y="120.53571428571428"/>
         </view>
     </objects>
-    <designables>
-        <designable name="nPE-3k-x9T">
-            <size key="intrinsicContentSize" width="-1" height="752"/>
-        </designable>
-        <designable name="vi6-w6-3YJ">
-            <size key="intrinsicContentSize" width="-1" height="771"/>
-        </designable>
-    </designables>
     <resources>
         <namedColor name="BottomSheetBackgroundColor">
             <color red="0.96100002527236938" green="0.9660000205039978" blue="0.96200001239776611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

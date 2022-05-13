@@ -14,6 +14,7 @@ target 'TaiwanEpidemicStatus' do
   use_frameworks!
   pod 'CryptoSwift', '~> 1.4.1'
   pod 'Charts'
+  pod 'Google-Mobile-Ads-SDK'
   # Pods for TaiwanEpidemicStatus
 
 end

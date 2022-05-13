@@ -111,9 +111,10 @@ extension CovidStatisticViewController: UITableViewDataSource, UITableViewDelega
         
         let cell = tableView.dequeueReusableCell(withIdentifier: DistStatisticTableViewCell.identity, for: indexPath) as! DistStatisticTableViewCell
         let data = cityStatisticData.filter({$0.districtName != "全區" && $0.announcementDate == newDate})[indexPath.row]
-        cell.txtDistName.text = data.districtName
+        cell.txtDistName.text = data.districtName == "空值" ? "全部移入" : data.districtName
         cell.txtNewsCases.text = data.newCasesAmount
         cell.txtTotalCases.text = data.totalCasesAmount
+    
         return cell
     }
 }

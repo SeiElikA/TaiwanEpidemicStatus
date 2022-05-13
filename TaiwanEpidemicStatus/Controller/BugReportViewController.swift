@@ -36,3 +36,44 @@ extension BugReportViewController: WKNavigationDelegate {
                                         "document.getElementsByTagName('head')[0].appendChild(script);", completionHandler: nil)
     }
 }
+
+extension BugReportViewController: WKUIDelegate {
+    func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping() -> Void) async {
+        let alertController = UIAlertController(title: nil, message: message, preferredStyle: .actionSheet)
+        alertController.addAction(UIAlertAction(title: nil, style: .default, handler: { _ in
+            completionHandler()
+        }))
+        self.present(alertController, animated: true)
+    }
+    
+    func webView(_ webView: WKWebView, runJavaScriptConfirmPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (Bool) -> Void) {
+        let alertController = UIAlertController(title: nil, message: message, preferredStyle: .actionSheet)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: { _ in
+            completionHandler(true)
+        })
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: { _ in
+            completionHandler(false)
+        })
+        
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true)
+    }
+    
+    func webView(_ webView: WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: String, defaultText: String?, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (String?) -> Void) {
+        let alertController = UIAlertController(title: nil, message: prompt, preferredStyle: .alert)
+        alertController.addTextField(configurationHandler: { textField in
+            textField.text = defaultText
+        })
+        
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: { _ in
+            let text = alertController.textFields?[0].text ?? ""
+            completionHandler(text)
+        })
+        
+        alertController.addAction(okAction)
+        
+        self.present(alertController, animated: true)
+    }
+}

@@ -43,6 +43,7 @@ class SettingsTableViewController: UITableViewController {
         bugReportTableCell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(openBugReportClickEvent)))
         appLanguageTableCell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(changeAppLanguageClickEvent)))
         darkModeTableCell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(changeDarkMode)))
+        aboutAsTableCell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(aboutAppClickEvent)))
     }
     
     @objc private func changeDarkMode() {
@@ -68,6 +69,10 @@ class SettingsTableViewController: UITableViewController {
             // 取消註冊遠程通知
             UIApplication.shared.unregisterForRemoteNotifications()
         }
+    }
+    
+    @objc private func aboutAppClickEvent() {
+        performSegue(withIdentifier: "changeToPrivacyPolicy", sender: self)
     }
     
     @objc private func closeClickEvent() {

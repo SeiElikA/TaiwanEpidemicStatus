@@ -13,7 +13,6 @@ class NewsImageView: UIView {
     @IBOutlet weak var loadImageActivityIndicator: UIActivityIndicatorView!
     @IBOutlet var root: UIView!
 
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -23,7 +22,6 @@ class NewsImageView: UIView {
         super.init(coder: aDecoder)
         setup()
     }
-    
 }
 
 fileprivate extension NewsImageView {
