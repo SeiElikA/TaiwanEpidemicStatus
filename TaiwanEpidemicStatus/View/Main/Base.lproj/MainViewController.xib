@@ -240,17 +240,17 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nRo-KL-llh">
                                             <rect key="frame" x="22" y="14" width="310" height="54"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="5Uk-i1-SQ0">
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="5Uk-i1-SQ0">
                                                     <rect key="frame" x="0.0" y="0.0" width="97.333333333333329" height="54"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="案例統計" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAY-wT-Oay">
-                                                            <rect key="frame" x="0.0" y="0.0" width="97.333333333333329" height="28.666666666666668"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="97.333333333333329" height="34"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="更新時間:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHn-Ha-Leo">
-                                                            <rect key="frame" x="0.0" y="37" width="61.333333333333336" height="17"/>
+                                                            <rect key="frame" x="0.0" y="34" width="61.333333333333336" height="20"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <color key="textColor" name="MainUpdateFontColor"/>
                                                             <nil key="highlightedColor"/>
@@ -271,7 +271,7 @@
                                                 </button>
                                             </subviews>
                                         </stackView>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QfI-lm-q9x">
+                                        <view contentMode="scaleToFill" verticalHuggingPriority="750" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="QfI-lm-q9x">
                                             <rect key="frame" x="20" y="86" width="314" height="64"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hBe-13-cXQ">
@@ -284,7 +284,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="dLd-d8-adI">
                                                     <rect key="frame" x="0.0" y="0.0" width="136.66666666666666" height="64"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImC-YS-zGh">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="ImC-YS-zGh">
                                                             <rect key="frame" x="57.000000000000007" y="0.0" width="22.333333333333336" height="43"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                                             <color key="textColor" name="MainColor"/>
@@ -301,7 +301,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="0Pp-qg-egf">
                                                     <rect key="frame" x="177.66666666666663" y="0.0" width="136.33333333333337" height="64"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2W-kd-wQh">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="V2W-kd-wQh">
                                                             <rect key="frame" x="57.000000000000036" y="0.0" width="22.333333333333336" height="43"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                                             <color key="textColor" name="DeathRedColor"/>
@@ -395,7 +395,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogv-7R-5gl">
                             <rect key="frame" x="0.0" y="0.0" width="165" height="65"/>
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" name="MainBackground"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="PassportIcon"/>
                             <connections>
@@ -404,7 +404,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pE-n0-oRF">
                             <rect key="frame" x="225" y="0.0" width="165" height="65"/>
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" name="MainBackground"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="SettingIcon"/>
                             <connections>
@@ -447,14 +447,19 @@
             <point key="canvasLocation" x="130.76923076923077" y="130.09478672985782"/>
         </view>
     </objects>
+    <designables>
+        <designable name="adP-p3-IoL">
+            <size key="intrinsicContentSize" width="-1" height="861.66666412353527"/>
+        </designable>
+    </designables>
     <resources>
         <image name="Circle" width="151" height="152"/>
         <image name="LocationIcon" width="16" height="21"/>
         <image name="MapIcon" width="33.333332061767578" height="30.333333969116211"/>
         <image name="PassportIcon" width="40" height="40"/>
         <image name="SettingIcon" width="77" height="64"/>
-        <image name="chevron.right" catalog="system" width="96" height="128"/>
-        <image name="sun.max" catalog="system" width="128" height="124"/>
+        <image name="chevron.right" catalog="system" width="32" height="32"/>
+        <image name="sun.max" catalog="system" width="32" height="32"/>
         <namedColor name="DeathRedColor">
             <color red="0.81568627450980391" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

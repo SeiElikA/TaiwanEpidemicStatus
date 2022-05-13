@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "廣元藥局"; ObjectID = "2e7-eu-dhp"; */
+"2e7-eu-dhp.text" = "廣元藥局";
+
+/* Class = "UILabel"; text = "嘉義市西區民安里中正路６９７號"; ObjectID = "5qk-WQ-jYU"; */
+"5qk-WQ-jYU.text" = "嘉義市西區民安里中正路６９７號";
+
+/* Class = "UILabel"; text = "更新時間："; ObjectID = "VYd-fm-m9t"; */
+"VYd-fm-m9t.text" = "更新时间：";
+
+/* Class = "UILabel"; text = "快篩種類"; ObjectID = "jYV-AX-TlM"; */
+"jYV-AX-TlM.text" = "快筛种类";
+
+/* Class = "UILabel"; text = "詳細資料"; ObjectID = "tQc-Vw-Gu3"; */
+"tQc-Vw-Gu3.text" = "详细资料";

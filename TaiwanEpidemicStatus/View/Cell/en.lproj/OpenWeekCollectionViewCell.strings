@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "下午"; ObjectID = "7ht-03-ust"; */
+"7ht-03-ust.text" = "Afternoon";
+
+/* Class = "UILabel"; text = "上午"; ObjectID = "94X-x4-4Ff"; */
+"94X-x4-4Ff.text" = "Morning";
+
+/* Class = "UILabel"; text = "禮拜一"; ObjectID = "n4F-DU-Dpg"; */
+"n4F-DU-Dpg.text" = "禮拜一";
+
+/* Class = "UILabel"; text = "晚間"; ObjectID = "wCM-IX-qUU"; */
+"wCM-IX-qUU.text" = "Evening";

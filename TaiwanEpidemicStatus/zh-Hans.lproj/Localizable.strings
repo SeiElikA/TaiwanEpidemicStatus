@@ -25,3 +25,16 @@
 "Light" = "浅色";
 "NotLocationPermission" = "无法取得现在位置";
 "LocationInfo" = "定位至卫福部疾病管制署";
+"WeatherError" = "无法取得天气资料";
+"monday" = "礼拜一";
+"tuesday" = "礼拜二";
+"wednesday" = "礼拜三";
+"thursday" = "礼拜四";
+"friday" = "礼拜五";
+"saturday" = "礼拜六";
+"sunday" = "礼拜日";
+"phone" = "电话";
+"note" = "备注";
+"remainAntigen" = "剩余快筛数量";
+"moreAntigenInfo" = "更多说明";
+"antigenQuestion" = "通知";

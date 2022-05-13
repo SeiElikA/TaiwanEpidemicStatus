@@ -30,10 +30,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "NewsViewController.getAllTableViewCell(tableView:indexPath:):NewsViewController.swift">
+         contextName = "PassportViewController.scrollViewDidScroll(_:):PassportViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "indexPath.row">
+               value = "self.passportCollection.collectionViewLayout.layoutAttributesForElements(in: cgRect)?.first">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -46,10 +46,18 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "PassportViewController.scrollViewDidScroll(_:):PassportViewController.swift">
+         contextName = "NewsViewController.getAllTableViewCell(tableView:indexPath:):NewsViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "self.passportCollection.collectionViewLayout.layoutAttributesForElements(in: cgRect)?.first">
+               value = "indexPath.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MainViewController.viewDidLoad():MainViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "UIColor(named: &quot;MainShadowColor&quot;)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -70,6 +78,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "CovidStatisticViewController.setChart():CovidStatisticViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "(0..&lt;dayValues.count).map({$0})&#10;">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "NewsDetailViewController.getCoverImage(imgUrl:):NewsDetailViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -86,10 +102,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "CovidStatisticViewController.setChart():CovidStatisticViewController.swift">
+         contextName = "MainViewController.viewDidAppear(_:):MainViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "(0..&lt;dayValues.count).map({$0})&#10;">
+               value = "UserDefaults().integer(forKey: &quot;selectIndex&quot;)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

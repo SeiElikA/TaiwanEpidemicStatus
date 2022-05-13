@@ -15,14 +15,17 @@ class MapViewController: UIViewController {
     private var locationManager = CLLocationManager()
     private var currentLocation = CLLocation(latitude: 25.04336042435599, longitude:  121.52270562636868)
     private var isFirstLocation = true
+    
+    
     @IBOutlet weak var mapView: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.mapView.delegate = self
         
+        self.showAntigenInfo()
         self.setLocationManager()
-        
+
         let coordinateRegion = MKCoordinateRegion(center: self.currentLocation.coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
         mapView.setRegion(coordinateRegion, animated: true)
         mapView.showsUserLocation = true
@@ -36,6 +39,7 @@ class MapViewController: UIViewController {
                     antigenAnnotation.title = $0.properties.name
                     antigenAnnotation.subtitle = $0.properties.address
                     antigenAnnotation.haspitalData = $0.properties
+                    
                     self.mapView.addAnnotation(antigenAnnotation)
                 })
             }
@@ -45,6 +49,22 @@ class MapViewController: UIViewController {
                 self.checkNetworkAlert()
             }
         })
+    }
+    
+    private func showAntigenInfo() {
+        let weekDay = Calendar.current.component(.weekday, from: Date())
+        var infoMsg = weekDay % 2 == 0 || weekDay == 7 ? "單數(1、3、5、7、9)" : "雙數(0、2、4、6、8)"
+        
+        let alertController = UIAlertController(title: NSLocalizedString("antigenQuestion", comment: ""), message: "身分證或居留證尾碼\(infoMsg)可購買", preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: .cancel)
+        let QAAction = UIAlertAction(title: NSLocalizedString("moreAntigenInfo", comment: ""), style: .default, handler: { _ in
+            UIApplication.shared.open(URL(string: Global.antigenInfoURL)!)
+        })
+        
+        alertController.addAction(QAAction)
+        alertController.addAction(OKAction)
+        
+        present(alertController, animated: true)
     }
     
     private func setLocationManager() {
@@ -86,19 +106,28 @@ class MapViewController: UIViewController {
 extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         // click annotation event
-        let haspitalAnnotation = view.annotation as! HaspitalAnnotation
-        
-        let viewController = MainViewController()
-        if #available(iOS 15.0, *) {
-            if let sheet = viewController.sheetPresentationController {
-                sheet.detents = [.medium(), .large()]
-                sheet.prefersGrabberVisible = true
-            }
-        } else {
-            // Fallback on earlier versions
+        let haspitalAnnotation = view.annotation as? HaspitalAnnotation
+        guard let haspitalAnnotation = haspitalAnnotation else {
+            return
         }
         
-        print(haspitalAnnotation.haspitalData?.address ?? "")
+        let viewController: BaseAntigenViewController
+        if #available(iOS 15.0, *) {
+            viewController = AntigenViewController()
+            if let viewController = viewController.sheetPresentationController {
+                viewController.detents = [.medium(), .large()]
+                viewController.prefersGrabberVisible = true
+            }
+        } else {
+            viewController = AntigenBottomSheetViewController()
+            viewController.modalPresentationStyle = .overCurrentContext
+            viewController.modalTransitionStyle = .crossDissolve
+        }
+        
+        viewController.antigenData = haspitalAnnotation.haspitalData
+        viewController.completion = {
+            self.mapView.deselectAnnotation(view.annotation, animated: true)
+        }
         present(viewController, animated: true)
     }
     
@@ -109,19 +138,24 @@ extension MapViewController: MKMapViewDelegate {
         }
         
         let annotationIdentifier = "AnnotationIdentifier"
-        var annotationView: MKAnnotationView?
+        var annotationView: MKMarkerAnnotationView?
         
-        if let dequedAnnotationView = self.mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifier) {
+        if let dequedAnnotationView = self.mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifier) as? MKMarkerAnnotationView {
             annotationView = dequedAnnotationView
             annotationView?.annotation = annotation
         } else {
-            let av = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
+            let av = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
             annotationView = av
         }
         
         if let annotationView = annotationView {
+            let data = (annotationView.annotation as! HaspitalAnnotation).haspitalData
+            
             annotationView.canShowCallout = true
-            annotationView.image = UIImage(named: "Haspital Icon")
+            annotationView.selectedGlyphImage = UIImage(systemName: "cross.fill")
+            annotationView.glyphImage = UIImage(systemName: "cross")
+            let count = data?.count ?? 0
+            annotationView.markerTintColor = count > 50 ? UIColor.systemGreen : (count > 10 ? UIColor.systemYellow : (count > 0 ? UIColor.systemRed : UIColor.systemGray))
         }
         
         return annotationView

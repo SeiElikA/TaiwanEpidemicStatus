@@ -47,44 +47,50 @@ public struct OpenWeek:Decodable {
     var sunday:Sunday
 }
 
-public struct Monday:Decodable {
+public struct Monday:Decodable,Day {
     var morning:Bool
     var afternoon: Bool
     var evening: Bool
 }
 
-public struct Tuesday:Decodable {
+public struct Tuesday:Decodable,Day {
     var morning:Bool
     var afternoon: Bool
     var evening: Bool
 }
 
-public struct Wednesday:Decodable {
+public struct Wednesday:Decodable,Day {
     var morning:Bool
     var afternoon: Bool
     var evening: Bool
 }
 
-public struct Thursday:Decodable {
+public struct Thursday:Decodable,Day {
     var morning:Bool
     var afternoon: Bool
     var evening: Bool
 }
 
-public struct Friday:Decodable {
+public struct Friday:Decodable,Day {
     var morning:Bool
     var afternoon: Bool
     var evening: Bool
 }
 
-public struct Saturday:Decodable {
+public struct Saturday:Decodable,Day {
     var morning:Bool
     var afternoon: Bool
     var evening: Bool
 }
 
-public struct Sunday:Decodable {
+public struct Sunday:Decodable,Day {
     var morning:Bool
     var afternoon: Bool
     var evening: Bool
+}
+
+protocol Day {
+    var morning:Bool {get set}
+    var afternoon: Bool {get set}
+    var evening: Bool {get set}
 }

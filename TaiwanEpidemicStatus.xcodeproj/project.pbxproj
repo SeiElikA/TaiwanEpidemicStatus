@@ -35,6 +35,13 @@
 		6F3F09A9281E985700407DBD /* AllNewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3F09A7281E985700407DBD /* AllNewsCollectionViewCell.swift */; };
 		6F3F09AA281E985700407DBD /* AllNewsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F3F09A8281E985700407DBD /* AllNewsCollectionViewCell.xib */; };
 		6F3F09AC281EA80F00407DBD /* AllNewsCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3F09AB281EA80F00407DBD /* AllNewsCollectionViewFlowLayout.swift */; };
+		6F421DBA282E038600CC8AA9 /* OpenWeekCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F421DB8282E038600CC8AA9 /* OpenWeekCollectionViewCell.swift */; };
+		6F421DBE282E06A000CC8AA9 /* OpenWeekCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F421DBD282E06A000CC8AA9 /* OpenWeekCollectionViewFlowLayout.swift */; };
+		6F421DBF282E081B00CC8AA9 /* OpenWeekCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F421DC1282E081B00CC8AA9 /* OpenWeekCollectionViewCell.xib */; };
+		6F421DCA282E109400CC8AA9 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F421DC8282E109400CC8AA9 /* DetailTableViewCell.swift */; };
+		6F421DCB282E109400CC8AA9 /* DetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F421DC9282E109400CC8AA9 /* DetailTableViewCell.xib */; };
+		6F421DCC282E170500CC8AA9 /* AntigenBottomSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F421DCE282E170500CC8AA9 /* AntigenBottomSheetViewController.xib */; };
+		6F421DD7282E298B00CC8AA9 /* AntigenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F421DD5282E298B00CC8AA9 /* AntigenViewController.swift */; };
 		6F65C1B1281FD561004EB65F /* NewsItemMediumNotImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F65C1AF281FD561004EB65F /* NewsItemMediumNotImageTableViewCell.swift */; };
 		6F65C1B2281FD561004EB65F /* NewsItemMediumNotImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F65C1B0281FD561004EB65F /* NewsItemMediumNotImageTableViewCell.xib */; };
 		6F65C1B4281FD8B5004EB65F /* CDCNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F65C1B3281FD8B5004EB65F /* CDCNews.swift */; };
@@ -46,6 +53,7 @@
 		6F68EFEE280CF9810012B5B1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F68EFEC280CF9810012B5B1 /* MainViewController.swift */; };
 		6F6E3FA72829357E00041B20 /* BugReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6E3FA62829357E00041B20 /* BugReportViewController.swift */; };
 		6F6E3FA928294C9400041B20 /* SelectAppearanceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6E3FA828294C9400041B20 /* SelectAppearanceTableViewController.swift */; };
+		6F7F8C3D282CF48C00C9F1B1 /* AntigenBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7F8C3B282CF48C00C9F1B1 /* AntigenBottomSheetViewController.swift */; };
 		6F807D5F281668F2009E3794 /* FastAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F807D5E281668F2009E3794 /* FastAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6F807D62281668F2009E3794 /* FastAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F807D5C281668F2009E3794 /* FastAPI.framework */; };
 		6F807D63281668F2009E3794 /* FastAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6F807D5C281668F2009E3794 /* FastAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -56,6 +64,8 @@
 		6F82AB0C28265E550006BF9A /* QRCodeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F82AB0B28265E550006BF9A /* QRCodeUtil.swift */; };
 		6F82AB0D2826605B0006BF9A /* PassportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F82AB0F2826605B0006BF9A /* PassportViewController.xib */; };
 		6F82AB16282663D90006BF9A /* PassportCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F82AB18282663D90006BF9A /* PassportCollectionViewCell.xib */; };
+		6FAD8A93282E2BBF001C79B2 /* BaseAntigenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAD8A92282E2BBF001C79B2 /* BaseAntigenViewController.swift */; };
+		6FAD8A94282E2D6E001C79B2 /* AntigenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FAD8A96282E2D6E001C79B2 /* AntigenViewController.xib */; };
 		6FAFD68A2816A4160060FD86 /* CovidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAFD6892816A4160060FD86 /* CovidModel.swift */; };
 		6FAFD68D2816D6D10060FD86 /* CityStatistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAFD68C2816D6D10060FD86 /* CityStatistic.swift */; };
 		6FAFD6922817848D0060FD86 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAFD6912817848D0060FD86 /* NewsModel.swift */; };
@@ -159,6 +169,19 @@
 		6F3F09A7281E985700407DBD /* AllNewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNewsCollectionViewCell.swift; sourceTree = "<group>"; };
 		6F3F09A8281E985700407DBD /* AllNewsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllNewsCollectionViewCell.xib; sourceTree = "<group>"; };
 		6F3F09AB281EA80F00407DBD /* AllNewsCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNewsCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		6F421DB8282E038600CC8AA9 /* OpenWeekCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeekCollectionViewCell.swift; sourceTree = "<group>"; };
+		6F421DBD282E06A000CC8AA9 /* OpenWeekCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeekCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		6F421DC0282E081B00CC8AA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/OpenWeekCollectionViewCell.xib; sourceTree = "<group>"; };
+		6F421DC3282E081C00CC8AA9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/OpenWeekCollectionViewCell.strings; sourceTree = "<group>"; };
+		6F421DC5282E081D00CC8AA9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/OpenWeekCollectionViewCell.strings"; sourceTree = "<group>"; };
+		6F421DC7282E081E00CC8AA9 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/OpenWeekCollectionViewCell.strings"; sourceTree = "<group>"; };
+		6F421DC8282E109400CC8AA9 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		6F421DC9282E109400CC8AA9 /* DetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTableViewCell.xib; sourceTree = "<group>"; };
+		6F421DCD282E170500CC8AA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AntigenBottomSheetViewController.xib; sourceTree = "<group>"; };
+		6F421DD0282E170700CC8AA9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AntigenBottomSheetViewController.strings; sourceTree = "<group>"; };
+		6F421DD2282E170700CC8AA9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/AntigenBottomSheetViewController.strings"; sourceTree = "<group>"; };
+		6F421DD4282E170800CC8AA9 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/AntigenBottomSheetViewController.strings"; sourceTree = "<group>"; };
+		6F421DD5282E298B00CC8AA9 /* AntigenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntigenViewController.swift; sourceTree = "<group>"; };
 		6F65C1AF281FD561004EB65F /* NewsItemMediumNotImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItemMediumNotImageTableViewCell.swift; sourceTree = "<group>"; };
 		6F65C1B0281FD561004EB65F /* NewsItemMediumNotImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsItemMediumNotImageTableViewCell.xib; sourceTree = "<group>"; };
 		6F65C1B3281FD8B5004EB65F /* CDCNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDCNews.swift; sourceTree = "<group>"; };
@@ -176,6 +199,7 @@
 		6F6E3FA62829357E00041B20 /* BugReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugReportViewController.swift; sourceTree = "<group>"; };
 		6F6E3FA828294C9400041B20 /* SelectAppearanceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAppearanceTableViewController.swift; sourceTree = "<group>"; };
 		6F7D04EB282A478B00C7D39A /* TaiwanEpidemicStatus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TaiwanEpidemicStatus.entitlements; sourceTree = "<group>"; };
+		6F7F8C3B282CF48C00C9F1B1 /* AntigenBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntigenBottomSheetViewController.swift; sourceTree = "<group>"; };
 		6F807D552816673C009E3794 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		6F807D5C281668F2009E3794 /* FastAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FastAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F807D5E281668F2009E3794 /* FastAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FastAPI.h; sourceTree = "<group>"; };
@@ -191,6 +215,11 @@
 		6F82AB1A282663DA0006BF9A /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/PassportCollectionViewCell.strings"; sourceTree = "<group>"; };
 		6F82AB1C282663DB0006BF9A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/PassportCollectionViewCell.strings; sourceTree = "<group>"; };
 		6F82AB1E282663DB0006BF9A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/PassportCollectionViewCell.strings"; sourceTree = "<group>"; };
+		6FAD8A92282E2BBF001C79B2 /* BaseAntigenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAntigenViewController.swift; sourceTree = "<group>"; };
+		6FAD8A95282E2D6E001C79B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AntigenViewController.xib; sourceTree = "<group>"; };
+		6FAD8A98282E2D70001C79B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AntigenViewController.strings; sourceTree = "<group>"; };
+		6FAD8A9A282E2D70001C79B2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/AntigenViewController.strings"; sourceTree = "<group>"; };
+		6FAD8A9C282E2D71001C79B2 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/AntigenViewController.strings"; sourceTree = "<group>"; };
 		6FAFD6892816A4160060FD86 /* CovidModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidModel.swift; sourceTree = "<group>"; };
 		6FAFD68C2816D6D10060FD86 /* CityStatistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityStatistic.swift; sourceTree = "<group>"; };
 		6FAFD6912817848D0060FD86 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
@@ -278,7 +307,9 @@
 		6F14AF39282B9DE200FC9FAB /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				6F421DCE282E170500CC8AA9 /* AntigenBottomSheetViewController.xib */,
 				6F14AF3B282B9DFA00FC9FAB /* MapViewController.xib */,
+				6FAD8A96282E2D6E001C79B2 /* AntigenViewController.xib */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -293,6 +324,8 @@
 				6F3B59D42817A437005B0E31 /* SelectCityTableViewCell.xib */,
 				6F65C1B0281FD561004EB65F /* NewsItemMediumNotImageTableViewCell.xib */,
 				6FD9725728280EF1004EDD07 /* DistStatisticTableViewCell.xib */,
+				6F421DC1282E081B00CC8AA9 /* OpenWeekCollectionViewCell.xib */,
+				6F421DC9282E109400CC8AA9 /* DetailTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -346,6 +379,15 @@
 			path = NewsCollection;
 			sourceTree = "<group>";
 		};
+		6F421DBC282E039100CC8AA9 /* OpenWeekCollection */ = {
+			isa = PBXGroup;
+			children = (
+				6F421DB8282E038600CC8AA9 /* OpenWeekCollectionViewCell.swift */,
+				6F421DBD282E06A000CC8AA9 /* OpenWeekCollectionViewFlowLayout.swift */,
+			);
+			path = OpenWeekCollection;
+			sourceTree = "<group>";
+		};
 		6F68EFC7280CF9030012B5B1 = {
 			isa = PBXGroup;
 			children = (
@@ -376,6 +418,7 @@
 				6F68EFDF280CF9040012B5B1 /* Assets.xcassets */,
 				6F68EFE1280CF9040012B5B1 /* LaunchScreen.storyboard */,
 				6F68EFE4280CF9040012B5B1 /* Info.plist */,
+				6FAD8A91282E2BAE001C79B2 /* Protocol */,
 				6F3B59D72817C9FF005B0E31 /* Extension */,
 				6F194381281790CF0008A6AD /* Util */,
 				6FAFD68B2816D6B60060FD86 /* Object */,
@@ -406,6 +449,7 @@
 		6F68EFEB280CF9720012B5B1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6F421DD5282E298B00CC8AA9 /* AntigenViewController.swift */,
 				6FD972522826B354004EDD07 /* CovidStatisticViewController.swift */,
 				6FF6D6B7282392DC00430CBB /* LoadingGetPassportViewController.swift */,
 				6FC6E8252821073C00C5D4CE /* ScanQRCodeViewController.swift */,
@@ -419,6 +463,7 @@
 				6F6E3FA62829357E00041B20 /* BugReportViewController.swift */,
 				6F6E3FA828294C9400041B20 /* SelectAppearanceTableViewController.swift */,
 				6F14AF3A282B9DFA00FC9FAB /* MapViewController.swift */,
+				6F7F8C3B282CF48C00C9F1B1 /* AntigenBottomSheetViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -433,6 +478,14 @@
 				6F807D7128168157009E3794 /* APIError.swift */,
 			);
 			path = FastAPI;
+			sourceTree = "<group>";
+		};
+		6FAD8A91282E2BAE001C79B2 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				6FAD8A92282E2BBF001C79B2 /* BaseAntigenViewController.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		6FAFD6882816A3FD0060FD86 /* Model */ = {
@@ -480,9 +533,11 @@
 		6FD357D9280D55D30010D5DE /* Adapter */ = {
 			isa = PBXGroup;
 			children = (
+				6F421DC8282E109400CC8AA9 /* DetailTableViewCell.swift */,
 				6FD9725628280EF1004EDD07 /* DistStatisticTableViewCell.swift */,
 				6F3B59D32817A437005B0E31 /* SelectCityTableViewCell.swift */,
 				6FF6D6AC28221D5600430CBB /* PassportCollection */,
+				6F421DBC282E039100CC8AA9 /* OpenWeekCollection */,
 				6F3F09A6281E983900407DBD /* NewsCollection */,
 				6FD357DA280D55DD0010D5DE /* NewsItem */,
 			);
@@ -657,7 +712,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FAD8A94282E2D6E001C79B2 /* AntigenViewController.xib in Resources */,
 				6FC6E8282821073C00C5D4CE /* ScanQRCodeViewController.xib in Resources */,
+				6F421DBF282E081B00CC8AA9 /* OpenWeekCollectionViewCell.xib in Resources */,
 				6FF6D6BA282392DC00430CBB /* LoadingGetPassportViewController.xib in Resources */,
 				6F3B59D62817A437005B0E31 /* SelectCityTableViewCell.xib in Resources */,
 				6FD8F5EE281B923B0053EC07 /* NewsImageView.xib in Resources */,
@@ -665,10 +722,12 @@
 				6FB1D4F328102B59002F44D3 /* InfoPlist.strings in Resources */,
 				6FD9725928280EF1004EDD07 /* DistStatisticTableViewCell.xib in Resources */,
 				6F3B59C328179AA3005B0E31 /* MainViewController.xib in Resources */,
+				6F421DCC282E170500CC8AA9 /* AntigenBottomSheetViewController.xib in Resources */,
 				6FFE1A09282986E600866713 /* SettingStoryboard.storyboard in Resources */,
 				6FD8F5F5281BFBDA0053EC07 /* NewsDetailViewController.xib in Resources */,
 				6F82AB0D2826605B0006BF9A /* PassportViewController.xib in Resources */,
 				6FC6E81D2820D69300C5D4CE /* NewsItemLargeTableViewCell.xib in Resources */,
+				6F421DCB282E109400CC8AA9 /* DetailTableViewCell.xib in Resources */,
 				6FD972552826B354004EDD07 /* CovidStatisticViewController.xib in Resources */,
 				6F68EFE3280CF9040012B5B1 /* LaunchScreen.storyboard in Resources */,
 				6F14AF3D282B9DFA00FC9FAB /* MapViewController.xib in Resources */,
@@ -784,11 +843,13 @@
 				6F128712281D5BD40046A586 /* Weather.swift in Sources */,
 				6FF6D6B128221DB800430CBB /* PassportCollectionViewCell.swift in Sources */,
 				6FF6D6C728239A5500430CBB /* TaiwanEpidemicStatus.xcdatamodeld in Sources */,
+				6FAD8A93282E2BBF001C79B2 /* BaseAntigenViewController.swift in Sources */,
 				6FAFD68D2816D6D10060FD86 /* CityStatistic.swift in Sources */,
 				6FC6E81F2820DC7400C5D4CE /* BaseNewsItem.swift in Sources */,
 				6FD9725828280EF1004EDD07 /* DistStatisticTableViewCell.swift in Sources */,
 				6FC6E823282104FA00C5D4CE /* PassportViewController.swift in Sources */,
 				6F3B59D52817A437005B0E31 /* SelectCityTableViewCell.swift in Sources */,
+				6F421DBA282E038600CC8AA9 /* OpenWeekCollectionViewCell.swift in Sources */,
 				6FC6E8192820D29900C5D4CE /* Global.swift in Sources */,
 				6FF6D6B42823904B00430CBB /* PassportModel.swift in Sources */,
 				6F3B59CD28179D75005B0E31 /* ExtensionMethod.swift in Sources */,
@@ -805,12 +866,16 @@
 				6F159E3628292AB9003D803E /* SettingsTableViewController.swift in Sources */,
 				6FAFD6922817848D0060FD86 /* NewsModel.swift in Sources */,
 				6FD357E1280D56D40010D5DE /* ExpandTableView.swift in Sources */,
+				6F7F8C3D282CF48C00C9F1B1 /* AntigenBottomSheetViewController.swift in Sources */,
+				6F421DCA282E109400CC8AA9 /* DetailTableViewCell.swift in Sources */,
 				6FD8F5E8281B91AA0053EC07 /* NewsImageView.swift in Sources */,
 				6FD8F600281C1B0A0053EC07 /* NewsViewController.swift in Sources */,
 				6F38DDA6282A9284000BAEED /* ApnsModel.swift in Sources */,
 				6FAFD694281788DC0060FD86 /* CovidNews.swift in Sources */,
 				6F3B59DA2817F5ED005B0E31 /* SelectCityNavigationViewController.swift in Sources */,
 				6F12870E281D52F40046A586 /* WeatherModel.swift in Sources */,
+				6F421DD7282E298B00CC8AA9 /* AntigenViewController.swift in Sources */,
+				6F421DBE282E06A000CC8AA9 /* OpenWeekCollectionViewFlowLayout.swift in Sources */,
 				6FD357E6280D82C00010D5DE /* BottomNavigationView.swift in Sources */,
 				6F65C1B4281FD8B5004EB65F /* CDCNews.swift in Sources */,
 				6F14AF3C282B9DFA00FC9FAB /* MapViewController.swift in Sources */,
@@ -875,6 +940,28 @@
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
+		6F421DC1282E081B00CC8AA9 /* OpenWeekCollectionViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6F421DC0282E081B00CC8AA9 /* Base */,
+				6F421DC3282E081C00CC8AA9 /* en */,
+				6F421DC5282E081D00CC8AA9 /* zh-Hans */,
+				6F421DC7282E081E00CC8AA9 /* zh-Hant */,
+			);
+			name = OpenWeekCollectionViewCell.xib;
+			sourceTree = "<group>";
+		};
+		6F421DCE282E170500CC8AA9 /* AntigenBottomSheetViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6F421DCD282E170500CC8AA9 /* Base */,
+				6F421DD0282E170700CC8AA9 /* en */,
+				6F421DD2282E170700CC8AA9 /* zh-Hans */,
+				6F421DD4282E170800CC8AA9 /* zh-Hant */,
+			);
+			name = AntigenBottomSheetViewController.xib;
+			sourceTree = "<group>";
+		};
 		6F65C1B7281FE7AC004EB65F /* NewsViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -914,6 +1001,17 @@
 				6F82AB1E282663DB0006BF9A /* zh-Hans */,
 			);
 			name = PassportCollectionViewCell.xib;
+			sourceTree = "<group>";
+		};
+		6FAD8A96282E2D6E001C79B2 /* AntigenViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6FAD8A95282E2D6E001C79B2 /* Base */,
+				6FAD8A98282E2D70001C79B2 /* en */,
+				6FAD8A9A282E2D70001C79B2 /* zh-Hans */,
+				6FAD8A9C282E2D71001C79B2 /* zh-Hant */,
+			);
+			name = AntigenViewController.xib;
 			sourceTree = "<group>";
 		};
 		6FB1D4F528102B59002F44D3 /* InfoPlist.strings */ = {
@@ -1079,8 +1177,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TaiwanEpidemicStatus/TaiwanEpidemicStatus.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development: Yeh Chia Chun (9V8ZJ6F325)";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 72QP2FGS73;
 				INFOPLIST_FILE = TaiwanEpidemicStatus/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1090,7 +1188,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.seielika.TaiwanEpidemicStatus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Taiwan Covid Helper Remote Notification";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1104,8 +1202,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TaiwanEpidemicStatus/TaiwanEpidemicStatus.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development: Yeh Chia Chun (9V8ZJ6F325)";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 72QP2FGS73;
 				INFOPLIST_FILE = TaiwanEpidemicStatus/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1115,7 +1213,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.seielika.TaiwanEpidemicStatus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Taiwan Covid Helper Remote Notification";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1127,10 +1225,11 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 72QP2FGS73;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1164,10 +1263,11 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 72QP2FGS73;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";

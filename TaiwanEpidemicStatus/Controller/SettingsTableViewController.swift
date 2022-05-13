@@ -18,6 +18,9 @@ class SettingsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.isModalInPresentation = true // disable drop down back previous viewController
+        
         SettingsTableViewController.instance = self
         let barButton = UIBarButtonItem(title: "Close", style: .done, target: self, action: #selector(closeClickEvent))
         self.navigationItem.rightBarButtonItem = barButton

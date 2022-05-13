@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="OpenWeekCollectionViewCell" customModule="TaiwanEpidemicStatus" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VAc-dH-7BO">
+                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="禮拜一" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="n4F-DU-Dpg">
+                                <rect key="frame" x="12" y="12" width="104" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Rp0-Nj-lo9">
+                                <rect key="frame" x="12" y="36" width="104" height="88"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="KUE-c0-I0g">
+                                        <rect key="frame" x="0.0" y="7.5" width="104" height="73.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="XTb-6o-GHR">
+                                                <rect key="frame" x="0.0" y="0.0" width="104" height="20.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="257" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="上午" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="94X-x4-4Ff">
+                                                        <rect key="frame" x="0.0" y="0.0" width="35" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="253" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="749" image="checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FyE-j1-n75">
+                                                        <rect key="frame" x="85.5" y="2" width="18.5" height="17"/>
+                                                        <color key="tintColor" systemColor="systemGreenColor"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="3Mc-BB-vSj">
+                                                <rect key="frame" x="0.0" y="26.5" width="104" height="20.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="257" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="下午" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="7ht-03-ust">
+                                                        <rect key="frame" x="0.0" y="0.0" width="35" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="253" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="749" image="xmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="KfR-FT-Wxu">
+                                                        <rect key="frame" x="86.5" y="2" width="17.5" height="16"/>
+                                                        <color key="tintColor" systemColor="systemRedColor"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="JX4-tx-uBS">
+                                                <rect key="frame" x="0.0" y="53" width="104" height="20.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="257" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="晚間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="wCM-IX-qUU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="35" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="253" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="749" image="checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fnz-c2-7KR">
+                                                        <rect key="frame" x="85.5" y="2" width="18.5" height="17"/>
+                                                        <color key="tintColor" systemColor="systemGreenColor"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Rp0-Nj-lo9" secondAttribute="trailing" constant="12" id="Fzx-Lw-2wu"/>
+                            <constraint firstItem="n4F-DU-Dpg" firstAttribute="top" secondItem="VAc-dH-7BO" secondAttribute="top" constant="12" id="Jh1-RY-04g"/>
+                            <constraint firstAttribute="bottom" secondItem="Rp0-Nj-lo9" secondAttribute="bottom" constant="4" id="azX-Mu-Llb"/>
+                            <constraint firstItem="Rp0-Nj-lo9" firstAttribute="leading" secondItem="VAc-dH-7BO" secondAttribute="leading" constant="12" id="dwa-aV-ymk"/>
+                            <constraint firstAttribute="trailing" secondItem="n4F-DU-Dpg" secondAttribute="trailing" constant="12" id="hq3-9c-93O"/>
+                            <constraint firstItem="n4F-DU-Dpg" firstAttribute="leading" secondItem="VAc-dH-7BO" secondAttribute="leading" constant="12" id="iag-iZ-2Wp"/>
+                            <constraint firstItem="Rp0-Nj-lo9" firstAttribute="top" secondItem="n4F-DU-Dpg" secondAttribute="bottom" id="rcU-Oi-z16"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="VAc-dH-7BO" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="2UU-SM-tVU"/>
+                <constraint firstAttribute="bottom" secondItem="VAc-dH-7BO" secondAttribute="bottom" id="APv-cg-lNb"/>
+                <constraint firstAttribute="trailing" secondItem="VAc-dH-7BO" secondAttribute="trailing" id="mNO-YR-w0C"/>
+                <constraint firstItem="VAc-dH-7BO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="sr1-AZ-uJf"/>
+            </constraints>
+            <connections>
+                <outlet property="imgAfternoon" destination="KfR-FT-Wxu" id="M1O-5x-byS"/>
+                <outlet property="imgEvent" destination="fnz-c2-7KR" id="iPS-rT-I9y"/>
+                <outlet property="imgMorning" destination="FyE-j1-n75" id="NIy-j4-abs"/>
+                <outlet property="txtWeekDay" destination="n4F-DU-Dpg" id="rFv-fC-07E"/>
+                <outlet property="viewBackground" destination="VAc-dH-7BO" id="C0E-7O-QQk"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="130.58035714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="checkmark" catalog="system" width="32" height="32"/>
+        <image name="xmark" catalog="system" width="32" height="32"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

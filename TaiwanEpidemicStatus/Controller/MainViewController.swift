@@ -41,6 +41,8 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     private let weatherModel = WeatherModel()
     
     // Data
+    private var delayWeatherFetch = Date().timeIntervalSince1970
+    private var isFirstFetchWeatherData = true
     private var locationManager = CLLocationManager()
     private var citySelectIndex = 12
     private var cityList:[String] = []
@@ -63,6 +65,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         // set color
         let selectColor = UserDefaults().integer(forKey: "selectIndex")
         if selectColor == 0 {
@@ -74,14 +77,19 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        
+        viewCityStatisticBoard.layer.shadowColor = UIColor(named: "MainShadowColor")?.cgColor
+        btnMap.layer.shadowColor = UIColor(named: "MainShadowColor")?.cgColor
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Setting Style
         navigationController?.navigationBar.isHidden = true
         txtTemperature.font = UIFont.roundedBoldFont(48)
-        txtTotalCases.font = UIFont.roundedBoldFont(36)
-        txtTodayCases.font = UIFont.roundedBoldFont(36)
         
         viewSearchBox.layer.borderColor = UIColor.white.cgColor
         viewSearchBox.layer.borderWidth = 0.8
@@ -104,6 +112,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         btnMap.layer.shadowRadius = 4
         btnMap.layer.shadowColor = UIColor(named: "MainShadowColor")?.cgColor
         
+        
         newsTableView.dataSource = self
         newsTableView.delegate = self
         newsTableView.register(UINib(nibName: NewsItemMediumTableViewCell.identity, bundle: nil), forCellReuseIdentifier: NewsItemMediumTableViewCell.identity)
@@ -119,7 +128,10 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         // click search box event
         viewSearchBox.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(btnSelectCity(_:))))
         
-
+        // Set Text size
+        let txtSize = txtTodayCases.font.pointSize > txtTotalCases.font.pointSize ? txtTotalCases.font.pointSize : txtTodayCases.font.pointSize
+        txtTotalCases.font = UIFont.roundedBoldFont(txtSize)
+        txtTodayCases.font = UIFont.roundedBoldFont(txtSize)
         
         // add scrollView Refresh
         let refreshControl = UIRefreshControl()
@@ -205,7 +217,6 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         self.navigationController?.pushViewController(newsController, animated: true)
     }
     
-    
     @IBAction func btnReconnectedEvent(_ sender: Any) {
         self.txtNetworkInfo.isHidden = true
         self.loadNewsActivityIndicator.startAnimating()
@@ -233,6 +244,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func btnSettingEvent(_ sender: Any) {
         let storyboard = UIStoryboard.init(name: "SettingStoryboard", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "SettingNavigationController")
+        viewController.modalPresentationStyle = .automatic
         self.navigationController?.present(viewController, animated: true)
     }
     
@@ -289,16 +301,24 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        DispatchQueue.global(qos: .background).async {
-            let userLocation = locations[0]
-            self.weatherModel.getWeatherData(location: userLocation, weathers: {
-                let data = $0[0]
-                self.txtLocation.text = $1
-                self.txtTemperature.text = data.MaxT == data.MinT ? "\(data.MinT)°C" : "\(data.MinT)~\(data.MaxT)°C"
-                let weatherIcon = self.weatherModel.getWeatherIcon(wX: data.Wx)
-                self.imgWeatherIcon.tintColor = weatherIcon.first?.value
-                self.imgWeatherIcon.image = weatherIcon.first?.key   
-            })
+        // delay 30 min
+        if Date().timeIntervalSince1970 - delayWeatherFetch > 30 * 60 || self.isFirstFetchWeatherData {
+            self.delayWeatherFetch = Date().timeIntervalSince1970
+            self.isFirstFetchWeatherData = false
+            DispatchQueue.global(qos: .background).async {
+                let userLocation = locations[0]
+                self.weatherModel.getWeatherData(location: userLocation, weathers: {
+                    let data = $0[0]
+                    self.txtLocation.text = $1
+                    self.txtTemperature.text = data.MaxT == data.MinT ? "\(data.MinT)°C" : "\(data.MinT)~\(data.MaxT)°C"
+                    let weatherIcon = self.weatherModel.getWeatherIcon(wX: data.Wx)
+                    self.imgWeatherIcon.tintColor = weatherIcon.first?.value
+                    self.imgWeatherIcon.image = weatherIcon.first?.key
+                }, timeOut: {
+                    let weatherError = NSLocalizedString("WeatherError", comment: "")
+                    self.txtLocation.text = weatherError
+                })
+            }
         }
     }
     

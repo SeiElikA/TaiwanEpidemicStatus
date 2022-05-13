@@ -15,7 +15,7 @@ public class ApnsModel {
     public func addTokenToServer(token:String) {
         let dic = ["token":token]
         let body = try? JSONSerialization.data(withJSONObject: dic, options: .prettyPrinted)
-        fastApi.post(url: "/Apns/addDeviceToken", body: body,  {_,error in
+        fastApi.post(url: "Apns/addDeviceToken", body: body,  {_,error in
             if case .requestError(let msg) = error {
                 print(msg)
             }

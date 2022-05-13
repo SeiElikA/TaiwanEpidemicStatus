@@ -21,8 +21,9 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gst-Vm-mT3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="548"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VaccineIcon" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TbZ-GS-c10">
-                                <rect key="frame" x="18" y="16" width="28" height="28"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cross.vial.fill" catalog="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TbZ-GS-c10">
+                                <rect key="frame" x="18" y="15" width="28" height="30"/>
+                                <color key="tintColor" name="MainBackground"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="TbZ-GS-c10" secondAttribute="height" multiplier="1:1" id="8J0-dv-T4h"/>
                                     <constraint firstAttribute="height" constant="28" id="QN0-AK-X3O"/>
@@ -173,7 +174,10 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="VaccineIcon" width="21" height="36"/>
+        <image name="cross.vial.fill" catalog="system" width="32" height="32"/>
+        <namedColor name="MainBackground">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="PassportCardColor">
             <color red="0.4823529411764706" green="0.67843137254901964" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
