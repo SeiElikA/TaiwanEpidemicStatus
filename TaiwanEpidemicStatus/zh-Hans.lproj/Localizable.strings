@@ -38,3 +38,9 @@
 "remainAntigen" = "剩余快筛数量";
 "moreAntigenInfo" = "更多说明";
 "antigenQuestion" = "通知";
+"restoreSuccessful" = "购买纪录恢复成功";
+"BuyFailure" = "购买失败";
+"BuyFailureReason" = "发生一些错误，我们不会收取你的金额";
+"HasRemoveAds" = "你已经拥有此项目";
+"AboutUs" = "关于我们";
+"CopyDone" = "复制完成";

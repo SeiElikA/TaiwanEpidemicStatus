@@ -237,20 +237,20 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cLI-Ku-vgz" userLabel="View City Statistic">
                                     <rect key="frame" x="18" y="186" width="354" height="180"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nRo-KL-llh">
+                                        <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" distribution="equalCentering" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nRo-KL-llh">
                                             <rect key="frame" x="22" y="14" width="310" height="54"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="5Uk-i1-SQ0">
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="5Uk-i1-SQ0">
                                                     <rect key="frame" x="0.0" y="0.0" width="97.333333333333329" height="54"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="案例統計" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAY-wT-Oay">
-                                                            <rect key="frame" x="0.0" y="0.0" width="97.333333333333329" height="34"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="97.333333333333329" height="27"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="更新時間:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHn-Ha-Leo">
-                                                            <rect key="frame" x="0.0" y="34" width="61.333333333333336" height="20"/>
+                                                            <rect key="frame" x="0.0" y="27" width="61.333333333333336" height="27"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <color key="textColor" name="MainUpdateFontColor"/>
                                                             <nil key="highlightedColor"/>
@@ -447,14 +447,19 @@
             <point key="canvasLocation" x="130.76923076923077" y="130.09478672985782"/>
         </view>
     </objects>
+    <designables>
+        <designable name="adP-p3-IoL">
+            <size key="intrinsicContentSize" width="-1" height="861.66666412353527"/>
+        </designable>
+    </designables>
     <resources>
         <image name="Circle" width="151" height="152"/>
         <image name="LocationIcon" width="16" height="21"/>
         <image name="MapIcon" width="33.333332061767578" height="30.333333969116211"/>
         <image name="PassportIcon" width="40" height="40"/>
         <image name="SettingIcon" width="77" height="64"/>
-        <image name="chevron.right" catalog="system" width="32" height="32"/>
-        <image name="sun.max" catalog="system" width="32" height="32"/>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <image name="sun.max" catalog="system" width="128" height="124"/>
         <namedColor name="DeathRedColor">
             <color red="0.81568627450980391" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

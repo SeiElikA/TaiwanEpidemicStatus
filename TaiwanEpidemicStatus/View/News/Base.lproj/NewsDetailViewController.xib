@@ -18,6 +18,7 @@
                 <outlet property="imgCover" destination="esO-jU-lnO" id="2Ha-Rv-cwZ"/>
                 <outlet property="loadActivityindicator" destination="6rc-YJ-7ub" id="YoJ-IX-hs0"/>
                 <outlet property="rootView" destination="i5M-Pr-FkT" id="Qxi-7O-zvs"/>
+                <outlet property="scrollView" destination="2n6-PN-Bkm" id="0wy-jN-csy"/>
                 <outlet property="stackNewsContent" destination="eGv-NG-PYg" id="JX8-4C-Zdq"/>
                 <outlet property="txtAuthor" destination="hPK-zo-9L3" id="0gX-pg-vSa"/>
                 <outlet property="txtDate" destination="wKE-uP-isk" id="3T6-EW-dIe"/>

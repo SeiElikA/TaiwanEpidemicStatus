@@ -8,6 +8,7 @@
 import UIKit
 import GoogleMobileAds
 import CoreData
+import StoreKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,10 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     {
         // Override point for customization after application launch.
         // init google ads
-        GADMobileAds.sharedInstance().start(completionHandler: nil)
-//        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [
-//            "326d46ed5dda1d95367c0f992c0ab945"
-//        ]
+        if !IAPManager.shared.getRemoveAdsStatus() {
+            print("not buy remove google ads")
+            GADMobileAds.sharedInstance().start(completionHandler: nil)
+//            GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [
+//                GADSimulatorID,
+//                "4bdffb255131eff823ef85571cb3fa75",
+//                "326d46ed5dda1d95367c0f992c0ab945"
+//            ]
+        } else {
+            print("is buy remove google ads")
+        }
+
         // set notification
         UNUserNotificationCenter.current().delegate = self
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: { granted,_  in
@@ -36,6 +45,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // 取消註冊遠程通知
             UIApplication.shared.unregisterForRemoteNotifications()
         }
+        
+        // set IAP
+        IAPManager.shared.getProducts()
+        SKPaymentQueue.default().add(IAPManager.shared)
 
         return true
     }

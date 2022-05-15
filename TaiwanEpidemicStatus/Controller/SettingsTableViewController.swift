@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import StoreKit
 
 class SettingsTableViewController: UITableViewController {
     public static var instance:SettingsTableViewController?
@@ -13,8 +14,12 @@ class SettingsTableViewController: UITableViewController {
     @IBOutlet weak var cdcNewsUpdateTableCell: UITableViewCell!
     @IBOutlet weak var appLanguageTableCell: UITableViewCell!
     @IBOutlet weak var darkModeTableCell: UITableViewCell!
-    @IBOutlet weak var aboutAsTableCell: UITableViewCell!
+    @IBOutlet weak var privateTableCell: UITableViewCell!
     @IBOutlet weak var bugReportTableCell: UITableViewCell!
+    @IBOutlet weak var removeAdsTableCell: UITableViewCell!
+    @IBOutlet weak var restoreBuyRecordTableCell: UITableViewCell!
+    @IBOutlet weak var buyCoffeeTableCell: UITableViewCell!
+    @IBOutlet weak var aboutUsTableCell: UITableViewCell!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +48,48 @@ class SettingsTableViewController: UITableViewController {
         bugReportTableCell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(openBugReportClickEvent)))
         appLanguageTableCell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(changeAppLanguageClickEvent)))
         darkModeTableCell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(changeDarkMode)))
-        aboutAsTableCell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(aboutAppClickEvent)))
+        privateTableCell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(aboutAppClickEvent)))
+        removeAdsTableCell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(removeGoogleAds)))
+        restoreBuyRecordTableCell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(restoreBuyRecord)))
+        buyCoffeeTableCell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(buyCoffeeEvent)))
+        aboutUsTableCell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(changeToAboutUsEvent)))
+    }
+    
+    @objc private func changeToAboutUsEvent() {
+        performSegue(withIdentifier: "goToAboutUs", sender: self)
+    }
+    
+    @objc private func buyCoffeeEvent() {
+        if !IAPManager.shared.isDeviceCanPay() {
+            let alertController = UIAlertController(title: "This device can't payment", message: nil, preferredStyle: .alert)
+            
+            let cancelAction = UIAlertAction(title: "OK", style: .cancel)
+            alertController.addAction(cancelAction)
+            present(alertController, animated: true)
+            return
+        }
+        
+        
+        let product = IAPManager.shared.products.first(where: {$0.productIdentifier == Global.buySmallCoffeeProductID})
+        guard let product = product else {
+            let alertController = UIAlertController(title: "Buy Failure", message: "Some thing wrong, please check your network status and restart application", preferredStyle: .alert)
+            
+            let cancelAction = UIAlertAction(title: "OK", style: .cancel)
+            alertController.addAction(cancelAction)
+            present(alertController, animated: true)
+            return
+        }
+        IAPManager.shared.buy(product: product)
+    }
+    
+    @objc private func restoreBuyRecord() {
+        SKPaymentQueue.default().restoreCompletedTransactions()
+        let msg = NSLocalizedString("restoreSuccessful", comment: "")
+        let alertController = UIAlertController(title: msg, message: nil, preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "OK", style: .cancel)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true)
     }
     
     @objc private func changeDarkMode() {
@@ -69,6 +115,37 @@ class SettingsTableViewController: UITableViewController {
             // 取消註冊遠程通知
             UIApplication.shared.unregisterForRemoteNotifications()
         }
+    }
+    
+    @objc private func removeGoogleAds() {
+        if !IAPManager.shared.isDeviceCanPay() {
+            let alertController = UIAlertController(title: "This device can't payment", message: nil, preferredStyle: .alert)
+            
+            let cancelAction = UIAlertAction(title: "OK", style: .cancel)
+            alertController.addAction(cancelAction)
+            present(alertController, animated: true)
+            return
+        }
+        
+        if IAPManager.shared.getRemoveAdsStatus() {
+            let alertController = UIAlertController(title: NSLocalizedString("HasRemoveAds", comment: ""), message: nil, preferredStyle: .alert)
+            
+            let cancelAction = UIAlertAction(title: "OK", style: .cancel)
+            alertController.addAction(cancelAction)
+            present(alertController, animated: true)
+            return
+        }
+        
+        let product = IAPManager.shared.products.first(where: {$0.productIdentifier == Global.removeAdsProductID})
+        guard let product = product else {
+            let alertController = UIAlertController(title: "Buy Failure", message: "Some thing wrong, please check your network status and restart application", preferredStyle: .alert)
+            
+            let cancelAction = UIAlertAction(title: "OK", style: .cancel)
+            alertController.addAction(cancelAction)
+            present(alertController, animated: true)
+            return
+        }
+        IAPManager.shared.buy(product: product)
     }
     
     @objc private func aboutAppClickEvent() {

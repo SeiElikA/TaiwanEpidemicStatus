@@ -22,6 +22,7 @@ class NewsDetailViewController: UIViewController{
     @IBOutlet weak var txtAuthor: UILabel!
     @IBOutlet weak var btnRefresh: UIButton!
     @IBOutlet weak var bannerView: GADBannerView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     // if is udn news
     var newsContentImage:[Int:UIImage] = [:]
@@ -70,6 +71,12 @@ class NewsDetailViewController: UIViewController{
     }
     
     private func initGoogleAds() {
+        if IAPManager.shared.getRemoveAdsStatus() {
+            self.bannerView.removeFromSuperview()
+            self.scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+            return
+        }
+        
         bannerView.rootViewController = self
         bannerView.adUnitID = Global.adUnitID
         bannerView.load(GADRequest())
@@ -291,15 +298,24 @@ class NewsDetailViewController: UIViewController{
     @IBAction func btnReconnectedEvent(_ sender: Any) {
         self.checkNetwork()
     }
+    
+    private func showAlert(title:String) {
+        let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+        let cancelActin = UIAlertAction(title: "OK", style: .cancel)
+        alert.addAction(cancelActin)
+        present(alert, animated: true)
+    }
 }
 
 extension NewsDetailViewController: GADBannerViewDelegate {
     func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
-      print("bannerViewDidReceiveAd")
+        print("bannerViewDidReceiveAd")
     }
 
     func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
-      print("bannerView:didFailToReceiveAdWithError: \(error.localizedDescription)")
+        print("bannerView:didFailToReceiveAdWithError: \(error.localizedDescription)")
+        self.bannerView.removeFromSuperview()
+        self.scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
 
     func bannerViewDidRecordImpression(_ bannerView: GADBannerView) {

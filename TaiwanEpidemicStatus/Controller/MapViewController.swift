@@ -52,8 +52,9 @@ class MapViewController: UIViewController {
     }
     
     private func showAntigenInfo() {
+        let weekDayValue = [7,1,2,3,4,5,6]
         let weekDay = Calendar.current.component(.weekday, from: Date())
-        var infoMsg = weekDay % 2 == 0 || weekDay == 7 ? "單數(1、3、5、7、9)" : "雙數(0、2、4、6、8)"
+        let infoMsg = weekDayValue.firstIndex(of: weekDay)! % 2 != 0 ? "單數(1、3、5、7、9)" : "雙數(0、2、4、6、8)"
         
         let alertController = UIAlertController(title: NSLocalizedString("antigenQuestion", comment: ""), message: "身分證或居留證尾碼\(infoMsg)可購買", preferredStyle: .alert)
         let OKAction = UIAlertAction(title: "OK", style: .cancel)
@@ -61,8 +62,8 @@ class MapViewController: UIViewController {
             UIApplication.shared.open(URL(string: Global.antigenInfoURL)!)
         })
         
-        alertController.addAction(QAAction)
         alertController.addAction(OKAction)
+        alertController.addAction(QAAction)
         
         present(alertController, animated: true)
     }

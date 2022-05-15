@@ -260,7 +260,10 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func btnPassportEvent(_ sender: Any) {
-        navigationController?.pushViewController(PassportViewController(), animated: true)
+//        navigationController?.pushViewController(PassportViewController(), animated: true)
+        
+        let url = URL(string: Global.passportURL)!
+        UIApplication.shared.open(url)
     }
     
     private func fetchData(complection: (() -> Void)? = nil) {

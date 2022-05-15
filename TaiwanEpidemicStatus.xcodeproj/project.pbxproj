@@ -64,6 +64,9 @@
 		6F82AB0C28265E550006BF9A /* QRCodeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F82AB0B28265E550006BF9A /* QRCodeUtil.swift */; };
 		6F82AB0D2826605B0006BF9A /* PassportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F82AB0F2826605B0006BF9A /* PassportViewController.xib */; };
 		6F82AB16282663D90006BF9A /* PassportCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F82AB18282663D90006BF9A /* PassportCollectionViewCell.xib */; };
+		6F98F880282F9F7400A02A77 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F98F87F282F9F7400A02A77 /* StoreKit.framework */; };
+		6F98F883282FA53500A02A77 /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F98F882282FA53500A02A77 /* IAPManager.swift */; };
+		6F98F88628302BD900A02A77 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F98F88528302BD900A02A77 /* AboutUsViewController.swift */; };
 		6FAD8A93282E2BBF001C79B2 /* BaseAntigenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAD8A92282E2BBF001C79B2 /* BaseAntigenViewController.swift */; };
 		6FAD8A94282E2D6E001C79B2 /* AntigenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FAD8A96282E2D6E001C79B2 /* AntigenViewController.xib */; };
 		6FAFD68A2816A4160060FD86 /* CovidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAFD6892816A4160060FD86 /* CovidModel.swift */; };
@@ -215,6 +218,13 @@
 		6F82AB1A282663DA0006BF9A /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/PassportCollectionViewCell.strings"; sourceTree = "<group>"; };
 		6F82AB1C282663DB0006BF9A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/PassportCollectionViewCell.strings; sourceTree = "<group>"; };
 		6F82AB1E282663DB0006BF9A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/PassportCollectionViewCell.strings"; sourceTree = "<group>"; };
+		6F98F87F282F9F7400A02A77 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		6F98F882282FA53500A02A77 /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
+		6F98F884282FC5D800A02A77 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
+		6F98F88528302BD900A02A77 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		6F98F8872830D83800A02A77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SettingStoryboard.strings; sourceTree = "<group>"; };
+		6F98F8882830D83B00A02A77 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SettingStoryboard.strings"; sourceTree = "<group>"; };
+		6F98F8892830D83D00A02A77 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/SettingStoryboard.strings"; sourceTree = "<group>"; };
 		6FAD8A92282E2BBF001C79B2 /* BaseAntigenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAntigenViewController.swift; sourceTree = "<group>"; };
 		6FAD8A95282E2D6E001C79B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AntigenViewController.xib; sourceTree = "<group>"; };
 		6FAD8A98282E2D70001C79B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AntigenViewController.strings; sourceTree = "<group>"; };
@@ -265,9 +275,6 @@
 		6FF6D6BB282398B200430CBB /* PassportEntityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportEntityModel.swift; sourceTree = "<group>"; };
 		6FF6D6C628239A5500430CBB /* TaiwanEpidemicStatus.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaiwanEpidemicStatus.xcdatamodel; sourceTree = "<group>"; };
 		6FFE1A0A282986E600866713 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SettingStoryboard.storyboard; sourceTree = "<group>"; };
-		6FFE1A0D282986E800866713 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SettingStoryboard.strings; sourceTree = "<group>"; };
-		6FFE1A0F2829871800866713 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SettingStoryboard.strings"; sourceTree = "<group>"; };
-		6FFE1A112829872200866713 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/SettingStoryboard.strings"; sourceTree = "<group>"; };
 		8D67909C78ADD09DDCF94958 /* Pods-TaiwanEpidemicStatus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiwanEpidemicStatus.debug.xcconfig"; path = "Target Support Files/Pods-TaiwanEpidemicStatus/Pods-TaiwanEpidemicStatus.debug.xcconfig"; sourceTree = "<group>"; };
 		8E785FFE1EB44893FB325A9C /* Pods-TaiwanEpidemicStatus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiwanEpidemicStatus.release.xcconfig"; path = "Target Support Files/Pods-TaiwanEpidemicStatus/Pods-TaiwanEpidemicStatus.release.xcconfig"; sourceTree = "<group>"; };
 		D93E472ECDF251766AC5187E /* Pods-FastAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastAPI.debug.xcconfig"; path = "Target Support Files/Pods-FastAPI/Pods-FastAPI.debug.xcconfig"; sourceTree = "<group>"; };
@@ -279,6 +286,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F98F880282F9F7400A02A77 /* StoreKit.framework in Frameworks */,
 				6F807D62281668F2009E3794 /* FastAPI.framework in Frameworks */,
 				38A47BFDD0FC580411B03C7A /* Pods_TaiwanEpidemicStatus.framework in Frameworks */,
 			);
@@ -298,6 +306,7 @@
 		1A48F47FFF1D98CCCB91984F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6F98F87F282F9F7400A02A77 /* StoreKit.framework */,
 				E703CACC2C71E2097F34F01E /* Pods_FastAPI.framework */,
 				5FB61A84121CD21BCD2898C3 /* Pods_TaiwanEpidemicStatus.framework */,
 			);
@@ -392,7 +401,6 @@
 			isa = PBXGroup;
 			children = (
 				6F68EFD2280CF9030012B5B1 /* TaiwanEpidemicStatus */,
-				6F807D5D281668F2009E3794 /* FastAPI */,
 				6F68EFD1280CF9030012B5B1 /* Products */,
 				DEF62EAFF04A76AEF5C384FB /* Pods */,
 				1A48F47FFF1D98CCCB91984F /* Frameworks */,
@@ -411,6 +419,7 @@
 		6F68EFD2280CF9030012B5B1 /* TaiwanEpidemicStatus */ = {
 			isa = PBXGroup;
 			children = (
+				6F807D5D281668F2009E3794 /* FastAPI */,
 				6F7D04EB282A478B00C7D39A /* TaiwanEpidemicStatus.entitlements */,
 				6FF6D6C528239A5500430CBB /* TaiwanEpidemicStatus.xcdatamodeld */,
 				6F68EFD3280CF9030012B5B1 /* AppDelegate.swift */,
@@ -418,6 +427,9 @@
 				6F68EFDF280CF9040012B5B1 /* Assets.xcassets */,
 				6F68EFE1280CF9040012B5B1 /* LaunchScreen.storyboard */,
 				6F68EFE4280CF9040012B5B1 /* Info.plist */,
+				6F98F884282FC5D800A02A77 /* Configuration.storekit */,
+				6FC6E8182820D29900C5D4CE /* Global.swift */,
+				6F98F881282FA52600A02A77 /* Manager */,
 				6FAD8A91282E2BAE001C79B2 /* Protocol */,
 				6F3B59D72817C9FF005B0E31 /* Extension */,
 				6F194381281790CF0008A6AD /* Util */,
@@ -429,7 +441,6 @@
 				6F68EFEA280CF95F0012B5B1 /* View */,
 				6FB1D4F528102B59002F44D3 /* InfoPlist.strings */,
 				6F3B59EB28181C01005B0E31 /* Localizable.strings */,
-				6FC6E8182820D29900C5D4CE /* Global.swift */,
 			);
 			path = TaiwanEpidemicStatus;
 			sourceTree = "<group>";
@@ -464,6 +475,7 @@
 				6F6E3FA828294C9400041B20 /* SelectAppearanceTableViewController.swift */,
 				6F14AF3A282B9DFA00FC9FAB /* MapViewController.swift */,
 				6F7F8C3B282CF48C00C9F1B1 /* AntigenBottomSheetViewController.swift */,
+				6F98F88528302BD900A02A77 /* AboutUsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -477,7 +489,16 @@
 				6F807D6A28166A3D009E3794 /* HttpMethod.swift */,
 				6F807D7128168157009E3794 /* APIError.swift */,
 			);
-			path = FastAPI;
+			name = FastAPI;
+			path = ../FastAPI;
+			sourceTree = "<group>";
+		};
+		6F98F881282FA52600A02A77 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				6F98F882282FA53500A02A77 /* IAPManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		6FAD8A91282E2BAE001C79B2 /* Protocol */ = {
@@ -820,6 +841,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F98F883282FA53500A02A77 /* IAPManager.swift in Sources */,
 				6FD8F5F1281BC78C0053EC07 /* NewsImagePreviewViewController.swift in Sources */,
 				6F68EFD4280CF9030012B5B1 /* AppDelegate.swift in Sources */,
 				6FF6D6B9282392DC00430CBB /* LoadingGetPassportViewController.swift in Sources */,
@@ -859,6 +881,7 @@
 				6F68EFEE280CF9810012B5B1 /* MainViewController.swift in Sources */,
 				6FD8F5F4281BCE5E0053EC07 /* NewsComponentUtil.swift in Sources */,
 				6F3A529128192728009E042B /* AuthModel.swift in Sources */,
+				6F98F88628302BD900A02A77 /* AboutUsViewController.swift in Sources */,
 				6FAFD68A2816A4160060FD86 /* CovidModel.swift in Sources */,
 				6F3F09AC281EA80F00407DBD /* AllNewsCollectionViewFlowLayout.swift in Sources */,
 				6F194383281790DA0008A6AD /* ParseUtil.swift in Sources */,
@@ -1039,9 +1062,9 @@
 			isa = PBXVariantGroup;
 			children = (
 				6FFE1A0A282986E600866713 /* Base */,
-				6FFE1A0D282986E800866713 /* en */,
-				6FFE1A0F2829871800866713 /* zh-Hans */,
-				6FFE1A112829872200866713 /* zh-Hant */,
+				6F98F8872830D83800A02A77 /* en */,
+				6F98F8882830D83B00A02A77 /* zh-Hans */,
+				6F98F8892830D83D00A02A77 /* zh-Hant */,
 			);
 			name = SettingStoryboard.storyboard;
 			sourceTree = "<group>";

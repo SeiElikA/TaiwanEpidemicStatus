@@ -10,6 +10,7 @@ import WebKit
 
 class BugReportViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,8 @@ extension BugReportViewController: WKNavigationDelegate {
                                         "script.name = 'viewport';" +
                                         "script.content=\"width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0, user-scalable=no\";" +
                                         "document.getElementsByTagName('head')[0].appendChild(script);", completionHandler: nil)
+        
+        self.activityIndicator.isHidden = true
     }
 }
 

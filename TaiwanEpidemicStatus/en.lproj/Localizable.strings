@@ -39,3 +39,9 @@
 "remainAntigen" = "Remain Antigen";
 "moreAntigenInfo" = "More info";
 "antigenQuestion" = "Info";
+"restoreSuccessful" = "Restore Successful";
+"BuyFailure" = "Buy Error";
+"BuyFailureReason" = "Some thing wrong. we won't charge you amount";
+"HasRemoveAds" = "You already own this item";
+"AboutUs" = "About Us";
+"CopyDone" = "Copy Complete";

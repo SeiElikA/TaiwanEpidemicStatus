@@ -19,7 +19,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         let rootViewController = UINavigationController(rootViewController: MainViewController())
-        //let rootViewController = UINavigationController(rootViewController: AntigenBottomSheetViewController())
+//        let storyBard = UIStoryboard(name: "SettingStoryboard", bundle: nil)
+//        let viewController = storyBard.instantiateViewController(withIdentifier: "SettingViewController")
+//        let rootViewController = UINavigationController(rootViewController: viewController)
         window?.rootViewController = rootViewController
         window?.windowScene = windowScene
         window?.makeKeyAndVisible()
