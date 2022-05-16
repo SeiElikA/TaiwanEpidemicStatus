@@ -128,7 +128,7 @@
 		3CCE8A616A323BDE56FA02CAB953BA18 /* BubbleChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFC24F4DC525C6A1B7FDC0D290EC780 /* BubbleChartView.swift */; };
 		3D86BA531959EE4B480E867B46ECF57D /* Intersperse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510FE9E6C1540B25BA3335E4ABA9F810 /* Intersperse.swift */; };
 		3F7DE7DD33C07E28ABBF80B3AFBCDF44 /* HorizontalBarChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5355281CC00E21448BAFDE2351788D92 /* HorizontalBarChartRenderer.swift */; };
-		406CF8974963D669A0179A5354AC72E3 /* Pods-TaiwanEpidemicStatus-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C3334C450154D5546BE7F68FCDFC11 /* Pods-TaiwanEpidemicStatus-dummy.m */; };
+		406CF8974963D669A0179A5354AC72E3 /* Pods-TaiwanEpidemicStatus-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 056566A87D5144F2746334E366607DDC /* Pods-TaiwanEpidemicStatus-dummy.m */; };
 		42361A518637B458CBB971D21E43346E /* CombinedChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706789AC208143D20CDF56B630AB1502 /* CombinedChartView.swift */; };
 		424B4F3F3CE3C8B496D9956B07EBE7EC /* GULNetworkLoggerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 2133A2460A0E384EF6064F51A77280A4 /* GULNetworkLoggerProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4304139B7049F735A4879E7A14DCA236 /* ScatterChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A36A2A913DBEAED45DC1C147849BAB9 /* ScatterChartRenderer.swift */; };
@@ -158,7 +158,7 @@
 		542C9E8C1561679C2B9596C7653D375E /* SHA2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949B7A3D4562C5B9BE89A81315E2C44 /* SHA2.swift */; };
 		54AAF9E48B52A3F5E550DD8AFC2F3118 /* Cycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F351927C027E2B61BE8B6629B1201170 /* Cycle.swift */; };
 		55018C7112A943BE15FB9735839CB8AE /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D643E9B8D0C6D4385E91CB801F8FDAD /* Int+Extension.swift */; };
-		555C5E3027C72895D9FEF6C6C639D06C /* Pods-TaiwanEpidemicStatus-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AC88B62ABEE0D7B815CC659297632F5 /* Pods-TaiwanEpidemicStatus-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		555C5E3027C72895D9FEF6C6C639D06C /* Pods-TaiwanEpidemicStatus-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BD137AF8EFE88571229657316FE99E29 /* Pods-TaiwanEpidemicStatus-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		56706731EFD3AF6092CDAF8359B039B8 /* CipherModeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A085C39C2480D99F1F9A69B3F827B53C /* CipherModeWorker.swift */; };
 		56C71B82E08666FBEC2E57178FF7EB18 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637EBA26E423C41AD661B141594ABECA /* Platform.swift */; };
 		5751FF8F73931CF52C588FC93DF87069 /* HorizontalBarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8003F129A542E48E1DC0C1F858846A60 /* HorizontalBarChartView.swift */; };
@@ -286,6 +286,7 @@
 		A94A244DA8E0960272B263B3C65036D3 /* pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 385BB495F6E82B32BC431AB504D7B742 /* pb.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9755DDCE518CFF69CD79BED345106AD /* FBLPromise+Timeout.h in Headers */ = {isa = PBXBuildFile; fileRef = 30533C86EB005F91B6DD72035BE6851E /* FBLPromise+Timeout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A992A05477D08BE8D97C2D432F97FB70 /* GULHeartbeatDateStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD675999D88CBCD326D8B881759364D /* GULHeartbeatDateStorage.m */; };
+		AAF576D057350E55493232B414B8E91C /* Pods-CovidWidgetExtension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1170D7FC942FE2C801192FB7BC5A106E /* Pods-CovidWidgetExtension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AC76E1306B64AD3C5D1523DDEBE53E87 /* FBLPromises.h in Headers */ = {isa = PBXBuildFile; fileRef = B99517ADCA1426EE0E28E786BC5B706D /* FBLPromises.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACE129DEF09F2B79F974942B653BF121 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277004BDDC4CE8099F7B255E40D12128 /* SystemConfiguration.framework */; };
 		AD485B7D9A894C44A57593FE64BD654E /* UInt64+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E22A013D08835955EDE98B4BC78E8F /* UInt64+Extension.swift */; };
@@ -325,9 +326,9 @@
 		C472373DFA73FC416CCDB97CFA586249 /* ChartAnimationEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360FBAB88FB1B6B125A974BBA0E22EC1 /* ChartAnimationEasing.swift */; };
 		C5CAA2E44799630B4930929DA08AD836 /* FBLPromise+Timeout.m in Sources */ = {isa = PBXBuildFile; fileRef = 068DA3F42BFDA9A47006E6D656CB7A85 /* FBLPromise+Timeout.m */; };
 		C687B73DBDE9967AF9A6AF429DB7C447 /* GULMutableDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = CE71F8AEFC857F6048F6F8A565588ADE /* GULMutableDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C6A7787E17488508399563DE2C369315 /* Pods-FastAPI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0596B036340792E5F42CE30D057CD17F /* Pods-FastAPI-dummy.m */; };
+		C6A7787E17488508399563DE2C369315 /* Pods-FastAPI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB2426A4BA6CE04F2BE0B3023BA5D7E /* Pods-FastAPI-dummy.m */; };
 		C7E4A381095F15F90606D7C157BD9ABA /* ChartUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C729FA1CE847A005FDC2B11EFE42154 /* ChartUtils.swift */; };
-		C800E926A642BF05AB26D04DF1C3CF41 /* Pods-FastAPI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BCED9F7A5B22D308C1C7C0CC81933293 /* Pods-FastAPI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C800E926A642BF05AB26D04DF1C3CF41 /* Pods-FastAPI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B2E41DEC1199A30D7B3ED77F1E7B608 /* Pods-FastAPI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9F15116A4F8F595EA08DCB5CA4166C3 /* GULReachabilityChecker+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D8E8CBB57758D7DF180C905936D6AC /* GULReachabilityChecker+Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		CA589FE7EC72C5BD7743D8EADBDB914E /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DC2A39FCDE7823A4DB3BD4BBA5602D /* BarChartView.swift */; };
 		CA8E9D71A639CCC3B7EF6BE76F79243B /* GULHeartbeatDateStorageUserDefaults.h in Headers */ = {isa = PBXBuildFile; fileRef = 62C87B95F423CDAD3908B47D7C7DDFEB /* GULHeartbeatDateStorageUserDefaults.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -342,8 +343,10 @@
 		D176D260FF4F0B02DC1BDC0563146034 /* Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27107B633EE4396BE0EE410CCC89162B /* Rotate.swift */; };
 		D292DD6106B0AB991A6F6CF3FBC18D9E /* Suffix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D3FE93711A4FB6274FD3D65900DF35 /* Suffix.swift */; };
 		D3E9E3F249E8D3D98C4E51836BDC4954 /* Cipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2571CADC8899B4DB3E7DC3A1ACA1F42A /* Cipher.swift */; };
+		D40884EC0D282B6D6A0364FDBD7CB2B7 /* Pods-CovidWidgetExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 50EE011388C20E74504294CCE24289E9 /* Pods-CovidWidgetExtension-dummy.m */; };
 		D4135E6CF7800B813179A4DFB88BB112 /* ChaCha20+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595945EBDBD40F63573F669F813C074 /* ChaCha20+Foundation.swift */; };
 		D44078A1F1CDB70D6EE87689EE274CAD /* AnimatedMoveViewJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = E392BB68C7392AB68467CABD91555BF9 /* AnimatedMoveViewJob.swift */; };
+		D56113A5EBA7CA89CB6E19338C68B1B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1E160E32E5714ECCFC1A1C5DC83BFC /* Foundation.framework */; };
 		D618594A60716C12B8FBAA73F18EC31C /* OCB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EEA7D37681B24D8AB721D9EDE0F04B /* OCB.swift */; };
 		D62A7122C49A6C972E28BEFA15A72E1D /* GULSwizzler.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B6792BDD6474627CC93838E6911FE4D /* GULSwizzler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D806EE791E0C1722A40410F0084F63E6 /* BarChartDataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DF061A5F6977637E4FF36E93E582FA /* BarChartDataEntry.swift */; };
@@ -417,6 +420,27 @@
 			remoteGlobalIDString = 8D7F5D5DD528D21A72DC87ADA5B12E2D;
 			remoteInfo = GoogleUtilities;
 		};
+		17624D4821F4021A90A708F0F50FD67E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C511EE63C6E7D5843B971D1E441119E;
+			remoteInfo = SwiftAlgorithms;
+		};
+		226D6A18045C35B724A88173D6B6A795 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BBF7206D7FAC92C82A042A99C4A98F8;
+			remoteInfo = PromisesObjC;
+		};
+		25A3D79A955CBA940BCCA1B96D7F4E3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FEA3B3A570634836C0457F3D7CEF1699;
+			remoteInfo = "Google-Mobile-Ads-SDK";
+		};
 		25E1ED5EE281E2B2FE9940FE2FB681BF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -444,6 +468,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2BBF7206D7FAC92C82A042A99C4A98F8;
 			remoteInfo = PromisesObjC;
+		};
+		6C6C78B431A885025A7DE0C1A4DDD56F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99313990C1D76A6D1D017868B6975CC8;
+			remoteInfo = CryptoSwift;
 		};
 		7B6BD6DA4A167A7E8FCB77D7AC34EAE5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -473,12 +504,40 @@
 			remoteGlobalIDString = BF03B0B2B8B052092CB5F90CC5FB3757;
 			remoteInfo = Charts;
 		};
+		98A5F36F079F3A99CFC05EA8C1AC3C51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF03B0B2B8B052092CB5F90CC5FB3757;
+			remoteInfo = Charts;
+		};
 		9DE84238E467F4B3E62A2D512C92E5C6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D2B5E7DCCBBFB32341D857D01211A1A3;
 			remoteInfo = nanopb;
+		};
+		A7E095E6A80934376E3F5DC41CE8D598 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B53D977A951AFC38B21751B706C1DF83;
+			remoteInfo = GoogleAppMeasurement;
+		};
+		ABFB169CBDEE14B14EEDC6C97F64D3EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2B5E7DCCBBFB32341D857D01211A1A3;
+			remoteInfo = nanopb;
+		};
+		AD735ABC182A0DBC5FDBE4FE54B207A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D7F5D5DD528D21A72DC87ADA5B12E2D;
+			remoteInfo = GoogleUtilities;
 		};
 		AE6160E3DB56479A4923C1E14E948FC1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -493,6 +552,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2C511EE63C6E7D5843B971D1E441119E;
 			remoteInfo = SwiftAlgorithms;
+		};
+		CEBD2071BC091CEFFDDC68990FC45E26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 458B188365A307B3C128ABF524D1A3E3;
+			remoteInfo = GoogleUserMessagingPlatform;
 		};
 		D82597531FEDF851817B91BF53D28A1A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -524,7 +590,7 @@
 		02C63F4B9D93B69978A9ED38F95E5355 /* GULSceneDelegateSwizzler_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULSceneDelegateSwizzler_Private.h; path = GoogleUtilities/AppDelegateSwizzler/Internal/GULSceneDelegateSwizzler_Private.h; sourceTree = "<group>"; };
 		0301303FB2E5903896085C2BEFE27476 /* ViewPortJob.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewPortJob.swift; path = Source/Charts/Jobs/ViewPortJob.swift; sourceTree = "<group>"; };
 		048A6141C6D2B9B000CC8702CF5CB71E /* GULKeychainUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULKeychainUtils.m; path = GoogleUtilities/Environment/SecureStorage/GULKeychainUtils.m; sourceTree = "<group>"; };
-		0596B036340792E5F42CE30D057CD17F /* Pods-FastAPI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FastAPI-dummy.m"; sourceTree = "<group>"; };
+		056566A87D5144F2746334E366607DDC /* Pods-TaiwanEpidemicStatus-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TaiwanEpidemicStatus-dummy.m"; sourceTree = "<group>"; };
 		05AEECA3307F45CC2A61B0D48995F9FF /* CTR.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CTR.swift; path = Sources/CryptoSwift/BlockMode/CTR.swift; sourceTree = "<group>"; };
 		05C199EDB7E2F68B310BA6AF1BD2349C /* Pods-TaiwanEpidemicStatus */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TaiwanEpidemicStatus"; path = Pods_TaiwanEpidemicStatus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		06231FAF7F13FD1F82E01C10DA0336E0 /* pb_decode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_decode.c; sourceTree = "<group>"; };
@@ -534,18 +600,22 @@
 		06FC5C9CF96D60C50FCD47D339C91951 /* nanopb */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = nanopb; path = nanopb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		097A4A8FE808F69A19DA5B43E6496F06 /* GULAppEnvironmentUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULAppEnvironmentUtil.m; path = GoogleUtilities/Environment/third_party/GULAppEnvironmentUtil.m; sourceTree = "<group>"; };
 		0A1E1ACA7EAE33589690308FFC05CD20 /* Platform+Graphics.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Platform+Graphics.swift"; path = "Source/Charts/Utils/Platform+Graphics.swift"; sourceTree = "<group>"; };
+		0B1CBCA79F15540D027992743279E424 /* Pods-TaiwanEpidemicStatus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaiwanEpidemicStatus.debug.xcconfig"; sourceTree = "<group>"; };
 		0BB693E3AA2C78BB2B828E7E5589F6DB /* GULSceneDelegateSwizzler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULSceneDelegateSwizzler.h; path = GoogleUtilities/AppDelegateSwizzler/Public/GoogleUtilities/GULSceneDelegateSwizzler.h; sourceTree = "<group>"; };
 		0C23F72737C0159294819330A98D525D /* Charts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Charts.release.xcconfig; sourceTree = "<group>"; };
 		0CEB552E4645B0116A1681A21267DE98 /* UInt32+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UInt32+Extension.swift"; path = "Sources/CryptoSwift/UInt32+Extension.swift"; sourceTree = "<group>"; };
 		0D5E4037A9EB54C3C3C9A4D008DBA8DE /* ScatterChartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterChartData.swift; path = Source/Charts/Data/Implementations/Standard/ScatterChartData.swift; sourceTree = "<group>"; };
 		0E9521FA762EAC64D5E212A2AC7D3059 /* GoogleMobileAds.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = GoogleMobileAds.xcframework; path = "Frameworks/GoogleMobileAdsFramework-Current/GoogleMobileAds.xcframework"; sourceTree = "<group>"; };
 		10360B66A217FF24FD667E964E14A943 /* GULHeartbeatDateStorageUserDefaults.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULHeartbeatDateStorageUserDefaults.m; path = GoogleUtilities/Environment/GULHeartbeatDateStorageUserDefaults.m; sourceTree = "<group>"; };
+		1170D7FC942FE2C801192FB7BC5A106E /* Pods-CovidWidgetExtension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CovidWidgetExtension-umbrella.h"; sourceTree = "<group>"; };
 		12788D3F0FECADA3E891BDB5F4CB6EF5 /* Pods-FastAPI */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-FastAPI"; path = Pods_FastAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		136A49DB2760982567FE2716226AE671 /* FBLPromise+Wrap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Wrap.h"; path = "Sources/FBLPromises/include/FBLPromise+Wrap.h"; sourceTree = "<group>"; };
 		136C018E1AA2A9BAC2C15775A49EC25D /* Charts-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Charts-dummy.m"; sourceTree = "<group>"; };
+		14160315956D40DA6266838466B3B988 /* Pods-CovidWidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CovidWidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		14FAC28EC40723D6C5E86E0BA4CE1426 /* FBLPromise+All.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+All.m"; path = "Sources/FBLPromises/FBLPromise+All.m"; sourceTree = "<group>"; };
 		1551FC0FAB9F4617836E441197080FDA /* DataRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataRenderer.swift; path = Source/Charts/Renderers/DataRenderer.swift; sourceTree = "<group>"; };
 		157BE068320314BACC58E06FB0163E0E /* Windows.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Windows.swift; path = Sources/Algorithms/Windows.swift; sourceTree = "<group>"; };
+		182EAC01053C284BC7F2E34121243891 /* Pods-CovidWidgetExtension */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-CovidWidgetExtension"; path = Pods_CovidWidgetExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18610E58AF1D414C4D29CEE1743EF244 /* LineScatterCandleRadarChartDataSetProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineScatterCandleRadarChartDataSetProtocol.swift; path = Source/Charts/Data/Interfaces/LineScatterCandleRadarChartDataSetProtocol.swift; sourceTree = "<group>"; };
 		189F2F90F9E0C80BE32F16BABDAD0F05 /* Sequence+KeyPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Sequence+KeyPath.swift"; path = "Source/Charts/Utils/Sequence+KeyPath.swift"; sourceTree = "<group>"; };
 		18E22A013D08835955EDE98B4BC78E8F /* UInt64+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UInt64+Extension.swift"; path = "Sources/CryptoSwift/UInt64+Extension.swift"; sourceTree = "<group>"; };
@@ -553,7 +623,6 @@
 		1937D399733970872BE0B521EB80389D /* CandleChartDataEntry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CandleChartDataEntry.swift; path = Source/Charts/Data/Implementations/Standard/CandleChartDataEntry.swift; sourceTree = "<group>"; };
 		1948EC617309BE7B4B119BB7CB45BA00 /* GULNSData+zlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GULNSData+zlib.m"; path = "GoogleUtilities/NSData+zlib/GULNSData+zlib.m"; sourceTree = "<group>"; };
 		19D1EEA52AB459053F73AE918C354EF0 /* FBLPromise+Any.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Any.h"; path = "Sources/FBLPromises/include/FBLPromise+Any.h"; sourceTree = "<group>"; };
-		19D6F823A4A3D0E3157CB19B69A2298F /* Pods-FastAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FastAPI.debug.xcconfig"; sourceTree = "<group>"; };
 		1A1637C48928B5C0D8960FEDBA175D44 /* GULNSData+zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GULNSData+zlib.h"; path = "GoogleUtilities/NSData+zlib/Public/GoogleUtilities/GULNSData+zlib.h"; sourceTree = "<group>"; };
 		1A45F6D669EB344456F11004B1857CCA /* GULAppEnvironmentUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULAppEnvironmentUtil.h; path = GoogleUtilities/Environment/Public/GoogleUtilities/GULAppEnvironmentUtil.h; sourceTree = "<group>"; };
 		1A4DE593B6EB3C1B17788BD826047A22 /* CombinedChartRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CombinedChartRenderer.swift; path = Source/Charts/Renderers/CombinedChartRenderer.swift; sourceTree = "<group>"; };
@@ -582,17 +651,18 @@
 		25A7C33620FF3CB304AF4977E9988CF4 /* GULNetworkInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULNetworkInternal.h; path = GoogleUtilities/Network/GULNetworkInternal.h; sourceTree = "<group>"; };
 		26303B2DE46E96327C1BB2FB00A25503 /* Chunked.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Chunked.swift; path = Sources/Algorithms/Chunked.swift; sourceTree = "<group>"; };
 		27107B633EE4396BE0EE410CCC89162B /* Rotate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Rotate.swift; path = Sources/Algorithms/Rotate.swift; sourceTree = "<group>"; };
-		274105263FBFDED348D6DD4C23143D76 /* Pods-TaiwanEpidemicStatus-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TaiwanEpidemicStatus-frameworks.sh"; sourceTree = "<group>"; };
 		277004BDDC4CE8099F7B255E40D12128 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		27AA25D8F472FCE68162DD332D7B632D /* Pods-FastAPI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FastAPI.modulemap"; sourceTree = "<group>"; };
 		27B56F93629324798D902FDFE259AAE8 /* XAxisRendererRadarChart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XAxisRendererRadarChart.swift; path = Source/Charts/Renderers/XAxisRendererRadarChart.swift; sourceTree = "<group>"; };
 		2804F9F92821FB4E755B692E8E810D78 /* FBLPromise+All.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+All.h"; path = "Sources/FBLPromises/include/FBLPromise+All.h"; sourceTree = "<group>"; };
 		2824E32126D967F55C9150293824BC86 /* ZoomViewJob.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZoomViewJob.swift; path = Source/Charts/Jobs/ZoomViewJob.swift; sourceTree = "<group>"; };
+		2A0E12CA080C312A365B1BEDD8975ECF /* Pods-CovidWidgetExtension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CovidWidgetExtension-acknowledgements.plist"; sourceTree = "<group>"; };
 		2A19AA7DCB38151AEDDBD6603520E45B /* LineChartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineChartData.swift; path = Source/Charts/Data/Implementations/Standard/LineChartData.swift; sourceTree = "<group>"; };
 		2A3268B40D9493B40CF499E341D49BE2 /* ShapeRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeRenderer.swift; path = Source/Charts/Renderers/Scatter/ShapeRenderer.swift; sourceTree = "<group>"; };
 		2A349360C8B6E8A65CCAF82DA5C3B5CD /* BarChartDataSetProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarChartDataSetProtocol.swift; path = Source/Charts/Data/Interfaces/BarChartDataSetProtocol.swift; sourceTree = "<group>"; };
 		2A712A102B1341B4C64E3768A33E6B45 /* BarHighlighter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarHighlighter.swift; path = Source/Charts/Highlight/BarHighlighter.swift; sourceTree = "<group>"; };
 		2A7FC339D693550CCE4118DF8E441700 /* FBLPromise+Await.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Await.m"; path = "Sources/FBLPromises/FBLPromise+Await.m"; sourceTree = "<group>"; };
-		2B6B43989E730D65222A4D03E251EB60 /* Pods-FastAPI-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FastAPI-Info.plist"; sourceTree = "<group>"; };
+		2B2E41DEC1199A30D7B3ED77F1E7B608 /* Pods-FastAPI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FastAPI-umbrella.h"; sourceTree = "<group>"; };
 		2C3302E06416B0CC2BE3E207BDCB1543 /* GULLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULLogger.h; path = GoogleUtilities/Logger/Public/GoogleUtilities/GULLogger.h; sourceTree = "<group>"; };
 		2C3B90D4722EE7F44C27BF239256DF3F /* RadarChartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadarChartData.swift; path = Source/Charts/Data/Implementations/Standard/RadarChartData.swift; sourceTree = "<group>"; };
 		2C6AE6B2D655598458648BF72410DCDD /* PCBC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PCBC.swift; path = Sources/CryptoSwift/BlockMode/PCBC.swift; sourceTree = "<group>"; };
@@ -625,16 +695,14 @@
 		394C21E41B6E05839ACAE86127A9DB7B /* LineRadarChartDataSetProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineRadarChartDataSetProtocol.swift; path = Source/Charts/Data/Interfaces/LineRadarChartDataSetProtocol.swift; sourceTree = "<group>"; };
 		39BDFB0BF1E60D544B9310BED3C44C96 /* MarkerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkerView.swift; path = Source/Charts/Components/MarkerView.swift; sourceTree = "<group>"; };
 		3A03F8F8FB424246186FA6B5823A96EB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
-		3A4AE4975BCE39F34E0EF88E4E58B54D /* Pods-FastAPI-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FastAPI-acknowledgements.plist"; sourceTree = "<group>"; };
-		3AC88B62ABEE0D7B815CC659297632F5 /* Pods-TaiwanEpidemicStatus-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TaiwanEpidemicStatus-umbrella.h"; sourceTree = "<group>"; };
 		3B2F3354D192C14E29D32E88D089FE1B /* FBLPromiseError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBLPromiseError.h; path = Sources/FBLPromises/include/FBLPromiseError.h; sourceTree = "<group>"; };
 		3CA2DC10EC6A57C6A235CECE9890A5DB /* GCM.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GCM.swift; path = Sources/CryptoSwift/BlockMode/GCM.swift; sourceTree = "<group>"; };
+		3EB2426A4BA6CE04F2BE0B3023BA5D7E /* Pods-FastAPI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FastAPI-dummy.m"; sourceTree = "<group>"; };
 		3F2D719E6088549984CA09D7478FA199 /* GULOriginalIMPConvenienceMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULOriginalIMPConvenienceMacros.h; path = GoogleUtilities/MethodSwizzler/Public/GoogleUtilities/GULOriginalIMPConvenienceMacros.h; sourceTree = "<group>"; };
 		4041481A3407079902BFCD63A77B88D5 /* BarLineScatterCandleBubbleChartDataSetProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarLineScatterCandleBubbleChartDataSetProtocol.swift; path = Source/Charts/Data/Interfaces/BarLineScatterCandleBubbleChartDataSetProtocol.swift; sourceTree = "<group>"; };
 		4181B6B74578C2FB2285ACEFFF72741E /* GULKeychainStorage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULKeychainStorage.m; path = GoogleUtilities/Environment/SecureStorage/GULKeychainStorage.m; sourceTree = "<group>"; };
 		41CFB378B4B86344F332C8F8D821B913 /* FBLPromise+Wrap.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Wrap.m"; path = "Sources/FBLPromises/FBLPromise+Wrap.m"; sourceTree = "<group>"; };
 		41D1B72C063EBD38C04514B60148DAB8 /* Scrypt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Scrypt.swift; path = Sources/CryptoSwift/Scrypt.swift; sourceTree = "<group>"; };
-		41D4940DB5FF5A7A982718F87CF4B601 /* Pods-FastAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FastAPI.release.xcconfig"; sourceTree = "<group>"; };
 		41EE4DC8650ECB8B0616007EA659158C /* FlattenCollection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlattenCollection.swift; path = Sources/Algorithms/FlattenCollection.swift; sourceTree = "<group>"; };
 		4214197E5820FAA1A85E0E9FE18D001B /* CombinedChartDataProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CombinedChartDataProvider.swift; path = Source/Charts/Interfaces/CombinedChartDataProvider.swift; sourceTree = "<group>"; };
 		42551525924615C486D019439AAC5019 /* GoogleAppMeasurement.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleAppMeasurement.release.xcconfig; sourceTree = "<group>"; };
@@ -663,10 +731,12 @@
 		4DCA448267BFA8CB8628226183E1C95F /* SHA1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SHA1.swift; path = Sources/CryptoSwift/SHA1.swift; sourceTree = "<group>"; };
 		4DF817C84061862D6C93A1DFCCFCED3D /* GULReachabilityChecker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULReachabilityChecker.m; path = GoogleUtilities/Reachability/GULReachabilityChecker.m; sourceTree = "<group>"; };
 		4E0E6EA37AE123158656897C6B5C4D49 /* GoogleUtilities.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GoogleUtilities.modulemap; sourceTree = "<group>"; };
+		4E1EFCF29B2475A1A4D17038C83D77E2 /* Pods-FastAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FastAPI.release.xcconfig"; sourceTree = "<group>"; };
 		4F329DD156B2A912B250AFE08A925D49 /* ScatterChartDataProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterChartDataProvider.swift; path = Source/Charts/Interfaces/ScatterChartDataProvider.swift; sourceTree = "<group>"; };
 		4FDC10408E0E3D6B70C9B5CF33C29C4E /* PieChartDataEntry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieChartDataEntry.swift; path = Source/Charts/Data/Implementations/Standard/PieChartDataEntry.swift; sourceTree = "<group>"; };
 		507208ECDDFAB8F30463A3203B848492 /* Bit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bit.swift; path = Sources/CryptoSwift/Bit.swift; sourceTree = "<group>"; };
 		508902168A90C6D96346B462CED8A5C3 /* FBLPromise+Always.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Always.h"; path = "Sources/FBLPromises/include/FBLPromise+Always.h"; sourceTree = "<group>"; };
+		50EE011388C20E74504294CCE24289E9 /* Pods-CovidWidgetExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CovidWidgetExtension-dummy.m"; sourceTree = "<group>"; };
 		510FE9E6C1540B25BA3335E4ABA9F810 /* Intersperse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Intersperse.swift; path = Sources/Algorithms/Intersperse.swift; sourceTree = "<group>"; };
 		516F8B5862D8F66FF8958263105F9AFB /* String+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Extension.swift"; path = "Sources/CryptoSwift/String+Extension.swift"; sourceTree = "<group>"; };
 		51900171BCCC063D6104E356DD4A3FDA /* Padding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Padding.swift; path = Sources/CryptoSwift/Padding.swift; sourceTree = "<group>"; };
@@ -675,7 +745,6 @@
 		52E58E7D42B1771C410D892DEB3505E9 /* FBLPromise+Recover.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Recover.h"; path = "Sources/FBLPromises/include/FBLPromise+Recover.h"; sourceTree = "<group>"; };
 		53337559C207774E1A362C9D91AE5AFD /* GULLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULLogger.m; path = GoogleUtilities/Logger/GULLogger.m; sourceTree = "<group>"; };
 		5355281CC00E21448BAFDE2351788D92 /* HorizontalBarChartRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HorizontalBarChartRenderer.swift; path = Source/Charts/Renderers/HorizontalBarChartRenderer.swift; sourceTree = "<group>"; };
-		53E7B17350ACDCB3C249A13F536A22F7 /* Pods-TaiwanEpidemicStatus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaiwanEpidemicStatus.debug.xcconfig"; sourceTree = "<group>"; };
 		544F96EF1ED0E62BCAE6058349AD8BE0 /* Unique.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Unique.swift; path = Sources/Algorithms/Unique.swift; sourceTree = "<group>"; };
 		556D8D614B33B9EA02A28C08C3C669F7 /* GULSceneDelegateSwizzler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULSceneDelegateSwizzler.m; path = GoogleUtilities/AppDelegateSwizzler/GULSceneDelegateSwizzler.m; sourceTree = "<group>"; };
 		558288D41245BD38992985A0ACA7FBD7 /* XAxis.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XAxis.swift; path = Source/Charts/Components/XAxis.swift; sourceTree = "<group>"; };
@@ -683,6 +752,7 @@
 		560A39563304B394B944D079B4B5024B /* BarLineScatterCandleBubbleChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarLineScatterCandleBubbleChartDataSet.swift; path = Source/Charts/Data/Implementations/Standard/BarLineScatterCandleBubbleChartDataSet.swift; sourceTree = "<group>"; };
 		566C7A761F04B7894C42D001FFE8AB10 /* Blowfish.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Blowfish.swift; path = Sources/CryptoSwift/Blowfish.swift; sourceTree = "<group>"; };
 		57170CCF228F46CCD6501F995B69808F /* PKCS7.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKCS7.swift; path = Sources/CryptoSwift/PKCS/PKCS7.swift; sourceTree = "<group>"; };
+		57FBBE163A20CA6B034A26D5E08850DA /* Pods-CovidWidgetExtension-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CovidWidgetExtension-Info.plist"; sourceTree = "<group>"; };
 		5925B1C2D7E205AB730F5345334B3A0F /* LegendRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LegendRenderer.swift; path = Source/Charts/Renderers/LegendRenderer.swift; sourceTree = "<group>"; };
 		5929B95B12605B516397BF154A913773 /* RadarChartDataSetProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadarChartDataSetProtocol.swift; path = Source/Charts/Data/Interfaces/RadarChartDataSetProtocol.swift; sourceTree = "<group>"; };
 		5934FD9DAFF9896989F32405067FBA81 /* ComponentBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ComponentBase.swift; path = Source/Charts/Components/ComponentBase.swift; sourceTree = "<group>"; };
@@ -690,6 +760,7 @@
 		5983C2E872D035C188E5846DDCCB8F9B /* Rabbit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Rabbit.swift; path = Sources/CryptoSwift/Rabbit.swift; sourceTree = "<group>"; };
 		59F43A3076464D1D48FCAF5BF897C130 /* BubbleChartRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BubbleChartRenderer.swift; path = Source/Charts/Renderers/BubbleChartRenderer.swift; sourceTree = "<group>"; };
 		5A08A06728DD4613A6BF5A31A2153064 /* LineChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineChartDataSet.swift; path = Source/Charts/Data/Implementations/Standard/LineChartDataSet.swift; sourceTree = "<group>"; };
+		5B751082891B84F9E33433C987C40C4B /* Pods-FastAPI-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FastAPI-acknowledgements.plist"; sourceTree = "<group>"; };
 		5BAF1DDF74CFAAF6426538A547C6228E /* GULNetwork.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULNetwork.m; path = GoogleUtilities/Network/GULNetwork.m; sourceTree = "<group>"; };
 		5CB81DD020C1455768F0A7A54C9827E9 /* GoogleUserMessagingPlatform.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleUserMessagingPlatform.release.xcconfig; sourceTree = "<group>"; };
 		5E23DFFB3E59199C445BDF1B1CDEC450 /* Authenticator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Authenticator.swift; path = Sources/CryptoSwift/Authenticator.swift; sourceTree = "<group>"; };
@@ -713,9 +784,11 @@
 		6974DC0E9D33DDE96B78154B3538BD7D /* CryptoSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CryptoSwift.release.xcconfig; sourceTree = "<group>"; };
 		6A79F689E01F0728EB72A773312B17AE /* SquareShapeRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SquareShapeRenderer.swift; path = Source/Charts/Renderers/Scatter/SquareShapeRenderer.swift; sourceTree = "<group>"; };
 		6AF492007B5852EA1B91D07B85C8C13A /* Combinations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Combinations.swift; path = Sources/Algorithms/Combinations.swift; sourceTree = "<group>"; };
+		6C5EA26E6A57289EEDB3CEDF60A7460A /* Pods-FastAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FastAPI.debug.xcconfig"; sourceTree = "<group>"; };
 		6C729FA1CE847A005FDC2B11EFE42154 /* ChartUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartUtils.swift; path = Source/Charts/Utils/ChartUtils.swift; sourceTree = "<group>"; };
 		6D1DC86E65C42ACE9C54C9E0EBDB9140 /* GULURLSessionDataResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULURLSessionDataResponse.m; path = GoogleUtilities/Environment/URLSessionPromiseWrapper/GULURLSessionDataResponse.m; sourceTree = "<group>"; };
 		6D6399D2288B0AAB9256B56957E79B97 /* GULLoggerLevel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULLoggerLevel.h; path = GoogleUtilities/Logger/Public/GoogleUtilities/GULLoggerLevel.h; sourceTree = "<group>"; };
+		6DD46969D266AB1CDA2F191F0BD8B204 /* Pods-FastAPI-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FastAPI-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6E7EF91B9D456928FC4003D79B0197B0 /* GULMutableDictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULMutableDictionary.m; path = GoogleUtilities/Network/GULMutableDictionary.m; sourceTree = "<group>"; };
 		6FB7264B98D54A9F3FB6782F47A63789 /* Trim.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Trim.swift; path = Sources/Algorithms/Trim.swift; sourceTree = "<group>"; };
 		6FBD6B47B704F0CC8C6C37BA57F305E1 /* GULApplication.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULApplication.h; path = GoogleUtilities/AppDelegateSwizzler/Public/GoogleUtilities/GULApplication.h; sourceTree = "<group>"; };
@@ -728,7 +801,6 @@
 		730B308750611F5BF9F8D7A6A119AE6C /* FBLPromise+Then.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Then.h"; path = "Sources/FBLPromises/include/FBLPromise+Then.h"; sourceTree = "<group>"; };
 		748854181749F339E87C787DAA9B0F7E /* Platform+Accessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Platform+Accessibility.swift"; path = "Source/Charts/Utils/Platform+Accessibility.swift"; sourceTree = "<group>"; };
 		7649C088B57091463D9A49BC72DF7660 /* Marker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Marker.swift; path = Source/Charts/Components/Marker.swift; sourceTree = "<group>"; };
-		789B668CE7B0D8457C5DFC04895C64DA /* Pods-TaiwanEpidemicStatus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaiwanEpidemicStatus.release.xcconfig"; sourceTree = "<group>"; };
 		7975F8D2C56BA6D1A46D6F31162E77E1 /* FBLPromise+Retry.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Retry.m"; path = "Sources/FBLPromises/FBLPromise+Retry.m"; sourceTree = "<group>"; };
 		79C7E879D672D738CBC0773D07FCD3C8 /* FBLPromise+Any.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Any.m"; path = "Sources/FBLPromises/FBLPromise+Any.m"; sourceTree = "<group>"; };
 		79DC2A39FCDE7823A4DB3BD4BBA5602D /* BarChartView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarChartView.swift; path = Source/Charts/Charts/BarChartView.swift; sourceTree = "<group>"; };
@@ -740,26 +812,26 @@
 		7D17518B85E7C5D1B5C6A2ADEFBB4DD4 /* SwiftAlgorithms-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftAlgorithms-dummy.m"; sourceTree = "<group>"; };
 		7D8F9467A62917475B173C12A88E1649 /* CombinedHighlighter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CombinedHighlighter.swift; path = Source/Charts/Highlight/CombinedHighlighter.swift; sourceTree = "<group>"; };
 		7D9E6578DECE677B95BBBD0F9E1001F6 /* FBLPromise+Do.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Do.h"; path = "Sources/FBLPromises/include/FBLPromise+Do.h"; sourceTree = "<group>"; };
+		7DFE8105AA711F6AFBE8530D2283BD2E /* Pods-CovidWidgetExtension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CovidWidgetExtension.modulemap"; sourceTree = "<group>"; };
 		7E5D917F07C38234D69D402D1B4DE1E6 /* Product.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Product.swift; path = Sources/Algorithms/Product.swift; sourceTree = "<group>"; };
 		7EA0FF5A4C2BB69F8CB49058B2D7D125 /* PromisesObjC-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PromisesObjC-umbrella.h"; sourceTree = "<group>"; };
 		7F42E3C8D22368680013304B8D579854 /* UInt16+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UInt16+Extension.swift"; path = "Sources/CryptoSwift/UInt16+Extension.swift"; sourceTree = "<group>"; };
 		8003F129A542E48E1DC0C1F858846A60 /* HorizontalBarChartView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HorizontalBarChartView.swift; path = Source/Charts/Charts/HorizontalBarChartView.swift; sourceTree = "<group>"; };
 		806EDD9B995A0F753E22E28144F7F460 /* GoogleAppMeasurement-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "GoogleAppMeasurement-xcframeworks.sh"; sourceTree = "<group>"; };
-		80C3334C450154D5546BE7F68FCDFC11 /* Pods-TaiwanEpidemicStatus-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TaiwanEpidemicStatus-dummy.m"; sourceTree = "<group>"; };
 		80EEA7D37681B24D8AB721D9EDE0F04B /* OCB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OCB.swift; path = Sources/CryptoSwift/BlockMode/OCB.swift; sourceTree = "<group>"; };
 		80F7516356C9B64DD8FC181CEDB0B798 /* GULAppDelegateSwizzler_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULAppDelegateSwizzler_Private.h; path = GoogleUtilities/AppDelegateSwizzler/Internal/GULAppDelegateSwizzler_Private.h; sourceTree = "<group>"; };
 		811F3E12D0EDD0B1383DE07B8D7782B5 /* Google-Mobile-Ads-SDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Google-Mobile-Ads-SDK-xcframeworks.sh"; sourceTree = "<group>"; };
 		818DA0647ED215AFB3573234D5AFF370 /* ECB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ECB.swift; path = Sources/CryptoSwift/BlockMode/ECB.swift; sourceTree = "<group>"; };
 		82678389462853E3AD7FDF7AA84FD2B6 /* ChartDataProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartDataProvider.swift; path = Source/Charts/Interfaces/ChartDataProvider.swift; sourceTree = "<group>"; };
+		83177930075269B0227B5197CC8CB8CB /* Pods-TaiwanEpidemicStatus-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TaiwanEpidemicStatus-frameworks.sh"; sourceTree = "<group>"; };
 		8423334DF2D2FC8652B64EF710D308BE /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Sources/CryptoSwift/Utils.swift; sourceTree = "<group>"; };
 		842B2F64772BCA252247B0AE338F4A93 /* ISO10126Padding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ISO10126Padding.swift; path = Sources/CryptoSwift/ISO10126Padding.swift; sourceTree = "<group>"; };
 		84D8E8CBB57758D7DF180C905936D6AC /* GULReachabilityChecker+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GULReachabilityChecker+Internal.h"; path = "GoogleUtilities/Reachability/GULReachabilityChecker+Internal.h"; sourceTree = "<group>"; };
+		85AC5E44AC7352EAB7A80116974378C3 /* Pods-TaiwanEpidemicStatus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaiwanEpidemicStatus.release.xcconfig"; sourceTree = "<group>"; };
 		86DD69B36BD805335611D4BE83956681 /* LineChartRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineChartRenderer.swift; path = Source/Charts/Renderers/LineChartRenderer.swift; sourceTree = "<group>"; };
 		874E90FBAA1718D34837A3D819810798 /* FBLPromise+Delay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Delay.h"; path = "Sources/FBLPromises/include/FBLPromise+Delay.h"; sourceTree = "<group>"; };
 		879F78E39B72C04636B7D1120FBD1D79 /* nanopb-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "nanopb-prefix.pch"; sourceTree = "<group>"; };
-		8803DA4DD01E5798B120920B6AE5A42E /* Pods-TaiwanEpidemicStatus-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaiwanEpidemicStatus-Info.plist"; sourceTree = "<group>"; };
 		885E142ACB4A6BA65FC25035917C2AFF /* Charts-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Charts-umbrella.h"; sourceTree = "<group>"; };
-		88E73D755BB75295B7F6110EACDF7E1C /* Pods-FastAPI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FastAPI.modulemap"; sourceTree = "<group>"; };
 		8A36A2A913DBEAED45DC1C147849BAB9 /* ScatterChartRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterChartRenderer.swift; path = Source/Charts/Renderers/ScatterChartRenderer.swift; sourceTree = "<group>"; };
 		8B8DCDCB5A132BFF32934469B0DB9122 /* BarLineScatterCandleBubbleRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarLineScatterCandleBubbleRenderer.swift; path = Source/Charts/Renderers/BarLineScatterCandleBubbleRenderer.swift; sourceTree = "<group>"; };
 		8BB3E364ACA08504BE51C8979935B43E /* CircleShapeRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircleShapeRenderer.swift; path = Source/Charts/Renderers/Scatter/CircleShapeRenderer.swift; sourceTree = "<group>"; };
@@ -774,7 +846,6 @@
 		904B1A1006DD6770C3B8343EC8C68E96 /* MarkerImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkerImage.swift; path = Source/Charts/Components/MarkerImage.swift; sourceTree = "<group>"; };
 		90780777B6A3AAFE66AA912794CE34CE /* GULSecureCoding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULSecureCoding.m; path = GoogleUtilities/Environment/GULSecureCoding.m; sourceTree = "<group>"; };
 		90FF08E46181DBB771E10C08C3C1956C /* pb_encode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_encode.h; sourceTree = "<group>"; };
-		9144FD9688D7637414F9BACA2AC0F7C6 /* Pods-TaiwanEpidemicStatus-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaiwanEpidemicStatus-acknowledgements.plist"; sourceTree = "<group>"; };
 		9165D48F2FD2A506EEDE3CCE3829DE79 /* CryptoSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CryptoSwift-dummy.m"; sourceTree = "<group>"; };
 		91FA59601499F892472CB95118E4615E /* ChevronUpShapeRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChevronUpShapeRenderer.swift; path = Source/Charts/Renderers/Scatter/ChevronUpShapeRenderer.swift; sourceTree = "<group>"; };
 		92C9583337D8E68A10DC803C49682B9E /* FBLPromise+Async.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Async.h"; path = "Sources/FBLPromises/include/FBLPromise+Async.h"; sourceTree = "<group>"; };
@@ -784,7 +855,6 @@
 		94F9D04115A9B300B25DF2CFFFFF2972 /* Indexed.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Indexed.swift; path = Sources/Algorithms/Indexed.swift; sourceTree = "<group>"; };
 		956157B6E86F37FB7ADDE9B8AF3E5724 /* Split.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Split.swift; path = Sources/Algorithms/Split.swift; sourceTree = "<group>"; };
 		956DDCD1069173CD93ECB38DE823F705 /* GoogleUtilities.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleUtilities.release.xcconfig; sourceTree = "<group>"; };
-		96071EF0633496888A54C99026D3D9DC /* Pods-TaiwanEpidemicStatus-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TaiwanEpidemicStatus-acknowledgements.markdown"; sourceTree = "<group>"; };
 		960DD1459418C4CB7CFBDB802935576C /* Fill.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Fill.swift; path = Source/Charts/Utils/Fill.swift; sourceTree = "<group>"; };
 		9678B7FA410482A6927DE5524223F973 /* ValueFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValueFormatter.swift; path = Source/Charts/Formatters/ValueFormatter.swift; sourceTree = "<group>"; };
 		967D0740AB459D812988F78394EDE397 /* Charts.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Charts.modulemap; sourceTree = "<group>"; };
@@ -832,23 +902,24 @@
 		B23E5D32A7558B3D640552C3EE812B90 /* StreamDecryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StreamDecryptor.swift; path = Sources/CryptoSwift/StreamDecryptor.swift; sourceTree = "<group>"; };
 		B243EE4D662543BB08678C08C88A9927 /* CrossShapeRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CrossShapeRenderer.swift; path = Source/Charts/Renderers/Scatter/CrossShapeRenderer.swift; sourceTree = "<group>"; };
 		B27D87F250DAEA5C6DD5A1DB1D74C888 /* FillFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FillFormatter.swift; path = Source/Charts/Formatters/FillFormatter.swift; sourceTree = "<group>"; };
+		B2C5D24146232370C481006D600BA514 /* Pods-TaiwanEpidemicStatus-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaiwanEpidemicStatus-acknowledgements.plist"; sourceTree = "<group>"; };
 		B36B77E976BA145A790402AF98507B66 /* BarChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarChartDataSet.swift; path = Source/Charts/Data/Implementations/Standard/BarChartDataSet.swift; sourceTree = "<group>"; };
+		B3A1B2FD52B1FC33CFC85C857B058760 /* Pods-TaiwanEpidemicStatus-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TaiwanEpidemicStatus-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B3B0BA5E221B33A23D65D319877CF482 /* RadarChartView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadarChartView.swift; path = Source/Charts/Charts/RadarChartView.swift; sourceTree = "<group>"; };
 		B3C2D8595F5EA5CFBF7FC726F097D4D2 /* pb_decode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_decode.h; sourceTree = "<group>"; };
 		B3D3FCAF1F00F7FD6CB7DCDB83C37623 /* FirstNonNil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FirstNonNil.swift; path = Sources/Algorithms/FirstNonNil.swift; sourceTree = "<group>"; };
+		B422D7EC852AE4264DC5577F3289D074 /* Pods-CovidWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CovidWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
 		B43874C6CBB50E7134FBEC24BABFE14F /* GoogleUtilities */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleUtilities; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B58F3DFCEE6C2D6DB70F37764A8FE73F /* XAxisRendererHorizontalBarChart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XAxisRendererHorizontalBarChart.swift; path = Source/Charts/Renderers/XAxisRendererHorizontalBarChart.swift; sourceTree = "<group>"; };
 		B5FF40699AEBAD9F988928509BCD1AFA /* PieChartRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieChartRenderer.swift; path = Source/Charts/Renderers/PieChartRenderer.swift; sourceTree = "<group>"; };
-		B66486DDF5211F92519CFEA54285597C /* Pods-TaiwanEpidemicStatus.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TaiwanEpidemicStatus.modulemap"; sourceTree = "<group>"; };
 		B6C15A238F9CD6C4CBAAD03DAFBD6462 /* Permutations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Permutations.swift; path = Sources/Algorithms/Permutations.swift; sourceTree = "<group>"; };
 		B7884CF35020ACE3B37E6F79C6DE2501 /* pb_encode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_encode.c; sourceTree = "<group>"; };
 		B7D6FEB63AB2D98B3070F5F222CB3D6F /* AES+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AES+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/AES+Foundation.swift"; sourceTree = "<group>"; };
 		B7D7CCC98509C5332C426D4FC5C13435 /* LineRadarChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineRadarChartDataSet.swift; path = Source/Charts/Data/Implementations/Standard/LineRadarChartDataSet.swift; sourceTree = "<group>"; };
 		B9789060571D4276F2E681B5BA73F916 /* CBC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBC.swift; path = Sources/CryptoSwift/BlockMode/CBC.swift; sourceTree = "<group>"; };
 		B99517ADCA1426EE0E28E786BC5B706D /* FBLPromises.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBLPromises.h; path = Sources/FBLPromises/include/FBLPromises.h; sourceTree = "<group>"; };
-		BA0B7FF30E83BD9A4C344B0AA4EDA4C3 /* Pods-FastAPI-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FastAPI-acknowledgements.markdown"; sourceTree = "<group>"; };
 		BC841CE4CB0902666C9372D428E20678 /* RadarHighlighter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadarHighlighter.swift; path = Source/Charts/Highlight/RadarHighlighter.swift; sourceTree = "<group>"; };
-		BCED9F7A5B22D308C1C7C0CC81933293 /* Pods-FastAPI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FastAPI-umbrella.h"; sourceTree = "<group>"; };
+		BD137AF8EFE88571229657316FE99E29 /* Pods-TaiwanEpidemicStatus-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TaiwanEpidemicStatus-umbrella.h"; sourceTree = "<group>"; };
 		C039FA6463EE36D9B2A45F41B40A1F8F /* BlockModeOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockModeOptions.swift; path = Sources/CryptoSwift/BlockMode/BlockModeOptions.swift; sourceTree = "<group>"; };
 		C1219A366FB826962224EBC85B5B6BD1 /* BubbleChartDataProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BubbleChartDataProvider.swift; path = Source/Charts/Interfaces/BubbleChartDataProvider.swift; sourceTree = "<group>"; };
 		C2C27599E0B1B19F63EF9E1BA94D6F3E /* BarChartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarChartData.swift; path = Source/Charts/Data/Implementations/Standard/BarChartData.swift; sourceTree = "<group>"; };
@@ -864,9 +935,11 @@
 		CF6738FEB7E8F12CF7C9EE49ED96F97C /* BlockCipher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockCipher.swift; path = Sources/CryptoSwift/BlockCipher.swift; sourceTree = "<group>"; };
 		D04F3B4C2668CA80B00E86F384D38DE7 /* nanopb-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "nanopb-umbrella.h"; sourceTree = "<group>"; };
 		D094130935B9818753E6081E96830198 /* SwiftAlgorithms.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftAlgorithms.release.xcconfig; sourceTree = "<group>"; };
+		D17A21DF5907B510907FA5AEEDD52A5A /* Pods-CovidWidgetExtension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CovidWidgetExtension-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D24101CD5BE2CA9E4BF21822947A6929 /* FBLPromise+Always.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Always.m"; path = "Sources/FBLPromises/FBLPromise+Always.m"; sourceTree = "<group>"; };
 		D35821ECD4FF0BA0109128157E44AAA8 /* GoogleUtilities-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleUtilities-dummy.m"; sourceTree = "<group>"; };
 		D3784457DC5BAC61B2B4E5C3403B0E0F /* FBLPromise+Then.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Then.m"; path = "Sources/FBLPromises/FBLPromise+Then.m"; sourceTree = "<group>"; };
+		D3B5F6EB1CD59A8F2548FA10D53FA52F /* Pods-TaiwanEpidemicStatus.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TaiwanEpidemicStatus.modulemap"; sourceTree = "<group>"; };
 		D3C972917330ACAE757BB516D4700E98 /* CandleStickChartView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CandleStickChartView.swift; path = Source/Charts/Charts/CandleStickChartView.swift; sourceTree = "<group>"; };
 		D589017A41C15C09776B652BF985F23B /* EitherSequence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EitherSequence.swift; path = Sources/Algorithms/EitherSequence.swift; sourceTree = "<group>"; };
 		D58C84CA347DC5C2415CC8DA41326533 /* RadarChartDataEntry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadarChartDataEntry.swift; path = Source/Charts/Data/Implementations/Standard/RadarChartDataEntry.swift; sourceTree = "<group>"; };
@@ -903,6 +976,7 @@
 		E6B7EF9097A2FF1924C427474B2A367D /* UInt128.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UInt128.swift; path = Sources/CryptoSwift/UInt128.swift; sourceTree = "<group>"; };
 		E6FE44006D5329D2F75F89DF225E8E95 /* FBLPromise+Delay.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Delay.m"; path = "Sources/FBLPromises/FBLPromise+Delay.m"; sourceTree = "<group>"; };
 		E7193447717BCE34E2CAFA2CB5E020AC /* SwiftAlgorithms-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftAlgorithms-prefix.pch"; sourceTree = "<group>"; };
+		E7A67848EFF03CB7C73BA8FC05B6D217 /* Pods-TaiwanEpidemicStatus-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaiwanEpidemicStatus-Info.plist"; sourceTree = "<group>"; };
 		E7BBBC111B39EF2134FF52081EAF1302 /* FBLPromise+Testing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Testing.h"; path = "Sources/FBLPromises/include/FBLPromise+Testing.h"; sourceTree = "<group>"; };
 		E7F46895643630A4909B47AA722DADD7 /* GULReachabilityMessageCode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULReachabilityMessageCode.h; path = GoogleUtilities/Reachability/GULReachabilityMessageCode.h; sourceTree = "<group>"; };
 		E89B38C999089DBA78344E1F22B5C654 /* FBLPromise+Catch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Catch.m"; path = "Sources/FBLPromises/FBLPromise+Catch.m"; sourceTree = "<group>"; };
@@ -911,6 +985,7 @@
 		E949B7A3D4562C5B9BE89A81315E2C44 /* SHA2.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SHA2.swift; path = Sources/CryptoSwift/SHA2.swift; sourceTree = "<group>"; };
 		E957075A82CF74C3A6169D9AE571393B /* PromisesObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PromisesObjC.release.xcconfig; sourceTree = "<group>"; };
 		E9D2E4B63388D0DF695F08954CB2958E /* HMAC+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HMAC+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/HMAC+Foundation.swift"; sourceTree = "<group>"; };
+		EA2CB7766C09405F05BFD72BD6FD191A /* Pods-FastAPI-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FastAPI-Info.plist"; sourceTree = "<group>"; };
 		EB0E300F81D52DE31D70A368293F9D9A /* Utils+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Utils+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/Utils+Foundation.swift"; sourceTree = "<group>"; };
 		EB4FC24E7C5303287055D8119E8B15E8 /* BlockMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockMode.swift; path = Sources/CryptoSwift/BlockMode/BlockMode.swift; sourceTree = "<group>"; };
 		EB8AF4AD6F87F90BB3000C1F847BCC47 /* CMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CMAC.swift; path = Sources/CryptoSwift/CMAC.swift; sourceTree = "<group>"; };
@@ -940,6 +1015,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0D1AD76BC00F976AC097201E2FB0D2D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D56113A5EBA7CA89CB6E19338C68B1B9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		254D9C12585E10462538F3DA17E6B644 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1026,6 +1109,22 @@
 				4AF459BDABD008037CEA4F02B415ADAB /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		05255D6D516F2EFF2F7AF1C6FDBCEE1B /* Pods-FastAPI */ = {
+			isa = PBXGroup;
+			children = (
+				27AA25D8F472FCE68162DD332D7B632D /* Pods-FastAPI.modulemap */,
+				6DD46969D266AB1CDA2F191F0BD8B204 /* Pods-FastAPI-acknowledgements.markdown */,
+				5B751082891B84F9E33433C987C40C4B /* Pods-FastAPI-acknowledgements.plist */,
+				3EB2426A4BA6CE04F2BE0B3023BA5D7E /* Pods-FastAPI-dummy.m */,
+				EA2CB7766C09405F05BFD72BD6FD191A /* Pods-FastAPI-Info.plist */,
+				2B2E41DEC1199A30D7B3ED77F1E7B608 /* Pods-FastAPI-umbrella.h */,
+				6C5EA26E6A57289EEDB3CEDF60A7460A /* Pods-FastAPI.debug.xcconfig */,
+				4E1EFCF29B2475A1A4D17038C83D77E2 /* Pods-FastAPI.release.xcconfig */,
+			);
+			name = "Pods-FastAPI";
+			path = "Target Support Files/Pods-FastAPI";
 			sourceTree = "<group>";
 		};
 		07754E05E2B704428C4F1C1139407E23 /* Support Files */ = {
@@ -1282,27 +1381,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		38B4E853DDD002E73EB3EBA7BADA83A3 /* Pods-FastAPI */ = {
-			isa = PBXGroup;
-			children = (
-				88E73D755BB75295B7F6110EACDF7E1C /* Pods-FastAPI.modulemap */,
-				BA0B7FF30E83BD9A4C344B0AA4EDA4C3 /* Pods-FastAPI-acknowledgements.markdown */,
-				3A4AE4975BCE39F34E0EF88E4E58B54D /* Pods-FastAPI-acknowledgements.plist */,
-				0596B036340792E5F42CE30D057CD17F /* Pods-FastAPI-dummy.m */,
-				2B6B43989E730D65222A4D03E251EB60 /* Pods-FastAPI-Info.plist */,
-				BCED9F7A5B22D308C1C7C0CC81933293 /* Pods-FastAPI-umbrella.h */,
-				19D6F823A4A3D0E3157CB19B69A2298F /* Pods-FastAPI.debug.xcconfig */,
-				41D4940DB5FF5A7A982718F87CF4B601 /* Pods-FastAPI.release.xcconfig */,
-			);
-			name = "Pods-FastAPI";
-			path = "Target Support Files/Pods-FastAPI";
-			sourceTree = "<group>";
-		};
 		398A902D92CE53F12D2853F2EF455530 /* decode */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = decode;
+			sourceTree = "<group>";
+		};
+		49ECA055ED21BE3D7722581DB4594414 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E857078FA5ECECECCA1A254500E8263F /* Pods-CovidWidgetExtension */,
+				05255D6D516F2EFF2F7AF1C6FDBCEE1B /* Pods-FastAPI */,
+				A81CB3521415A52D4656C8164DB7CD5E /* Pods-TaiwanEpidemicStatus */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		4A434C7F17FEC83D1F39C20A7E56ECE8 /* WithoutAdIdSupport */ = {
@@ -1331,21 +1424,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		565FA256937D96983FEAC0C99AF5A0E0 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A1C1B977ED8804E8AEEC884E7359EE58 /* Charts */,
-				F81274EDB681F11E7CB05F7DCA2BB33C /* CryptoSwift */,
-				B43874C6CBB50E7134FBEC24BABFE14F /* GoogleUtilities */,
-				06FC5C9CF96D60C50FCD47D339C91951 /* nanopb */,
-				12788D3F0FECADA3E891BDB5F4CB6EF5 /* Pods-FastAPI */,
-				05C199EDB7E2F68B310BA6AF1BD2349C /* Pods-TaiwanEpidemicStatus */,
-				3347A1AB6546F0A3977529B8F199DC41 /* PromisesObjC */,
-				F3E7458F7D38C89A9DE4BBACD3450C88 /* SwiftAlgorithms */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		6D24650AC05CF3946E8C10F26AC8A628 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -1359,23 +1437,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SwiftAlgorithms";
-			sourceTree = "<group>";
-		};
-		6D5BB37935689F325615CC1C8AAACB0D /* Pods-TaiwanEpidemicStatus */ = {
-			isa = PBXGroup;
-			children = (
-				B66486DDF5211F92519CFEA54285597C /* Pods-TaiwanEpidemicStatus.modulemap */,
-				96071EF0633496888A54C99026D3D9DC /* Pods-TaiwanEpidemicStatus-acknowledgements.markdown */,
-				9144FD9688D7637414F9BACA2AC0F7C6 /* Pods-TaiwanEpidemicStatus-acknowledgements.plist */,
-				80C3334C450154D5546BE7F68FCDFC11 /* Pods-TaiwanEpidemicStatus-dummy.m */,
-				274105263FBFDED348D6DD4C23143D76 /* Pods-TaiwanEpidemicStatus-frameworks.sh */,
-				8803DA4DD01E5798B120920B6AE5A42E /* Pods-TaiwanEpidemicStatus-Info.plist */,
-				3AC88B62ABEE0D7B815CC659297632F5 /* Pods-TaiwanEpidemicStatus-umbrella.h */,
-				53E7B17350ACDCB3C249A13F536A22F7 /* Pods-TaiwanEpidemicStatus.debug.xcconfig */,
-				789B668CE7B0D8457C5DFC04895C64DA /* Pods-TaiwanEpidemicStatus.release.xcconfig */,
-			);
-			name = "Pods-TaiwanEpidemicStatus";
-			path = "Target Support Files/Pods-TaiwanEpidemicStatus";
 			sourceTree = "<group>";
 		};
 		6EA25D39442843E5444DC632212D0CA7 /* PromisesObjC */ = {
@@ -1482,6 +1543,39 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/PromisesObjC";
+			sourceTree = "<group>";
+		};
+		9ADD87C88F6009D7E35A6C0282F0D783 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1C1B977ED8804E8AEEC884E7359EE58 /* Charts */,
+				F81274EDB681F11E7CB05F7DCA2BB33C /* CryptoSwift */,
+				B43874C6CBB50E7134FBEC24BABFE14F /* GoogleUtilities */,
+				06FC5C9CF96D60C50FCD47D339C91951 /* nanopb */,
+				182EAC01053C284BC7F2E34121243891 /* Pods-CovidWidgetExtension */,
+				12788D3F0FECADA3E891BDB5F4CB6EF5 /* Pods-FastAPI */,
+				05C199EDB7E2F68B310BA6AF1BD2349C /* Pods-TaiwanEpidemicStatus */,
+				3347A1AB6546F0A3977529B8F199DC41 /* PromisesObjC */,
+				F3E7458F7D38C89A9DE4BBACD3450C88 /* SwiftAlgorithms */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A81CB3521415A52D4656C8164DB7CD5E /* Pods-TaiwanEpidemicStatus */ = {
+			isa = PBXGroup;
+			children = (
+				D3B5F6EB1CD59A8F2548FA10D53FA52F /* Pods-TaiwanEpidemicStatus.modulemap */,
+				B3A1B2FD52B1FC33CFC85C857B058760 /* Pods-TaiwanEpidemicStatus-acknowledgements.markdown */,
+				B2C5D24146232370C481006D600BA514 /* Pods-TaiwanEpidemicStatus-acknowledgements.plist */,
+				056566A87D5144F2746334E366607DDC /* Pods-TaiwanEpidemicStatus-dummy.m */,
+				83177930075269B0227B5197CC8CB8CB /* Pods-TaiwanEpidemicStatus-frameworks.sh */,
+				E7A67848EFF03CB7C73BA8FC05B6D217 /* Pods-TaiwanEpidemicStatus-Info.plist */,
+				BD137AF8EFE88571229657316FE99E29 /* Pods-TaiwanEpidemicStatus-umbrella.h */,
+				0B1CBCA79F15540D027992743279E424 /* Pods-TaiwanEpidemicStatus.debug.xcconfig */,
+				85AC5E44AC7352EAB7A80116974378C3 /* Pods-TaiwanEpidemicStatus.release.xcconfig */,
+			);
+			name = "Pods-TaiwanEpidemicStatus";
+			path = "Target Support Files/Pods-TaiwanEpidemicStatus";
 			sourceTree = "<group>";
 		};
 		B37B07A4BBF74AF4A85FFBC09FE6B968 /* nanopb */ = {
@@ -1677,8 +1771,8 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
 				3384301289D95E730100587B4E3B8F6E /* Pods */,
-				565FA256937D96983FEAC0C99AF5A0E0 /* Products */,
-				F74FA2FE15D9A1AB35B1F580BBF57019 /* Targets Support Files */,
+				9ADD87C88F6009D7E35A6C0282F0D783 /* Products */,
+				49ECA055ED21BE3D7722581DB4594414 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1735,13 +1829,20 @@
 			name = Network;
 			sourceTree = "<group>";
 		};
-		F74FA2FE15D9A1AB35B1F580BBF57019 /* Targets Support Files */ = {
+		E857078FA5ECECECCA1A254500E8263F /* Pods-CovidWidgetExtension */ = {
 			isa = PBXGroup;
 			children = (
-				38B4E853DDD002E73EB3EBA7BADA83A3 /* Pods-FastAPI */,
-				6D5BB37935689F325615CC1C8AAACB0D /* Pods-TaiwanEpidemicStatus */,
+				7DFE8105AA711F6AFBE8530D2283BD2E /* Pods-CovidWidgetExtension.modulemap */,
+				D17A21DF5907B510907FA5AEEDD52A5A /* Pods-CovidWidgetExtension-acknowledgements.markdown */,
+				2A0E12CA080C312A365B1BEDD8975ECF /* Pods-CovidWidgetExtension-acknowledgements.plist */,
+				50EE011388C20E74504294CCE24289E9 /* Pods-CovidWidgetExtension-dummy.m */,
+				57FBBE163A20CA6B034A26D5E08850DA /* Pods-CovidWidgetExtension-Info.plist */,
+				1170D7FC942FE2C801192FB7BC5A106E /* Pods-CovidWidgetExtension-umbrella.h */,
+				14160315956D40DA6266838466B3B988 /* Pods-CovidWidgetExtension.debug.xcconfig */,
+				B422D7EC852AE4264DC5577F3289D074 /* Pods-CovidWidgetExtension.release.xcconfig */,
 			);
-			name = "Targets Support Files";
+			name = "Pods-CovidWidgetExtension";
+			path = "Target Support Files/Pods-CovidWidgetExtension";
 			sourceTree = "<group>";
 		};
 		F9BC13DB8DC31A77C652CBB431A932B1 /* Support Files */ = {
@@ -1785,6 +1886,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		20995531489844C4D24D6C960B3AFE7F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAF576D057350E55493232B414B8E91C /* Pods-CovidWidgetExtension-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4223A81E2806301077E69778231892CD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -2062,6 +2171,33 @@
 			productReference = 06FC5C9CF96D60C50FCD47D339C91951 /* nanopb */;
 			productType = "com.apple.product-type.framework";
 		};
+		E13F9002F630EC916CF2A43ED226FA99 /* Pods-CovidWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48A909A639406C0DCA439B7AA045B159 /* Build configuration list for PBXNativeTarget "Pods-CovidWidgetExtension" */;
+			buildPhases = (
+				20995531489844C4D24D6C960B3AFE7F /* Headers */,
+				A9344D88B7B23AFF5983F7D3E17BF295 /* Sources */,
+				0D1AD76BC00F976AC097201E2FB0D2D7 /* Frameworks */,
+				2F29598E77EB4FD06F010D6027617281 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4AAEDD20D58602210D85A1F40AD325B4 /* PBXTargetDependency */,
+				E81B0FECBEA3D8AE705A0F389EA9BBD0 /* PBXTargetDependency */,
+				363B5BD7351DA51198828A90DA35EC3D /* PBXTargetDependency */,
+				6E61B068CF75A61AFCD29DA03CBF81CB /* PBXTargetDependency */,
+				4A6DD5CA3897C5C13834E9A9428CCFD9 /* PBXTargetDependency */,
+				F560F21577B181482424D066DF19B9C0 /* PBXTargetDependency */,
+				212A0C70BA56D2B4FE00119620716ECC /* PBXTargetDependency */,
+				718C613E81E72E9530B6F655E2EAA440 /* PBXTargetDependency */,
+				176F626C613BAC2AF176183BB837EE00 /* PBXTargetDependency */,
+			);
+			name = "Pods-CovidWidgetExtension";
+			productName = Pods_CovidWidgetExtension;
+			productReference = 182EAC01053C284BC7F2E34121243891 /* Pods-CovidWidgetExtension */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -2080,7 +2216,7 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 565FA256937D96983FEAC0C99AF5A0E0 /* Products */;
+			productRefGroup = 9ADD87C88F6009D7E35A6C0282F0D783 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -2091,6 +2227,7 @@
 				458B188365A307B3C128ABF524D1A3E3 /* GoogleUserMessagingPlatform */,
 				8D7F5D5DD528D21A72DC87ADA5B12E2D /* GoogleUtilities */,
 				D2B5E7DCCBBFB32341D857D01211A1A3 /* nanopb */,
+				E13F9002F630EC916CF2A43ED226FA99 /* Pods-CovidWidgetExtension */,
 				55ACE2EA954BB4AB45EF2F6168158798 /* Pods-FastAPI */,
 				86AC75967560F56C6EBB58A09A7D9C51 /* Pods-TaiwanEpidemicStatus */,
 				2BBF7206D7FAC92C82A042A99C4A98F8 /* PromisesObjC */,
@@ -2101,6 +2238,13 @@
 
 /* Begin PBXResourcesBuildPhase section */
 		20BC808A286698B859247E07CAF3BC23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F29598E77EB4FD06F010D6027617281 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2492,6 +2636,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A9344D88B7B23AFF5983F7D3E17BF295 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D40884EC0D282B6D6A0364FDBD7CB2B7 /* Pods-CovidWidgetExtension-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D44B37BB17C8CAFE0C472DED7BA18037 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2574,11 +2726,41 @@
 			target = 458B188365A307B3C128ABF524D1A3E3 /* GoogleUserMessagingPlatform */;
 			targetProxy = D82597531FEDF851817B91BF53D28A1A /* PBXContainerItemProxy */;
 		};
+		176F626C613BAC2AF176183BB837EE00 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = nanopb;
+			target = D2B5E7DCCBBFB32341D857D01211A1A3 /* nanopb */;
+			targetProxy = ABFB169CBDEE14B14EEDC6C97F64D3EF /* PBXContainerItemProxy */;
+		};
+		212A0C70BA56D2B4FE00119620716ECC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PromisesObjC;
+			target = 2BBF7206D7FAC92C82A042A99C4A98F8 /* PromisesObjC */;
+			targetProxy = 226D6A18045C35B724A88173D6B6A795 /* PBXContainerItemProxy */;
+		};
+		363B5BD7351DA51198828A90DA35EC3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Google-Mobile-Ads-SDK";
+			target = FEA3B3A570634836C0457F3D7CEF1699 /* Google-Mobile-Ads-SDK */;
+			targetProxy = 25A3D79A955CBA940BCCA1B96D7F4E3C /* PBXContainerItemProxy */;
+		};
 		3C4AD70C68A1350299FFE10D5486A0D4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Google-Mobile-Ads-SDK";
 			target = FEA3B3A570634836C0457F3D7CEF1699 /* Google-Mobile-Ads-SDK */;
 			targetProxy = 8A72F5B4E59BA9E5DF32963C515A8162 /* PBXContainerItemProxy */;
+		};
+		4A6DD5CA3897C5C13834E9A9428CCFD9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleUserMessagingPlatform;
+			target = 458B188365A307B3C128ABF524D1A3E3 /* GoogleUserMessagingPlatform */;
+			targetProxy = CEBD2071BC091CEFFDDC68990FC45E26 /* PBXContainerItemProxy */;
+		};
+		4AAEDD20D58602210D85A1F40AD325B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			target = BF03B0B2B8B052092CB5F90CC5FB3757 /* Charts */;
+			targetProxy = 98A5F36F079F3A99CFC05EA8C1AC3C51 /* PBXContainerItemProxy */;
 		};
 		5185BE7B9F8704F7D3CE08DC779CCAD7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2591,6 +2773,18 @@
 			name = GoogleAppMeasurement;
 			target = B53D977A951AFC38B21751B706C1DF83 /* GoogleAppMeasurement */;
 			targetProxy = 8849D0FB79A1461CD3E2D1B9FCFA5CAD /* PBXContainerItemProxy */;
+		};
+		6E61B068CF75A61AFCD29DA03CBF81CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleAppMeasurement;
+			target = B53D977A951AFC38B21751B706C1DF83 /* GoogleAppMeasurement */;
+			targetProxy = A7E095E6A80934376E3F5DC41CE8D598 /* PBXContainerItemProxy */;
+		};
+		718C613E81E72E9530B6F655E2EAA440 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftAlgorithms;
+			target = 2C511EE63C6E7D5843B971D1E441119E /* SwiftAlgorithms */;
+			targetProxy = 17624D4821F4021A90A708F0F50FD67E /* PBXContainerItemProxy */;
 		};
 		758DA2766F52E47A39B0EC00DAF030FB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2622,6 +2816,12 @@
 			target = 2C511EE63C6E7D5843B971D1E441119E /* SwiftAlgorithms */;
 			targetProxy = 25E1ED5EE281E2B2FE9940FE2FB681BF /* PBXContainerItemProxy */;
 		};
+		E81B0FECBEA3D8AE705A0F389EA9BBD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CryptoSwift;
+			target = 99313990C1D76A6D1D017868B6975CC8 /* CryptoSwift */;
+			targetProxy = 6C6C78B431A885025A7DE0C1A4DDD56F /* PBXContainerItemProxy */;
+		};
 		E99A4940EE98210F8A5C88B46A63EA13 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GoogleUtilities;
@@ -2633,6 +2833,12 @@
 			name = PromisesObjC;
 			target = 2BBF7206D7FAC92C82A042A99C4A98F8 /* PromisesObjC */;
 			targetProxy = 6B49081AF339A932B066F5E051F8E842 /* PBXContainerItemProxy */;
+		};
+		F560F21577B181482424D066DF19B9C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleUtilities;
+			target = 8D7F5D5DD528D21A72DC87ADA5B12E2D /* GoogleUtilities */;
+			targetProxy = AD735ABC182A0DBC5FDBE4FE54B207A8 /* PBXContainerItemProxy */;
 		};
 		FA0D408D527A315C6AD15091D77C6984 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2682,6 +2888,43 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		162CFDA695F25BB68A62F80F86627F92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14160315956D40DA6266838466B3B988 /* Pods-CovidWidgetExtension.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CovidWidgetExtension/Pods-CovidWidgetExtension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CovidWidgetExtension/Pods-CovidWidgetExtension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -2881,7 +3124,7 @@
 		};
 		45C7AFAA63A8D04AA101237F0020BD54 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 19D6F823A4A3D0E3157CB19B69A2298F /* Pods-FastAPI.debug.xcconfig */;
+			baseConfigurationReference = 6C5EA26E6A57289EEDB3CEDF60A7460A /* Pods-FastAPI.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -3020,7 +3263,7 @@
 		};
 		646F6EB2FFCD80B3521C10C86B8A3502 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 53E7B17350ACDCB3C249A13F536A22F7 /* Pods-TaiwanEpidemicStatus.debug.xcconfig */;
+			baseConfigurationReference = 0B1CBCA79F15540D027992743279E424 /* Pods-TaiwanEpidemicStatus.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -3183,6 +3426,44 @@
 			};
 			name = Debug;
 		};
+		95E2C5619D00BFFBBF9F20F3D9CA23DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B422D7EC852AE4264DC5577F3289D074 /* Pods-CovidWidgetExtension.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CovidWidgetExtension/Pods-CovidWidgetExtension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CovidWidgetExtension/Pods-CovidWidgetExtension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		9DFD042BA80AA1320BAD51397B1318A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E0898EE86A6A0CD0E2D3D08C5296A4DC /* Charts.debug.xcconfig */;
@@ -3220,7 +3501,7 @@
 		};
 		AC42736DE0FF59CFF3BB046EF05B458D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 41D4940DB5FF5A7A982718F87CF4B601 /* Pods-FastAPI.release.xcconfig */;
+			baseConfigurationReference = 4E1EFCF29B2475A1A4D17038C83D77E2 /* Pods-FastAPI.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -3258,7 +3539,7 @@
 		};
 		AD10619E50E0B389C20FA31C7DE12CE8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 789B668CE7B0D8457C5DFC04895C64DA /* Pods-TaiwanEpidemicStatus.release.xcconfig */;
+			baseConfigurationReference = 85AC5E44AC7352EAB7A80116974378C3 /* Pods-TaiwanEpidemicStatus.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -3510,6 +3791,15 @@
 			buildConfigurations = (
 				4BC7450F9457737EE3E637BA155B56F7 /* Debug */,
 				8B5A46FF8D3C1289CDEE3BAFACABCD2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48A909A639406C0DCA439B7AA045B159 /* Build configuration list for PBXNativeTarget "Pods-CovidWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				162CFDA695F25BB68A62F80F86627F92 /* Debug */,
+				95E2C5619D00BFFBBF9F20F3D9CA23DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

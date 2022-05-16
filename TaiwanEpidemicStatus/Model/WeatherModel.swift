@@ -58,6 +58,8 @@ class WeatherModel {
         switch(wX){
         case "陰短暫陣雨":
             return [UIImage(systemName: "cloud.drizzle"): UIColor.cyan]
+        case "陰時多雲陣雨","陰陣雨":
+            return [UIImage(systemName: "cloud.rain"): UIColor.systemBlue]
         default:
             return [UIImage(systemName: "sun.max"): UIColor.systemYellow]
         }

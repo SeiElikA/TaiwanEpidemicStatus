@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  TaiwanEpidemicStatus
+
+  Created by 葉家均 on 2022/5/16.
+  
+*/
+"TaiwanCovidWidgetTitle" = "台灣新增確診數";
+"LastUpdate" = "最後更新:\n{date}";
+"NetworkError" = "載入失敗，請確認網路連接";
+"TotalCases" = "累積確診";
+"NewCases" = "新增確診";

@@ -292,14 +292,16 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     
     private func getCityStatistic(cityName:String) {
         covidModel.getCitySatistic(cityName: cityName, { result in
-            if result.isEmpty {
-                return
+            DispatchQueue.main.async {
+                if result.isEmpty {
+                    return
+                }
+                self.cityStatisticData = result
+                let cityFirstStatistic = result[0]
+                self.txtTotalCases.text = cityFirstStatistic.totalCasesAmount
+                self.txtTodayCases.text = cityFirstStatistic.newCasesAmount
+                self.txtUpdateTime.text = self.txtUpdateTime.text?.replace("{Date}", cityFirstStatistic.announcementDate.replace("-", "."))
             }
-            self.cityStatisticData = result
-            let cityFirstStatistic = result[0]
-            self.txtTotalCases.text = cityFirstStatistic.totalCasesAmount
-            self.txtTodayCases.text = cityFirstStatistic.newCasesAmount
-            self.txtUpdateTime.text = self.txtUpdateTime.text?.replace("{Date}", cityFirstStatistic.announcementDate.replace("-", "."))
         })
     }
     

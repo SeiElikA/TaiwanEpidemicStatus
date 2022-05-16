@@ -9,12 +9,19 @@ target 'FastAPI' do
 
 end
 
-target 'TaiwanEpidemicStatus' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
+def shared_pods
   pod 'CryptoSwift', '~> 1.4.1'
   pod 'Charts'
   pod 'Google-Mobile-Ads-SDK'
-  # Pods for TaiwanEpidemicStatus
+end
 
+target 'TaiwanEpidemicStatus' do
+  use_frameworks!
+  shared_pods
+  # Pods for TaiwanEpidemicStatus
+end
+
+target 'CovidWidgetExtension' do
+  use_frameworks! 
+  shared_pods
 end

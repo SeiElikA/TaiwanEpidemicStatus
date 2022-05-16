@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  TaiwanEpidemicStatus
+
+  Created by 葉家均 on 2022/5/16.
+  
+*/
+"TaiwanCovidWidgetTitle" = "Taiwan New Cases";
+"LastUpdate" = "Last Update:\n{date}";
+"NetworkError" = "Loading fail, please check your network connect.";
+"TotalCases" = "Total Cases";
+"NewCases" = "New Cases";

@@ -16,10 +16,11 @@ public class CovidModel {
         
     }
     
-    public func getTaiwanStatistic(result: @escaping (TaiwanStatisticData) -> Void) {
-        fastApi.get(url: "Covid/getTaiwanStatistic",header: JWTUtil.getJWTHeader(), { data, error in
+    public func getTaiwanStatistic(result: @escaping (TaiwanStatisticData) -> Void, requestError: ((String) -> Void)? = nil) {
+        fastApi.get(url: "Covid/getTaiwanStatistic", header: JWTUtil.getJWTHeader(), { data, error in
             if case .requestError(let msg) = error {
                 print(msg)
+                requestError?(msg)
                 return
             }
             
@@ -35,7 +36,7 @@ public class CovidModel {
     }
     
     public func getCityList(result: @escaping ([String]) -> Void) {
-        fastApi.get(url: "Covid/getCity", header: JWTUtil.getJWTHeader(), { data, error in
+        fastApi.get(url: "Covid/getCity", { data, error in
             if case .requestError(let msg) = error {
                 print(msg)
                 return
@@ -56,18 +57,17 @@ public class CovidModel {
         })
     }
     
-    public func getCitySatistic(cityName:String, _ cityDataList: @escaping ([CityStatistic]) -> Void) {
+    public func getCitySatistic(cityName:String, _ cityDataList: @escaping ([CityStatistic]) -> Void, requestError: ((String) -> Void)? = nil) {
         fastApi.get(url: "Covid/getCityStatistic?city=" + cityName, header: JWTUtil.getJWTHeader(), { result, error in
             if case .requestError(let msg) = error {
                 print(msg)
+                requestError?(msg)
                 return
             }
             
             if let result = result {
                 let cityStisticList = (try? JSONDecoder().decode([CityStatistic].self, from: result)) ?? []
-                DispatchQueue.main.async {
-                    cityDataList(cityStisticList)
-                }
+                cityDataList(cityStisticList)
             }
         })
     }
