@@ -52,7 +52,7 @@ class MapViewController: UIViewController {
     }
     
     private func showAntigenInfo() {
-        let weekDayValue = [7,1,2,3,4,5,6]
+        let weekDayValue = [1,2,3,4,5,6,7]
         let weekDay = Calendar.current.component(.weekday, from: Date())
         let infoMsg = weekDayValue.firstIndex(of: weekDay)! % 2 != 0 ? "單數(1、3、5、7、9)" : "雙數(0、2、4、6、8)"
         

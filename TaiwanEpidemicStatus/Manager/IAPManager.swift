@@ -72,6 +72,15 @@ extension SKProduct {
 }
 
 extension IAPManager: SKPaymentTransactionObserver {
+    func paymentQueue(_ queue: SKPaymentQueue, didRevokeEntitlementsForProductIdentifiers productIdentifiers: [String]) {
+        for productIdentifier in productIdentifiers {
+            print("Refund:\(productIdentifier)")
+            if productIdentifier == Global.removeAdsProductID {
+                self.saveRemoveAdsStatus(isRemove: false)
+            }
+        }
+    }
+    
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         transactions.forEach {
             print($0.payment.productIdentifier, $0.transactionState.rawValue)
