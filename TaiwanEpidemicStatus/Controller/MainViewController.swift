@@ -45,7 +45,6 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     private var isFirstFetchWeatherData = true
     private var locationManager = CLLocationManager()
     private var citySelectIndex = 12
-    private var cityList:[String] = []
     private var isCityStatisticLoaded = false
     private var covidNewsList:[CovidNews] = [] {
         didSet {
@@ -139,7 +138,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         mainScrollView.refreshControl?.addTarget(self, action: #selector(checkNetworkAndFetchData), for: .valueChanged)
         
         // Set Time out timer
-        timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(networkError),userInfo: nil, repeats: false)
+        timer = Timer.scheduledTimer(timeInterval: 20, target: self, selector: #selector(networkError),userInfo: nil, repeats: false)
         setLocationManager()
         checkNetworkAndFetchData()
     }
@@ -187,6 +186,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         
         func hideLoadView() {
             self.loadNewsActivityIndicator.fadeOutAnimate(during: 0.5, completion: {
+                self.timer?.invalidate()
                 self.txtNetworkInfo.isHidden = true
                 self.loadNewsActivityIndicator.stopAnimating()
             })
@@ -251,8 +251,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func btnSelectCity(_ sender: Any) {
         let navigationView = UINavigationController(rootViewController: SelectCityNavigationViewController())
         let viewController = navigationView.viewControllers.first as! SelectCityNavigationViewController
-        viewController.selectCity = { index in
-            let cityName = self.cityList[index]
+        viewController.selectCity = { cityName in
             self.txtCityList.text = cityName
             self.getCityStatistic(cityName: cityName)
         }
@@ -277,12 +276,6 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         dispatchGroup.enter()
         newsModel.getAllNewsList(page: 1, result: {
             self.covidNewsList = Array($0.prefix(5))
-            dispatchGroup.leave()
-        })
-        
-        dispatchGroup.enter()
-        covidModel.getCityList(result: {
-            self.cityList = $0
             dispatchGroup.leave()
         })
         
@@ -317,6 +310,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
                     self.txtLocation.text = $1
                     self.txtTemperature.text = data.MaxT == data.MinT ? "\(data.MinT)°C" : "\(data.MinT)~\(data.MaxT)°C"
                     let weatherIcon = self.weatherModel.getWeatherIcon(wX: data.Wx)
+                    print(data.Wx)
                     self.imgWeatherIcon.tintColor = weatherIcon.first?.value
                     self.imgWeatherIcon.image = weatherIcon.first?.key
                 }, timeOut: {

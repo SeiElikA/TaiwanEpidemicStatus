@@ -27,20 +27,16 @@ struct TaiwanCovidProvider: TimelineProvider {
         let tokenDispatch = DispatchSemaphore(value: 0)
         let authModel = AuthModel()
         
-        if JWTUtil.getToken().isEmpty {
-            authModel.getToken(result: {
-                JWTUtil.saveToken(token: $0)
-                tokenDispatch.signal()
-            })
-        } else {
+        authModel.getToken(result: {
+            JWTUtil.saveToken(token: $0)
             tokenDispatch.signal()
-        }
+        })
         
         tokenDispatch.wait()
             CovidModel().getTaiwanStatistic(result: { data in
                 let dateformatter = DateFormatter()
                 dateformatter.dateFormat = "yyyy.MM.dd HH:mm"
-                entry = TaiwanCovidEntry(date: currentDate, updateDate: dateformatter.string(from: currentDate), confirmCases: data.totalCases, isError: false)
+                entry = TaiwanCovidEntry(date: currentDate, updateDate: dateformatter.string(from: currentDate), confirmCases: data.yesterdayCases, isError: false)
                 dispatch.signal()
             }, requestError: {
                 print($0)

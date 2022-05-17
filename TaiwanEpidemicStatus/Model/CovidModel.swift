@@ -36,7 +36,7 @@ public class CovidModel {
     }
     
     public func getCityList(result: @escaping ([String]) -> Void) {
-        fastApi.get(url: "Covid/getCity", { data, error in
+        fastApi.get(url: "Covid/getCity", header: JWTUtil.getJWTHeader(), { data, error in
             if case .requestError(let msg) = error {
                 print(msg)
                 return
@@ -50,9 +50,7 @@ public class CovidModel {
                     print("\(error)")
                 }
                 
-                DispatchQueue.main.async {
-                    result(cityList)
-                }
+                result(cityList)
             }
         })
     }

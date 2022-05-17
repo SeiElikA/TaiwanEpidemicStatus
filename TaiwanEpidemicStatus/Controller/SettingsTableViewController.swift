@@ -20,6 +20,7 @@ class SettingsTableViewController: UITableViewController {
     @IBOutlet weak var restoreBuyRecordTableCell: UITableViewCell!
     @IBOutlet weak var buyCoffeeTableCell: UITableViewCell!
     @IBOutlet weak var aboutUsTableCell: UITableViewCell!
+    @IBOutlet weak var versionTableCell: UITableViewCell!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +54,7 @@ class SettingsTableViewController: UITableViewController {
         restoreBuyRecordTableCell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(restoreBuyRecord)))
         buyCoffeeTableCell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(buyCoffeeEvent)))
         aboutUsTableCell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(changeToAboutUsEvent)))
+        versionTableCell.detailTextLabel?.text = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
     }
     
     @objc private func changeToAboutUsEvent() {

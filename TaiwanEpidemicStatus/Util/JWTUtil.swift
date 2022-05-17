@@ -12,6 +12,7 @@ public class JWTUtil {
     private static let authPassword = "KNFuH8R/ikyCDOgWyQLNLA=="
     private static let userDefaultNameToken = "JWTToken"
     private static let userDefaultNameTime = "JWTTime"
+    private static let refreshTime = 10 // minute
     
     public static func getAuthBody() -> [String:String] {
         let uuid = UUID().uuidString
@@ -38,13 +39,14 @@ public class JWTUtil {
         UserDefaults().set(token, forKey: userDefaultNameToken)
     }
     
-    public static func saveGetTokenTime() {
+    public static func saveGetNextTokenTime() {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
-        UserDefaults().set(formatter.string(from: Date()), forKey: userDefaultNameTime)
+        let nextDate = Calendar.current.date(byAdding: .minute, value: JWTUtil.refreshTime, to: Date()) ?? Date()
+        UserDefaults().set(formatter.string(from: nextDate), forKey: userDefaultNameTime)
     }
     
-    public static func getGetTokenTime() -> Date {
+    public static func getGetNextTokenTime() -> Date {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
         let dateString = UserDefaults().string(forKey: userDefaultNameTime) ?? ""
@@ -64,12 +66,15 @@ public class JWTUtil {
             
             while(true) {
                 let semaphore = DispatchSemaphore(value: 0)
-                if JWTUtil.getGetTokenTime() < Date() {
+                if JWTUtil.getGetNextTokenTime() < Date() {
+                    print("\(Date()): Refresh Token!")
                     authModel.refreshToken(result: {
                         saveToken(token: $0)
-                        saveGetTokenTime()
+                        saveGetNextTokenTime()
                         semaphore.signal()
                     })
+                } else {
+                    semaphore.signal()
                 }
                 semaphore.wait()
                 

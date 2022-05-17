@@ -30,14 +30,11 @@ struct CityCovidProvider:IntentTimelineProvider {
         let selectCity = configuration.City ?? "新北市"
         let tokenDispatch = DispatchSemaphore(value: 0)
         
-        if JWTUtil.getToken().isEmpty {
-            authModel.getToken(result: {
-                JWTUtil.saveToken(token: $0)
-                tokenDispatch.signal()
-            })
-        } else {
+
+        authModel.getToken(result: {
+            JWTUtil.saveToken(token: $0)
             tokenDispatch.signal()
-        }
+        })
         
         tokenDispatch.wait()
         

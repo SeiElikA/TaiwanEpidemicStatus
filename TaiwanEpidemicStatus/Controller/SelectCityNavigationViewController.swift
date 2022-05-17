@@ -15,7 +15,7 @@ class SelectCityNavigationViewController: UIViewController {
     
     private let covidModel = CovidModel()
     
-    public var selectCity:((Int) -> Void)?
+    public var selectCity:((String) -> Void)?
     private var searchCityList:[String] = [] {
         didSet {
             if isViewLoaded {
@@ -65,14 +65,16 @@ class SelectCityNavigationViewController: UIViewController {
     }
     
     private func fetchData() {
-        covidModel.getCityList(result: {
-            if $0.isEmpty {
-                return
+        covidModel.getCityList(result: { list in
+            DispatchQueue.main.async {
+                if list.isEmpty {
+                    return
+                }
+                self.cityList = list
+                self.txtNetworkInfo.isHidden = true
+                self.timer?.invalidate()
+                self.hideActivityIndicator()
             }
-            self.cityList = $0
-            self.txtNetworkInfo.isHidden = true
-            self.timer?.invalidate()
-            self.hideActivityIndicator()
         })
     }
     
@@ -113,7 +115,7 @@ extension SelectCityNavigationViewController: UITableViewDelegate, UITableViewDa
         let index = indexPath.row
         let selectCityName = searchCityList[index]
         covidModel.saveSelectCity(cityName: selectCityName)
-        self.selectCity?(cityList.firstIndex(of: selectCityName) ?? 0)
+        self.selectCity?(selectCityName)
         self.dismiss(animated: true)
     }
 }

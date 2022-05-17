@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		38A47BFDD0FC580411B03C7A /* Pods_TaiwanEpidemicStatus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB61A84121CD21BCD2898C3 /* Pods_TaiwanEpidemicStatus.framework */; };
 		64B5012C78013B4739F070C8 /* Pods_FastAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E703CACC2C71E2097F34F01E /* Pods_FastAPI.framework */; };
+		6F0655B4283377110038B66E /* CovidStatisticViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F0655B6283377110038B66E /* CovidStatisticViewController.xib */; };
 		6F12870E281D52F40046A586 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F12870D281D52F40046A586 /* WeatherModel.swift */; };
 		6F128710281D54E70046A586 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F12870F281D54E70046A586 /* Location.swift */; };
 		6F128712281D5BD40046A586 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F128711281D5BD40046A586 /* Weather.swift */; };
@@ -121,7 +122,6 @@
 		6FD8F5F5281BFBDA0053EC07 /* NewsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FD8F5F7281BFBDA0053EC07 /* NewsDetailViewController.xib */; };
 		6FD8F600281C1B0A0053EC07 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD8F5FE281C1B0A0053EC07 /* NewsViewController.swift */; };
 		6FD972542826B354004EDD07 /* CovidStatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD972522826B354004EDD07 /* CovidStatisticViewController.swift */; };
-		6FD972552826B354004EDD07 /* CovidStatisticViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FD972532826B354004EDD07 /* CovidStatisticViewController.xib */; };
 		6FD9725828280EF1004EDD07 /* DistStatisticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD9725628280EF1004EDD07 /* DistStatisticTableViewCell.swift */; };
 		6FD9725928280EF1004EDD07 /* DistStatisticTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FD9725728280EF1004EDD07 /* DistStatisticTableViewCell.xib */; };
 		6FD9725B28281737004EDD07 /* TaiwanStatisticData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD9725A28281737004EDD07 /* TaiwanStatisticData.swift */; };
@@ -193,6 +193,10 @@
 		214424F9D8D37A486553F1D4 /* Pods-FastAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastAPI.release.xcconfig"; path = "Target Support Files/Pods-FastAPI/Pods-FastAPI.release.xcconfig"; sourceTree = "<group>"; };
 		4761E6067A29EFF67DD29145 /* Pods-CovidWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidWidgetExtension.release.xcconfig"; path = "Target Support Files/Pods-CovidWidgetExtension/Pods-CovidWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
 		5FB61A84121CD21BCD2898C3 /* Pods_TaiwanEpidemicStatus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaiwanEpidemicStatus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F0655B5283377110038B66E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/CovidStatisticViewController.xib; sourceTree = "<group>"; };
+		6F0655B8283377140038B66E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/CovidStatisticViewController.strings; sourceTree = "<group>"; };
+		6F0655BA283377170038B66E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/CovidStatisticViewController.strings"; sourceTree = "<group>"; };
+		6F0655BC283377180038B66E /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/CovidStatisticViewController.strings"; sourceTree = "<group>"; };
 		6F12870D281D52F40046A586 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		6F12870F281D54E70046A586 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		6F128711281D5BD40046A586 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
@@ -342,7 +346,6 @@
 		6FD8F5FD281BFBDF0053EC07 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/NewsDetailViewController.strings"; sourceTree = "<group>"; };
 		6FD8F5FE281C1B0A0053EC07 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		6FD972522826B354004EDD07 /* CovidStatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidStatisticViewController.swift; sourceTree = "<group>"; };
-		6FD972532826B354004EDD07 /* CovidStatisticViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CovidStatisticViewController.xib; sourceTree = "<group>"; };
 		6FD9725628280EF1004EDD07 /* DistStatisticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistStatisticTableViewCell.swift; sourceTree = "<group>"; };
 		6FD9725728280EF1004EDD07 /* DistStatisticTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DistStatisticTableViewCell.xib; sourceTree = "<group>"; };
 		6FD9725A28281737004EDD07 /* TaiwanStatisticData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaiwanStatisticData.swift; sourceTree = "<group>"; };
@@ -464,7 +467,7 @@
 			children = (
 				6F3B59C528179AA3005B0E31 /* MainViewController.xib */,
 				6F3B59DE281813D5005B0E31 /* SelectCityNavigationViewController.xib */,
-				6FD972532826B354004EDD07 /* CovidStatisticViewController.xib */,
+				6F0655B6283377110038B66E /* CovidStatisticViewController.xib */,
 				6FFE1A0B282986E600866713 /* SettingStoryboard.storyboard */,
 			);
 			path = Main;
@@ -953,7 +956,7 @@
 				6F82AB0D2826605B0006BF9A /* PassportViewController.xib in Resources */,
 				6FC6E81D2820D69300C5D4CE /* NewsItemLargeTableViewCell.xib in Resources */,
 				6F421DCB282E109400CC8AA9 /* DetailTableViewCell.xib in Resources */,
-				6FD972552826B354004EDD07 /* CovidStatisticViewController.xib in Resources */,
+				6F0655B4283377110038B66E /* CovidStatisticViewController.xib in Resources */,
 				6F68EFE3280CF9040012B5B1 /* LaunchScreen.storyboard in Resources */,
 				6F14AF3D282B9DFA00FC9FAB /* MapViewController.xib in Resources */,
 				6F82AB16282663D90006BF9A /* PassportCollectionViewCell.xib in Resources */,
@@ -1217,6 +1220,17 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		6F0655B6283377110038B66E /* CovidStatisticViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6F0655B5283377110038B66E /* Base */,
+				6F0655B8283377140038B66E /* en */,
+				6F0655BA283377170038B66E /* zh-Hans */,
+				6F0655BC283377180038B66E /* zh-Hant */,
+			);
+			name = CovidStatisticViewController.xib;
+			sourceTree = "<group>";
+		};
 		6F3B59C528179AA3005B0E31 /* MainViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1516,7 +1530,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.5.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.seielika.TaiwanEpidemicStatus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1542,7 +1556,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.5.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.seielika.TaiwanEpidemicStatus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

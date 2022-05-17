@@ -21,7 +21,7 @@ public class AuthModel {
             
             if let data = data {
                 let token = String(data: data, encoding: .utf8) ?? ""
-                JWTUtil.saveGetTokenTime()
+                JWTUtil.saveGetNextTokenTime()
                 result(token)
             }
         }

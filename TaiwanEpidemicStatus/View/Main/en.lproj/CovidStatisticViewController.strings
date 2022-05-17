@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "0"; ObjectID = "2AB-iE-diz"; */
+"2AB-iE-diz.text" = "0";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "GcQ-Tt-CR7"; */
+"GcQ-Tt-CR7.text" = "0";
+
+/* Class = "UILabel"; text = "區域"; ObjectID = "I0S-s4-vXA"; */
+"I0S-s4-vXA.text" = "Area";
+
+/* Class = "UILabel"; text = "新增確診"; ObjectID = "IFL-LZ-FcQ"; */
+"IFL-LZ-FcQ.text" = "New";
+
+/* Class = "UILabel"; text = "統計資料"; ObjectID = "RND-72-ESY"; */
+"RND-72-ESY.text" = "City Statistic";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "cSK-P0-DhG"; */
+"cSK-P0-DhG.text" = "0";
+
+/* Class = "UILabel"; text = "全國資料統計"; ObjectID = "h9H-T1-DpU"; */
+"h9H-T1-DpU.text" = "Taiwan Statistic";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "iZ6-YB-iFF"; */
+"iZ6-YB-iFF.text" = "Label";
+
+/* Class = "UILabel"; text = "累積確診"; ObjectID = "qdb-3v-7jT"; */
+"qdb-3v-7jT.text" = "Total";
